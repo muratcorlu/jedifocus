@@ -4,4 +4,8 @@ import { $ } from 'dombili';
 
 import AppContainer from './containers/app/AppContainer';
 
-render(<AppContainer />, $('#react-root'));
+import './css/reset.css';
+import './css/main.css';
+import './css/columns.css';
+
+render( <AppContainer />, $( '#react-root' ) );

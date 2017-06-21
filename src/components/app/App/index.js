@@ -1,6 +1,17 @@
 import React from 'react';
-import { render } from 'react-dom';
 
-const App = () => (<h1>Hello World, Hello Stars, Hello Universe!!!!!!</h1>);
+import BestIntentions from '../../../components/columns/BestIntentions';
+import ToDo from '../../../components/columns/ToDo';
+import InProgress from '../../../components/columns/InProgress';
+import Done from '../../../components/columns/Done';
+
+const App = () => (
+    <div className="container">
+        <BestIntentions />
+        <ToDo />
+        <InProgress />
+        <Done />
+    </div>
+);
 
 export default App;
