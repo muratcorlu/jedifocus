@@ -1,14 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BaseColumn from '../BaseColumn';
 
-const BestIntentions = () => (
-    <BaseColumn heading="Best Intentions" className="column__best-intentions">
-        <div className="card">Remember the milk.</div>
-        <div className="card">Drag and drop the cards.</div>
-        <div className="card">Persist the cards to a database.</div>
-        <div className="card">Finish bytesized.tv React recording.</div>
-    </BaseColumn>
-);
+const BestIntentions = ( { items } ) => {
+    console.log( items );
+
+    return (
+        <BaseColumn heading="Best Intentions" className="column__best-intentions">
+            { Object.keys( items ).map( ( key ) => {
+                const item = items[ key ];
+
+                return ( <div className="card" key={key}>{item}</div> );
+            } ) }
+        </BaseColumn>
+    );
+};
+
+BestIntentions.propTypes = {
+    items: PropTypes.object.isRequired
+};
 
 export default BestIntentions;

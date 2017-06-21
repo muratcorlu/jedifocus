@@ -1,16 +1,16 @@
 import React from 'react';
 
-import BestIntentions from '../../../components/columns/BestIntentions';
-import ToDo from '../../../components/columns/ToDo';
-import InProgress from '../../../components/columns/InProgress';
-import Done from '../../../components/columns/Done';
+import BestIntentionsContainer from '../../../containers/columns/BestIntentionsContainer';
+import ToDoContainer from '../../../containers/columns/ToDoContainer';
+import InProgressContainer from '../../../containers/columns/InProgressContainer';
+import DoneContainer from '../../../containers/columns/DoneContainer';
 
 const App = () => (
     <div className="container">
-        <BestIntentions />
-        <ToDo />
-        <InProgress />
-        <Done />
+        <BestIntentionsContainer />
+        <ToDoContainer />
+        <InProgressContainer />
+        <DoneContainer />
     </div>
 );
 
