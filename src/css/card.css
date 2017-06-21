@@ -1,4 +1,6 @@
 .card {
+    position: relative;
+    
     background: #ffffff;
     border: 1px #444 solid;
     padding: 1em;
@@ -8,4 +10,15 @@
     -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.55);
     -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.55);
     box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.55);
+}
+
+.card__edit-action {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.card__text {
+    margin-right: 2em;
+    display: block;
 }

@@ -8,6 +8,7 @@ import './css/reset.css';
 import './css/main.css';
 import './css/columns.css';
 import './css/card.css';
+import './css/modal.css';
 
 import * as config from './config.json';
 

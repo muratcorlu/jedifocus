@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BaseColumn from '../BaseColumn';
 
-const Todo = () => (
-    <BaseColumn heading="To Do" className="column__to-do"></BaseColumn>
+const ToDo = ( { items } ) => (
+    <BaseColumn heading="To Do" className="column__to-do" items={ items } />
 );
 
-export default Todo;
+ToDo.propTypes = {
+    items: PropTypes.object.isRequired
+};
+
+export default ToDo;

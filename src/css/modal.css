@@ -1,0 +1,17 @@
+.container__modal-edit {
+    position: fixed;
+    width: 900px;
+    background: #ffffff;
+    border: 1px #999999 solid;
+    z-index: 9999;
+    padding: 10px;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%) translateY(95px);
+    -o-transform: translateX(-50%) translateY(95px);
+    -ms-transform: translateX(-50%) translateY(95px);
+    -moz-transform: translateX(-50%) translateY(95px);
+    transform: translateX(-50%) translateY(95px);
+    left: 0;
+
+    box-shadow: 15px 15px 10px 5px rgba(0,0,0,0.35);
+}

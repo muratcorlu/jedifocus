@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BaseColumn = ( { heading, children, className } ) => (
+import Card from '../../../components/cards/Card';
+
+const BaseColumn = ( { heading, items, className } ) => (
     <div className={`column ${className}`}>
         <h2>{heading}</h2>
         <div className="column__body">
-            {children}
+            { Object.keys( items ).map( ( key ) => {
+                const item = items[ key ];
+
+                return ( <Card key={key} item={item} /> );
+            } ) }
         </div>
     </div>
 );
@@ -13,7 +19,8 @@ const BaseColumn = ( { heading, children, className } ) => (
 BaseColumn.propTypes = {
     heading: PropTypes.string.isRequired,
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    items: PropTypes.object.isRequired
 };
 
 export default BaseColumn;

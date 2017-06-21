@@ -18,7 +18,7 @@ class AppContainer extends Component {
     }
 
     render() {
-        return ( <App /> );
+        return ( <App appStateFetched={this.props.appStateFetched} /> );
     }
 }
 
@@ -26,12 +26,13 @@ AppContainer.propTypes = {
     config: PropTypes.object.isRequired,
     email: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired,
-    fetchAppState: PropTypes.func.isRequired
+    fetchAppState: PropTypes.func.isRequired,
+    appStateFetched: PropTypes.bool.isRequired
 };
 
 const ConnectedAppContainer = connect(
     AppContainer, actions,
-    () => ( {} )
+    ( { appStateFetched } ) => ( { appStateFetched } )
 );
 
 const ProvidedAppContainer = ( { config, email, password } ) => (
