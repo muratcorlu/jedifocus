@@ -28,7 +28,8 @@ module.exports = {
             test: /\.js$/,
             include: [
                 join( __dirname, 'src' ),
-                join( __dirname, 'node_modules/dombili' )
+                join( __dirname, 'node_modules/dombili' ),
+                join( __dirname, 'node_modules/kink' )
             ],
             use: [ 'babel-loader' ]
         }, {
