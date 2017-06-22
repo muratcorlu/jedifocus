@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 import BaseColumn from '../BaseColumn';
 
 const ToDo = ( { items } ) => (
-    <BaseColumn heading="To Do" className="column__to-do" items={ items } />
+    <BaseColumn
+        bucket="toDo"
+        heading="To Do"
+        className="column__to-do"
+        items={items}
+    />
 );
 
 ToDo.propTypes = {

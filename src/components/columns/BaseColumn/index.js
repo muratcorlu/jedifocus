@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Card from '../../../components/cards/Card';
+import CardContainer from '../../../containers/cards/CardContainer';
 
-const BaseColumn = ( { heading, items, className } ) => (
+const BaseColumn = ( { heading, items, className, bucket } ) => (
     <div className={`column ${className}`}>
         <h2>{heading}</h2>
         <div className="column__body">
             { Object.keys( items ).map( ( key ) => {
                 const item = items[ key ];
 
-                return ( <Card key={key} item={item} /> );
+                return ( <CardContainer key={key} item={item} id={key} bucket={bucket} /> );
             } ) }
         </div>
     </div>
 );
 
 BaseColumn.propTypes = {
-    heading: PropTypes.string.isRequired,
+    bucket: PropTypes.string.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
+    heading: PropTypes.string.isRequired,
     items: PropTypes.object.isRequired
 };
 
