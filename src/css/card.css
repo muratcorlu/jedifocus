@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    
+
     background: #ffffff;
     border: 1px #444 solid;
     padding: 1em;
@@ -14,8 +14,15 @@
 
 .card__edit-action {
     position: absolute;
-    top: 1em;
-    right: 1em;
+    top: .5em;
+    right: .5em;
+    color: #1005C9;
+    padding: .5em;
+    cursor: hand;
+}
+.card__edit-action:hover {
+    background: #1005C9;
+    color: #ffffff;
 }
 
 .card__text {

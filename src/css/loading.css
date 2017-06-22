@@ -1,0 +1,13 @@
+.container__loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #009688;
+    color: #ffffff;
+    padding: 30px;
+    font-size: 24px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.85;
+}
