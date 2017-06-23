@@ -1,0 +1,10 @@
+{
+    "apiKey": "$YOUR_FIREBASE_API_KEY",
+    "authDomain": "$YOUR_FIREBASE_AUTH_DOMAIN",
+    "databaseURL": "$YOUR_FIREBASE_DATABSE_URL",
+    "projectId": "$YOUR_FIREBASE_PROJECT_ID",
+    "storageBucket": "$YOUR_FIREBASE_STORAGE_BUCKET",
+    "messagingSenderId": "$YOUR_FIREBASE_MESSAGE_SENDER_ID",
+    "email": "$YOUR_FIREBASE_EMAIL",
+    "password": "$YOUR_FIREBASE_PASSWORD"
+}

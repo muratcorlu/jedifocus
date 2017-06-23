@@ -1,0 +1,33 @@
+.card {
+    position: relative;
+
+    background: #ffffff;
+    border: 1px #444 solid;
+    padding: 1em;
+    margin: 1em;
+
+    border: 1px #757575 solid;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.55);
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.55);
+
+    min-height: 50px;
+}
+
+.card__edit-action {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    color: #1005C9;
+    padding: .5em;
+    cursor: hand;
+}
+.card__edit-action:hover {
+    background: #1005C9;
+    color: #ffffff;
+}
+
+.card__text {
+    margin-right: 2em;
+    display: block;
+}

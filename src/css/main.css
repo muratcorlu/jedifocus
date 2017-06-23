@@ -1,0 +1,11 @@
+body {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #bdbdbd;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    padding: 1em;
+}

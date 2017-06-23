@@ -1,0 +1,51 @@
+
+.container {
+    display: flex;
+    height: 100vh;
+    max-width: 1690px;
+    margin: 0 auto;
+    border: 1px #757575 solid;
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.55);
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.55);
+}
+
+.column {
+    flex-basis: 25%;
+}
+
+.column__best-intentions {
+    background: #96a6a6;
+}
+
+.column__best-intentions h2 {
+    color: #ffffff;
+    background: #35495d;
+}
+
+.column__to-do {
+    background: #f29b2d;
+}
+
+.column__to-do h2 {
+    color: #ffffff;
+    background: #d3541a;
+}
+
+.column__in-progress {
+    background: #3b99d9;
+}
+
+.column__in-progress h2 {
+    color: #ffffff;
+    background: #3081b7;
+}
+
+.column__done {
+    background: #30ad64;
+}
+
+.column__done h2 {
+    color: #ffffff;
+    background: #239f86;
+}
