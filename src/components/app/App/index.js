@@ -5,13 +5,13 @@ import BestIntentionsContainer from '../../../containers/columns/BestIntentionsC
 import ToDoContainer from '../../../containers/columns/ToDoContainer';
 import InProgressContainer from '../../../containers/columns/InProgressContainer';
 import DoneContainer from '../../../containers/columns/DoneContainer';
-import ModalEdit from '../../../components/modals/ModalEdit';
+import ModalEditContainer from '../../../containers/modals/ModalEditContainer';
 import LoadingIndicator from '../../../components/feedback/LoadingIndicator';
 
 const App = ( { appStateFetched } ) => (
     <div className="container">
         <LoadingIndicator show={!appStateFetched} />
-        <ModalEdit show={false} />
+        <ModalEditContainer />
         <BestIntentionsContainer />
         <ToDoContainer />
         <InProgressContainer />

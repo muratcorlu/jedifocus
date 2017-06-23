@@ -29,7 +29,8 @@ module.exports = {
             include: [
                 join( __dirname, 'src' ),
                 join( __dirname, 'node_modules/dombili' ),
-                join( __dirname, 'node_modules/kink' )
+                join( __dirname, 'node_modules/kink' ),
+                join( __dirname, 'node_modules/delgado' )
             ],
             use: [ 'babel-loader' ]
         }, {

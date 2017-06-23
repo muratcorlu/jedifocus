@@ -12,28 +12,11 @@
     transform: translateX(-50%) translateY(95px);
     left: 0;
     box-shadow: 15px 15px 10px 5px rgba(0,0,0,0.35);
-}
-
-.modal-edit__action-button {
-      display: inline-block;
-      position: relative;
-      width: 120px;
-      height: 32px;
-      line-height: 32px;
-      border-radius: 2px;
-      font-size: 0.9em;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      background-color: #4285f4;
-      color: #ffffff;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-      text-align: center;
-      text-decoration: none;
-      font-size: 1em;
-      letter-spacing: 1px;
-}
-
-.modal-edit__action-button:hover {
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    -webkit-opacity: 0.95;
+    -moz-opacity: 0.95;
+    -o-opacity: 0.95;
+    -ms-opacity: 0.95;
+    opacity: 0.95;
 }
 
 .modal-edit__heading {

@@ -15,4 +15,16 @@ const inProgress = () => refOnce( '/inProgress' );
 
 const done = () => refOnce( '/done' );
 
-export { initialize, login, bestIntentions, toDo, inProgress, done };
+const saveItem = ( path, data ) => window.firebase.database().ref( path ).set( data );
+
+const saveToDo = ( data ) => saveItem( '/toDo', data );
+const saveInProgress = ( data ) => saveItem( '/inProgress', data );
+const saveBestIntentions = ( data ) => saveItem( '/bestIntentions', data );
+
+const saveAll = ( data ) => {
+    saveToDo( data.toDo );
+    saveInProgress( data.inProgress );
+    saveBestIntentions( data.bestIntentions );
+};
+
+export { initialize, login, bestIntentions, toDo, inProgress, done, saveAll };

@@ -4,7 +4,12 @@ const zeroState = {
     bestIntentions: makeImmutable( {} ),
     toDo: makeImmutable( {} ),
     inProgress: makeImmutable( {} ),
-    appStateFetched: false
+    done: makeImmutable( {} ),
+    appStateFetched: false,
+    modalVisible: false,
+    modalId: '',
+    modalItem: '',
+    modalBucket: ''
 };
 
 export default zeroState;

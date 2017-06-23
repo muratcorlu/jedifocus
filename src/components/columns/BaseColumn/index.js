@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import CardContainer from '../../../containers/cards/CardContainer';
 
-const BaseColumn = ( { heading, items, className, bucket } ) => (
+const BaseColumn = ( { heading, items, className, bucket, children } ) => (
     <div className={`column ${className}`}>
         <h2>{heading}</h2>
+
         <div className="column__body">
             { Object.keys( items ).map( ( key ) => {
                 const item = items[ key ];
@@ -13,6 +14,8 @@ const BaseColumn = ( { heading, items, className, bucket } ) => (
                 return ( <CardContainer key={key} item={item} id={key} bucket={bucket} /> );
             } ) }
         </div>
+
+        <div>{children}</div>
     </div>
 );
 

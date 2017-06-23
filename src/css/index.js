@@ -1,6 +1,7 @@
 import './reset.css';
 import './main.css';
-import './columns.css';
+import './buttons.css';
 import './card.css';
-import './modal.css';
+import './columns.css';
 import './loading.css';
+import './modal.css';
