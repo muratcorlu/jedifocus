@@ -1,4 +1,16 @@
-const webpack = require( 'webpack' );
+/*
+ * ▬▬ι═══════ﺤJediFocus-═══════ι▬▬
+ *   use the source to get things done
+ *
+ * This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *
+ * You can watch “Byte-Sized JavaScript” at: https://bit.ly/bytesized
+ *
+ * MIT Licensed — See LICENSE.md
+ *
+ * Send your comments, suggestions, and feedback to me@volkan.io                                                     l
+ */
+
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 

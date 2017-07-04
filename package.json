@@ -1,11 +1,23 @@
 {
   "name": "jedifocus",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Gets things done the Jedi way.",
   "main": "index.js",
   "repository": "git@github.com:jsbites/jedifocus.git",
   "author": "Volkan Özçelik <me@volkan.io> (https://volkan.io)",
   "license": "MIT",
+  "keywords": [
+    "javascript",
+    "podcast",
+    "screencast",
+    "bytesized.tv",
+    "byte-sized",
+    "front-end",
+    "gtd",
+    "to do list",
+    "list",
+    "productivity"
+  ],
   "scripts": {
     "watch": "bin/watch.sh",
     "serve": "bin/serve.sh"
@@ -13,7 +25,7 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.0",
+    "babel-loader": "^7.1.1",
     "babel-plugin-istanbul": "^4.1.4",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
@@ -21,14 +33,14 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
-    "eslint": "^4.0.0",
-    "eslint-config-jsbites": "^0.6.0",
+    "eslint": "^4.1.1",
+    "eslint-config-jsbites": "^0.7.0",
     "eslint-loader": "^1.8.0",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
-    "html-webpack-plugin": "^2.28.0",
+    "html-webpack-plugin": "^2.29.0",
     "http-server": "^0.10.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
@@ -43,7 +55,11 @@
     "kink": "^0.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "redux": "^3.7.0",
+    "redux": "^3.7.1",
     "redux-thunk": "^2.2.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jsbites/jedifocus/issues"
+  },
+  "homepage": "https://github.com/jsbites/jedifocus/"
 }
