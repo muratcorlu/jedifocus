@@ -1,3 +1,16 @@
+/*
+ * ▬▬ι═══════ﺤJediFocus-═══════ι▬▬
+ *   use the source to get things done
+ *
+ * This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *
+ * You can watch “Byte-Sized JavaScript” at: https://bit.ly/bytesized
+ *
+ * MIT Licensed — See LICENSE.md
+ *
+ * Send your comments, suggestions, and feedback to me@volkan.io                                                     l
+ */
+
 const moveBucket = ( activeBucket, currentBucket, nextBucket, goalId, state ) => {
     if ( currentBucket === nextBucket ) { return state[ activeBucket ]; }
     if ( activeBucket === currentBucket ) { return state[ activeBucket ].delete( goalId ); }
