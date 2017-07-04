@@ -18,5 +18,5 @@ import { connect } from 'kink';
 export default connect(
     InProgress,
     {},
-    ( { inProgress } ) => ( { items: inProgress.toJSON() } )
+    ( { inProgress } ) => ( { items: ( inProgress ? inProgress.toJSON() : {} ) } )
 );

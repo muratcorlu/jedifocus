@@ -18,5 +18,5 @@ import { connect } from 'kink';
 export default connect(
     Done,
     {},
-    ( { done } ) => ( { items: done.toJSON() } )
+    ( { done } ) => ( { items: ( done ? done.toJSON() : {} ) } )
 );

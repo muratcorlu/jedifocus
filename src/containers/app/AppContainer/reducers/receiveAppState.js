@@ -11,12 +11,14 @@
  * Send your comments, suggestions, and feedback to me@volkan.io                                                     l
  */
 
+import { Map } from 'immutable';
+
 const receiveAppState = ( state = {}, { payload } ) => ( {
     ...state,
     appStateFetched: true,
-    bestIntentions: payload.get( 'bestIntentions' ),
-    toDo: payload.get( 'toDo' ),
-    inProgress: payload.get( 'inProgress' )
+    bestIntentions: payload.get( 'bestIntentions' ) || Map.of(),
+    toDo: payload.get( 'toDo' ) || Map.of(),
+    inProgress: payload.get( 'inProgress' ) || Map.of()
 } );
 
 export default receiveAppState;

@@ -19,5 +19,7 @@ import { connect } from 'kink';
 export default connect(
     BestIntentions,
     actions,
-    ( { bestIntentions } ) => ( { items: bestIntentions.toJSON() } )
+    ( { bestIntentions } ) => ( {
+        items: ( bestIntentions ? bestIntentions.toJSON() : {} )
+    } )
 );
