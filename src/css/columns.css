@@ -11,10 +11,10 @@
  *
  * Send your comments, suggestions, and feedback to me@volkan.io                                                     l
  */
- 
+
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     max-width: 1690px;
     margin: 0 auto;
     border: 1px #757575 solid;

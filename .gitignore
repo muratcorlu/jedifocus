@@ -57,6 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# IDE
+.vscode
+
 public/index\.html
 public/js/bundles/
 

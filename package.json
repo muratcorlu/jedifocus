@@ -1,22 +1,30 @@
 {
   "name": "jedifocus",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Gets things done the Jedi way.",
   "main": "index.js",
   "repository": "git@github.com:jsbites/jedifocus.git",
   "author": "Volkan Özçelik <me@volkan.io> (https://volkan.io/)",
   "license": "MIT",
   "keywords": [
-    "javascript",
-    "podcast",
-    "screencast",
-    "bytesized.tv",
+    "byte-sized javascript",
     "byte-sized",
+    "bytesized.tv",
+    "demos",
+    "education",
     "front-end",
     "gtd",
-    "to do list",
+    "javascript",
+    "learning",
     "list",
-    "productivity"
+    "podcast",
+    "productivity",
+    "screencast",
+    "to do list",
+    "tutorials",
+    "vidcast",
+    "videocast",
+    "videos"
   ],
   "scripts": {
     "watch": "bin/watch.sh",
@@ -61,5 +69,5 @@
   "bugs": {
     "url": "https://github.com/jsbites/jedifocus/issues"
   },
-  "homepage": "https://github.com/jsbites/jedifocus/"
+  "homepage": "https://bytesized.tv/"
 }
