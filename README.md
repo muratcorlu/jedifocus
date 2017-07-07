@@ -1,6 +1,6 @@
 ```
-  ▬▬ι═══════ﺤJediFocus-═══════ι▬▬
-    use the source to get things done
+    ▬▬▬ι══════JediFocus══════════
+    use the source; get $#!% done
 ```
 
 // TODO: update README.
