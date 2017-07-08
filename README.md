@@ -1,6 +1,7 @@
 ```
- [_/::/JediFocus/::=============
- Do. Or do not. There is no try.
+,___________________.______________________________________.
+|_)_)_)_)_)JediFocus)______________________________________|
+                        Do. Or do not. There is no try.
 ```
 
 // TODO: update README.
