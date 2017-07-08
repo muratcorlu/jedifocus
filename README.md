@@ -1,7 +1,7 @@
 ```
   __ 
- |::|
- |::|    Jedi Focus 
+ |::|    Jedi Focus
+ |::| 
 _|//|_ 
 |____|  Do. Or do not.
  || |  There is no try.
