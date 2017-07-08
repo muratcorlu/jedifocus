@@ -1,5 +1,5 @@
 ```
-      +==JediFocus═══════════-
+      +==JediFocus════════════
     use the source; get $#!% done
 ```
 
