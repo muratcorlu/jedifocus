@@ -1,6 +1,6 @@
 ```
-      +==JediFocus════════════
-    use the source; get $#!% done
+  +==JediFocus════════════
+use the source; get $#!% done
 ```
 
 // TODO: update README.
