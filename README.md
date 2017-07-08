@@ -1,6 +1,6 @@
 ```
-  +==JediFocus=═══════════
-use the source; get $#!% done
+ [_[[JediFocus||================
+ Do. Or do not. There is no try.
 ```
 
 // TODO: update README.
