@@ -1,6 +1,12 @@
 ```
-  ▬▬ι═══════ﺤJediFocus-═══════ι▬▬
-    use the source to get things done
+  __ 
+ |::|    Jedi Focus
+ |::| 
+_|//|_ 
+|____|  Do. Or do not.
+ || |  There is no try.
+ | ||   
+ | ||
 ```
 
 // TODO: update README.
