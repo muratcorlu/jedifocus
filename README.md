@@ -1,11 +1,11 @@
 ```
-  __ 
+  __
  |::|    Jedi Focus
- |::| 
-_|//|_ 
-|____|  Do. Or do not.
- || |  There is no try.
- | ||   
+ |::|
+_|//|_  Do. Or do not.
+|____|  There is no try.
+ || |  
+ | ||
  | ||
 ```
 
