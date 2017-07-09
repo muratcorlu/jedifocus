@@ -10,7 +10,7 @@
  *
  * Send your comments, suggestions, and feedback to me@volkan.io                                                     l
  */
- 
+
 .card {
     position: relative;
 
@@ -25,19 +25,27 @@
     box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.55);
 
     min-height: 50px;
+    opacity: 0.65;
+    cursor: pointer;
+    line-height: 1.5em;
+}
+
+.card:hover {
+    opacity: 0.99;
 }
 
 .card__edit-action {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
     position: absolute;
     top: .5em;
     right: .5em;
-    color: #1005C9;
+    color: #b14c1b;
     padding: .5em;
     cursor: hand;
+    font-weight: normal;
 }
-.card__edit-action:hover {
-    background: #1005C9;
-    color: #ffffff;
+.card:hover .card__edit-action, .card__edit-action:hover {
+    color: #1005C9;
 }
 
 .card__text {

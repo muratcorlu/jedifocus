@@ -15,7 +15,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: #009688;
+    background: #b14c1b;
     color: #ffffff;
     padding: 20px 30px 20px 30px;
     font-size: 24px;
@@ -23,4 +23,5 @@
     width: 100%;
     text-align: center;
     opacity: 0.85;
+    z-index: 9999;
 }

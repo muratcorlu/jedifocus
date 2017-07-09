@@ -13,12 +13,34 @@
 
 body {
     font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Riga ExtraLight", Helvetica, Arial, sans-serif;
     background: #bdbdbd;
+    line-height: 1.5em;
+
+    background-color: #01262A;
+    background-image: radial-gradient(#011D20 15%, transparent 35%), radial-gradient(#011315 10%, transparent 25%);
+    background-size:60px 60px;
+    background-position: 0 0, 30px 30px;
+    background-attachment: fixed;
 }
 
 h2 {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
     font-size: 1.2em;
+    font-weight: normal;
     margin-bottom: 1em;
     padding: 1em;
+    text-align: center;
+    opacity: 0.55;
 }
+
+.column:hover h2 {
+    opacity: 0.99;
+}
+
+.column:hover {
+    opacity: 0.85;
+}
+

@@ -18,18 +18,18 @@
     z-index: 9999;
     padding: 10px;
     margin-left: 50%;
-    -webkit-transform: translateX(-50%) translateY(95px);
-    -o-transform: translateX(-50%) translateY(95px);
-    -ms-transform: translateX(-50%) translateY(95px);
-    -moz-transform: translateX(-50%) translateY(95px);
-    transform: translateX(-50%) translateY(95px);
+    -webkit-transform: translateX(-50%) translateY(25vh);
+    -o-transform: translateX(-50%) translateY(25vh);
+    -ms-transform: translateX(-50%) translateY(25vh);
+    -moz-transform: translateX(-50%) translateY(25vh);
+    transform: translateX(-50%) translateY(25vh);
     left: 0;
-    box-shadow: 15px 15px 10px 5px rgba(0,0,0,0.35);
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.35);
     -webkit-opacity: 0.95;
     -moz-opacity: 0.95;
     -o-opacity: 0.95;
     -ms-opacity: 0.95;
-    opacity: 0.95;
+    opacity: 0.99;
 }
 
 .modal-edit__heading {
@@ -41,8 +41,9 @@
     margin-right: -0.5em;
     margin-left: -0.5em;
     color: #ffffff;
-    text-align: right;
+    text-align: left;
     padding-right: 1.5em;
+    opacity: 0.99;
 }
 
 .modal-edit__label {
@@ -52,6 +53,7 @@
     margin-bottom: 0;
     margin-top: 0;
     font-weight: bold;
+    font-family: "Riga", Helvetica, Arial, sans-serif;
 }
 
 .modal-edit__description {
@@ -59,9 +61,11 @@
     height: 200px;
     font-size: 1em;
     margin: 0.5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", mono;
     padding: 0.5em;
     background: #ffffff;
+    font-size: 0.85em;
+    line-height: 1.5em;
 }
 
 .modal-edit__column {
@@ -73,10 +77,12 @@
     width: 880px;
     margin-left: 0.5em;
     margin-top: 0.6em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.85em;
 }
 
 .modal-edit__actions {
     text-align: right;
     padding-right: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }

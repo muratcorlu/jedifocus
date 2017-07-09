@@ -32,7 +32,7 @@ const ModalEdit = ( {
             />
         </div>
 
-        <h3 className="modal-edit__label"><label htmlFor="modal-edit-column">Bucket</label></h3>
+        <h3 className="modal-edit__label"><label htmlFor="modal-edit-column">State</label></h3>
         <div>
             <select id="modal-edit-column" className="modal-edit__column"
                 value={bucket}
