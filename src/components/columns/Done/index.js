@@ -19,7 +19,7 @@ import BaseColumn from '../BaseColumn';
 const Done = ( { items } ) => (
     <BaseColumn
         bucket="done"
-        heading="Done"
+        heading="Done & Dead"
         className="column__done"
         items={items}
     />

@@ -38,7 +38,7 @@ const ModalEdit = ( {
                 value={bucket}
                 onChange={( evt ) => updateBucket( bucket, id, evt.target.value )}
             >
-                <option value="bestIntentions">Good Intentions</option>
+                <option value="bestIntentions">Best Intentions</option>
                 <option value="toDo">To Do</option>
                 <option value="inProgress">In Progress</option>
                 <option value="done">Done</option>

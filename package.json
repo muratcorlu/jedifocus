@@ -1,6 +1,6 @@
 {
   "name": "jedifocus",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Gets things done the Jedi way.",
   "main": "index.js",
   "repository": "git@github.com:jsbites/jedifocus.git",

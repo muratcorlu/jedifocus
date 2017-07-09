@@ -24,10 +24,28 @@ const BestIntentions = ( { items, addNew } ) => (
         className="column__best-intentions"
         items={items}
     >
-        <ActionButton text="Add a New Goal"
-            onClick={() => addNew()}
-            className="column__action-button"
-        />
+        <center>
+            <ActionButton text="New Goal"
+                onClick={() => addNew()}
+                className="column__action-button"
+            />
+            <ActionButton text="New Context"
+                onClick={() => addNew()}
+                className="column__action-button"
+            />
+            <ActionButton text="Manage Contexts"
+                onClick={() => addNew()}
+                className="column__action-button"
+            />
+            <ActionButton text="Switch Context"
+                onClick={() => addNew()}
+                className="column__action-button"
+            />
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </center>
     </BaseColumn>
 );
 
