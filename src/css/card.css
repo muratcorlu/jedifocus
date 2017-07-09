@@ -30,10 +30,20 @@
     opacity: 0.65;
     cursor: pointer;
     line-height: 1.5em;
+
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .card:hover {
     opacity: 0.99;
+
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .card__edit-action {
@@ -45,9 +55,19 @@
     padding: .5em;
     cursor: hand;
     font-weight: normal;
+
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 .card:hover .card__edit-action, .card__edit-action:hover {
     color: #1005C9;
+
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .card__text {
