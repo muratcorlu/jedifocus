@@ -18,7 +18,7 @@ const { join } = require( 'path' );
 
 module.exports = {
     entry: {
-        app: join( __dirname, 'src/index.js' ),
+        app: join( __dirname, 'src/index.js' )
     },
 
     output: {

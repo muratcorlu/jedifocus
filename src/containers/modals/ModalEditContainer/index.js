@@ -13,30 +13,64 @@
  *  ||||
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import * as actions from './actions';
 import { connect } from 'kink';
 
+import { on, off } from 'dombili';
+
 import ModalEdit from '../../../components/modals/ModalEdit';
 
-const ModalEditContainer = ( {
-    show, bucket, item, id,
-    updateDescription, updateBucket, saveGoal,
-    bestIntentions, inProgress, toDo
-} ) => ( <ModalEdit
-    bestIntentions={bestIntentions}
-    bucket={bucket}
-    id={id}
-    inProgress={inProgress}
-    item={item}
-    saveGoal={saveGoal}
-    show={show}
-    toDo={toDo}
-    updateBucket={updateBucket}
-    updateDescription={updateDescription}
-/> );
+import { onMouseDown, onMouseMove, onMouseUp, initializeState } from './events';
+
+const body = document.body;
+
+class ModalEditContainer extends Component {
+    constructor( props ) {
+        super( props );
+
+        initializeState( this );
+
+        this.onMouseDown = this.onMouseDown.bind( this );
+        this.onMouseMove = this.onMouseMove.bind( this );
+        this.onMouseUp = this.onMouseUp.bind( this );
+    }
+
+    onMouseDown( evt ) { onMouseDown( evt, this ); }
+    onMouseMove( evt ) { onMouseMove( evt, this ); }
+    onMouseUp( evt ) { onMouseUp( evt, this ); }
+
+    componentDidMount() {
+        on( body, 'mousedown', this.onMouseDown );
+        on( body, 'mousemove', this.onMouseMove );
+        on( body, 'mouseup', this.onMouseUp );
+    }
+
+    componentBeforeUnmount() {
+        off( body, 'mousedown', this.onMouseDown );
+        off( body, 'mousemove', this.onMouseMove );
+        off( body, 'mouseup', this.onMouseUp );
+    }
+
+    render() {
+        return (
+            <ModalEdit
+                bestIntentions={this.props.bestIntentions}
+                bucket={this.props.bucket}
+                id={this.props.id}
+                inProgress={this.props.inProgress}
+                item={this.props.item}
+                saveGoal={this.props.saveGoal}
+                show={this.props.show}
+                toDo={this.props.toDo}
+                updateBucket={this.props.updateBucket}
+                updateDescription={this.props.updateDescription}
+            />
+        );
+    }
+}
 
 ModalEditContainer.propTypes = {
     bestIntentions: PropTypes.object.isRequired,

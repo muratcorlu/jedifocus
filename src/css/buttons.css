@@ -56,3 +56,20 @@
     padding: 0.5em;
     display: inline-block;
 }
+
+.modal-edit__action-button {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.modal-edit__action-button--cancel {
+    background: transparent;
+    color: #555555;
+    text-decoration: none;
+
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
+}

@@ -46,6 +46,7 @@
     text-align: left;
     padding-right: 1.5em;
     opacity: 0.99;
+    cursor: move;
 }
 
 .modal-edit__label {
