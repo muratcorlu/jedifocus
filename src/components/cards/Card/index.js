@@ -19,7 +19,14 @@ import PropTypes from 'prop-types';
 const Card = ( { item, bucket, id, editCard } ) => (
     <div className="card">
         <span className="card__text">{item}</span>
-        <a href="#" className="card__edit-action" onClick={()=> editCard( bucket, id )}>edit</a>
+        <a href="#" className="card__edit-action"
+            onClick={
+                ( evt ) => {
+                    evt.preventDefault();
+                    editCard( bucket, id );
+                }
+            }
+        >edit</a>
     </div> );
 
 Card.propTypes = {
