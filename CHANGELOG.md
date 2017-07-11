@@ -9,6 +9,12 @@ _|//|_  Do. Or do not.
  | ||
 ```
 
+## **Jedi Focus** (*v.0.3.0*)
+
+* Added drag capability to the modal window.
+* Fixed an anchoring problem with the edit links.
+* Minor stylistic changes.
+
 ## **Jedi Focus** (*v.0.2.0*)
 
 * Muted colors, and did some visual changes to make the app more usable.
