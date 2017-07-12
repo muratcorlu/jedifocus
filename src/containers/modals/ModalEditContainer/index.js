@@ -62,7 +62,9 @@ class ModalEditContainer extends Component {
                 id={this.props.id}
                 inProgress={this.props.inProgress}
                 item={this.props.item}
-                saveGoal={this.props.saveGoal}
+                saveGoal={( data ) => this.props.saveGoal(
+                    this.props.userId, this.props.context, data
+                )}
                 show={this.props.show}
                 toDo={this.props.toDo}
                 updateBucket={this.props.updateBucket}
@@ -75,6 +77,7 @@ class ModalEditContainer extends Component {
 ModalEditContainer.propTypes = {
     bestIntentions: PropTypes.object.isRequired,
     bucket: PropTypes.string.isRequired,
+    context: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     inProgress: PropTypes.object.isRequired,
     item: PropTypes.string.isRequired,
@@ -82,7 +85,8 @@ ModalEditContainer.propTypes = {
     show: PropTypes.bool.isRequired,
     toDo: PropTypes.object.isRequired,
     updateBucket: PropTypes.func.isRequired,
-    updateDescription: PropTypes.func.isRequired
+    updateDescription: PropTypes.func.isRequired,
+    userId: PropTypes.string.isRequired
 };
 
 export default connect(
@@ -91,10 +95,12 @@ export default connect(
     ( state ) => ( {
         bestIntentions: state.bestIntentions ? state.bestIntentions.toJSON() : {},
         bucket: state.modalBucket,
+        context: state.context,
         id: state.modalId,
         inProgress: state.inProgress ? state.inProgress.toJSON() : {},
         item: state.modalItem,
         show: state.modalVisible,
-        toDo: state.toDo ? state.toDo.toJSON() : {}
+        toDo: state.toDo ? state.toDo.toJSON() : {},
+        userId: state.userId
     } )
 );

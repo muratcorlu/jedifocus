@@ -6,5 +6,6 @@
     "storageBucket": "$YOUR_FIREBASE_STORAGE_BUCKET",
     "messagingSenderId": "$YOUR_FIREBASE_MESSAGE_SENDER_ID",
     "email": "$YOUR_FIREBASE_EMAIL",
-    "password": "$YOUR_FIREBASE_PASSWORD"
+    "password": "$YOUR_FIREBASE_PASSWORD",
+    "fbUserId": "$YOUR_FB_USER_ID"
 }

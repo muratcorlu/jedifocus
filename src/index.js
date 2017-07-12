@@ -21,13 +21,15 @@ import './css';
 
 import * as config from './config.json';
 const email = config.email;
+const fbUserId = config.fbUserId;
 const password = config.password;
 delete config.email;
 delete config.password;
+delete config.fbUserId;
 
 import AppContainer from './containers/app/AppContainer';
 
 render(
-    <AppContainer config={config} email={email} password={password} />,
+    <AppContainer config={config} email={email} password={password} userId={fbUserId} />,
     $( '#react-root' )
 );

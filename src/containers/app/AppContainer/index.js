@@ -28,7 +28,9 @@ class AppContainer extends Component {
         this.props.fetchAppState(
             this.props.config,
             this.props.email,
-            this.props.password
+            this.props.password,
+            this.props.userId,
+            this.props.context
         );
     }
 
@@ -42,24 +44,29 @@ AppContainer.propTypes = {
     email: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired,
     fetchAppState: PropTypes.func.isRequired,
-    appStateFetched: PropTypes.bool.isRequired
+    appStateFetched: PropTypes.bool.isRequired,
+    userId: PropTypes.string.isRequired,
+    context: PropTypes.string.isRequired
 };
 
 const ConnectedAppContainer = connect(
     AppContainer, actions,
-    ( { appStateFetched } ) => ( { appStateFetched } )
+    ( { appStateFetched, userId, context } ) => ( { appStateFetched, userId, context } )
 );
 
-const ProvidedAppContainer = ( { config, email, password } ) => (
-    <Provider store={store()}>
-        <ConnectedAppContainer config={config} email={email} password={password} />
+const ProvidedAppContainer = ( { config, email, password, userId } ) => (
+    <Provider store={store( { userId } ) }>
+        <ConnectedAppContainer
+            config={config} email={email} password={password} userId={userId}
+        />
     </Provider>
 );
 
 ProvidedAppContainer.propTypes = {
     config: PropTypes.object.isRequired,
     email: PropTypes.string.isRequired,
-    password: PropTypes.string.isRequired
+    password: PropTypes.string.isRequired,
+    userId: PropTypes.string.isRequired
 };
 
 export default ProvidedAppContainer;

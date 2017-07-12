@@ -16,15 +16,16 @@
 import { fromJS as makeImmutable } from 'immutable';
 
 const zeroState = {
-    bestIntentions: makeImmutable( {} ),
-    toDo: makeImmutable( {} ),
-    inProgress: makeImmutable( {} ),
-    done: makeImmutable( {} ),
     appStateFetched: false,
-    modalVisible: false,
+    bestIntentions: makeImmutable( {} ),
+    context: 'default',
+    done: makeImmutable( {} ),
+    inProgress: makeImmutable( {} ),
+    modalBucket: '',
     modalId: '',
     modalItem: '',
-    modalBucket: ''
+    modalVisible: false,
+    toDo: makeImmutable( {} )
 };
 
 export default zeroState;

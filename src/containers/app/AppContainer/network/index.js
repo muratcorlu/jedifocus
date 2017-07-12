@@ -17,7 +17,7 @@ import * as db from '../../../../lib/io/firebase';
 
 let whenDbFetched = null;
 
-const sendFetchAppStateRequest = ( config, email, password ) => {
+const sendFetchAppStateRequest = ( config, email, password, userId, context ) => {
     db.initialize( config );
 
     if ( whenDbFetched ) {
@@ -27,9 +27,9 @@ const sendFetchAppStateRequest = ( config, email, password ) => {
     whenDbFetched = db
         .login( email, password )
         .then( () => Promise.all( [
-            db.bestIntentions(),
-            db.toDo(),
-            db.inProgress()
+            db.bestIntentions( userId, context ),
+            db.toDo( userId, context ),
+            db.inProgress( userId, context )
         ] ) );
 
     return whenDbFetched;

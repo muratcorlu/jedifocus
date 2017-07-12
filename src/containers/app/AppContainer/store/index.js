@@ -27,6 +27,10 @@ const initialize = ( reducer = rootReducer, initialState = zeroState ) =>
         applyMiddleware( thunkMiddleware )
     );
 
+const initializeWithUser = ( { userId } ) => initialize(
+    rootReducer, { ...zeroState, userId }
+);
+
 export { getInitialState };
 
-export default initialize;
+export default initializeWithUser;

@@ -33,10 +33,10 @@ const receiveAppState = ( data ) => ( {
     } )
 } );
 
-const fetchAppState = ( config, email, password ) => ( dispatch ) => {
+const fetchAppState = ( config, email, password, userId, context ) => ( dispatch ) => {
     dispatch( requestAppState() );
 
-    sendFetchAppStateRequest( config, email, password )
+    sendFetchAppStateRequest( config, email, password, userId, context )
         .then( ( data ) => dispatch( receiveAppState( data ) ) );
 };
 

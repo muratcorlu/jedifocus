@@ -13,31 +13,33 @@
 
 const initialize = ( config ) => window.firebase.initializeApp( config );
 
-const login = ( email, password ) => window.firebase
-    .auth().signInWithEmailAndPassword( email, password );
+const login = ( email, password ) => window.firebase.auth()
+    .signInWithEmailAndPassword( email, password );
 
-const refOnce = ( path ) => window.firebase.database()
-    .ref( path ).once( 'value' )
+const ref = ( userId, context, path ) => `${userId}/${context}/${path}`;
+
+const refOnce = ( userId, context, path ) => window.firebase.database()
+    .ref( ref( userId, context, path ) ).once( 'value' )
     .then( ( snapshot ) => snapshot.val() );
 
-const bestIntentions = () => refOnce( '/bestIntentions' );
+const bestIntentions = ( userId, context ) => refOnce( userId, context, 'bestIntentions' );
 
-const toDo = () => refOnce( '/toDo' );
+const toDo = ( userId, context ) => refOnce( userId, context, 'toDo' );
 
-const inProgress = () => refOnce( '/inProgress' );
+const inProgress = ( userId, context ) => refOnce( userId, context, 'inProgress' );
 
-const done = () => refOnce( '/done' );
+const saveItem = ( userId, context, path, data ) => window.firebase.database()
+    .ref( ref( userId, context, path ) )
+    .set( data );
 
-const saveItem = ( path, data ) => window.firebase.database().ref( path ).set( data );
+const saveToDo = ( userId, context, data ) => saveItem( userId, context, 'toDo', data );
+const saveInProgress = ( userId, context, data ) => saveItem( userId, context, 'inProgress', data );
+const saveBestIntentions = ( userId, context, data ) => saveItem( userId, context, 'bestIntentions', data );
 
-const saveToDo = ( data ) => saveItem( '/toDo', data );
-const saveInProgress = ( data ) => saveItem( '/inProgress', data );
-const saveBestIntentions = ( data ) => saveItem( '/bestIntentions', data );
-
-const saveAll = ( data ) => {
-    saveToDo( data.toDo );
-    saveInProgress( data.inProgress );
-    saveBestIntentions( data.bestIntentions );
+const saveAll = ( userId, context, data ) => {
+    saveToDo( userId, context, data.toDo );
+    saveInProgress( userId, context, data.inProgress );
+    saveBestIntentions( userId, context, data.bestIntentions );
 };
 
-export { initialize, login, bestIntentions, toDo, inProgress, done, saveAll };
+export { initialize, login, bestIntentions, toDo, inProgress, saveAll };

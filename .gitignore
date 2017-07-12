@@ -81,3 +81,5 @@ public/js/bundles/
 src/config.json
 
 public/css/bundles/
+
+\.DS_Store

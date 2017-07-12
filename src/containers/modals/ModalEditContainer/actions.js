@@ -23,8 +23,8 @@ import {
 
 import { sendSaveAllRequest } from './network';
 
-const saveGoal = ( data ) => {
-    sendSaveAllRequest( data );
+const saveGoal = ( userId, context, data ) => {
+    sendSaveAllRequest( userId, context, data );
 
     return { type: JFDI_SAVE_GOAL };
 };
