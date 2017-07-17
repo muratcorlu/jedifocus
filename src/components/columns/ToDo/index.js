@@ -23,6 +23,7 @@ const ToDo = ( { items } ) => (
         bucket="toDo"
         heading="To Do"
         className="column__to-do"
+        headingClassName="heading__to-do"
         items={items}
     />
 );

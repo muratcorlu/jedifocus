@@ -16,20 +16,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import BaseColumn from '../../../components/columns/BaseColumn';
+import * as actions from './actions';
+import { connect } from 'kink';
+import { returnObject } from 'delgado';
 
-const BestIntentions = ( { items } ) => (
-    <BaseColumn
-        bucket="bestIntentions"
-        heading="Best Intentions"
-        className="column__best-intentions"
-        headingClassName="heading__best-intentions"
-        items={items}
-    />
+import Navigation from '../../../components/navigation/Navigation';
+
+const NavigationContainer = ( { addNew } ) => (
+    <Navigation addNew={addNew} />
 );
 
-BestIntentions.propTypes = {
-    items: PropTypes.object.isRequired
+NavigationContainer.propTypes = {
+    addNew: PropTypes.func.isRequired
 };
 
-export default BestIntentions;
+export default connect( NavigationContainer, actions, returnObject );

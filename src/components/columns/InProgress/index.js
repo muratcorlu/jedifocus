@@ -23,6 +23,7 @@ const InProgress = ( { items } ) => (
         bucket="inProgress"
         heading="In Progress"
         className="column__in-progress"
+        headingClassName="heading__in-progress"
         items={items}
     />
 );

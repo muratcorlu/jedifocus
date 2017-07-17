@@ -15,10 +15,18 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import showdown from 'showdown';
+
+showdown.setFlavor( 'github' );
+
+const converter = new showdown.Converter( {
+} );
+
+const markdown = ( text ) => converter.makeHtml( text );
 
 const Card = ( { item, bucket, id, editCard } ) => (
     <div className="card">
-        <span className="card__text">{item}</span>
+        <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
         <a href="#" className="card__edit-action"
             onClick={
                 ( evt ) => {

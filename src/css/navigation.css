@@ -1,0 +1,65 @@
+/*   __
+ *  |::|    Jedi Focus
+ *  |::|
+ * _|//|_  Do. Or do not.
+ * |____|  There is no try.
+ *  || |
+ *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *  || |
+ *  || |   MIT Licensed — See LICENSE.md
+ *  || |
+ *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
+ *  ||||
+ */
+
+.navigation-main {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    width: 110px;
+    padding: 18px;
+
+    opacity: 0.65;
+
+    font-size: 15px;
+
+    transition: all 0.25s ease-in-out;
+}
+
+.navigation-main:hover {
+    opacity: 0.99;
+    transition: all 0.25s ease-in-out;
+}
+
+.navigation-main__action-button {
+    text-align: left;
+    width: 180px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.navigation-context {
+    color: #ffffff;
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    text-align: right;
+
+    margin: 0 18px -15px 18px;
+    padding: 9px 18px 9px 18px;
+
+    position: relative;
+    right: 210px;
+    width: 300px;
+
+    opacity: 0.35;
+    line-height: 1.2em;
+}
+
+.navigation-context__context-name {
+    color: #ffffff;
+}
+
+.navigation-context__context-label {
+    font-size: 16px;
+}

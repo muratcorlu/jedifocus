@@ -24,19 +24,21 @@ const ModalEdit = ( {
     bestIntentions, inProgress, toDo
 } ) => show ? (
     <div className="modal-edit">
-        <h2 className="modal-edit__heading">Edit Your Goal</h2>
+        <h2 className="modal-edit__heading"><label htmlFor="modal-edit-description">Describe Your Goal</label></h2>
 
-        <h3 className="modal-edit__label"><label htmlFor="modal-edit-description">Description</label></h3>
         <div>
-            <textarea id="modal-edit-description" className="modal-edit__description" autoFocus
+            <textarea id="modal-edit-description" className="modal-edit__description"
                 value={item}
                 onChange={( evt ) => updateDescription( bucket, id, evt.target.value )}
+                placeholder="What would you like to do?"
+                autoFocus={!item}
             />
         </div>
 
-        <h3 className="modal-edit__label"><label htmlFor="modal-edit-column">State</label></h3>
+        <h3 className="modal-edit__label modal-edit__label--floated modal-edit__label--floated-first">
+            <label htmlFor="modal-edit-column">Stage</label></h3>
         <div>
-            <select id="modal-edit-column" className="modal-edit__column"
+            <select id="modal-edit-column" className="modal-edit__selection"
                 value={bucket}
                 onChange={( evt ) => updateBucket( bucket, id, evt.target.value )}
             >
@@ -44,6 +46,18 @@ const ModalEdit = ( {
                 <option value="toDo">To Do</option>
                 <option value="inProgress">In Progress</option>
                 <option value="done">Done</option>
+            </select>
+        </div>
+
+        <h3 className="modal-edit__label modal-edit__label--floated">
+            <label htmlFor="modal-edit-column">Context</label></h3>
+        <div>
+            <select id="modal-edit-column" className="modal-edit__selection"
+                value={bucket}
+                onChange={( evt ) => updateBucket( bucket, id, evt.target.value )}
+            >
+                <option value="default">Default</option>
+                <option value="default">Create New…</option>
             </select>
         </div>
 

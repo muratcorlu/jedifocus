@@ -18,9 +18,9 @@ import PropTypes from 'prop-types';
 
 import CardContainer from '../../../containers/cards/CardContainer';
 
-const BaseColumn = ( { heading, items, className, bucket, children } ) => (
+const BaseColumn = ( { heading, items, className, headingClassName, bucket, children } ) => (
     <div className={`column ${className}`}>
-        <h2>{heading}</h2>
+        <h2 className={headingClassName}>{heading}</h2>
 
         <div className="column__body">
             { Object.keys( items ).map( ( key ) => {
@@ -34,11 +34,17 @@ const BaseColumn = ( { heading, items, className, bucket, children } ) => (
     </div>
 );
 
+BaseColumn.defaultProps = {
+    className: '',
+    headingClassName: ''
+};
+
 BaseColumn.propTypes = {
     bucket: PropTypes.string.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
     heading: PropTypes.string.isRequired,
+    headingClassName: PropTypes.string,
     items: PropTypes.object.isRequired
 };
 

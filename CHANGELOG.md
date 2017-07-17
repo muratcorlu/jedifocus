@@ -9,6 +9,10 @@ _|//|_  Do. Or do not.
  | ||
 ```
 
+## **Jedi Focus** (*v.0.4.0*)
+
+* Added markdown support, now you can write your card in [**GFM**](https://help.github.com/articles/about-writing-and-formatting-on-github/)
+
 ## **Jedi Focus** (*v.0.3.0*)
 
 * Added drag capability to the modal window.

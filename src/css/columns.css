@@ -1,15 +1,16 @@
-
-/*
- * ▬▬ι═══════ﺤJediFocus-═══════ι▬▬
- *   use the source to get things done
- *
- * This project is a part of the “Byte-Sized JavaScript” videocasts.
- *
- * You can watch “Byte-Sized JavaScript” at: https://bit.ly/bytesized
- *
- * MIT Licensed — See LICENSE.md
- *
- * Send your comments, suggestions, and feedback to me@volkan.io                                                     l
+/*   __
+ *  |::|    Jedi Focus
+ *  |::|
+ * _|//|_  Do. Or do not.
+ * |____|  There is no try.
+ *  || |
+ *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *  || |
+ *  || |   MIT Licensed — See LICENSE.md
+ *  || |
+ *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
+ *  ||||
  */
 
 .container {
@@ -22,40 +23,47 @@
 .column {
     flex-basis: 25%;
     opacity: 0.65;
+    transition: all 0.25s ease-in-out;
+}
+
+.column:hover {
+    opacity: 0.85;
+    transition: all 0.25s ease-in-out;
 }
 
 .column__best-intentions {
     background: #2C3742;
 }
 
-.column__best-intentions h2 {
-    color: #ffffff;
-    background: #35495d;
-}
 
 .column__to-do {
     background: #4C423D;
-}
-
-.column__to-do h2 {
-    color: #ffffff;
-    background: #d3541a;
 }
 
 .column__in-progress {
     background: #394F5E;
 }
 
-.column__in-progress h2 {
-    color: #ffffff;
-    background: #3081b7;
-}
-
 .column__done {
     background: #2B564E;
 }
 
-.column__done h2 {
+.heading__best-intentions {
+    color: #ffffff;
+    background: #35495d;
+}
+
+.heading__to-do {
+    color: #ffffff;
+    background: #d3541a;
+}
+
+.heading__in-progress {
+    color: #ffffff;
+    background: #3081b7;
+}
+
+.heading__done {
     color: #ffffff;
     background: #239f86;
 }

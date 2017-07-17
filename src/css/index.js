@@ -20,3 +20,4 @@ import './card.css';
 import './columns.css';
 import './loading.css';
 import './modal.css';
+import './navigation.css';

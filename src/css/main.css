@@ -16,48 +16,27 @@
 body {
     font-size: 18px;
     font-family: "Riga ExtraLight", Helvetica, Arial, sans-serif;
-    background: #bdbdbd;
-    line-height: 1.5em;
+    line-height: 24px;
 
-    background-color: #01262A;
-    background-image: radial-gradient(#011D20 15%, transparent 35%), radial-gradient(#011315 10%, transparent 25%);
-    background-size:60px 60px;
+    background: #01262A;
+    background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
     background-attachment: fixed;
+    background-image: radial-gradient(#011D20 15%, transparent 35%), radial-gradient(#011315 10%, transparent 25%);
 }
 
 h2 {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 1.2em;
+    font-family: "Riga ExtraLight", Helvetica, Arial, sans-serif;
+    font-size: 24px;
     font-weight: normal;
-    margin-bottom: 1em;
-    padding: 1em;
+    letter-spacing: 1px;
+
+    margin-bottom: 24px;
+    padding: 12px;
     text-align: center;
-    opacity: 0.55;
 
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
 }
 
-.column:hover h2 {
-    opacity: 0.99;
-
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -webkit-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-}
-
-.column:hover {
-    opacity: 0.85;
-
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -webkit-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-}
-
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}

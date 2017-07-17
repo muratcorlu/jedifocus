@@ -23,6 +23,7 @@ const Done = ( { items } ) => (
         bucket="done"
         heading="Done & Dead"
         className="column__done"
+        headingClassName="heading__done"
         items={items}
     />
 );

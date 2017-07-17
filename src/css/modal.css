@@ -14,78 +14,89 @@
  */
 
 .modal-edit {
-    position: fixed;
-    width: 900px;
-    background: #bdbdbd;
+    width: 625px;
+
     z-index: 9999;
-    padding: 10px;
-    margin-left: 50%;
-    -webkit-transform: translateX(-50%) translateY(25vh);
-    -o-transform: translateX(-50%) translateY(25vh);
-    -ms-transform: translateX(-50%) translateY(25vh);
-    -moz-transform: translateX(-50%) translateY(25vh);
-    transform: translateX(-50%) translateY(25vh);
+    position: fixed;
     left: 0;
+    top: 0;
+
+    padding: 10px;
+
+    background: #bdbdbd;
     box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.35);
-    -webkit-opacity: 0.95;
-    -moz-opacity: 0.95;
-    -o-opacity: 0.95;
-    -ms-opacity: 0.95;
-    opacity: 0.99;
+    border-radius: 2px;
+    opacity: 0.95;
 }
 
 .modal-edit__heading {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-    padding: 1em;
-    background: #37474f;
-    margin-top: -0.5em;
-    margin-right: -0.5em;
-    margin-left: -0.5em;
-    color: #ffffff;
+    margin: -10px -10px 20px -10px;
+    padding: 13px;
+
+    font-size: 20px;
+    font-family: "Riga ExtraLight", Arial, Helvetica, sans-serif;
     text-align: left;
-    padding-right: 1.5em;
-    opacity: 0.99;
+    color: #fff;
+
     cursor: move;
+
+    background: #2c3e50;
+    background: linear-gradient(to bottom, #060D13, #2c3e50);
+    border-radius: 2px 2px 0 0;
+    opacity: 0.8;
 }
 
 .modal-edit__label {
-    font-size: 1.2em;
-    margin: 1em;
-    margin-left: 0.5em;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 1px 10px 10px 0;
+
+    font-size: 18px;
     font-weight: bold;
     font-family: "Riga", Helvetica, Arial, sans-serif;
 }
 
-.modal-edit__description {
-    width: 860px;
-    height: 200px;
-    font-size: 1em;
-    margin: 0.5em;
-    font-family: "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", mono;
-    padding: 0.5em;
-    background: #ffffff;
-    font-size: 0.85em;
-    line-height: 1.5em;
+.modal-edit__label--floated {
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: -2px;
 }
 
-.modal-edit__column {
-    font-size: inherit;
-    margin: 20px;
+.modal-edit__label--floated-first {
+    margin-left: 4px
+}
+
+.modal-edit__description {
+    background: #ffffff;
+
+    font-family: "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+    font-size: 14px;
+
+    line-height: 22px;
+    width: 607px;
+    height: 187px;
+
+    margin: -10px 10px 10px 0;
+    padding: 7px;
+}
+
+.modal-edit__selection {
     padding: 5px 10px;
-    text-overflow: ellipsis;
+    margin: -2px 0 0 -5px;
+
     white-space: nowrap;
-    width: 880px;
-    margin-left: 0.5em;
-    margin-top: 0.6em;
-    font-size: 0.85em;
+    text-overflow: ellipsis;
+    font-size: 14px;
+
+    float: left;
+
+    width: 150px;
 }
 
 .modal-edit__actions {
     text-align: right;
-    padding-right: 0.5em;
-    margin-bottom: 1em;
-    margin-top: 1em;
+
+    float: right;
+
+    margin: -5px 3px 10px 0;
 }
