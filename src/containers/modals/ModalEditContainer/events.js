@@ -19,6 +19,13 @@ import {
     tick, untick
 } from 'dombili';
 
+// To dombili.
+const getStyle = ( elm, attribute ) => {
+    if ( !elm ) { return null; }
+
+    return elm.style[attribute] || window.getComputedStyle( elm ).getPropertyValue( attribute );
+};
+
 const findModalHeading = ( elm ) => elm.className === 'modal-edit__heading';
 
 const initializeState = ( component ) => {
@@ -42,8 +49,9 @@ const onMouseDown = ( evt, component ) => {
     component.dragging = true;
     component.start.clientX = evt.clientX;
     component.start.clientY = evt.clientY;
-    component.start.left = parseInt( component.modal.style.left, 10 ) || 0;
-    component.start.top = parseInt( component.modal.style.top, 10 ) || 0;
+
+    component.start.left = parseInt( getStyle( component.modal, 'left' ), 10 ) || 0;
+    component.start.top = parseInt( getStyle( component.modal, 'top' ), 10 ) || 0;
 };
 
 const onMouseUp = ( evt, component ) => { component.dragging = false; };

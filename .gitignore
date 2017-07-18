@@ -74,6 +74,8 @@ typings/
 
 # IDE
 .vscode
+.history
+.idea
 
 public/index\.html
 public/js/bundles/

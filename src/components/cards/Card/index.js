@@ -25,16 +25,16 @@ const converter = new showdown.Converter( {
 const markdown = ( text ) => converter.makeHtml( text );
 
 const Card = ( { item, bucket, id, editCard } ) => (
-    <div className="card">
-        <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
-        <a href="#" className="card__edit-action"
-            onClick={
-                ( evt ) => {
-                    evt.preventDefault();
-                    editCard( bucket, id );
-                }
+    <div className="card"
+        onClick={
+            ( evt ) => {
+                evt.preventDefault();
+                editCard( bucket, id );
             }
-        >edit</a>
+        }
+    >
+        <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
+        <a href="#" className="card__edit-action" onClick={( evt ) => evt.preventDefault()}>edit</a>
     </div> );
 
 Card.propTypes = {

@@ -24,11 +24,15 @@
     flex-basis: 25%;
     opacity: 0.65;
     transition: all 0.25s ease-in-out;
+
+    will-change:opacity;
 }
 
 .column:hover {
     opacity: 0.85;
     transition: all 0.25s ease-in-out;
+
+    will-change:opacity;
 }
 
 .column__best-intentions {

@@ -30,12 +30,16 @@
     line-height: 1.5em;
 
     transition: all 0.25s ease-in-out;
+
+    will-change: opacity;
 }
 
 .card:hover {
     background: #ffffff;
     opacity: 0.99;
     transition: all 0.25s ease-in-out;
+
+    will-change:opacity;
 }
 
 .card__edit-action {
@@ -80,6 +84,49 @@
 
 .card__text ul {
     margin-bottom: 16px;
+}
+
+.card__text h1 {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: bold; text-align: left;margin: 0;
+    padding: 0; margin-bottom: 16px;
+}
+
+.card__text h2 {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: bold; text-align: left;margin: 0;
+    padding: 0; margin-bottom: 16px;
+}
+
+.card__text h3 {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: bold; text-align: left;
+    margin: 0; padding: 0; margin-bottom: 16px;
+}
+
+.card__text h4 {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: bold; text-align: left;margin: 0;
+    padding: 0; margin-bottom: 16px;
+}
+
+.card__text h5 {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: bold; text-align: left;
+    margin: 0; padding: 0; margin-bottom: 16px;
+}
+
+.card__text h6 {
+    font-family: "Riga", Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: bold; text-align: left;
+    margin: 0; padding: 0; margin-bottom: 16px;
+}
+
+.card__text code {
+    font-family: "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+    font-size: 14px;
+    padding: 3px;
+    background: #dfdfcf;
 }
 
 .card__text strong, .cart__text b {
