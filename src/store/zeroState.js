@@ -13,10 +13,20 @@
  *  ||||
  */
 
-import { JFDI_ADD_NEW, JFDI_CHANGE_CONTEXT } from '../../../lib/constants';
+import { fromJS as makeImmutable } from 'immutable';
 
-const addNew = () => ( { type: JFDI_ADD_NEW } );
+const zeroState = {
+    appStateFetched: false,
+    bestIntentions: makeImmutable( {} ),
+    context: 'default',
+    done: makeImmutable( {} ),
+    inProgress: makeImmutable( {} ),
+    modalBucket: '',
+    modalId: '',
+    modalItem: '',
+    modalVisible: false,
+    modalContextVisible: false,
+    toDo: makeImmutable( {} )
+};
 
-const changeContext = () => ( { type: JFDI_CHANGE_CONTEXT } );
-
-export { addNew, changeContext };
+export default zeroState;

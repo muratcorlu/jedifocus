@@ -85,3 +85,5 @@ src/config.json
 public/css/bundles/
 
 \.DS_Store
+
+stats\.json

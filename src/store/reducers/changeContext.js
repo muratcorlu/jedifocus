@@ -13,10 +13,10 @@
  *  ||||
  */
 
-import { JFDI_ADD_NEW, JFDI_CHANGE_CONTEXT } from '../../../lib/constants';
+const changeContext = ( state = {} ) => ( {
+    ...state,
+    modalVisible: false,
+    modalContextVisible: true
+} );
 
-const addNew = () => ( { type: JFDI_ADD_NEW } );
-
-const changeContext = () => ( { type: JFDI_CHANGE_CONTEXT } );
-
-export { addNew, changeContext };
+export default changeContext;

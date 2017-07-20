@@ -25,14 +25,14 @@
     opacity: 0.65;
     transition: all 0.25s ease-in-out;
 
-    will-change:opacity;
+    will-change: opacity;
 }
 
 .column:hover {
     opacity: 0.85;
     transition: all 0.25s ease-in-out;
 
-    will-change:opacity;
+    will-change: opacity;
 }
 
 .column__best-intentions {
@@ -55,19 +55,59 @@
 .heading__best-intentions {
     color: #ffffff;
     background: #35495d;
+    min-width: 200px;
+    opacity: 0.35;
+    will-change: opacity;
+    transition: all 0.25s ease-in-out;
+}
+
+.column:hover .heading__best-intentions {
+    opacity: 0.99;
+    will-change: opacity;
+    transition: all 0.25s ease-in-out;
 }
 
 .heading__to-do {
     color: #ffffff;
     background: #d3541a;
+    min-width: 200px;
+    opacity: 0.35;
+    will-change: opacity;
+    transition: all 0.25s ease-in-out;
+}
+
+.column:hover .heading__to-do {
+    opacity: 0.99;
+    will-change: opacity;
+    transition: all 0.25s ease-in-out;
 }
 
 .heading__in-progress {
     color: #ffffff;
     background: #3081b7;
+    min-width: 200px;
+    opacity: 0.35;
+    transition: all 0.25s ease-in-out;
+}
+
+.column:hover .heading__in-progress {
+    opacity: 0.99;
+    will-change: opacity;
+    transition: all 0.25s ease-in-out;
 }
 
 .heading__done {
     color: #ffffff;
     background: #239f86;
+    min-width: 200px;
+    opacity: 0.35;
+    will-change: opacity;
+    transition: all 0.25s ease-in-out;
 }
+
+.column:hover .heading__done {
+    opacity: 0.99;
+    will-change: opacity;
+    transition: all 0.25s ease-in-out;
+}
+

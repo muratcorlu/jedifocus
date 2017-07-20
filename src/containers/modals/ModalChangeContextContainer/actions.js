@@ -15,17 +15,11 @@
 
 import { fromJS as makeImmutable } from 'immutable';
 
-const zeroState = {
-    appStateFetched: false,
-    bestIntentions: makeImmutable( {} ),
-    context: 'default',
-    done: makeImmutable( {} ),
-    inProgress: makeImmutable( {} ),
-    modalBucket: '',
-    modalId: '',
-    modalItem: '',
-    modalVisible: false,
-    toDo: makeImmutable( {} )
-};
+import { JFDI_UPDATE_CONTEXT } from '../../../lib/constants';
 
-export default zeroState;
+const changeContext = ( context ) => ( {
+    type: JFDI_UPDATE_CONTEXT,
+    payload: makeImmutable( { context } )
+} );
+
+export { changeContext };

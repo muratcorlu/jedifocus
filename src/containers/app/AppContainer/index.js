@@ -21,7 +21,7 @@ import App from '../../../components/app/App';
 
 import { connect } from 'kink';
 import * as actions from './actions';
-import store from './store';
+import store from '../../../store';
 
 class AppContainer extends Component {
     componentDidMount() {

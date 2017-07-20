@@ -13,8 +13,14 @@
  *  ||||
  */
 
-import { saveAll } from '../../../lib/io/firebase';
+import { saveAll, saveGoal, removeGoalFromOtherBuckets } from '../../../lib/io/firebase';
 
 const sendSaveAllRequest = saveAll;
+const sendSaveGoalRequest = saveGoal;
+const sendRemoveFromOtherBucketsRequest = removeGoalFromOtherBuckets;
 
-export { sendSaveAllRequest };
+export {
+    sendSaveAllRequest,
+    sendSaveGoalRequest,
+    sendRemoveFromOtherBucketsRequest
+};

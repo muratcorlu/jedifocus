@@ -20,10 +20,12 @@ const initialize = ( config ) => db().initializeApp( config );
 const login = ( email, password ) => db().auth()
     .signInWithEmailAndPassword( email, password );
 
-const ref = ( userId, context, path ) => `${userId}/${context}/${path}`;
+const refGoal = ( userId, context, bucket, goalId ) => `${userId}/${context}/${bucket}/${goalId}`;
+
+const refColumn = ( userId, context, path ) => `${userId}/${context}/${path}`;
 
 const refOnce = ( userId, context, path ) => db().database()
-    .ref( ref( userId, context, path ) ).once( 'value' )
+    .ref( refColumn( userId, context, path ) ).once( 'value' )
     .then( ( snapshot ) => snapshot.val() );
 
 const bestIntentions = ( userId, context ) => refOnce( userId, context, 'bestIntentions' );
@@ -33,9 +35,10 @@ const toDo = ( userId, context ) => refOnce( userId, context, 'toDo' );
 const inProgress = ( userId, context ) => refOnce( userId, context, 'inProgress' );
 
 const saveItem = ( userId, context, path, data ) => db().database()
-    .ref( ref( userId, context, path ) )
+    .ref( refColumn( userId, context, path ) )
     .set( data );
 
+// refactor bucket names as symbolic constants.
 const saveToDo = ( userId, context, data ) => saveItem( userId, context, 'toDo', data );
 const saveInProgress = ( userId, context, data ) => saveItem( userId, context, 'inProgress', data );
 const saveBestIntentions = ( userId, context, data ) => saveItem( userId, context, 'bestIntentions', data );
@@ -46,4 +49,30 @@ const saveAll = ( userId, context, data ) => {
     saveBestIntentions( userId, context, data.bestIntentions );
 };
 
-export { initialize, login, bestIntentions, toDo, inProgress, saveAll };
+const saveGoal = ( userId, context, bucket, goalId, item ) => bucket === 'done' ? Promise.resolve() :
+    db()
+        .database()
+        .ref( refGoal( userId, context, bucket, goalId ) )
+        .set( item );
+
+const removeGoalFromOtherBuckets = ( userId, context, bucket, goalId ) => Promise.all(
+    [ 'toDo', 'inProgress', 'bestIntentions' ]
+        .filter( ( b ) => b !== bucket )
+        .map(
+            ( bucketToRemoveFrom ) => db()
+                .database()
+                .ref( refGoal( userId, context, bucketToRemoveFrom, goalId ) )
+                .remove()
+        )
+);
+
+export {
+    bestIntentions,
+    inProgress,
+    initialize,
+    login,
+    removeGoalFromOtherBuckets,
+    saveAll,
+    saveGoal,
+    toDo
+};

@@ -21,6 +21,7 @@ import ToDoContainer from '../../../containers/columns/ToDoContainer';
 import InProgressContainer from '../../../containers/columns/InProgressContainer';
 import DoneContainer from '../../../containers/columns/DoneContainer';
 import ModalEditContainer from '../../../containers/modals/ModalEditContainer';
+import ModalChangeContextContainer from '../../../containers/modals/ModalChangeContextContainer';
 import LoadingIndicator from '../../../components/feedback/LoadingIndicator';
 import NavigationContainer from '../../../containers/navigation/NavigationContainer';
 
@@ -28,6 +29,7 @@ const App = ( { appStateFetched } ) => (
     <div className="container">
         <LoadingIndicator show={!appStateFetched} />
         <ModalEditContainer />
+        <ModalChangeContextContainer />
         <BestIntentionsContainer />
         <ToDoContainer />
         <InProgressContainer />

@@ -60,6 +60,15 @@
     font-family: "Riga", Helvetica, Arial, sans-serif;
 }
 
+.modal-edit__label--centered {
+    text-align: center;
+}
+
+.modal-edit__label--top-pushed {
+    text-align: center;
+    margin-top: 72px;
+}
+
 .modal-edit__label--floated {
     float: left;
     margin-right: 10px;
@@ -99,10 +108,39 @@
     width: 150px;
 }
 
+.modal-edit__selection--margin-adjust {
+    margin: -2px 3px 0 -5px;
+}
+
+.modal-edit__selection--inline {
+    float: none;
+}
+
+.modal-edit__selection--larger {
+    width: 280px;
+}
+
 .modal-edit__actions {
     text-align: right;
 
     float: right;
 
     margin: -5px 3px 10px 0;
+}
+
+.modal-edit__actions--inline {
+    float: none;
+}
+
+.modal-edit__actions--centered {
+    text-align: center;
+}
+
+.modal-edit__actions--push-top {
+    margin-top: 75px;
+}
+
+.modal-edit__body {
+    margin: 10px 15px 10px 10px;
+    text-align: center;
 }

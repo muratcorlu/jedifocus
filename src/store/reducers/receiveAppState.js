@@ -13,10 +13,14 @@
  *  ||||
  */
 
-import { JFDI_ADD_NEW, JFDI_CHANGE_CONTEXT } from '../../../lib/constants';
+import { Map } from 'immutable';
 
-const addNew = () => ( { type: JFDI_ADD_NEW } );
+const receiveAppState = ( state = {}, { payload } ) => ( {
+    ...state,
+    appStateFetched: true,
+    bestIntentions: payload.get( 'bestIntentions' ) || Map.of(),
+    toDo: payload.get( 'toDo' ) || Map.of(),
+    inProgress: payload.get( 'inProgress' ) || Map.of()
+} );
 
-const changeContext = () => ( { type: JFDI_CHANGE_CONTEXT } );
-
-export { addNew, changeContext };
+export default receiveAppState;

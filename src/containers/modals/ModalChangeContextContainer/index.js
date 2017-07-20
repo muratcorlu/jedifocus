@@ -16,22 +16,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import * as actions from './actions';
+import ModalChangeContext from '../../../components/modals/ModalChangeContext';
+
+import actions from './actions';
 import { connect } from 'kink';
-import { returnObject } from 'delgado';
 
-import Navigation from '../../../components/navigation/Navigation';
-
-const NavigationContainer = ( { addNew, changeContext } ) => (
-    <Navigation
-        addNew={addNew}
+const ModalChangeContextContainer = ( { show, changeContext } ) => (
+    <ModalChangeContext
+        show={show}
         changeContext={changeContext}
     />
 );
 
-NavigationContainer.propTypes = {
-    addNew: PropTypes.func.isRequired,
+ModalChangeContextContainer.propTypes = {
+    show: PropTypes.bool.isRequired,
     changeContext: PropTypes.func.isRequired
 };
 
-export default connect( NavigationContainer, actions, returnObject );
+export default connect(
+    ModalChangeContextContainer,
+    actions,
+    ( { modalContextVisible } ) => ( { show: modalContextVisible } )
+);

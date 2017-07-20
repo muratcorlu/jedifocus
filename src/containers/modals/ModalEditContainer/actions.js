@@ -21,13 +21,23 @@ import {
     JFDI_UPDATE_DESCRIPTION
 } from '../../../lib/constants';
 
-import { sendSaveAllRequest } from './network';
+// import { sendSaveAllRequest } from './network';
 
-const saveGoal = ( userId, context, data ) => {
-    sendSaveAllRequest( userId, context, data );
+import {
+    sendSaveGoalRequest,
+    sendRemoveFromOtherBucketsRequest
+} from './network';
+
+// rename all ids as goalId
+const saveGoal = ( userId, context, bucket, goalId, item ) => {
+    sendSaveGoalRequest( userId, context, bucket, goalId, item )
+        .then( () => sendRemoveFromOtherBucketsRequest( userId, context, bucket, goalId ) );
+
+    // log to somewhere when something fails.
 
     return { type: JFDI_SAVE_GOAL };
 };
+
 const updateBucket = ( currentBucket, id, nextBucket ) => ( {
     type: JFDI_UPDATE_BUCKET,
     payload: makeImmutable( { currentBucket, id, nextBucket } )

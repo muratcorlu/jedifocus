@@ -16,7 +16,7 @@
 import thunkMiddleware from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 
-import { rootReducer } from '../reducers';
+import { rootReducer } from './reducers';
 import zeroState from './zeroState';
 
 const getInitialState = () => zeroState;

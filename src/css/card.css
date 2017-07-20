@@ -75,7 +75,7 @@
 }
 
 .card__text pre {
-    font-family: "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+    font-family: "Operator Mono", "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
     font-size: 14px;
     margin-bottom: 16px;
     background: #dfdfcf;
@@ -123,7 +123,7 @@
 }
 
 .card__text code {
-    font-family: "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+    font-family: "Operator Mono", "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
     font-size: 14px;
     padding: 3px;
     background: #dfdfcf;

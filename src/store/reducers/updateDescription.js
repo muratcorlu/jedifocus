@@ -13,10 +13,12 @@
  *  ||||
  */
 
-import { JFDI_ADD_NEW, JFDI_CHANGE_CONTEXT } from '../../../lib/constants';
+const updateDescription = ( state = {}, { payload } ) => ( {
+    ...state,
+    modalVisible: true,
+    modalItem: payload.get( 'value' ),
+    [ payload.get( 'bucket' ) ]: state[ payload.get( 'bucket' ) ]
+        .set( payload.get( 'id' ), payload.get( 'value' ) )
+} );
 
-const addNew = () => ( { type: JFDI_ADD_NEW } );
-
-const changeContext = () => ( { type: JFDI_CHANGE_CONTEXT } );
-
-export { addNew, changeContext };
+export default updateDescription;

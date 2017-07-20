@@ -20,8 +20,7 @@ import ActionButton from '../../../components/buttons/ActionButton';
 
 const ModalEdit = ( {
     show, bucket, item, id,
-    updateDescription, updateBucket, saveGoal,
-    bestIntentions, inProgress, toDo
+    updateDescription, updateBucket, saveGoal
 } ) => show ? (
     <div className="modal-edit">
         <h2 className="modal-edit__heading"><label htmlFor="modal-edit-description">Describe Your Goal</label></h2>
@@ -63,7 +62,7 @@ const ModalEdit = ( {
 
         <div className="modal-edit__actions">
             <ActionButton text="Done"
-                onClick={() => saveGoal( { bestIntentions, inProgress, toDo } )}
+                onClick={() => saveGoal()}
             />
         </div>
     </div>
@@ -78,12 +77,9 @@ ModalEdit.propTypes = {
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
     saveGoal: PropTypes.func.isRequired,
-    show: PropTypes.bool.isRequired,
+    show: PropTypes.bool,
     updateBucket: PropTypes.func.isRequired,
-    updateDescription: PropTypes.func.isRequired,
-    bestIntentions: PropTypes.object.isRequired,
-    inProgress: PropTypes.object.isRequired,
-    toDo: PropTypes.object.isRequired
+    updateDescription: PropTypes.func.isRequired
 };
 
 export default ModalEdit;

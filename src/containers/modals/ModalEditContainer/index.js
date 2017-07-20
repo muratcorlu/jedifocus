@@ -57,16 +57,17 @@ class ModalEditContainer extends Component {
     render() {
         return (
             <ModalEdit
-                bestIntentions={this.props.bestIntentions}
                 bucket={this.props.bucket}
                 id={this.props.id}
-                inProgress={this.props.inProgress}
                 item={this.props.item}
-                saveGoal={( data ) => this.props.saveGoal(
-                    this.props.userId, this.props.context, data
+                saveGoal={() => this.props.saveGoal(
+                    this.props.userId,
+                    this.props.context,
+                    this.props.bucket,
+                    this.props.id,
+                    this.props.item
                 )}
                 show={this.props.show}
-                toDo={this.props.toDo}
                 updateBucket={this.props.updateBucket}
                 updateDescription={this.props.updateDescription}
             />
@@ -75,15 +76,12 @@ class ModalEditContainer extends Component {
 }
 
 ModalEditContainer.propTypes = {
-    bestIntentions: PropTypes.object.isRequired,
     bucket: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
-    inProgress: PropTypes.object.isRequired,
     item: PropTypes.string.isRequired,
     saveGoal: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
-    toDo: PropTypes.object.isRequired,
     updateBucket: PropTypes.func.isRequired,
     updateDescription: PropTypes.func.isRequired,
     userId: PropTypes.string.isRequired

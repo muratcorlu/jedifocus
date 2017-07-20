@@ -13,12 +13,13 @@
  *  ||||
  */
 
-import { getInitialState } from '../store';
+import { getInitialState } from '../../store';
 import { createRootReducer } from 'kink';
 
-import * as constants from '../../../../lib/constants';
+import * as constants from '../../lib/constants';
 
 import addNew from './addNew';
+import changeContext from './changeContext';
 import editCard from './editCard';
 import receiveAppState from './receiveAppState';
 import saveGoal from './saveGoal';
@@ -27,6 +28,7 @@ import updateDescription from './updateDescription';
 
 const rootReducer = createRootReducer( getInitialState, {
     [constants.JFDI_ADD_NEW]: addNew,
+    [constants.JFDI_CHANGE_CONTEXT]: changeContext,
     [constants.JFDI_EDIT_CARD]: editCard,
     [constants.JFDI_RECEIVE_APP_STATE]: receiveAppState,
     [constants.JFDI_SAVE_GOAL]: saveGoal,
