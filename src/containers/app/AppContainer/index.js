@@ -24,7 +24,7 @@ import * as actions from './actions';
 import store from '../../../store';
 
 class AppContainer extends Component {
-    componentDidMount() {
+    fetchAppState() {
         this.props.fetchAppState(
             this.props.config,
             this.props.email,
@@ -32,6 +32,16 @@ class AppContainer extends Component {
             this.props.userId,
             this.props.context
         );
+    }
+
+    componentDidMount() {
+        this.fetchAppState();
+    }
+
+    componentDidUpdate( prevProps ) {
+        if ( this.props.context === prevProps.context ) { return; }
+
+        this.fetchAppState();
     }
 
     render() {

@@ -16,8 +16,10 @@
 const editCard = ( state = {}, { payload } ) => ( {
     ...state,
     modalVisible: true,
+    modalContextVisible: false,
     modalId: payload.id,
     modalItem: state[ payload.bucket ].get( payload.id ),
+    modalContext: state.context,
     modalBucket: payload.bucket
 } );
 

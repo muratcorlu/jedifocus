@@ -16,9 +16,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ActionButton from '../../../components/buttons/ActionButton';
-
-const ModalChangeContext = ( { show, changeContext } ) => show ? (
+const ModalChangeContext = ( { show, changeContext, context } ) => show ? (
     <div className="modal-edit">
         <h2 className="modal-edit__heading"><label>Change Current Context</label></h2>
 
@@ -31,24 +29,32 @@ const ModalChangeContext = ( { show, changeContext } ) => show ? (
             <select id="modal-edit-context"
                 className={`modal-edit__selection modal-edit__selection--inline
                     modal-edit__selection--larger modal-edit__selection--margin-adjust`}
-                value={'default'}
+                value={context}
                 onChange={( evt ) => changeContext( evt.target.value ) }
             >
-                <option value="default">Default</option>
-                <option value="ice-box">Ice Box</option>
+                <optgroup label="Clarify or Kick to the Future">
+                    <option value="needs-clarification">Needs Clarification / Splitting</option>
+                    <option value="ice-box">Ice Box</option>
+                </optgroup>
+                <optgroup label="Basic">
+                    <option value="default">Default</option>
+                    <option value="30-minutes">30 Minutes</option>
+                    <option value="cast-topics">Cast Topics</option>
+                    <option value="learning">Learning</option>
+                    <option value="backlog">Backlog</option>
+                </optgroup>
+                <optgroup label="Projects">
+                    <option value="repo-maintenance">Repo Maintenance</option>
+                    <option value="byte-sized-tv-improvements">ByteSized.TV Improvements</option>
+                    <option value="jedifocus-improvements">JediFocus Improvements</option>
+                </optgroup>
+                <optgroup label="Queues">
+                    <option value="reading-queue">Reading Queue</option>
+                    <option value="watching-queue">Watching Queue</option>
+                </optgroup>
                 <option value="cisco">Cisco</option>
-                <option value="reading-queue">Reading Queue</option>
-                <option value="watching-queue">Watching Queue</option>
             </select>
         </div>
-
-        <div className={`modal-edit__actions modal-edit__actions--inline
-            modal-edit__actions--centered modal-edit__actions--push-top`}>
-            <ActionButton text="Done"
-                onClick={() => {}}
-            />
-        </div>
-
     </div>
 ) : null;
 
@@ -58,6 +64,7 @@ ModalChangeContext.defaultProps = {
 
 ModalChangeContext.propTypes = {
     show: PropTypes.bool,
+    context: PropTypes.string.isRequired,
     changeContext: PropTypes.func.isRequired
 };
 

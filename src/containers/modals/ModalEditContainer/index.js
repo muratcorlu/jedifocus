@@ -57,6 +57,7 @@ class ModalEditContainer extends Component {
     render() {
         return (
             <ModalEdit
+                context={this.props.context}
                 bucket={this.props.bucket}
                 id={this.props.id}
                 item={this.props.item}
@@ -65,10 +66,12 @@ class ModalEditContainer extends Component {
                     this.props.context,
                     this.props.bucket,
                     this.props.id,
-                    this.props.item
+                    this.props.item,
+                    this.props.stateContext
                 )}
                 show={this.props.show}
                 updateBucket={this.props.updateBucket}
+                updateContext={this.props.updateContext}
                 updateDescription={this.props.updateDescription}
             />
         );
@@ -78,12 +81,14 @@ class ModalEditContainer extends Component {
 ModalEditContainer.propTypes = {
     bucket: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
+    stateContext: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
     saveGoal: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
     updateBucket: PropTypes.func.isRequired,
     updateDescription: PropTypes.func.isRequired,
+    updateContext: PropTypes.func.isRequired,
     userId: PropTypes.string.isRequired
 };
 
@@ -93,11 +98,12 @@ export default connect(
     ( state ) => ( {
         bestIntentions: state.bestIntentions ? state.bestIntentions.toJSON() : {},
         bucket: state.modalBucket,
-        context: state.context,
         id: state.modalId,
         inProgress: state.inProgress ? state.inProgress.toJSON() : {},
         item: state.modalItem,
         show: state.modalVisible,
+        context: state.modalContext,
+        stateContext: state.context,
         toDo: state.toDo ? state.toDo.toJSON() : {},
         userId: state.userId
     } )

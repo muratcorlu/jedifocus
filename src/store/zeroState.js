@@ -24,6 +24,7 @@ const zeroState = {
     modalBucket: '',
     modalId: '',
     modalItem: '',
+    modalContext: 'default',
     modalVisible: false,
     modalContextVisible: false,
     toDo: makeImmutable( {} )

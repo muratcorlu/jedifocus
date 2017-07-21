@@ -13,9 +13,15 @@
  *  ||||
  */
 
-const updateContext = ( state = {}, { payload } ) => ( {
-    ...state,
-    context: payload.get( 'context' )
-} );
+const updateContext = ( state = {}, { payload } ) => {
+    console.log( payload.toJSON() );
+
+    return ( {
+        ...state,
+        appStateFetched: false,
+        modalContextVisible: true,
+        context: payload.get( 'context' )
+    } );
+};
 
 export default updateContext;

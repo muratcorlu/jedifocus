@@ -9,6 +9,13 @@ _|//|_  Do. Or do not.
  | ||
 ```
 
+## **Jedi Focus** (*v.0.5.0*)
+
+* Performance improvements when saving goals.
+* Added contexts, so if you don’t want the default board to be too crowded, you can move some of the goals to **backlog** or **ice box**, for example.
+* Bugfixes and code improvements.
+* Removed the web fonts thaI used because it was causing delay. The UI uses “Georgia” because it is a quite legible serif font that is default in **most** of the systems.
+
 ## **Jedi Focus** (*v.0.4.0*)
 
 * Added markdown support, now you can write your card in [**GFM**](https://help.github.com/articles/about-writing-and-formatting-on-github/)

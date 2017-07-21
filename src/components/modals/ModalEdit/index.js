@@ -19,8 +19,8 @@ import PropTypes from 'prop-types';
 import ActionButton from '../../../components/buttons/ActionButton';
 
 const ModalEdit = ( {
-    show, bucket, item, id,
-    updateDescription, updateBucket, saveGoal
+    show, bucket, context, item, id,
+    updateDescription, updateBucket, updateContext, saveGoal
 } ) => show ? (
     <div className="modal-edit">
         <h2 className="modal-edit__heading"><label htmlFor="modal-edit-description">Describe Your Goal</label></h2>
@@ -52,11 +52,30 @@ const ModalEdit = ( {
             <label htmlFor="modal-edit-column">Context</label></h3>
         <div>
             <select id="modal-edit-column" className="modal-edit__selection"
-                value={bucket}
-                onChange={( evt ) => updateBucket( bucket, id, evt.target.value )}
+                value={context}
+                onChange={( evt ) => updateContext( bucket, id, evt.target.value )}
             >
-                <option value="default">Default</option>
-                <option value="default">Create New…</option>
+                <optgroup label="Clarify or Kick to the Future">
+                    <option value="needs-clarification">Needs Clarification / Splitting</option>
+                    <option value="ice-box">Ice Box</option>
+                </optgroup>
+                <optgroup label="Basic">
+                    <option value="default">Default</option>
+                    <option value="30-minutes">30 Minutes</option>
+                    <option value="cast-topics">Cast Topics</option>
+                    <option value="learning">Learning</option>
+                    <option value="backlog">Backlog</option>
+                </optgroup>
+                <optgroup label="Projects">
+                    <option value="repo-maintenance">Repo Maintenance</option>
+                    <option value="byte-sized-tv-improvements">ByteSized.TV Improvements</option>
+                    <option value="jedifocus-improvements">JediFocus Improvements</option>
+                </optgroup>
+                <optgroup label="Queues">
+                    <option value="reading-queue">Reading Queue</option>
+                    <option value="watching-queue">Watching Queue</option>
+                </optgroup>
+                <option value="cisco">Cisco</option>
             </select>
         </div>
 
@@ -76,10 +95,12 @@ ModalEdit.propTypes = {
     bucket: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
+    context: PropTypes.string.isRequired,
     saveGoal: PropTypes.func.isRequired,
     show: PropTypes.bool,
     updateBucket: PropTypes.func.isRequired,
-    updateDescription: PropTypes.func.isRequired
+    updateDescription: PropTypes.func.isRequired,
+    updateContext: PropTypes.func.isRequired
 };
 
 export default ModalEdit;

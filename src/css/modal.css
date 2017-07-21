@@ -38,9 +38,9 @@
 .modal-edit__heading {
     margin: -10px -10px 20px -10px;
     padding: 13px;
+    letter-spacing: 2px;
 
     font-size: 20px;
-    font-family: "Riga ExtraLight", Arial, Helvetica, sans-serif;
     text-align: left;
     color: #fff;
 
@@ -57,7 +57,6 @@
 
     font-size: 18px;
     font-weight: bold;
-    font-family: "Riga", Helvetica, Arial, sans-serif;
 }
 
 .modal-edit__label--centered {
@@ -84,8 +83,8 @@
 .modal-edit__description {
     background: #ffffff;
 
-    font-family: "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
-    font-size: 14px;
+    font-family: "Operator Mono", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+    font-size: 16px;
 
     line-height: 22px;
     width: 607px;

@@ -18,23 +18,25 @@ import PropTypes from 'prop-types';
 
 import ModalChangeContext from '../../../components/modals/ModalChangeContext';
 
-import actions from './actions';
+import * as actions from './actions';
 import { connect } from 'kink';
 
-const ModalChangeContextContainer = ( { show, changeContext } ) => (
+const ModalChangeContextContainer = ( { show, context, changeContext } ) => (
     <ModalChangeContext
         show={show}
+        context={context}
         changeContext={changeContext}
     />
 );
 
 ModalChangeContextContainer.propTypes = {
     show: PropTypes.bool.isRequired,
+    context: PropTypes.string.isRequired,
     changeContext: PropTypes.func.isRequired
 };
 
 export default connect(
     ModalChangeContextContainer,
     actions,
-    ( { modalContextVisible } ) => ( { show: modalContextVisible } )
+    ( { modalContextVisible, context } ) => ( { show: modalContextVisible, context } )
 );

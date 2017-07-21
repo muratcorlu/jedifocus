@@ -18,24 +18,29 @@ import { fromJS as makeImmutable } from 'immutable';
 import {
     JFDI_SAVE_GOAL,
     JFDI_UPDATE_BUCKET,
-    JFDI_UPDATE_DESCRIPTION
+    JFDI_UPDATE_DESCRIPTION,
+    JFDI_UPDATE_GOAL_CONTEXT
 } from '../../../lib/constants';
-
-// import { sendSaveAllRequest } from './network';
 
 import {
     sendSaveGoalRequest,
     sendRemoveFromOtherBucketsRequest
 } from './network';
 
-// rename all ids as goalId
-const saveGoal = ( userId, context, bucket, goalId, item ) => {
+const saveGoal = ( userId, context, bucket, goalId, item, currentContext ) => {
     sendSaveGoalRequest( userId, context, bucket, goalId, item )
-        .then( () => sendRemoveFromOtherBucketsRequest( userId, context, bucket, goalId ) );
+        .then( () => {
+            if ( context !== currentContext ) {
+                return sendRemoveFromOtherBucketsRequest( userId, currentContext, 'done', goalId );
+            }
 
-    // log to somewhere when something fails.
+            return sendRemoveFromOtherBucketsRequest( userId, currentContext, bucket, goalId );
+        } );
 
-    return { type: JFDI_SAVE_GOAL };
+    return {
+        type: JFDI_SAVE_GOAL,
+        payload: makeImmutable( { context, bucket, goalId } )
+    };
 };
 
 const updateBucket = ( currentBucket, id, nextBucket ) => ( {
@@ -48,4 +53,9 @@ const updateDescription = ( bucket, id, value ) => ( {
     payload: makeImmutable( { bucket, id, value } )
 } );
 
-export { updateDescription, updateBucket, saveGoal };
+const updateContext = ( bucket, id, context ) => ( {
+    type: JFDI_UPDATE_GOAL_CONTEXT,
+    payload: makeImmutable( { bucket, id, context } )
+} );
+
+export { updateDescription, updateBucket, updateContext, saveGoal };

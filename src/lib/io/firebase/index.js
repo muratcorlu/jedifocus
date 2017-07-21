@@ -15,7 +15,14 @@
 
 const db = () => window.firebase;
 
-const initialize = ( config ) => db().initializeApp( config );
+let app = null;
+const initialize = ( config ) => {
+    if ( app ) { return app; }
+
+    app = db().initializeApp( config );
+
+    return app;
+};
 
 const login = ( email, password ) => db().auth()
     .signInWithEmailAndPassword( email, password );
@@ -28,7 +35,11 @@ const refOnce = ( userId, context, path ) => db().database()
     .ref( refColumn( userId, context, path ) ).once( 'value' )
     .then( ( snapshot ) => snapshot.val() );
 
-const bestIntentions = ( userId, context ) => refOnce( userId, context, 'bestIntentions' );
+const bestIntentions = ( userId, context ) => {
+    console.log( 'about to fetch best intentiions', context );
+
+    return refOnce( userId, context, 'bestIntentions' );
+};
 
 const toDo = ( userId, context ) => refOnce( userId, context, 'toDo' );
 
@@ -38,7 +49,6 @@ const saveItem = ( userId, context, path, data ) => db().database()
     .ref( refColumn( userId, context, path ) )
     .set( data );
 
-// refactor bucket names as symbolic constants.
 const saveToDo = ( userId, context, data ) => saveItem( userId, context, 'toDo', data );
 const saveInProgress = ( userId, context, data ) => saveItem( userId, context, 'inProgress', data );
 const saveBestIntentions = ( userId, context, data ) => saveItem( userId, context, 'bestIntentions', data );
@@ -49,11 +59,10 @@ const saveAll = ( userId, context, data ) => {
     saveBestIntentions( userId, context, data.bestIntentions );
 };
 
-const saveGoal = ( userId, context, bucket, goalId, item ) => bucket === 'done' ? Promise.resolve() :
-    db()
-        .database()
-        .ref( refGoal( userId, context, bucket, goalId ) )
-        .set( item );
+const saveGoal = ( userId, context, bucket, goalId, item ) => bucket === 'done' ? Promise.resolve() : db()
+    .database()
+    .ref( refGoal( userId, context, bucket, goalId ) )
+    .set( item );
 
 const removeGoalFromOtherBuckets = ( userId, context, bucket, goalId ) => Promise.all(
     [ 'toDo', 'inProgress', 'bestIntentions' ]

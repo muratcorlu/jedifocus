@@ -59,6 +59,7 @@
     opacity: 0.35;
     will-change: opacity;
     transition: all 0.25s ease-in-out;
+    letter-spacing: 2px;
 }
 
 .column:hover .heading__best-intentions {
@@ -74,6 +75,7 @@
     opacity: 0.35;
     will-change: opacity;
     transition: all 0.25s ease-in-out;
+    letter-spacing: 2px;
 }
 
 .column:hover .heading__to-do {
@@ -88,6 +90,7 @@
     min-width: 200px;
     opacity: 0.35;
     transition: all 0.25s ease-in-out;
+    letter-spacing: 2px;
 }
 
 .column:hover .heading__in-progress {
@@ -103,6 +106,7 @@
     opacity: 0.35;
     will-change: opacity;
     transition: all 0.25s ease-in-out;
+    letter-spacing: 2px;
 }
 
 .column:hover .heading__done {

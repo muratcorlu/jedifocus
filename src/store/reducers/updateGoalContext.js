@@ -13,27 +13,10 @@
  *  ||||
  */
 
-.container__loading {
-    letter-spacing: 2px;
-    position: fixed;
-    top: -8px;
-    right: -8px;
+const updateGoalContext = ( state = {}, { payload } ) => ( {
+    ...state,
+    modalVisible: true,
+    modalContext: payload.get( 'context' )
+} );
 
-    padding: 18px 32px 13px 32px;
-    margin: 0;
-
-    font-size: 18px;
-    font-weight: normal;
-    text-align: center;
-    color: #ffffff;
-    background: #b14c1b;
-
-    width: 160px;
-    font-size: 16px;
-
-    opacity: 0.9;
-
-    z-index: 9999;
-
-    border-radius: 2px;
-}
+export default updateGoalContext;

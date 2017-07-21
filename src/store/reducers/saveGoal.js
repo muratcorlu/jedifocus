@@ -13,12 +13,15 @@
  *  ||||
  */
 
-const saveGoal = ( state = {} ) => ( {
+const saveGoal = ( state = {}, { payload } ) => ( {
     ...state,
     modalVisible: false,
     modalId: '',
     modalItem: '',
-    modalBucket: ''
+    modalBucket: '',
+    [payload.get( 'bucket' )]: ( payload.get( 'context' ) === state.context ) ?
+        state[payload.get( 'bucket' )] :
+        state[payload.get( 'bucket' )].remove( payload.get( 'goalId' ) )
 } );
 
 export default saveGoal;

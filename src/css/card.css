@@ -43,7 +43,6 @@
 }
 
 .card__edit-action {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #b14c1b;
 
@@ -75,8 +74,8 @@
 }
 
 .card__text pre {
-    font-family: "Operator Mono", "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
-    font-size: 14px;
+    font-family: "Operator Mono", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+    font-size: 16px;
     margin-bottom: 16px;
     background: #dfdfcf;
     padding: 7px;
@@ -87,50 +86,41 @@
 }
 
 .card__text h1 {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
-    font-size: 16px; font-weight: bold; text-align: left;margin: 0;
+    font-size: 18px; font-weight: bold; text-align: left;margin: 0;
     padding: 0; margin-bottom: 16px;
 }
 
 .card__text h2 {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
-    font-size: 16px; font-weight: bold; text-align: left;margin: 0;
+    font-size: 18px; font-weight: bold; text-align: left;margin: 0;
     padding: 0; margin-bottom: 16px;
+    letter-spacing: inherit;
 }
 
 .card__text h3 {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
-    font-size: 16px; font-weight: bold; text-align: left;
+    font-size: 18px; font-weight: bold; text-align: left;
     margin: 0; padding: 0; margin-bottom: 16px;
 }
 
 .card__text h4 {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
-    font-size: 16px; font-weight: bold; text-align: left;margin: 0;
+    font-size: 18px; font-weight: bold; text-align: left;margin: 0;
     padding: 0; margin-bottom: 16px;
 }
 
 .card__text h5 {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
-    font-size: 16px; font-weight: bold; text-align: left;
+    font-size: 18px; font-weight: bold; text-align: left;
     margin: 0; padding: 0; margin-bottom: 16px;
 }
 
 .card__text h6 {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
-    font-size: 16px; font-weight: bold; text-align: left;
+    font-size: 18px; font-weight: bold; text-align: left;
     margin: 0; padding: 0; margin-bottom: 16px;
 }
 
 .card__text code {
-    font-family: "Operator Mono", "Input Mono Cond", "Menlo", "Monaco", "Courier New", "Courier", monospace;
-    font-size: 14px;
+    font-family: "Operator Mono", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+    font-size: 16px;
     padding: 3px;
     background: #dfdfcf;
-}
-
-.card__text strong, .cart__text b {
-    font-family: "Riga", Helvetica, Arial, sans-serif;
 }
 
 .card__text ul li {
