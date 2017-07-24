@@ -13,14 +13,11 @@
  *  ||||
  */
 
-import { JFDI_EDIT_CARD } from '../../../lib/constants';
+import { JFDI_CARD_EDIT } from '../../../lib/constants';
 
 const editCard = ( bucket, id ) => ( {
-    type: JFDI_EDIT_CARD,
-    payload: {
-        bucket,
-        id
-    }
+    type: JFDI_CARD_EDIT,
+    payload: { bucket, id }
 } );
 
 export { editCard };

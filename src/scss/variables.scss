@@ -1,0 +1,50 @@
+/*   __
+ *  |::|    Jedi Focus
+ *  |::|
+ * _|//|_  Do. Or do not.
+ * |____|  There is no try.
+ *  || |
+ *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *  || |
+ *  || |   MIT Licensed — See LICENSE.md
+ *  || |
+ *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
+ *  ||||
+ */
+
+$base_font: "Georgia Pro", Georgia, Times, "Times New Roman", serif;
+$monotype_font: "Input Mono Cond", "OperatorMono-Book", "Operator Mono Book", "Menlo", "Monaco", "Courier New", "Courier", monospace;
+
+$default_font_size: 18px;
+$smaller_font_size: 16px;
+$smallest_font_size: 14px;
+
+$accent_1: #d3541a;
+$accent_2: #35495d;
+$accent_3: #3081b7;
+$accent_4: #239f86;
+$light_foreground_1: #ffffff;
+$light_background_1: #ffffff;
+$light_background_2: #bdbdbd;
+$light_background_3: #eef3f0;
+$light_background_4: #b0cbbd;
+$light_background_5: #f3f2ee;
+$link_foreground: #1005C9;
+
+$dark1: #2C3742;
+$dark2: #4C423D;
+$dark3: #394F5E;
+$dark4: #2B564E;
+$dark5: #01262A;
+$dark6: #011D20;
+$dark7: #011315;
+
+$box_shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+$dark_border: 1px #757575 solid;
+
+$default_transition: all 0.25s ease-in-out;
+
+$transparent: 0.65;
+$semi-opaque: 0.85;
+$opaque: 0.99;

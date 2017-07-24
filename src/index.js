@@ -17,7 +17,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { $ } from 'dombili';
 
-import './css';
+import './scss/main.scss';
 
 import * as config from './config.json';
 const email = config.email;

@@ -29,15 +29,15 @@ import updateDescription from './updateDescription';
 import updateGoalContext from './updateGoalContext';
 
 const rootReducer = createRootReducer( getInitialState, {
-    [constants.JFDI_ADD_NEW]: addNew,
-    [constants.JFDI_CHANGE_CONTEXT]: changeContext,
-    [constants.JFDI_EDIT_CARD]: editCard,
-    [constants.JFDI_RECEIVE_APP_STATE]: receiveAppState,
-    [constants.JFDI_SAVE_GOAL]: saveGoal,
-    [constants.JFDI_UPDATE_BUCKET]: updateBucket,
-    [constants.JFDI_UPDATE_CONTEXT]: updateContext,
-    [constants.JFDI_UPDATE_DESCRIPTION]: updateDescription,
-    [constants.JFDI_UPDATE_GOAL_CONTEXT]: updateGoalContext
+    [constants.JFDI_APP_CHANGE_CONTEXT]: changeContext,
+    [constants.JFDI_APP_RECEIVE_STATE]: receiveAppState,
+    [constants.JFDI_APP_UPDATE_CONTEXT]: updateContext,
+    [constants.JFDI_CARD_ADD_NEW]: addNew,
+    [constants.JFDI_CARD_EDIT]: editCard,
+    [constants.JFDI_GOAL_SAVE]: saveGoal,
+    [constants.JFDI_GOAL_UPDATE_BUCKET]: updateBucket,
+    [constants.JFDI_GOAL_UPDATE_CONTEXT]: updateGoalContext,
+    [constants.JFDI_GOAL_UPDATE_DESCRIPTION]: updateDescription
 } );
 
 export { rootReducer };

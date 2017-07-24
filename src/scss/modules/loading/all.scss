@@ -13,16 +13,20 @@
  *  ||||
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+.container__loading {
+    color: $light_foreground_1;
+    background: $accent_1;
+    opacity: $transparent;
 
-const LoadingIndicator = ( { show } ) => ( show ?
-    <div className="container__loading">Fetching tasks…</div> :
-    null
-);
-
-LoadingIndicator.defaultProps = { show: false };
-
-LoadingIndicator.propTypes = { show: PropTypes.bool };
-
-export default LoadingIndicator;
+    border-radius: 2px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 18px 32px 13px 32px;
+    position: fixed;
+    right: -8px;
+    text-align: center;
+    top: -8px;
+    width: 160px;
+    z-index: 9999;
+}

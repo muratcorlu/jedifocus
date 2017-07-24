@@ -18,20 +18,25 @@ import PropTypes from 'prop-types';
 
 import * as actions from './actions';
 import { connect } from 'kink';
-import { returnObject } from 'delgado';
 
 import Navigation from '../../../components/navigation/Navigation';
 
-const NavigationContainer = ( { addNew, changeContext } ) => (
+const NavigationContainer = ( { addNew, changeContext, context } ) => (
     <Navigation
         addNew={addNew}
         changeContext={changeContext}
+        context={context}
     />
 );
 
 NavigationContainer.propTypes = {
     addNew: PropTypes.func.isRequired,
-    changeContext: PropTypes.func.isRequired
+    changeContext: PropTypes.func.isRequired,
+    context: PropTypes.string.isRequired
 };
 
-export default connect( NavigationContainer, actions, returnObject );
+export default connect(
+    NavigationContainer,
+    actions,
+    ( { context } ) => ( { context } )
+);

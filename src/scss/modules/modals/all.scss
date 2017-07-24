@@ -1,0 +1,142 @@
+/*   __
+ *  |::|    Jedi Focus
+ *  |::|
+ * _|//|_  Do. Or do not.
+ * |____|  There is no try.
+ *  || |
+ *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *  || |
+ *  || |   MIT Licensed — See LICENSE.md
+ *  || |
+ *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
+ *  ||||
+ */
+
+.modal-edit {
+    width: 625px;
+    z-index: 9999;
+    position: fixed;
+
+    top:50%;
+    left:50%;
+    height:300px;
+    width:624px;
+    margin:-150px -312px;
+
+    padding: 10px;
+
+    background: $light_background_2;
+    box-shadow: $box_shadow;
+    border-radius: 2px;
+    opacity: 0.95;
+
+    will-change: top, left;
+
+    &__heading {
+        margin: -10px -10px 20px -10px;
+        padding: 13px;
+        letter-spacing: 2px;
+
+        font-size: 20px;
+        text-align: left;
+        color: $light_foreground_1;
+
+        cursor: move;
+
+        background: $dark4;
+        background: linear-gradient(to bottom, $dark1 ,$dark3);
+        border-radius: 2px 2px 0 0;
+        opacity: 0.8;
+    }
+
+    &__label {
+        margin: 1px 10px 10px 0;
+        font-weight: bold;
+
+        &--floated {
+            float: left;
+            margin-right: 10px;
+            margin-left: 10px;
+            position: relative;
+            top: -2px;
+        }
+
+        &--floated-first { margin-left: 4px; }
+
+        &--centered { text-align: center; }
+
+        &--top-pushed {
+            text-align: center;
+            margin-top: 72px;
+        }
+    }
+
+    &__description {
+        background: $light_background_1;
+
+        font-family: $monotype_font;
+        font-size: $smallest_font_size;
+
+        line-height: 22px;
+        width: 607px;
+        height: 187px;
+
+        margin: -10px 10px 10px 0;
+        padding: 7px;
+    }
+
+    &__selection {
+        padding: 5px 10px;
+        margin: -1px 0 0 -5px;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px;
+
+        float: left;
+
+        width: 165px;
+        font-size: $smaller_font_size;
+
+        &--margin-adjust { margin: -2px 3px 0 -5px; }
+
+        &--inline { float: none; }
+
+        &--larger { width: 180px; }
+    }
+
+    &__body--for-context {
+        .modal-edit__selection {
+            float: none;
+            width: 350px;
+        }
+    }
+
+    &__actions {
+        text-align: right;
+        float: right;
+        margin: -5px 3px 10px 0;
+
+        &--inline { float: none; }
+        &--centered { text-align: center; }
+        &--push-top { margin-top: 75px; }
+    }
+
+    &__body {
+        margin: 10px 15px 10px 10px;
+        text-align: center;
+    }
+
+    &__action-button {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    &__action-button--cancel {
+        background: transparent;
+        color: $dark2;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
