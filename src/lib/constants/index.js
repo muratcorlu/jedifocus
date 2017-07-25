@@ -27,3 +27,11 @@ export const JFDI_GOAL_UPDATE_CONTEXT = 'JFDI_GOAL_UPDATE_CONTEXT';
 export const JFDI_GOAL_UPDATE_DESCRIPTION = 'JFDI_GOAL_UPDATE_DESCRIPTION';
 
 // #endregion
+
+// #region Columns
+
+export const COLUMN_BEST_INTENTIONS = 'bestIntentions';
+export const COLUMN_IN_PROGRESS = 'inProgress';
+export const COLUMN_TO_DO = 'toDo';
+
+// #endregion

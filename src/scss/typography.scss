@@ -16,9 +16,13 @@
 body {
     font-size: 18px;
     line-height: 24px;
-    font-family: $base_font;
+    font-family: $base_fallback_font;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+}
+
+body.wf-loaded {
+    font-family: $base_font;
 }
 
 h2 {
@@ -58,7 +62,15 @@ pre {
     padding: 7px;
 }
 
+body.wf-loaded pre {
+    font-family: $monotype_font;
+}
+
 code {
     @include pre_formatted;
     padding: 3px;
+}
+
+body.wf-loaded code {
+    font-family: $monotype_font;
 }

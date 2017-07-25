@@ -6,7 +6,7 @@
 }
 
 @mixin pre_formatted {
-    font-family: $monotype_font;
+    font-family: $monotype_fallback_font;
     font-size: 16px;
     background: $light_background_5;
     color: $dark1;

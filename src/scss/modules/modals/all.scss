@@ -35,19 +35,25 @@
 
     &__heading {
         margin: -10px -10px 20px -10px;
-        padding: 13px;
-        letter-spacing: 2px;
+        padding: 13px 13px 15px 13px;
+        letter-spacing: 0;
 
-        font-size: 20px;
-        text-align: left;
-        color: $light_foreground_1;
+        font-size: 24px;
+        text-align: center;
+
+        color: $dark7;
 
         cursor: move;
 
-        background: $dark4;
-        background: linear-gradient(to bottom, $dark1 ,$dark3);
+        background: #888888;
+        background: linear-gradient(to bottom, #e5e5e5, #888888);
         border-radius: 2px 2px 0 0;
         opacity: 0.8;
+    }
+
+    &__heading:hover {
+        text-shadow: none;
+
     }
 
     &__label {
@@ -75,8 +81,10 @@
     &__description {
         background: $light_background_1;
 
-        font-family: $monotype_font;
-        font-size: $smallest_font_size;
+        font-family: $monotype_fallback_font;
+        font-size: $smaller_font_size;
+
+        color: $dark7;
 
         line-height: 22px;
         width: 607px;
@@ -138,5 +146,13 @@
         color: $dark2;
         text-decoration: none;
         box-shadow: none;
+    }
+}
+
+body.wf-loaded {
+    .modal-edit {
+        &__description {
+             font-family: $monotype_font;
+        }
     }
 }

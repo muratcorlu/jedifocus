@@ -9,10 +9,12 @@ _|//|_  Do. Or do not.
  | ||
 ```
 
-## **JediFocus** (*v.0.7.0*)
+## **JediFocus** (*v.0.7.1*)
 
 * Now the CSS that we use are syntactically awesome (*integrated [sass](http://sass-lang.com), to the codebase*).
 * Minor refactorings and bugfixes.
+* Performance improvements for web fonts.
+* Minor stylistic changes.
 
 ## **Jedi Focus** (*v.0.6.0*)
 
