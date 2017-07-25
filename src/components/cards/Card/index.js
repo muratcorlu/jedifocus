@@ -16,10 +16,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import showdown from 'showdown';
+import { firstParentIncludingSelf as parent } from 'dombili';
 
 showdown.setFlavor( 'github' );
 
 const converter = new showdown.Converter( {
+    openLinksInNewWindow: true
 } );
 
 const markdown = ( text ) => converter.makeHtml( text );
@@ -28,13 +30,19 @@ const Card = ( { item, bucket, id, editCard } ) => (
     <div className="card"
         onClick={
             ( evt ) => {
+                if (
+                    parent(
+                        evt.target,
+                        ( elm ) => elm.nodeName.toLowerCase() === 'a'
+                    )
+                ) { return; }
+
                 evt.preventDefault();
                 editCard( bucket, id );
             }
         }
     >
         <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
-        <a href="#" className="card__edit-action" onClick={( evt ) => evt.preventDefault()}>edit</a>
     </div> );
 
 Card.propTypes = {

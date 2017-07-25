@@ -16,18 +16,41 @@
 import { fromJS as makeImmutable } from 'immutable';
 
 const zeroState = {
+
+    // #region App and Context
+
+    // Loading Indicator
     appStateFetched: false,
-    bestIntentions: makeImmutable( {} ),
+
+    // Current Context
     context: 'default',
+
+    // #endregion
+
+    // #region Column Cards
+
+    bestIntentions: makeImmutable( {} ),
     done: makeImmutable( {} ),
     inProgress: makeImmutable( {} ),
+    toDo: makeImmutable( {} ),
+
+    // #endregion
+
+    // #region “Edit Goal” Modal
+
+    modalVisible: false,
     modalBucket: '',
     modalId: '',
     modalItem: '',
     modalContext: 'default',
-    modalVisible: false,
-    modalContextVisible: false,
-    toDo: makeImmutable( {} )
+
+    // #endregion
+
+    // #region “Change Context” Modal
+
+    modalContextVisible: false
+
+    // #endregion
 };
 
 export default zeroState;

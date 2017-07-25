@@ -16,10 +16,10 @@
 import { fromJS as makeImmutable } from 'immutable';
 
 import {
-    JFDI_SAVE_GOAL,
-    JFDI_UPDATE_BUCKET,
-    JFDI_UPDATE_DESCRIPTION,
-    JFDI_UPDATE_GOAL_CONTEXT
+    JFDI_GOAL_SAVE,
+    JFDI_GOAL_UPDATE_BUCKET,
+    JFDI_GOAL_UPDATE_DESCRIPTION,
+    JFDI_GOAL_UPDATE_CONTEXT
 } from '../../../lib/constants';
 
 import {
@@ -38,23 +38,23 @@ const saveGoal = ( userId, context, bucket, goalId, item, currentContext ) => {
         } );
 
     return {
-        type: JFDI_SAVE_GOAL,
+        type: JFDI_GOAL_SAVE,
         payload: makeImmutable( { context, bucket, goalId } )
     };
 };
 
 const updateBucket = ( currentBucket, id, nextBucket ) => ( {
-    type: JFDI_UPDATE_BUCKET,
+    type: JFDI_GOAL_UPDATE_BUCKET,
     payload: makeImmutable( { currentBucket, id, nextBucket } )
 } );
 
 const updateDescription = ( bucket, id, value ) => ( {
-    type: JFDI_UPDATE_DESCRIPTION,
+    type: JFDI_GOAL_UPDATE_DESCRIPTION,
     payload: makeImmutable( { bucket, id, value } )
 } );
 
 const updateContext = ( bucket, id, context ) => ( {
-    type: JFDI_UPDATE_GOAL_CONTEXT,
+    type: JFDI_GOAL_UPDATE_CONTEXT,
     payload: makeImmutable( { bucket, id, context } )
 } );
 

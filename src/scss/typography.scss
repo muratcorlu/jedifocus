@@ -1,0 +1,76 @@
+/*   __
+ *  |::|    Jedi Focus
+ *  |::|
+ * _|//|_  Do. Or do not.
+ * |____|  There is no try.
+ *  || |
+ *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *  || |
+ *  || |   MIT Licensed — See LICENSE.md
+ *  || |
+ *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
+ *  ||||
+ */
+
+body {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $base_fallback_font;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body.wf-loaded {
+    font-family: $base_font;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+
+blockquote {
+    @include block_quote;
+
+    padding: 0 10px 0 6px;
+    margin-bottom: 16px;
+
+    p {
+        padding: 5px 10px 5px 10px;
+        margin: 0;
+    }
+
+    blockquote {
+        margin-bottom: 0;
+    }
+}
+
+pre {
+    @include pre_formatted;
+
+    margin-bottom: 16px;
+    padding: 7px;
+}
+
+body.wf-loaded pre {
+    font-family: $monotype_font;
+}
+
+code {
+    @include pre_formatted;
+    padding: 3px;
+}
+
+body.wf-loaded code {
+    font-family: $monotype_font;
+}

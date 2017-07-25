@@ -18,7 +18,7 @@ import PropTypes from 'prop-types';
 
 import ActionButton from '../../../components/buttons/ActionButton';
 
-const Navigation = ( { addNew, changeContext } ) => (
+const Navigation = ( { addNew, changeContext, context } ) => (
     <div className="navigation-main">
         <ActionButton text="Add a New Goal"
             onClick={() => addNew()}
@@ -33,14 +33,15 @@ const Navigation = ( { addNew, changeContext } ) => (
         <div className="navigation-context">
             <em className="navigation-context__context-label">context:</em>
             {' '}
-            <strong className="navigation-context__context-name">Default</strong>
+            <strong className="navigation-context__context-name">{context}</strong>
         </div>
     </div>
 );
 
 Navigation.propTypes = {
     addNew: PropTypes.func.isRequired,
-    changeContext: PropTypes.func.isRequired
+    changeContext: PropTypes.func.isRequired,
+    context: PropTypes.string.isRequired
 };
 
 export default Navigation;

@@ -13,11 +13,23 @@
  *  ||||
  */
 
-import './reset.css';
-import './main.css';
-import './buttons.css';
-import './card.css';
-import './columns.css';
-import './loading.css';
-import './modal.css';
-import './navigation.css';
+.card {
+    @include card_common;
+
+    transition: $default_transition;
+
+    opacity: $transparent;
+    will-change: opacity;
+
+    &:hover {
+        transition: $default_transition;
+
+        opacity: $opaque;
+        will-change:opacity;
+    }
+}
+
+.card__text {
+    h1, h2, h3, h4, h5, h6 { @include heading }
+    h2 { letter-spacing: inherit; }
+}

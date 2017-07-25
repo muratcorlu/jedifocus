@@ -14,28 +14,30 @@
  */
 
 body {
-    font-size: 18px;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    line-height: 24px;
-
-    background: #01262A;
+    background: $dark5;
     background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
     background-attachment: fixed;
-    background-image: radial-gradient(#011D20 15%, transparent 35%), radial-gradient(#011315 10%, transparent 25%);
+    background-image: radial-gradient($dark6 15%, transparent 35%),
+        radial-gradient($dark7 10%, transparent 25%);
+    font-size: $default_font_size;
 }
 
 h2 {
-    font-size: 20px;
-    font-weight: normal;
-    letter-spacing: 1px;
-
     margin-bottom: 24px;
     padding: 12px;
-    text-align: center;
-
-    transition: all 0.25s ease-in-out;
+    transition: $default_transition;
 }
 
-strong, b {font-weight: bold;}
-em, i {font-style: italic;}
+ul {
+    margin-bottom: 16px;
+
+    li {
+        list-style: disc;
+        margin-left: 16px;
+    }
+}
+
+a {
+    color: $link_foreground;
+}

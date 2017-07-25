@@ -15,10 +15,10 @@
 
 import { fromJS as makeImmutable } from 'immutable';
 
-import { JFDI_UPDATE_CONTEXT } from '../../../lib/constants';
+import { JFDI_APP_UPDATE_CONTEXT } from '../../../lib/constants';
 
 const changeContext = ( context ) => ( {
-    type: JFDI_UPDATE_CONTEXT,
+    type: JFDI_APP_UPDATE_CONTEXT,
     payload: makeImmutable( { context } )
 } );
 

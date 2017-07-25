@@ -13,16 +13,15 @@
  *  ||||
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+.container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1690px;
+    margin: 0 auto;
+}
 
-const LoadingIndicator = ( { show } ) => ( show ?
-    <div className="container__loading">Fetching tasks…</div> :
-    null
-);
-
-LoadingIndicator.defaultProps = { show: false };
-
-LoadingIndicator.propTypes = { show: PropTypes.bool };
-
-export default LoadingIndicator;
+.column {
+    flex-basis: 25%;
+    opacity: 0.65;
+    transition: all 0.25s ease-in-out;
+}

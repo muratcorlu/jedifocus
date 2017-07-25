@@ -13,6 +13,12 @@
  *  ||||
  */
 
+import {
+    COLUMN_BEST_INTENTIONS,
+    COLUMN_IN_PROGRESS,
+    COLUMN_TO_DO
+} from '../../../lib/constants';
+
 const db = () => window.firebase;
 
 let app = null;
@@ -35,23 +41,19 @@ const refOnce = ( userId, context, path ) => db().database()
     .ref( refColumn( userId, context, path ) ).once( 'value' )
     .then( ( snapshot ) => snapshot.val() );
 
-const bestIntentions = ( userId, context ) => {
-    console.log( 'about to fetch best intentiions', context );
+const bestIntentions = ( userId, context ) => refOnce( userId, context, COLUMN_BEST_INTENTIONS );
 
-    return refOnce( userId, context, 'bestIntentions' );
-};
+const toDo = ( userId, context ) => refOnce( userId, context, COLUMN_TO_DO );
 
-const toDo = ( userId, context ) => refOnce( userId, context, 'toDo' );
-
-const inProgress = ( userId, context ) => refOnce( userId, context, 'inProgress' );
+const inProgress = ( userId, context ) => refOnce( userId, context, COLUMN_IN_PROGRESS );
 
 const saveItem = ( userId, context, path, data ) => db().database()
     .ref( refColumn( userId, context, path ) )
     .set( data );
 
-const saveToDo = ( userId, context, data ) => saveItem( userId, context, 'toDo', data );
-const saveInProgress = ( userId, context, data ) => saveItem( userId, context, 'inProgress', data );
-const saveBestIntentions = ( userId, context, data ) => saveItem( userId, context, 'bestIntentions', data );
+const saveToDo = ( userId, context, data ) => saveItem( userId, context, COLUMN_TO_DO, data );
+const saveInProgress = ( userId, context, data ) => saveItem( userId, context, COLUMN_IN_PROGRESS, data );
+const saveBestIntentions = ( userId, context, data ) => saveItem( userId, context, COLUMN_BEST_INTENTIONS, data );
 
 const saveAll = ( userId, context, data ) => {
     saveToDo( userId, context, data.toDo );
@@ -65,7 +67,7 @@ const saveGoal = ( userId, context, bucket, goalId, item ) => bucket === 'done' 
     .set( item );
 
 const removeGoalFromOtherBuckets = ( userId, context, bucket, goalId ) => Promise.all(
-    [ 'toDo', 'inProgress', 'bestIntentions' ]
+    [ COLUMN_TO_DO, COLUMN_IN_PROGRESS, COLUMN_BEST_INTENTIONS ]
         .filter( ( b ) => b !== bucket )
         .map(
             ( bucketToRemoveFrom ) => db()

@@ -9,6 +9,22 @@ _|//|_  Do. Or do not.
  | ||
 ```
 
+## **JediFocus** (*v.0.7.1*)
+
+* Now the CSS that we use are syntactically awesome (*integrated [sass](http://sass-lang.com), to the codebase*).
+* Minor refactorings and bugfixes.
+* Performance improvements for web fonts.
+* Minor stylistic changes.
+
+## **Jedi Focus** (*v.0.6.0*)
+
+* Bugfix: Clicking on a link inside a card now opens the link istead of activating the card.
+* Bugfix: Creating a new card resets the context to the active context.
+* Other minor bugfixes and refactorings.
+* Minor style changes.
+* Using antialiased fonts (better readability for retina screens).
+* Using **Georgia Pro** and **Input Mono Condensed** as fonts; they load fast enough and when they are loading the fallback font the the browser renders is good enough.
+
 ## **Jedi Focus** (*v.0.5.0*)
 
 * Performance improvements when saving goals.

@@ -18,14 +18,14 @@ import { fromJS as makeImmutable } from 'immutable';
 import { sendFetchAppStateRequest } from '../network';
 
 import {
-    JFDI_REQUEST_APP_STATE,
-    JFDI_RECEIVE_APP_STATE
+    JFDI_APP_REQUEST_STATE,
+    JFDI_APP_RECEIVE_STATE
 } from '../../../../lib/constants';
 
-const requestAppState = () => ( { type: JFDI_REQUEST_APP_STATE } );
+const requestAppState = () => ( { type: JFDI_APP_REQUEST_STATE } );
 
 const receiveAppState = ( data ) => ( {
-    type: JFDI_RECEIVE_APP_STATE,
+    type: JFDI_APP_RECEIVE_STATE,
     payload: makeImmutable( {
         bestIntentions: data[ 0 ],
         toDo: data[ 1 ],

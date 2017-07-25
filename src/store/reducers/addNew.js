@@ -28,7 +28,8 @@ const addNew = ( state = {} ) => ( {
     modalContextVisible: false,
     modalId: guid(),
     modalItem: '',
-    modalBucket: 'bestIntentions'
+    modalBucket: 'bestIntentions',
+    modalContext: state.context
 } );
 
 export default addNew;

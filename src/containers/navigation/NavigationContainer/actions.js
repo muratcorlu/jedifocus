@@ -13,10 +13,10 @@
  *  ||||
  */
 
-import { JFDI_ADD_NEW, JFDI_CHANGE_CONTEXT } from '../../../lib/constants';
+import { JFDI_CARD_ADD_NEW, JFDI_APP_CHANGE_CONTEXT } from '../../../lib/constants';
 
-const addNew = () => ( { type: JFDI_ADD_NEW } );
+const addNew = () => ( { type: JFDI_CARD_ADD_NEW } );
 
-const changeContext = () => ( { type: JFDI_CHANGE_CONTEXT } );
+const changeContext = () => ( { type: JFDI_APP_CHANGE_CONTEXT } );
 
 export { addNew, changeContext };
