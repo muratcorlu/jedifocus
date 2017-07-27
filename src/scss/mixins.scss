@@ -1,7 +1,7 @@
 @mixin block_quote {
     border-left: 6px $light_background_4 solid;
     background: $light_background_3;
-    color: $dark1;
+    color: $dark_1;
     font-style: italic;
 }
 
@@ -9,24 +9,28 @@
     font-family: $monotype_fallback_font;
     font-size: 16px;
     background: $light_background_5;
-    color: $dark1;
+    color: $dark_1;
 }
 
 @mixin heading {
+    margin: $margin_none;
+    padding: 0;
+
     font-size: $default_font_size;
     font-weight: bold;
     text-align: left;
-    margin: 0;
-    padding: 0;
+
     margin-bottom: 16px;
 }
 
 @mixin card_common {
+    margin: $margin_card_common;
+    padding: 16px;
+
     cursor: pointer;
     position: relative;
     line-height: 1.5em;
-    padding: 16px;
-    margin: 16px;
+
     min-height: 50px;
     background: $light_background_1;
     border: $dark_border;

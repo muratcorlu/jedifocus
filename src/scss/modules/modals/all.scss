@@ -14,17 +14,17 @@
  */
 
 .modal-edit {
+    margin: $margin_modal_edit;
+    padding: 10px;
+
     width: 625px;
     z-index: 9999;
     position: fixed;
 
-    top:50%;
-    left:50%;
-    height:300px;
-    width:624px;
-    margin:-150px -312px;
-
-    padding: 10px;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 624px;
 
     background: $light_background_2;
     box-shadow: $box_shadow;
@@ -34,30 +34,36 @@
     will-change: top, left;
 
     &__heading {
-        margin: -10px -10px 20px -10px;
+        margin: $margin_modal_heading;
         padding: 13px 13px 15px 13px;
+
         letter-spacing: 0;
 
         font-size: 24px;
         text-align: center;
 
-        color: $dark7;
+        color: $dark_7;
 
         cursor: move;
 
-        background: #888888;
-        background: linear-gradient(to bottom, #e5e5e5, #888888);
+        background: $dark_background_1;
+        background: linear-gradient(to bottom, $dark_background_2, $dark_background_1);
         border-radius: 2px 2px 0 0;
-        opacity: 0.8;
-    }
+        opacity: $transparent;
 
-    &__heading:hover {
-        text-shadow: none;
+        &:hover {
+            color: $dark_foreground_1;
+            opacity: $opaque;
+        }
 
+        label {
+            cursor: move;
+        }
     }
 
     &__label {
-        margin: 1px 10px 10px 0;
+        margin: $margin_modal_label;
+
         font-weight: bold;
 
         &--floated {
@@ -79,24 +85,24 @@
     }
 
     &__description {
+        margin: $margin_modal_description;
+        padding: 7px;
+
+        width: 607px;
+        height: 187px;
+
         background: $light_background_1;
 
         font-family: $monotype_fallback_font;
         font-size: $smaller_font_size;
-
-        color: $dark7;
-
         line-height: 22px;
-        width: 607px;
-        height: 187px;
-
-        margin: -10px 10px 10px 0;
-        padding: 7px;
+        color: $dark_7;
     }
 
     &__selection {
+        margin: $margin_modal_selection;
         padding: 5px 10px;
-        margin: -1px 0 0 -5px;
+        width: 165px;
 
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -104,10 +110,9 @@
 
         float: left;
 
-        width: 165px;
         font-size: $smaller_font_size;
 
-        &--margin-adjust { margin: -2px 3px 0 -5px; }
+        &--margin-adjust { margin: $margin_modal_adjust; }
 
         &--inline { float: none; }
 
@@ -122,9 +127,10 @@
     }
 
     &__actions {
+        margin: $margin_modal_actions;
+
         text-align: right;
         float: right;
-        margin: -5px 3px 10px 0;
 
         &--inline { float: none; }
         &--centered { text-align: center; }
@@ -132,7 +138,7 @@
     }
 
     &__body {
-        margin: 10px 15px 10px 10px;
+        margin: $margin_modal_body;
         text-align: center;
     }
 
@@ -143,7 +149,7 @@
 
     &__action-button--cancel {
         background: transparent;
-        color: $dark2;
+        color: $dark_2;
         text-decoration: none;
         box-shadow: none;
     }
@@ -152,7 +158,7 @@
 body.wf-loaded {
     .modal-edit {
         &__description {
-             font-family: $monotype_font;
+            font-family: $monotype_font;
         }
     }
 }

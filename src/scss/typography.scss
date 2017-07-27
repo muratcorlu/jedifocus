@@ -33,7 +33,7 @@ h2 {
 }
 
 p {
-    margin-bottom: 16px;
+    margin-bottom: $margin_regular;
 }
 
 strong, b {font-weight: bold;}
@@ -42,23 +42,23 @@ em, i {font-style: italic;}
 blockquote {
     @include block_quote;
 
+    margin-bottom: $margin_regular;
     padding: 0 10px 0 6px;
-    margin-bottom: 16px;
 
     p {
+        margin: $margin_none;
         padding: 5px 10px 5px 10px;
-        margin: 0;
     }
 
     blockquote {
-        margin-bottom: 0;
+        margin-bottom: $margin_none;
     }
 }
 
 pre {
     @include pre_formatted;
 
-    margin-bottom: 16px;
+    margin-bottom: $margin_regular;
     padding: 7px;
 }
 

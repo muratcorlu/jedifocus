@@ -17,3 +17,4 @@
 
 eslint src
 eslint webpack.config.js
+sass-lint -c .sass-lint.yml --no-exit -v

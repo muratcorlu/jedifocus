@@ -14,12 +14,12 @@
  */
 
 body {
-    background: $dark5;
+    background: $dark_5;
     background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
     background-attachment: fixed;
-    background-image: radial-gradient($dark6 15%, transparent 35%),
-        radial-gradient($dark7 10%, transparent 25%);
+    background-image: radial-gradient($dark_6 15%, transparent 35%),
+        radial-gradient($dark_7 10%, transparent 25%);
     font-size: $default_font_size;
 }
 

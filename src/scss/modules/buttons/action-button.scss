@@ -13,7 +13,7 @@
   *  ||||
   */
 
- .action-button {
+.action-button {
     display: inline-block;
     position: relative;
     top: -1px;
@@ -43,7 +43,7 @@
 }
 
 .column__action-button {
-    margin: 0.2em;
     display: inline-block;
-    padding: 0 0.3em 0 0.3em;
+    margin: $margin_action_button;
+    padding: 0 6px 0 6px;
 }

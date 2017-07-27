@@ -22,25 +22,29 @@ $default_font_size: 18px;
 $smaller_font_size: 16px;
 $smallest_font_size: 14px;
 
-$accent_1: #d3541a;
-$accent_2: #35495d;
-$accent_3: #3081b7;
-$accent_4: #239f86;
-$light_foreground_1: #ffffff;
-$light_background_1: #ffffff;
-$light_background_2: #bdbdbd;
-$light_background_3: #eef3f0;
-$light_background_4: #b0cbbd;
-$light_background_5: #f3f2ee;
+$accent_1: #D3541A;
+$accent_2: #35495D;
+$accent_3: #3081B7;
+$accent_4: #239F86;
+$dark_foreground_1: #000000;
+$light_foreground_1: #FFFFFF;
+$light_background_1: #FFFFFF;
+$light_background_2: #BDBDBD;
+$light_background_3: #EEF3F0;
+$light_background_4: #B0CBBD;
+$light_background_5: #F3F2EE;
 $link_foreground: #1005C9;
 
-$dark1: #2C3742;
-$dark2: #4C423D;
-$dark3: #394F5E;
-$dark4: #2B564E;
-$dark5: #01262A;
-$dark6: #011D20;
-$dark7: #011315;
+$dark_background_1: #888888;
+$dark_background_2: #E5E5E5;
+
+$dark_1: #2C3742;
+$dark_2: #4C423D;
+$dark_3: #394F5E;
+$dark_4: #2B564E;
+$dark_5: #01262A;
+$dark_6: #011D20;
+$dark_7: #011315;
 
 $box_shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 $dark_border: 1px #757575 solid;
@@ -50,3 +54,18 @@ $default_transition: all 0.25s ease-in-out;
 $transparent: 0.65;
 $semi-opaque: 0.85;
 $opaque: 0.99;
+
+$margin_none: 0;
+$margin_regular: 16px;
+
+$margin_modal_edit: -150px -312px;
+$margin_modal_heading: -10px -10px 20px -10px;
+$margin_modal_label: 1px 10px 10px 0;
+$margin_modal_description: -10px 10px 10px 0;
+$margin_modal_selection: -1px 0 0 -5px;
+$margin_modal_adjust: -2px 3px 0 -5px;
+$margin_modal_actions: -5px 3px 10px 0;
+$margin_modal_body: 10px 15px 10px 10px;
+$margin_action_button: 10px;
+$margin_card_common: 16px;
+$margin_centered: 0 auto;
