@@ -15,7 +15,6 @@ options:
 files:
   include: 'src/scss/**/*.s+(a|c)ss'
   ignore:
-    - 'src/scss/vendor/**/*.*'
     - 'src/scss/reset.scss'
 # Rule Configuration
 rules:

@@ -13,70 +13,26 @@
  *  ||||
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import * as actions from './actions';
 import { connect } from 'kink';
 
-import { on, off } from 'dombili';
-
 import ModalEdit from '../../../components/modals/ModalEdit';
 
-import { onMouseDown, onMouseMove, onMouseUp, initializeState } from './events';
-
-const body = document.body;
-
-class ModalEditContainer extends Component {
-    constructor( props ) {
-        super( props );
-
-        initializeState( this );
-
-        this.onMouseDown = this.onMouseDown.bind( this );
-        this.onMouseMove = this.onMouseMove.bind( this );
-        this.onMouseUp = this.onMouseUp.bind( this );
-    }
-
-    onMouseDown( evt ) { onMouseDown( evt, this ); }
-    onMouseMove( evt ) { onMouseMove( evt, this ); }
-    onMouseUp( evt ) { onMouseUp( evt, this ); }
-
-    componentDidMount() {
-        on( body, 'mousedown', this.onMouseDown );
-        on( body, 'mousemove', this.onMouseMove );
-        on( body, 'mouseup', this.onMouseUp );
-    }
-
-    componentBeforeUnmount() {
-        off( body, 'mousedown', this.onMouseDown );
-        off( body, 'mousemove', this.onMouseMove );
-        off( body, 'mouseup', this.onMouseUp );
-    }
-
-    render() {
-        return (
-            <ModalEdit
-                context={this.props.context}
-                bucket={this.props.bucket}
-                id={this.props.id}
-                item={this.props.item}
-                saveGoal={() => this.props.saveGoal(
-                    this.props.userId,
-                    this.props.context,
-                    this.props.bucket,
-                    this.props.id,
-                    this.props.item,
-                    this.props.stateContext
-                )}
-                show={this.props.show}
-                updateBucket={this.props.updateBucket}
-                updateContext={this.props.updateContext}
-                updateDescription={this.props.updateDescription}
-            />
-        );
-    }
-}
+const ModalEditContainer = ( {
+    context, bucket, id, item, userId, stateContext, show,
+    updateBucket, updateContext, updateDescription, saveGoal
+} ) => (
+    <ModalEdit
+        context={context} bucket={bucket} id={id} item={item} show={show}
+        saveGoal={() => saveGoal( userId, context, bucket, id, item, stateContext )}
+        updateBucket={updateBucket}
+        updateContext={updateContext}
+        updateDescription={updateDescription}
+    />
+);
 
 ModalEditContainer.propTypes = {
     bucket: PropTypes.string.isRequired,

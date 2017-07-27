@@ -50,8 +50,20 @@ const onMouseDown = ( evt, component ) => {
     component.start.clientX = evt.clientX;
     component.start.clientY = evt.clientY;
 
-    component.start.left = parseInt( getStyle( component.modal, 'left' ), 10 ) || 0;
-    component.start.top = parseInt( getStyle( component.modal, 'top' ), 10 ) || 0;
+    const leftStyle = getStyle( component.modal, 'left' );
+    const topStyle = getStyle( component.modal, 'top' );
+
+    const safariDoesNotPlayByTheRulesAsAlways = leftStyle.indexOf( '%' ) > -1;
+
+    if ( safariDoesNotPlayByTheRulesAsAlways ) {
+        component.start.left = parseInt( document.documentElement.clientWidth / 2, 10 ) || 0;
+        component.start.top = parseInt( document.documentElement.clientHeight / 2, 10 ) || 0;
+
+        return;
+    }
+
+    component.start.left = parseInt( leftStyle, 10 ) || 0;
+    component.start.top = parseInt( topStyle, 10 ) || 0;
 };
 
 const onMouseUp = ( evt, component ) => { component.dragging = false; };
