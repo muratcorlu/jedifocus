@@ -44,6 +44,7 @@
     will-change: opacity;
     transition: all 0.25s ease-in-out;
     letter-spacing: 2px;
+    height: 25px;
 }
 
 @mixin column_opaque {

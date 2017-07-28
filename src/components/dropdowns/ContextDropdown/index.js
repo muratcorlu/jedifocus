@@ -39,6 +39,10 @@ const ContextDropdown = ( { id, value, onChange } ) => (
             <option value="dombili-improvements">dombili Improvements</option>
             <option value="jedifocus-improvements">JediFocus Improvements</option>
         </optgroup>
+        <optgroup label="Reference">
+            <option value="toolbox">Toolbox</option>
+            <option value="articles">Articles</option>
+        </optgroup>
         <optgroup label="Queues">
             <option value="reading-queue">Reading Queue</option>
             <option value="watching-queue">Watching Queue</option>

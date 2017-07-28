@@ -14,10 +14,10 @@
  */
 
 .column {
-    @include column_transparent;
+    @include column_semi_opaque;
 
     &:hover {
-        @include column_semi_opaque;
+        @include column_transparent;
 
         .heading {
             &__best-intentions { @include column_opaque; }
@@ -26,11 +26,6 @@
             &__done { @include column_opaque; }
         }
     }
-
-    &__best-intentions { background: $dark_1; }
-    &__to-do { background: $dark_2; }
-    &__in-progress { background: $dark_3; }
-    &__done { background: $dark_4; }
 }
 
 .heading {
