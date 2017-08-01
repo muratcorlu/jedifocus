@@ -25,6 +25,7 @@ const ContextDropdown = ( { id, value, onChange } ) => (
         <optgroup label="Clarify or Kick to the Future">
             <option value="needs-clarification">Needs Clarification / Splitting</option>
             <option value="ice-box">Ice Box</option>
+            <option value="wontfix">Won’t Fix</option>
         </optgroup>
         <optgroup label="Runway">
             <option value="default">Default</option>
@@ -49,6 +50,9 @@ const ContextDropdown = ( { id, value, onChange } ) => (
         </optgroup>
         <optgroup label="Work">
             <option value="cisco">Cisco</option>
+        </optgroup>
+        <optgroup label="Test">
+            <option value="demo">Demo</option>
         </optgroup>
     </select>
 );
