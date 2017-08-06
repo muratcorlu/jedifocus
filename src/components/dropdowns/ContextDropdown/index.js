@@ -26,6 +26,7 @@ const ContextDropdown = ( { id, value, onChange } ) => (
             <option value="needs-clarification">Needs Clarification / Splitting</option>
             <option value="ice-box">Ice Box</option>
             <option value="wontfix">Won’t Fix</option>
+            <option value="revisit">Revisit</option>
         </optgroup>
         <optgroup label="Runway">
             <option value="default">Default</option>

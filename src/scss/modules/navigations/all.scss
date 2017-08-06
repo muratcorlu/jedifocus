@@ -16,7 +16,7 @@
 .navigation-main {
     position: fixed;
     right: 55px;
-    bottom: 32px;
+    bottom: 26px;
     width: 110px;
     padding: 18px;
 
@@ -43,14 +43,13 @@
 }
 
 .navigation-context {
-    // move these to the variables too
-    color: #FFFFFF;
-    background: #128F5F;
-    font-size: 18px;
+    color: $light_foreground_1;
+    background: $accent_5;
+    font-size: $default_font_size;
 
     text-align: right;
 
-    padding: 9px 30px 9px 18px;
+    padding: 5px 30px 5px 18px;
 
     position: fixed;
     right: -20px;
