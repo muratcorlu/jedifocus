@@ -28,7 +28,7 @@ import {
 } from './network';
 
 const saveGoal = ( userId, context, bucket, goalId, item, currentContext ) => {
-    sendSaveGoalRequest( userId, context, bucket, goalId, item )
+    sendSaveGoalRequest( userId, context, bucket, goalId, item.trim() )
         .then( () => {
             if ( context !== currentContext ) {
                 return sendRemoveFromOtherBucketsRequest( userId, currentContext, 'done', goalId );

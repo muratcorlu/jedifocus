@@ -17,7 +17,7 @@
     @include column_semi_opaque;
 
     &:hover {
-        @include column_transparent;
+        @include column_opaque;
 
         .heading {
             &__best-intentions { @include column_opaque; }

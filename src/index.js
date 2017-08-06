@@ -29,6 +29,8 @@ delete config.fbUserId;
 
 import AppContainer from './containers/app/AppContainer';
 
+import './lib/ux/fonts';
+
 render(
     <AppContainer config={config} email={email} password={password} userId={fbUserId} />,
     $( '#react-root' )

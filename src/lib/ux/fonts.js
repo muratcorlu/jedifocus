@@ -17,13 +17,17 @@ import FontFaceObserver from 'fontfaceobserver';
 
 const FONT_LOAD_TIMEOUT = 10000;
 
+const inputMonoObserver = new FontFaceObserver( 'Input Mono Cond Lt' );
+const georgiaProObserver = new FontFaceObserver( 'Georgia Pro Reg' );
+
 const checkFonts = () => Promise.all( [
-    ( new FontFaceObserver( 'Georgia Pro' ) ).load( null, FONT_LOAD_TIMEOUT ),
-    ( new FontFaceObserver( 'Input Mono Cond' ) ).load( null, FONT_LOAD_TIMEOUT )
+    inputMonoObserver.load( null, FONT_LOAD_TIMEOUT ),
+    georgiaProObserver.load( null, FONT_LOAD_TIMEOUT )
 ] )
     .then( () => ( document.body.className = document.body.clasName ?
         `${document.body.className} wf-loaded` :
         'wf-loaded'
-    ) );
+    ) )
+    .catch( ( err ) => console.log( 'error occured', typeof err ) );
 
 checkFonts();

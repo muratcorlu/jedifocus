@@ -61,10 +61,13 @@ const saveAll = ( userId, context, data ) => {
     saveBestIntentions( userId, context, data.bestIntentions );
 };
 
-const saveGoal = ( userId, context, bucket, goalId, item ) => bucket === 'done' ? Promise.resolve() : db()
-    .database()
-    .ref( refGoal( userId, context, bucket, goalId ) )
-    .set( item );
+const saveGoal = ( userId, context, bucket, goalId, item ) =>
+    bucket === 'done' || item.trim() === '' ?
+        Promise.resolve() :
+        db()
+            .database()
+            .ref( refGoal( userId, context, bucket, goalId ) )
+            .set( item.trim() );
 
 const removeGoalFromOtherBuckets = ( userId, context, bucket, goalId ) => Promise.all(
     [ COLUMN_TO_DO, COLUMN_IN_PROGRESS, COLUMN_BEST_INTENTIONS ]

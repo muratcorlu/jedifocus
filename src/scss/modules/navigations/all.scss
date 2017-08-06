@@ -16,7 +16,7 @@
 .navigation-main {
     position: fixed;
     right: 55px;
-    bottom: 45px;
+    bottom: 53px;
     width: 110px;
     padding: 18px;
 
@@ -41,18 +41,19 @@
 }
 
 .navigation-context {
-    color: $light_foreground_1;
+    color: $dark_foreground_1;
+    background: $light_background_5;
     text-align: right;
 
-    padding: 9px 18px 9px 18px;
+    padding: 9px 30px 9px 18px;
 
     position: fixed;
-    right: 0;
+    right: -20px;
     bottom: 20px;
 
-    width: 500px;
-    opacity: $opaque;
+    opacity: 0.35;
+    border-radius: 25px;
 
-    &__context-name { color: $light_foreground_1; }
+    &__context-name { color: $dark_foreground_1; }
     &__context-label { font-size: $smaller_font_size; }
 }

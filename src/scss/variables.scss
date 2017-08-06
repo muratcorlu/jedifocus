@@ -13,12 +13,14 @@
  *  ||||
  */
 
-$base_font: "Georgia Pro";
+$base_font_lt: "Georgia Pro Lt It";
+$base_font: "Georgia Pro Reg";
 $base_fallback_font: Georgia, "Noto Serif", "Liberation Serif", "Dejavu Serif", "Times New Roman", Times, serif;
-$monotype_font: "Input Mono Cond";
+$monotype_font: "Input Mono Cond Reg";
 $monotype_fallback_font: "OperatorMono-Book", "Operator Mono Book", "Menlo", "Monaco", "Meslo", "Courier New", "Courier", "Liberation Mono", monospace;
 
 $default_font_size: 18px;
+$larger_font_size: 20px;
 $smaller_font_size: 16px;
 $smallest_font_size: 14px;
 

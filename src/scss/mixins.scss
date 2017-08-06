@@ -41,12 +41,15 @@
 
 @mixin column_heading_common {
     color: $light_foreground_1;
+    font-family: $base_font_lt;
     min-width: 200px;
     opacity: 0.35;
     will-change: opacity;
     transition: all 0.25s ease-in-out;
     letter-spacing: 2px;
     height: 25px;
+    font-style: italic;
+    font-weight: inherit;
 }
 
 @mixin column_opaque {

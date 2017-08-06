@@ -15,19 +15,23 @@
 
 .container__loading {
     margin: $margin_none;
-    padding: 18px 32px 13px 32px;
+    padding: 19px 32px 14px 32px;
     position: fixed;
     right: -8px;
     top: -8px;
-    width: 160px;
+    width: 100%;
     z-index: 9999;
     border-radius: 2px;
 
     color: $light_foreground_1;
     background: $accent_1;
-    opacity: $transparent;
+    opacity: $opaque;
+
+    font-size: $larger_font_size;
+    font-family: $base_font_lt;
 
     font-weight: normal;
+    font-style: italic;
     letter-spacing: 2px;
     text-align: center;
 }
