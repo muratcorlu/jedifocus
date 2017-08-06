@@ -16,11 +16,11 @@
 .navigation-main {
     position: fixed;
     right: 55px;
-    bottom: 53px;
+    bottom: 32px;
     width: 110px;
     padding: 18px;
 
-    opacity: $transparent;
+    opacity: $opaque;
     font-size: $smaller_font_size;
 
     will-change: opacity;
@@ -33,27 +33,32 @@
     }
 
     &__action-button {
+        font-family: $base_font_lt;
         text-align: left;
         width: 180px;
         padding-left: 20px;
-        margin-top: 10px;
+        margin-top: 5px;
+        margin-bottom: 0;
     }
 }
 
 .navigation-context {
-    color: $dark_foreground_1;
-    background: $light_background_5;
+    // move these to the variables too
+    color: #FFFFFF;
+    background: #128F5F;
+    font-size: 18px;
+
     text-align: right;
 
     padding: 9px 30px 9px 18px;
 
     position: fixed;
     right: -20px;
-    bottom: 20px;
+    bottom: 5px;
 
-    opacity: 0.35;
+    opacity: $opaque;
     border-radius: 25px;
 
-    &__context-name { color: $dark_foreground_1; }
-    &__context-label { font-size: $smaller_font_size; }
+    &__context-name { color: #FFFFFF; font-family: $base_font; font-style: normal; font-weight: normal; padding-right: 8px; }
+    &__context-label { font-size: $smaller_font_size; font-family: $base_font_lt; }
 }
