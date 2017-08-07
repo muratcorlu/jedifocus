@@ -16,8 +16,11 @@
 body {
     background: $dark_8;
     background-attachment: fixed;
-    background-image: url("/images/bg.gif");
+
+    // random image:
+    background-image: url(/images/bg3.jpg); // url("/images/bg.gif");
     font-size: $default_font_size;
+    background-size: cover;
 }
 
 h2 {
