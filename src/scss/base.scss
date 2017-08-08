@@ -18,9 +18,11 @@ body {
     background-attachment: fixed;
 
     // random image:
-    background-image: url(/images/bg10.jpg); // url("/images/bg.gif");
+    background-image: url(/images/bg21.jpg); // url("/images/bg.gif");
     font-size: $default_font_size;
     background-size: cover;
+
+    padding-bottom: 75vh;
 }
 
 h2 {

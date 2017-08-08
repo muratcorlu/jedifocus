@@ -43,7 +43,7 @@ const Card = ( { item, bucket, id, editCard } ) => (
         }
     >
         <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
-        <div style={{ 'border-top': '2px #dddddd solid', 'padding-top': '5px', 'text-align': 'right', 'margin-bottom': '-15px', 'margin-left': '-16px', 'margin-right': '-16px', 'padding-left': '10px', 'padding-right': '10px', 'padding-bottom': '5px', 'background': '#e0e0e0' }}>
+        <div style={{ 'border-top': '2px #dddddd solid', 'padding-top': '5px', 'text-align': 'right', 'margin-bottom': '-15px', 'margin-left': '-16px', 'margin-right': '-16px', 'padding-left': '10px', 'padding-right': '10px', 'padding-bottom': '5px', 'background': '#e0e0e0', 'position': 'relative', 'top': '2px' }}>
             <a href="#" style={{ 'xfont-size': '22px', 'font-weight': 'normal', 'float': 'left', 'text-decoration': 'none', 'color': '#aaaaaa' }}>✲</a>  &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#" style={{ 'text-decoration': 'none', 'color': '#aaaaaa' }}>🡸</a> &nbsp;
             <a href="#" style={{ 'text-decoration': 'none', 'color': '#aaaaaa' }}>🡺</a>

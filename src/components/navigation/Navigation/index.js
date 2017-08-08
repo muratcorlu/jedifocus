@@ -30,6 +30,11 @@ const Navigation = ( { addNew, changeContext, context } ) => (
             className="column__action-button navigation-main__action-button"
         />
 
+        <ActionButton text="Search & Filter"
+            onClick={() => addNew()}
+            className="column__action-button navigation-main__action-button"
+        />
+
         <div className="navigation-context">
             <em className="navigation-context__context-label">context:</em>
             {' '}
