@@ -15,9 +15,11 @@
 
 .column {
     @include column_semi_opaque;
+    opacity: 0.99;
 
     &:hover {
         @include column_opaque;
+        opacity: .99;
 
         .heading {
             &__best-intentions { @include column_opaque; }
@@ -29,23 +31,28 @@
 }
 
 .heading {
+
     &__best-intentions {
         @include column_heading_common;
+        opacity: 0.35;
         background: $accent_2;
     }
 
     &__to-do {
         @include column_heading_common;
+        opacity: 0.35;
         background: $accent_1;
     }
 
     &__in-progress {
         @include column_heading_common;
+        opacity: 0.35;
         background: $accent_3;
     }
 
     &__done {
         @include column_heading_common;
+        opacity: 0.35;
         background: $accent_4;
     }
 }
