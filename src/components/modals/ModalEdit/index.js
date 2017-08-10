@@ -28,11 +28,6 @@ const ModalEdit = ( {
     <div className="modal-edit">
         <h2 className="modal-edit__heading"><label htmlFor="modal-edit-description">Describe Your Goal</label></h2>
 
-        <div>
-            <GoalDescriptionTextarea id="modal-edit-description" value={item}
-                onChange={( value ) => updateDescription( bucket, id, value )} />
-        </div>
-
         <h3 className="modal-edit__label modal-edit__label--floated modal-edit__label--floated-first">
             <label htmlFor="modal-edit-column">Stage</label></h3>
         <div>
@@ -43,15 +38,19 @@ const ModalEdit = ( {
         <h3 className="modal-edit__label modal-edit__label--floated">
             <label htmlFor="modal-edit-context">Context</label></h3>
 
-        <div className="modal-edit__actions">
-            <ActionButton text="Done" onClick={() => saveGoal()} />
-        </div>
-
         <div>
             <ContextDropdown id="modal-edit-context" value={context}
                 onChange={( value ) => updateContext( bucket, id, value )} />
         </div>
 
+        <div>
+            <GoalDescriptionTextarea id="modal-edit-description" value={item}
+                onChange={( value ) => updateDescription( bucket, id, value )} />
+        </div>
+
+        <div className="modal-edit__actions">
+            <ActionButton onClick={() => saveGoal()}>Save</ActionButton>
+        </div>
     </div>
 ) : null;
 

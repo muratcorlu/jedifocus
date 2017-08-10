@@ -16,17 +16,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ActionButton = ( { text, onClick, className } ) => (
+const ActionButton = ( { children, onClick, className } ) => (
     <a href="#" className={`action-button ${className}`}
         onClick={( evt ) => {
             evt.preventDefault();
             onClick( evt );
-        }}>{text}</a>
+        }}>{children}</a>
 );
 
 ActionButton.propTypes = {
     onClick: PropTypes.func.isRequired,
-    text: PropTypes.string.isRequired,
+    children: PropTypes.node,
     className: PropTypes.string
 };
 

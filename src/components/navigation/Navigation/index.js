@@ -20,24 +20,17 @@ import ActionButton from '../../../components/buttons/ActionButton';
 
 const Navigation = ( { addNew, changeContext, context } ) => (
     <div className="navigation-main">
-        <ActionButton text="Add a New Goal"
+        <ActionButton
             onClick={() => addNew()}
             className="column__action-button navigation-main__action-button"
-        />
+        >new goal <img src="/images/plus.png" /></ActionButton>
 
-        <ActionButton text="Change Context"
-            onClick={() => changeContext()}
-            className="column__action-button navigation-main__action-button"
-        />
-
-        <ActionButton text="Search & Filter"
+        <ActionButton
             onClick={() => addNew()}
             className="column__action-button navigation-main__action-button"
-        />
+        >search <img src="/images/search.png" /></ActionButton>
 
-        <div className="navigation-context">
-            <em className="navigation-context__context-label">context:</em>
-            {' '}
+        <div className="navigation-context" onClick={() => changeContext()}>
             <strong className="navigation-context__context-name">{context}</strong>
         </div>
     </div>

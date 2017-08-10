@@ -15,8 +15,8 @@
 
 .navigation-main {
     position: fixed;
-    right: 55px;
-    bottom: 26px;
+    left: 55px;
+    top: 0;
     width: 110px;
     padding: 18px;
 
@@ -34,30 +34,57 @@
 
     &__action-button {
         font-family: $base_font_lt;
-        text-align: left;
+        text-align: right;
         width: 180px;
-        padding-left: 20px;
+        padding-right: 15px;
         margin-top: 5px;
         margin-bottom: 0;
+
+        // background: #FFFFFF;
+        // color: #000000;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        position: relative;
+        left: -230px;
+        top: 50px;
+
+        text-decoration: none;
+
+        &:hover {
+            // background: $accent_1;
+        }
+
+        img {
+            vertical-align: middle;
+            margin-left: 15px;
+        }
     }
 }
 
 .navigation-context {
     color: $light_foreground_1;
-    background: $accent_5;
+    background: $accent_1;
     font-size: $default_font_size;
+
+    cursor: pointer;
 
     text-align: right;
 
-    padding: 5px 30px 5px 18px;
+    padding: 15px 30px 15px 18px;
 
     position: fixed;
     right: -20px;
-    bottom: 5px;
+    bottom: 35px;
 
     opacity: $opaque;
     border-radius: 25px;
 
-    &__context-name { color: #FFFFFF; font-family: $base_font; font-style: normal; font-weight: normal; padding-right: 8px; }
-    &__context-label { font-size: $smaller_font_size; font-family: $base_font_lt; }
+    &:hover {
+        background: #FFFFFF;
+        color: $accent_1;
+    }
+
+    &__context-name {font-family: $base_font; font-style: italic; font-weight: normal; padding-right: 8px; }
 }
