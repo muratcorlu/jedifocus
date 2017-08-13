@@ -24,18 +24,18 @@ const ContextDropdown = ( { id, value, onChange } ) => (
     >
         <optgroup label="Runway">
             <option value="default">Default</option>
-            <option value="errands">Errands</option>
             <option value="30-minutes">30 Minutes</option>
-            <option value="cast-topics">Cast Topics</option>
-            <option value="learning">Learning</option>
             <option value="backlog">Backlog</option>
+            <option value="cast-topics">Cast Topics</option>
+            <option value="errands">Errands</option>
         </optgroup>
 
         <optgroup label="Clarify or Kick to the Future">
             <option value="needs-clarification">Needs Clarification / Splitting</option>
+
             <option value="ice-box">Ice Box</option>
-            <option value="wontfix">Won’t Fix</option>
             <option value="revisit">Revisit</option>
+            <option value="wontfix">Won’t Fix</option>
         </optgroup>
 
         <optgroup label="Projects">
@@ -50,6 +50,7 @@ const ContextDropdown = ( { id, value, onChange } ) => (
             <option value="articles">Articles</option>
         </optgroup>
         <optgroup label="Queues">
+            <option value="learning">Learning</option>
             <option value="reading-queue">Reading Queue</option>
             <option value="watching-queue">Watching Queue</option>
         </optgroup>

@@ -33,9 +33,7 @@ const ModalChangeContext = ( { show, changeContext, context } ) => show ? (
     </div>
 ) : null;
 
-ModalChangeContext.defaultProps = {
-    show: false
-};
+ModalChangeContext.defaultProps = { show: false };
 
 ModalChangeContext.propTypes = {
     show: PropTypes.bool,

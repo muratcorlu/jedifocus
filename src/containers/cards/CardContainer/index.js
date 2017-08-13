@@ -21,15 +21,38 @@ import * as actions from './actions';
 
 import Card from '../../../components/cards/Card';
 
-const CardContainer = ( { item, id, bucket, editCard } ) => (
-    <Card item={item} id={id} bucket={bucket} editCard={editCard} />
+const CardContainer = ( {
+    item, id, bucket, userId, context,
+    editCard, copyCard, snoozeCard,
+    moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
+} ) => (
+    <Card
+        item={item} id={id} bucket={bucket} userId={userId} context={context}
+        editCard={editCard} copyCard={copyCard} snoozeCard={snoozeCard}
+        moveCardToBestIntentions={moveCardToBestIntentions}
+        moveCardToToDo={moveCardToToDo}
+        moveCardToInProgress={moveCardToInProgress}
+        moveCardToDone={moveCardToDone}
+    />
 );
 
 CardContainer.propTypes = {
     bucket: PropTypes.string.isRequired,
+    context: PropTypes.string.isRequired,
     editCard: PropTypes.func.isRequired,
+    copyCard: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
-    item: PropTypes.string.isRequired
+    item: PropTypes.string.isRequired,
+    moveCardToBestIntentions: PropTypes.func.isRequired,
+    moveCardToDone: PropTypes.func.isRequired,
+    moveCardToInProgress: PropTypes.func.isRequired,
+    moveCardToToDo: PropTypes.func.isRequired,
+    snoozeCard: PropTypes.func.isRequired,
+    userId: PropTypes.string.isRequired
 };
 
-export default connect( CardContainer, actions, () => ( {} ) );
+export default connect(
+    CardContainer,
+    actions,
+    ( { userId, context } ) => ( { userId, context } )
+);

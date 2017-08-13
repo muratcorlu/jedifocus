@@ -47,38 +47,35 @@ const toDo = ( userId, context ) => refOnce( userId, context, COLUMN_TO_DO );
 
 const inProgress = ( userId, context ) => refOnce( userId, context, COLUMN_IN_PROGRESS );
 
-const saveItem = ( userId, context, path, data ) => db().database()
-    .ref( refColumn( userId, context, path ) )
-    .set( data );
+const saveGoal = ( userId, context, bucket, goalId, item ) => {
+    if ( process.env.NODE_ENV !== 'production' ) {
+        console.log( 'db:saveGoal', context, bucket, goalId );
+    }
 
-const saveToDo = ( userId, context, data ) => saveItem( userId, context, COLUMN_TO_DO, data );
-const saveInProgress = ( userId, context, data ) => saveItem( userId, context, COLUMN_IN_PROGRESS, data );
-const saveBestIntentions = ( userId, context, data ) => saveItem( userId, context, COLUMN_BEST_INTENTIONS, data );
-
-const saveAll = ( userId, context, data ) => {
-    saveToDo( userId, context, data.toDo );
-    saveInProgress( userId, context, data.inProgress );
-    saveBestIntentions( userId, context, data.bestIntentions );
-};
-
-const saveGoal = ( userId, context, bucket, goalId, item ) =>
-    bucket === 'done' || item.trim() === '' ?
+    return bucket === 'done' || item.trim() === '' ?
         Promise.resolve() :
         db()
             .database()
             .ref( refGoal( userId, context, bucket, goalId ) )
             .set( item.trim() );
+};
 
-const removeGoalFromOtherBuckets = ( userId, context, bucket, goalId ) => Promise.all(
-    [ COLUMN_TO_DO, COLUMN_IN_PROGRESS, COLUMN_BEST_INTENTIONS ]
-        .filter( ( b ) => b !== bucket )
-        .map(
-            ( bucketToRemoveFrom ) => db()
-                .database()
-                .ref( refGoal( userId, context, bucketToRemoveFrom, goalId ) )
-                .remove()
-        )
-);
+const removeGoalFromOtherBuckets = ( userId, context, bucket, goalId ) => {
+    if ( process.env.NODE_ENV !== 'production' ) {
+        console.log( 'db:removeGoalFromOthers', context, bucket, goalId );
+    }
+
+    return Promise.all(
+        [ COLUMN_TO_DO, COLUMN_IN_PROGRESS, COLUMN_BEST_INTENTIONS ]
+            .filter( ( b ) => b !== bucket )
+            .map(
+                ( bucketToRemoveFrom ) => db()
+                    .database()
+                    .ref( refGoal( userId, context, bucketToRemoveFrom, goalId ) )
+                    .remove()
+            )
+    );
+};
 
 export {
     bestIntentions,
@@ -86,7 +83,6 @@ export {
     initialize,
     login,
     removeGoalFromOtherBuckets,
-    saveAll,
     saveGoal,
     toDo
 };

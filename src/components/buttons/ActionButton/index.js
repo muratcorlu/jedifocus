@@ -16,8 +16,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ActionButton = ( { children, onClick, className } ) => (
-    <a href="#" className={`action-button ${className}`}
+const ActionButton = ( { children, onClick, className, title } ) => (
+    <a href="#"
+        className={`action-button ${className || ''}`}
+        title={`${title || ''}`}
         onClick={( evt ) => {
             evt.preventDefault();
             onClick( evt );
@@ -25,9 +27,10 @@ const ActionButton = ( { children, onClick, className } ) => (
 );
 
 ActionButton.propTypes = {
-    onClick: PropTypes.func.isRequired,
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
+    title: PropTypes.string
 };
 
 export default ActionButton;
