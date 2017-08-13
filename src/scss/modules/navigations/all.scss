@@ -81,9 +81,17 @@
     opacity: $opaque;
     border-radius: 25px;
 
+    box-shadow: $box_shadow;
+    transition: $default_transition;
+
+    transform: translateZ(0);
+
     &:hover {
         background: #FFFFFF;
         color: $accent_1;
+
+        box-shadow: none;
+        transition: $default_transition;
     }
 
     &__context-name {font-family: $base_font; font-style: italic; font-weight: normal; padding-right: 8px; }
