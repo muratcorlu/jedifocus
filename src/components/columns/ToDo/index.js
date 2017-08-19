@@ -1,16 +1,15 @@
-/*   __
- *  |::|    Jedi Focus
- *  |::|
- * _|//|_  Do. Or do not.
- * |____|  There is no try.
- *  || |
- *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
- *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
- *  || |
- *  || |   MIT Licensed — See LICENSE.md
- *  || |
- *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
- *  ||||
+/*  __.-._
+ *  '-._"7'  Jedi Focus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
 import React from 'react';
@@ -22,8 +21,7 @@ const ToDo = ( { items } ) => (
     <BaseColumn
         bucket="toDo"
         heading="To Do"
-        className="column__to-do"
-        headingClassName="heading__to-do"
+        headingClassName="column-heading__to-do"
         items={items}
     />
 );

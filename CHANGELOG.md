@@ -1,13 +1,19 @@
 ```
-  __
- |::|    Jedi Focus
- |::|
-_|//|_  Do. Or do not.
-|____|  There is no try.
- || |  
- | ||
- | ||
+__.-._  
+'-._"7'  Jedi Focus
+ /'.-c
+ |  /T   Do. Or do not.
+_)_/LI   There is no try.
 ```
+
+## **JediFocus** (*v.0.9.0*)
+
+* Removed the “Done” column. — You don’t need it. If something is done, it is done; keeping track of done items is a counter-productive. Say “bye” do things you do, and move on. No need to overload your mind. — You are a **doer**; not an accountant!
+* Usability enhancements code cleanup.
+* Theme and typography improvement
+* Minor bug fixes.
+* Drafted a “README” (*I’ll probably work on it further*).
+* Started using **JediFocus** to track **ALL** of my goals; which helps me improve the product **faster** and **better**.
 
 ## **JediFocus** (*v.0.7.1*)
 

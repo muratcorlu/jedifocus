@@ -1,0 +1,80 @@
+/*  __.-._
+ *  '-._"7'  Jedi Focus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
+ */
+
+// Theme color palette:
+$black: #272830;
+$white: #F6F6F6;
+$dimmedWhite: #EBEBEB;
+$lightGrey: #E0E0E0;
+$orange: #EF6C00;
+$blue: #039BE5;
+$blueGray: #78909C;
+$teal: #009688;
+
+// Derived palette:
+$modalEditBackground: lighten($black, 70%);
+$codeBackground: adjust_hue(lighten($blueGray, 35%), 90deg);
+$codeColor: darken(adjust_hue(lighten($blueGray, 30%), 90deg), 70%);
+$codeBorderColor: adjust_hue(lighten($blueGray, 25%), 90deg);
+$quoteBackground: lighten($blueGray, 35%);
+$quoteBorderColor: lighten($blueGray, 25%);
+$quoteColor: darken(lighten($blueGray, 30%), 70%);
+$cardSideMarkerColor: adjust_hue(lighten($blue, 35%), 0deg);
+$cardLinkColor: darken($blue, 20%);
+$cardLinkUnderlineColor: darken($blue, 20%);
+$cardLinkUnderlineHoverColor: $black;
+$cardLinkHoverColor: $black;
+$cardLinkHoverBackgroundColor: lighten($blue, 48%);
+$cardBackgroundColor: $white;
+
+
+// Important borders:
+$codeBorderWidth: 6px;
+$quoteBorderWidth: 6px;
+$cardSideMarkerBorderWidth: 6px;
+$cardLinkBorderWidth: 1px;
+$cardLinkHoverBorderWidth: 1px;
+
+// Fonts:
+$baseFontItalic: "Georgia Pro It";
+$baseFontLightItalic: "Georgia Pro Lt It";
+$baseFont: "Georgia Pro Reg";
+$baseFontBold: "Georgia Pro Bd";
+$baseFallbackFont: Georgia, "Noto Serif", "Liberation Serif", "Dejavu Serif", "Times New Roman", Times, serif;
+$monotypeFont: "Input Mono Cond Reg";
+$monotypeFallbackFont: "OperatorMono-Book", "Operator Mono Book", "Menlo", "Monaco", "Meslo", "Courier New", "Courier", "Liberation Mono", monospace;
+
+// Font sizes:
+$largerFontSize: 24px;
+$buttonFontSize: 18px;
+$largeFontSize: 18px;
+$defaultFontSize: 16px;
+$smallerFontSize: 14px;
+$smallestFontSize: 12px;
+
+// Important Dimensions:
+$buttonHeight: 32px;
+$buttonBorderRadius: 30px;
+$minCardWidth: 280px;
+
+
+// All boxes have this shadow:
+$defaultBoxShadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.26);
+
+// Transitions:
+$defaultTransition: all 0.25s ease-in-out;
+
+// To make sass-lint happy:
+$blank: '';
+$none: none;

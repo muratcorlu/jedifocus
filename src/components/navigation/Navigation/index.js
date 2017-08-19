@@ -1,16 +1,15 @@
-/*   __
- *  |::|    Jedi Focus
- *  |::|
- * _|//|_  Do. Or do not.
- * |____|  There is no try.
- *  || |
- *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
- *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
- *  || |
- *  || |   MIT Licensed — See LICENSE.md
- *  || |
- *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
- *  ||||
+/*  __.-._
+ *  '-._"7'  Jedi Focus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
 import React from 'react';
@@ -19,12 +18,12 @@ import PropTypes from 'prop-types';
 import ActionButton from '../../../components/buttons/ActionButton';
 
 const Navigation = ( { addNew, /* search, */ changeContext, context } ) => (
-    <div className="navigation-main">
+    <div className="navigation">
         <ActionButton
             onClick={() => addNew()}
             title="Add a brand new goal."
-            className="column__action-button navigation-main__action-button"
-        >new goal <img src="/images/plus.png" alt="Plus Icon" title="Add a brand new goal." /></ActionButton>
+            className="action-button--align-right action-button--inverted navigation__action-button"
+        ><img src="/images/icons/plus.png" alt="Plus Icon" title="Add a brand new goal." />&nbsp;</ActionButton>
 
         {/* <ActionButton */}
         {/* onClick={() => search()} */}
@@ -32,10 +31,10 @@ const Navigation = ( { addNew, /* search, */ changeContext, context } ) => (
         {/* className="column__action-button navigation-main__action-button"*/}
         {/* >search <img src="/images/search.png" alt="Search Icon" title="Search this context." /></ActionButton> */}
 
-        <a className="navigation-context" onClick={() => changeContext()}
+        <a className="context-selection" onClick={() => changeContext()}
             title="Change the active context."
         >
-            <strong className="navigation-context__context-name">{context}</strong>
+            <span className="context-selection__context-name">{context}</span>
         </a>
     </div>
 );

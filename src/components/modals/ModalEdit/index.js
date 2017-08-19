@@ -1,16 +1,15 @@
-/*   __
- *  |::|    Jedi Focus
- *  |::|
- * _|//|_  Do. Or do not.
- * |____|  There is no try.
- *  || |
- *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
- *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
- *  || |
- *  || |   MIT Licensed — See LICENSE.md
- *  || |
- *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
- *  ||||
+/*  __.-._
+ *  '-._"7'  Jedi Focus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
 import React from 'react';
@@ -26,7 +25,9 @@ const ModalEdit = ( {
     updateDescription, updateBucket, updateContext, saveGoal
 } ) => show ? (
     <div className="modal-edit">
-        <h2 className="modal-edit__heading"><label htmlFor="modal-edit-description">Describe Your Goal</label></h2>
+        <h2 className="modal-edit__heading">
+            <label htmlFor="modal-edit-description" className="modal-edit__heading--label">Describe Your Goal</label>
+        </h2>
 
         <h3 className="modal-edit__label modal-edit__label--floated modal-edit__label--floated-first">
             <label htmlFor="modal-edit-column">Stage</label></h3>
@@ -40,7 +41,7 @@ const ModalEdit = ( {
 
         <div>
             <ContextDropdown id="modal-edit-context" value={context}
-                onChange={( value ) => updateContext( bucket, id, value )} />
+                onChange={( value ) => updateContext( bucket, id, value )} className="" />
         </div>
 
         <div>
@@ -49,7 +50,8 @@ const ModalEdit = ( {
         </div>
 
         <div className="modal-edit__actions">
-            <ActionButton onClick={() => saveGoal()}>Save</ActionButton>
+            <ActionButton onClick={() => saveGoal()}
+                className="action-button--modal action-button--default">Save</ActionButton>
         </div>
     </div>
 ) : null;

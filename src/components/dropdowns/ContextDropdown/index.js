@@ -1,24 +1,23 @@
-/*   __
- *  |::|    Jedi Focus
- *  |::|
- * _|//|_  Do. Or do not.
- * |____|  There is no try.
- *  || |
- *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
- *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
- *  || |
- *  || |   MIT Licensed — See LICENSE.md
- *  || |
- *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
- *  ||||
+/*  __.-._
+ *  '-._"7'  Jedi Focus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContextDropdown = ( { id, value, onChange } ) => (
+const ContextDropdown = ( { id, value, onChange, className } ) => (
     <select id={id}
-        className="modal-edit__selection"
+        className={`modal-edit__selection ${className || ''}`}
         value={value}
         onChange={( evt ) => onChange( evt.target.value ) }
     >
@@ -56,6 +55,7 @@ const ContextDropdown = ( { id, value, onChange } ) => (
         </optgroup>
         <optgroup label="Work">
             <option value="cisco">Cisco</option>
+            <option value="home">Home</option>
         </optgroup>
         <optgroup label="Test">
             <option value="demo">Demo</option>
@@ -66,7 +66,8 @@ const ContextDropdown = ( { id, value, onChange } ) => (
 ContextDropdown.propTypes = {
     value: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    className: PropTypes.string
 };
 
 export default ContextDropdown;

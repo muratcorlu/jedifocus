@@ -1,0 +1,56 @@
+/*  __.-._
+ *  '-._"7'  Jedi Focus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
+ */
+
+.card {
+    background: $cardBackgroundColor;
+
+    &__text {
+        transition: $defaultTransition;
+        will-change: border-right;
+
+        padding: 5px 5px 5px 10px;
+        margin-bottom: 10px;
+        min-height: 75px;
+
+        border-left: $cardSideMarkerBorderWidth transparent solid;
+
+        a {
+            color: $cardLinkColor;
+            border-bottom: $cardLinkBorderWidth $cardLinkUnderlineColor solid;
+            padding: 1px;
+            transition: $defaultTransition;
+            will-change: color, border-bottom;
+
+            &:hover {
+                transition: $defaultTransition;
+                will-change: color, border-bottom;
+                background: $cardLinkHoverBackgroundColor;
+                color: $cardLinkHoverColor;
+                border-bottom: $cardLinkHoverBorderWidth $cardLinkHoverColor solid;
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 16px 0;
+            padding: 0;
+        }
+
+        &:hover {
+            transition: $defaultTransition;
+            will-change: border-right;
+
+            border-left: $cardSideMarkerBorderWidth $cardSideMarkerColor solid;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+/*  __.-._
+ *  '-._"7'  Jedi Focus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
+ */
+
+body {
+    background: $black url(/images/backgrounds/bg300.jpg) fixed;
+    background-size: cover;
+    padding-bottom: 75vh;
+}
+
+h2 {
+    margin-bottom: 24px;
+    padding: 12px;
+    transition: $defaultTransition;
+}
+
+ul {
+    margin-bottom: 16px;
+
+    li {
+        list-style: disc;
+        margin-left: 16px;
+    }
+}
+
+a { color: $blueGray; }
+
+blockquote {
+    transition: $defaultTransition;
+
+    background: $quoteBackground;
+    border-left: $quoteBorderWidth $quoteBorderColor solid;
+    color: $quoteColor;
+
+    margin-bottom: 15px;
+    padding: 7px;
+    border-radius: 3px;
+
+    p {
+        margin: 0;
+        padding: 5px 10px 5px 10px;
+    }
+
+    blockquote { margin-bottom: 0; }
+}
+
+pre {
+    background: $codeBackground;
+    color: $codeColor;
+    border-left: $codeBorderWidth $codeBorderColor solid;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+
+code {
+    background: $codeBackground;
+    color: $codeColor;
+    padding: 3px;
+}
