@@ -39,3 +39,5 @@ The issue with task management is: It so personal that it’s virtually impossib
 I’m sure some will like **JediFocus**, and some will feel more comfortable using a different app.
  
 > Let me tell you a secret: It’s not the app that you use; it’s the focus, discipline, dedication, and repetition that makes you succeed.
+
+[jfdi]: https://github.com/v0lkan/jfdi "JFDI: A Hacker’s Way of Getting Stuff Done"
