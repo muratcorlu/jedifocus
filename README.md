@@ -32,9 +32,7 @@ If you need help, [file an issue][ticket], or [send me an email at me@volkan.io]
 >
 > I’m working on an online version. 
 >
-> Until the web app is ready, the only way to use **JediFocus** is to build it from the source and run it locally.
->
-> See the **Installation** section below.
+> Until the web app is ready, the only way to use **JediFocus** is to [build it from the source][INSTALLATION.md] and run it locally.
 
 ## A [ByteSized.TV][vidcast] Project
 
