@@ -20,7 +20,7 @@ Simply, “simplicity”.
 
 **JediFocus** is designed to be **intuitive**, **simple**; but not “*simpler*”:
 
-> The experience has everything you need, and nothing you don’t need so that you don’t [die by a thousand micro decisions][limited-resources].
+> **JediFocus** has everything you need, and nothing you don’t; so you don’t [die by a thousand micro decisions][limited-resources].
 
 ## Help Me, Obi-Wan Kenobi
 
