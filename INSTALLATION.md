@@ -35,3 +35,13 @@ Here are the helper npm scripts that you can run via `npm`:
 I am leaving this section blank for now since things change a lot.
 
 I will update here when the file system stabilizes more.
+
+If you want to contribute to the source code, **fork this repository** and **create a pull request**.
+
+> In lieu of a formal style guide, take care to maintain the existing coding style.
+
+Also, don’t forget to add unit tests for any new or changed functionality.
+
+## I’ve Found a Bug; I Have an Idea
+
+[For bug reports and suggestions, please file an issue][ticket].
