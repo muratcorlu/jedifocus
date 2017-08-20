@@ -32,7 +32,7 @@ If you need help, [file an issue][ticket], or [send me an email at me@volkan.io]
 >
 > I’m working on an online version. 
 >
-> Until the web app is ready, the only way to use **JediFocus** is to [build it from the source][INSTALLATION.md] and run it locally.
+> Until the web app is ready, the only way to use **JediFocus** is to [build it from the source](INSTALLATION.md) and run it locally.
 
 ## Every Saga Has a Beginning
 
@@ -44,7 +44,7 @@ I don’t want to bore you with the details here. I’m obsessed with productivi
 
 In short when developing and enhancing **JediFocus**, I know what I am doing.
 
-[Read the backstory][BACKSTORY.md], if you want to learn how it all began.
+[Read the backstory](BACKSTORY.md), if you want to learn how it all began.
 
 ## Wanna Help?
 
@@ -52,7 +52,7 @@ Any help and feedback is more than appreciated.
 
 If you want to report a bug; or share a comment or suggestion, [file an issue][ticket].
 
-> Are you a developer? — **pull requests are welcome** — [You might want to read the **installation instructions**][INSTALLATION.md] first.
+> Are you a developer? — **pull requests are welcome** — [You might want to read the **installation instructions**](INSTALLATION.md) first.
 
 ## Contact Information
 
