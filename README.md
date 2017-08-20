@@ -50,22 +50,21 @@ It is a compilation of short (*around ten minutes*) screencasts about **JavaScri
 
 > What I finally relized is “*getting things done*” is a **virtual reality**. 
 >
-> You need **focus**, you don’t need anything else; your mind will handle the rest for you.
+> All you need is a Jedi-like **focus**. — Your mind will handle the rest for you.
 
-I don’t want to bore you with the details here. I’m obsessed with productivity methodologies and from **meditation**, to **pomodoro**, to **GTD**… and more. I try them all; both old, and new; combine what works, and churn what doensn’t. I also experiment with a lot of procutivity apps. — And **JediFocus** is here because **none** of those apps satisfied all my productivity needs.
+I don’t want to bore you with the details here. I’m obsessed with productivity methodologies and from **meditation**, to **pomodoro**, to **GTD**, you name it! — **JediFocus** is here because **none** of the productivity apps on the market satisfied all my needs.
 
 In short when developing and enhancing **JediFocus**, I know what I am doing.
 
 [Read the backstory][BACKSTORY.md], if you want to learn how it all began.
 
-
 ## Wanna Help?
-
-> Are you a developer? [You might want to read the **installation instructions**][INSTALLATION.md] first.
 
 Any help and feedback is more than appreciated.
 
 If you want to report a bug; or share a comment or suggestion, [file an issue][ticket].
+
+> Are you a developer? — **pull requests are welcome** — [You might want to read the **installation instructions**][INSTALLATION.md] first.
 
 ## Contact Information
 
