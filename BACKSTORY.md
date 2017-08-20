@@ -41,3 +41,4 @@ I’m sure some will like **JediFocus**, and some will feel more comfortable usi
 > Let me tell you a secret: It’s not the app that you use; it’s the focus, discipline, dedication, and repetition that makes you succeed.
 
 [jfdi]: https://github.com/v0lkan/jfdi "JFDI: A Hacker’s Way of Getting Stuff Done"
+[jfdi-manifesto]: https://gist.github.com/v0lkan/2731233 "The JFDI Manifesto"
