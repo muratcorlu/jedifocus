@@ -34,13 +34,13 @@ If you need help, [file an issue][ticket], or [send me an email at me@volkan.io]
 
 ## Every Saga Has a Beginning
 
-I’m **obsessed** with GTD, productivity methodologies, and related apps. I’ve tried them all, only to see that all of them were mere **illusions**: 
+I’m **obsessed** with **GTD** (*getting things done*), productivity methodologies, and related apps. I’ve tried them all, only to see that all of them were mere **illusions**: 
 
 All in all, **GTD** is a **virtual reality** to make you **feel** productive.
 
-> What I finally relized is “*getting $#!% done*” is a **virtual reality**. 
->
-> All you need is a Jedi-like **focus**, because when you have **focus**, your mind will handle the rest for you.
+Instead, the sole thing you need is a Jedi-like **focus**. 
+
+When you have **focus**, your mind will handle the rest for you.
 
 I don’t want to bore you with the details. [Read the backstory](BACKSTORY.md), if you want to learn how it all began.
 
