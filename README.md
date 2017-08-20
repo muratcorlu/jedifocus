@@ -59,12 +59,6 @@ If you want to report a bug; or share a comment or suggestion, [file an issue][t
 * **Project Maintainer**: [Volkan Özçelik](https://volkan.io/)
 * **Project Website**: [bytesized.tv](https://bytesized.tv/)
 
-## A [ByteSized.TV][vidcast] Project
-
-This repository is a part of the [Byte-Sized JavaScript VideoCasts][vidcast].
-
-It is a compilation of short (*around ten minutes*) screencasts about **JavaScript** and related technologies.
-
 ## License
 
 MIT-licensed. — [See the license file for details](LICENSE.md).
@@ -74,6 +68,14 @@ MIT-licensed. — [See the license file for details](LICENSE.md).
 We are committed to making participation in this project a harassment-free experience for everyone, regardless of the level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.
 
 [See the code of conduct for details](CODE_OF_CONDUCT.md).
+
+## A [ByteSized.TV][vidcast] Project
+
+This repository is a part of the [Byte-Sized JavaScript VideoCasts][vidcast].
+
+It is a compilation of short (*around ten minutes*) screencasts about **JavaScript** and related technologies.
+
+[**Learn**, **explore**, and **have fun**][vidcast]!
 
 [email]: mailto:me@volkan.io
 [firebase]: https://firebase.google.com "Firebase helps you build better mobile apps"
