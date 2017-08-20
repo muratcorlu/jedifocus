@@ -36,7 +36,9 @@ If you need help, [file an issue][ticket], or [send me an email at me@volkan.io]
 
 > What I finally relized is “*getting things done*” is a **virtual reality**. 
 >
-> All you need is a Jedi-like **focus**. — Your mind will handle the rest for you.
+> All you need is a Jedi-like **focus**.
+>
+> When you have that, your mind will handle the rest for you.
 
 I don’t want to bore you with the details here. I’m obsessed with productivity methodologies and from **meditation**, to **pomodoro**, to **GTD**, you name it! — **JediFocus** is here because **none** of the productivity apps on the market satisfied all my needs.
 
