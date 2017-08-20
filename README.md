@@ -18,9 +18,7 @@ Simply, “*simplicity*”.
 * **Less** configuration
 * And **less** clutter
 
-**JediFocus** is designed to be **intuitive**, **simple**; but not “*simpler*”:
-
-> **JediFocus** has everything you need, and nothing you don’t; so you don’t [die by a thousand micro decisions][limited-resources].
+**JediFocus** has everything you need, and nothing you don’t; so you don’t [die by a thousand micro decisions][limited-resources].
 
 ## Help Me, Obi-Wan Kenobi…
 
