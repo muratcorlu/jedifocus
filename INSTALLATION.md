@@ -15,3 +15,23 @@ If you want to tweak the way **JediFocus** works for you, that’s the place to 
 2. Then rename `src/config.example.json` to `src/config.json` and fill in appropriate [**Firebase**][firebase] credentials and variables.
 3. Install the project using `yarn install`.
 4. Run the development server using `npm run serve`.
+
+## Dependencies
+
+* You will need the **current** version of [**Node.JS**][node] with all the bells and whistles — [You can install it from nodejs.org][node].
+* You will need [**yarn**][yarn] to install dependencies.
+* You will need to setup a [**Firebase** database][firebase], and configure your app by using the variables that you fetch from the **Firebase console**.
+
+## Package Scripts
+
+Here are the helper npm scripts that you can run via `npm`:
+
+* `npm run lint`: Check the files for syntactical issues.
+* `npm run serve`: Run the development server.
+* `npm run watch`: Run the bundler in “watch” mode (*you’ll need to run a separate server in this case*).
+
+## Important Files and Folders
+
+I am leaving this section blank for now since things change a lot.
+
+I will update here when the file system stabilizes more.
