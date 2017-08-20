@@ -34,7 +34,7 @@ If you need help, [file an issue][ticket], or [send me an email at me@volkan.io]
 
 ## Every Saga Has a Beginning
 
-I’m **obsessed** with **GTD** (*getting things done*), productivity methodologies, and related apps. I’ve tried them all, only to see that all of them were mere **illusions**: 
+I’m **obsessed** with **GTD** (*getting things done*), productivity methodologies, and related apps. — I’ve tried them all, only to see that they all were mere **illusions**: 
 
 All in all, **GTD** is a **virtual reality** to make you **feel** productive.
 
