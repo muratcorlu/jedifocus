@@ -10,7 +10,7 @@ _)_/LI   There is no try.
 
 ## What Makes **JediFocus** Different?
 
-Simply, “simplicity”.
+Simply, “*simplicity*”.
 
 **JediFocus** is an **opinionated** goal organizer that offers…
 
