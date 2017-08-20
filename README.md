@@ -34,16 +34,6 @@ If you need help, [file an issue][ticket], or [send me an email at me@volkan.io]
 >
 > Until the web app is ready, the only way to use **JediFocus** is to [build it from the source][INSTALLATION.md] and run it locally.
 
-## A [ByteSized.TV][vidcast] Project
-
-This repository is a part of the [Byte-Sized JavaScript VideoCasts][vidcast].
-
-### Byte-Sized What?!
-
-[Byte-Sized JavaScript][vidcast].
-
-It is a compilation of short (*around ten minutes*) screencasts about **JavaScript** and related technologies.
-
 ## Every Saga Has a Beginning
 
 > What I finally relized is “*getting things done*” is a **virtual reality**. 
@@ -68,6 +58,12 @@ If you want to report a bug; or share a comment or suggestion, [file an issue][t
 
 * **Project Maintainer**: [Volkan Özçelik](https://volkan.io/)
 * **Project Website**: [bytesized.tv](https://bytesized.tv/)
+
+## A [ByteSized.TV][vidcast] Project
+
+This repository is a part of the [Byte-Sized JavaScript VideoCasts][vidcast].
+
+It is a compilation of short (*around ten minutes*) screencasts about **JavaScript** and related technologies.
 
 ## License
 
