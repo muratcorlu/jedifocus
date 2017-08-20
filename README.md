@@ -22,7 +22,7 @@ Simply, “simplicity”.
 
 > **JediFocus** has everything you need, and nothing you don’t; so you don’t [die by a thousand micro decisions][limited-resources].
 
-## Help Me, Obi-Wan Kenobi
+## Help Me, Obi-Wan Kenobi…
 
 If you need help, [file an issue][ticket], or [send me an email at me@volkan.io][email].
 
