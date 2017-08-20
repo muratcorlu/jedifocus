@@ -8,6 +8,20 @@ _)_/LI   There is no try.
 
 **JediFocus** gives you an a **simple** and **opinionated** way to handle your goals. 
 
+## What Makes **JediFocus** Different?
+
+Simply, “simplicity”.
+
+**JediFocus** is an **opinionated** goal organizer that offers…
+
+* **Less** confusion
+* **Less** configuration
+* And **less** clutter
+
+**JediFocus** is designed to be as intuitive, simple; but not “simpler”.
+
+The experience has everything you need, and nothing you don’t need so that you don’t [die by a thousand micro decisions][limited-resources].
+
 ## Try **JediFocus** Online
 
 > **In Progress**
@@ -111,18 +125,6 @@ The issue with task management is: It so personal that it’s virtually impossib
 I’m sure some will like **JediFocus**, and some will feel more comfortable using a different app.
  
 > Let me tell you a secret: It’s not the app that you use; it’s the focus, discipline, dedication, and repetition that makes you succeed.
-
-## What Makes **JediFocus** Different?
-
-Simply, “simplicity”.
-
-**JediFocus** is an **opinionated** goal organizer that offers…
-
-* **Less** confusion
-* **Less** configuration
-* And **less** clutter
-
-**JediFocus** is designed to be as intuitive, simple; but not “simpler”.
 
 ## Wanna Help?
 
