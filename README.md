@@ -42,7 +42,7 @@ Instead, the sole thing you need is a Jedi-like **focus**.
 
 When you have **focus**, your mind will handle the rest for you.
 
-I don’t want to bore you with the details. [Read the backstory](BACKSTORY.md), if you want to learn how it all began.
+I don’t want to bore you with the details. — [Read the backstory](BACKSTORY.md), if you want to learn how it all began.
 
 ## Wanna Help?
 
