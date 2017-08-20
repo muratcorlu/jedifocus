@@ -6,7 +6,7 @@ __.-._
 _)_/LI   There is no try.
 ```
 
-**JediFocus** gives you an a **simple** and **opinionated** way to handle your goals. 
+**JediFocus** gives you a straightforward and **opinionated** way to handle your goals. 
 
 ## What Makes **JediFocus** Different?
 
@@ -46,7 +46,7 @@ I don’t want to bore you with the details. — [Read the backstory](BACKSTORY.
 
 ## Wanna Help?
 
-Any help and feedback is more than appreciated.
+Any help and feedback are more than appreciated.
 
 If you want to report a bug; or share a comment or suggestion, [file an issue][ticket].
 
