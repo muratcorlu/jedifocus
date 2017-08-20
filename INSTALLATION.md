@@ -45,3 +45,14 @@ Also, don’t forget to add unit tests for any new or changed functionality.
 ## I’ve Found a Bug; I Have an Idea
 
 [For bug reports and suggestions, please file an issue][ticket].
+
+
+[email]: mailto:me@volkan.io
+[firebase]: https://firebase.google.com "Firebase helps you build better mobile apps"
+[jfdi-manifesto]: https://gist.github.com/v0lkan/2731233 "The JFDI Manifesto"
+[jfdi]: https://github.com/v0lkan/jfdi "JFDI: A Hacker’s Way of Getting Stuff Done"
+[limited-resources]: https://www.youtube.com/watch?v=FKTxC9pl-WM "Making Badass Developers"
+[node]: https://nodejs.org/en/ "Node.js"
+[ticket]: https://github.com/jsbites/jedifocus/issues/new "Create a New Issue"
+[vidcast]: https://bytesized.tv/ "ByteSized.TV"
+[yarn]: https://yarnpkg.com "Yarn: Fast, Reliable, and Secure Dependency Management"
