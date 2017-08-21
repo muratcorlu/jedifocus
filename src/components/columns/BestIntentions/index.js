@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -19,7 +19,7 @@ import BaseColumn from '../../../components/columns/BaseColumn';
 
 const BestIntentions = ( { items } ) => (
     <BaseColumn
-        bucket="bestIntentions"
+        column="bestIntentions"
         heading="Best Intentions"
         headingClassName="column-heading__best-intentions"
         items={items}

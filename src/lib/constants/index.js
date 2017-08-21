@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -27,7 +27,7 @@ export const JFDI_CARD_MOVE_IN_PROGRESS = 'JFDI_CARD_MOVE_IN_PROGRESS';
 export const JFDI_CARD_MOVE_TO_DO = 'JFDI_CARD_MOVE_TO_DO';
 export const JFDI_CARD_SNOOZE = 'JFDI_CARD_SNOOZE';
 export const JFDI_GOAL_SAVE = 'JFDI_GOAL_SAVE';
-export const JFDI_GOAL_UPDATE_BUCKET = 'JFDI_GOAL_UPDATE_BUCKET';
+export const JFDI_GOAL_UPDATE_COLUMN = 'JFDI_GOAL_UPDATE_COLUMN';
 export const JFDI_GOAL_UPDATE_CONTEXT = 'JFDI_GOAL_UPDATE_CONTEXT';
 export const JFDI_GOAL_UPDATE_DESCRIPTION = 'JFDI_GOAL_UPDATE_DESCRIPTION';
 export const JFDI_SEARCH = 'JFDI_SEARCH';

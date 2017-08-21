@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -13,55 +13,50 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
-
 const ContextDropdown = ( { id, value, onChange, className } ) => (
-    <select id={id}
-        className={`modal-edit__selection ${className || ''}`}
-        value={value}
-        onChange={( evt ) => onChange( evt.target.value ) }
-    >
-        <optgroup label="Runway">
-            <option value="default">Default</option>
-            <option value="30-minutes">30 Minutes</option>
-            <option value="backlog">Backlog</option>
-            <option value="cast-topics">Cast Topics</option>
-            <option value="errands">Errands</option>
-        </optgroup>
+    <div style={{ textAlign: 'left' }}>
+        <ul style={{ display: 'none' }}>
+            <li>
+                <label>Areas of Focus</label>
+                <ul>
+                    <li><a href="#" onClick={() => onChange( 'runway' )}>Runway</a></li>
+                    <li><a href="#" onClick={() => onChange( 'low-hanging-fruits' )}>Low-Hanging Fruits</a></li>
+                    <li><a href="#" onClick={() => onChange( 'errands' )}>Errands</a></li>
+                    <li><a href="#" onClick={() => onChange( 'backlog' )}>Backlog</a></li>
+                </ul>
+            </li>
+            <li>
+                <label>Clarify or Kick to the Future</label>
+                <ul>
+                    <li><a href="#" onClick={() => onChange( 'revisit' )}>
+                        Needs Clarification / Splitting / Revisit</a></li>
+                    <li><a href="#" onClick={() => onChange( 'later' )}>Later / Maybe</a></li>
+                    <li><a href="#" onClick={() => onChange( 'ice-box' )}>Ice Box</a></li>
+                </ul>
+            </li>
+        </ul>
+        <select id={id}
+            className={`modal-edit__selection ${className || ''}`}
+            value={value}
+            onChange={( evt ) => onChange( evt.target.value ) }
+        >
+            <optgroup label="Focus">
+                <option value="runway">Runway</option>
+                <option value="low-hanging-fruits">Low-Hanging Fruits</option>
+                <option value="errands">Errands</option>
+                <option value="backlog">Backlog</option>
+            </optgroup>
 
-        <optgroup label="Clarify or Kick to the Future">
-            <option value="needs-clarification">Needs Clarification / Splitting</option>
-
-            <option value="ice-box">Ice Box</option>
-            <option value="revisit">Revisit</option>
-            <option value="wontfix">Won’t Fix</option>
-        </optgroup>
-
-        <optgroup label="Projects">
-            <option value="repo-maintenance">Repo Maintenance</option>
-            <option value="byte-sized-tv-improvements">ByteSized.TV Improvements</option>
-            <option value="dombili-improvements">dombili Improvements</option>
-            <option value="jedifocus-improvements">JediFocus Improvements</option>
-        </optgroup>
-        <optgroup label="Reference">
-            <option value="gtd">GTD</option>
-            <option value="toolbox">Toolbox</option>
-            <option value="articles">Articles</option>
-        </optgroup>
-        <optgroup label="Queues">
-            <option value="learning">Learning</option>
-            <option value="reading-queue">Reading Queue</option>
-            <option value="watching-queue">Watching Queue</option>
-        </optgroup>
-        <optgroup label="Work">
-            <option value="cisco">Cisco</option>
-            <option value="home">Home</option>
-        </optgroup>
-        <optgroup label="Test">
-            <option value="demo">Demo</option>
-        </optgroup>
-    </select>
+            <optgroup label="Later">
+                <option value="revisit">Needs Clarification / Splitting / Revisit</option>
+                <option value="later">Later / Maybe</option>
+                <option value="ice-box">Ice Box</option>
+            </optgroup>
+        </select>
+    </div>
 );
+
+import PropTypes from 'prop-types';
 
 ContextDropdown.propTypes = {
     value: PropTypes.string.isRequired,

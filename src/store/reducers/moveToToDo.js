@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -14,8 +14,8 @@
 
 const moveToToDo = ( state = {}, { payload } ) => ( {
     ...state,
-    toDo: state.toDo.set( payload.id, state[payload.bucket].get( payload.id ) ),
-    [payload.bucket]: state[payload.bucket].remove( payload.id )
+    toDo: state.toDo.set( payload.id, state[payload.column].get( payload.id ) ),
+    [payload.column]: state[payload.column].remove( payload.id )
 } );
 
 export default moveToToDo;

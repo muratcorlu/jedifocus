@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -29,7 +29,7 @@ import receiveAppState from './receiveAppState';
 import saveGoal from './saveGoal';
 import search from './search';
 import snoozeCard from './snoozeCard';
-import updateBucket from './updateBucket';
+import updateColumn from './updateColumn';
 import updateContext from './updateContext';
 import updateDescription from './updateDescription';
 import updateGoalContext from './updateGoalContext';
@@ -47,7 +47,7 @@ const rootReducer = createRootReducer( getInitialState, {
     [constants.JFDI_CARD_MOVE_TO_DO]: moveToToDo,
     [constants.JFDI_CARD_SNOOZE]: snoozeCard,
     [constants.JFDI_GOAL_SAVE]: saveGoal,
-    [constants.JFDI_GOAL_UPDATE_BUCKET]: updateBucket,
+    [constants.JFDI_GOAL_UPDATE_COLUMN]: updateColumn,
     [constants.JFDI_GOAL_UPDATE_CONTEXT]: updateGoalContext,
     [constants.JFDI_GOAL_UPDATE_DESCRIPTION]: updateDescription,
     [constants.JFDI_SEARCH]: search

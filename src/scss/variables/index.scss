@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -22,6 +22,7 @@ $blue: #039BE5;
 $blueGray: #78909C;
 $teal: #009688;
 
+
 // Derived palette:
 $modalEditBackground: lighten($black, 70%);
 $codeBackground: adjust_hue(lighten($blueGray, 35%), 90deg);
@@ -30,21 +31,27 @@ $codeBorderColor: adjust_hue(lighten($blueGray, 25%), 90deg);
 $quoteBackground: lighten($blueGray, 35%);
 $quoteBorderColor: lighten($blueGray, 25%);
 $quoteColor: darken(lighten($blueGray, 30%), 70%);
+$bodyBackground: lighten($black, 10%);
+
+// Derived palette / Card:
 $cardSideMarkerColor: adjust_hue(lighten($blue, 35%), 0deg);
-$cardLinkColor: darken($blue, 20%);
-$cardLinkUnderlineColor: darken($blue, 20%);
-$cardLinkUnderlineHoverColor: $black;
-$cardLinkHoverColor: $black;
-$cardLinkHoverBackgroundColor: lighten($blue, 48%);
 $cardBackgroundColor: $white;
 
+// Derived palette / Card / Link:
+$cardLinkColor: $black;
+$cardLinkPadding: 1px 3px 1px 3px;
+$cardLinkUnderlineColor: $black;
+$cardLinkUnderlineHoverColor: $black;
+$cardLinkHoverColor: $white;
+$cardLinkHoverBackgroundColor: $orange;
+$cardLinkHoverBorderColor: $orange;
 
 // Important borders:
 $codeBorderWidth: 6px;
 $quoteBorderWidth: 6px;
 $cardSideMarkerBorderWidth: 6px;
-$cardLinkBorderWidth: 1px;
-$cardLinkHoverBorderWidth: 1px;
+$cardLinkBorderWidth: 2px;
+$cardLinkHoverBorderWidth: 2px;
 
 // Fonts:
 $baseFontItalic: "Georgia Pro It";
@@ -67,7 +74,6 @@ $smallestFontSize: 12px;
 $buttonHeight: 32px;
 $buttonBorderRadius: 30px;
 $minCardWidth: 280px;
-
 
 // All boxes have this shadow:
 $defaultBoxShadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.26);

@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -22,7 +22,7 @@ const zeroState = {
     appStateFetched: false,
 
     // Current Context
-    context: 'default',
+    context: 'demo',
 
     // #endregion
 
@@ -38,10 +38,10 @@ const zeroState = {
     // #region “Edit Goal” Modal
 
     modalVisible: false,
-    modalBucket: '',
+    modalColumn: '',
     modalId: '',
     modalItem: '',
-    modalContext: 'default',
+    modalContext: 'runway',
 
     // #endregion
 

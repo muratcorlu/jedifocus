@@ -1,3 +1,11 @@
+```text
+__.-._
+'-._"7'  JediFocus
+ /'.-c
+ |  /T   Do. Or do not.
+_)_/LI   There is no try.
+```
+
 ## About This Repository
 
 This repository contains the source code of **JediFocus**.

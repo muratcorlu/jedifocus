@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -16,7 +16,7 @@ const updateDescription = ( state = {}, { payload } ) => ( {
     ...state,
     modalVisible: true,
     modalItem: payload.get( 'value' ),
-    [ payload.get( 'bucket' ) ]: state[ payload.get( 'bucket' ) ]
+    [ payload.get( 'column' ) ]: state[ payload.get( 'column' ) ]
         .set( payload.get( 'id' ), payload.get( 'value' ) )
 } );
 

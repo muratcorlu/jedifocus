@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -17,10 +17,10 @@ const saveGoal = ( state = {}, { payload } ) => ( {
     modalVisible: false,
     modalId: '',
     modalItem: '',
-    modalBucket: '',
-    [payload.get( 'bucket' )]: ( payload.get( 'context' ) === state.context ) ?
-        state[payload.get( 'bucket' )] :
-        state[payload.get( 'bucket' )].remove( payload.get( 'goalId' ) )
+    modalColumn: '',
+    [payload.get( 'column' )]: ( payload.get( 'context' ) === state.context ) ?
+        state[payload.get( 'column' )] :
+        state[payload.get( 'column' )].remove( payload.get( 'goalId' ) )
 } );
 
 export default saveGoal;

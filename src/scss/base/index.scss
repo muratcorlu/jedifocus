@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -13,9 +13,9 @@
  */
 
 body {
-    background: $black url(/images/backgrounds/bg300.jpg) fixed;
+    background: $bodyBackground url(/images/backgrounds/zen/default.jpg) fixed;
     background-size: cover;
-    padding-bottom: 75vh;
+    padding-bottom: 25vh;
 }
 
 h2 {
@@ -34,6 +34,8 @@ ul {
 }
 
 a { color: $blueGray; }
+
+textarea { resize: none; }
 
 blockquote {
     transition: $defaultTransition;

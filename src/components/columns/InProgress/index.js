@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -19,7 +19,7 @@ import BaseColumn from '../BaseColumn';
 
 const InProgress = ( { items } ) => (
     <BaseColumn
-        bucket="inProgress"
+        column="inProgress"
         heading="In Progress"
         headingClassName="column-heading__in-progress"
         items={items}

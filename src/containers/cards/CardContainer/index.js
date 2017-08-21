@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -21,12 +21,12 @@ import * as actions from './actions';
 import Card from '../../../components/cards/Card';
 
 const CardContainer = ( {
-    item, id, bucket, userId, context,
+    item, id, column, userId, context,
     editCard, copyCard, snoozeCard,
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
 } ) => (
     <Card
-        item={item} id={id} bucket={bucket} userId={userId} context={context}
+        item={item} id={id} column={column} userId={userId} context={context}
         editCard={editCard} copyCard={copyCard} snoozeCard={snoozeCard}
         moveCardToBestIntentions={moveCardToBestIntentions}
         moveCardToToDo={moveCardToToDo}
@@ -36,7 +36,7 @@ const CardContainer = ( {
 );
 
 CardContainer.propTypes = {
-    bucket: PropTypes.string.isRequired,
+    column: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     editCard: PropTypes.func.isRequired,
     copyCard: PropTypes.func.isRequired,

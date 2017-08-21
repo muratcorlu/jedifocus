@@ -67,7 +67,7 @@ module.exports = {
         } ),
         new HtmlWebpackPlugin( {
             env: process.env.NODE_ENV || 'development',
-            title: 'Jedi Focus',
+            title: 'JediFocus',
             template: 'src/index.ejs',
             filename: 'index.html'
         } )

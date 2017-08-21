@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -19,7 +19,7 @@ import BaseColumn from '../BaseColumn';
 
 const ToDo = ( { items } ) => (
     <BaseColumn
-        bucket="toDo"
+        column="toDo"
         heading="To Do"
         headingClassName="column-heading__to-do"
         items={items}

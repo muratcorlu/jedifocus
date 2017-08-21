@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -29,9 +29,9 @@ const copyCard = ( state = {}, { payload } ) => {
         modalVisible: true,
         modalContextVisible: false,
         modalId: guid(),
-        modalItem: state[ payload.bucket ].get( payload.id ),
+        modalItem: state[ payload.column ].get( payload.id ),
         modalContext: state.context,
-        modalBucket: payload.bucket
+        modalColumn: payload.column
     };
 };
 

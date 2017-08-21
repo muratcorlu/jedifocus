@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -14,10 +14,10 @@
 
 import {
     saveGoal as sendSaveGoalRequest,
-    removeGoalFromOtherBuckets as sendRemoveFromOtherBucketsRequest
+    removeGoalFromOtherColumns as sendRemoveFromOtherColumnsRequest
 } from '../../../lib/io/firebase';
 
 export {
     sendSaveGoalRequest,
-    sendRemoveFromOtherBucketsRequest
+    sendRemoveFromOtherColumnsRequest
 };

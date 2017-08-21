@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -21,27 +21,27 @@ import { connect } from 'kink';
 import ModalEdit from '../../../components/modals/ModalEdit';
 
 const ModalEditContainer = ( {
-    context, bucket, id, item, userId, stateContext, show,
-    updateBucket, updateContext, updateDescription, saveGoal
+    context, column, id, item, userId, stateContext, show,
+    updateColumn, updateContext, updateDescription, saveGoal
 } ) => (
     <ModalEdit
-        context={context} bucket={bucket} id={id} item={item} show={show}
-        saveGoal={() => saveGoal( userId, context, bucket, id, item, stateContext )}
-        updateBucket={updateBucket}
+        context={context} column={column} id={id} item={item} show={show}
+        saveGoal={() => saveGoal( userId, context, column, id, item, stateContext )}
+        updateColumn={updateColumn}
         updateContext={updateContext}
         updateDescription={updateDescription}
     />
 );
 
 ModalEditContainer.propTypes = {
-    bucket: PropTypes.string.isRequired,
+    column: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     stateContext: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
     saveGoal: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
-    updateBucket: PropTypes.func.isRequired,
+    updateColumn: PropTypes.func.isRequired,
     updateDescription: PropTypes.func.isRequired,
     updateContext: PropTypes.func.isRequired,
     userId: PropTypes.string.isRequired
@@ -52,7 +52,7 @@ export default connect(
     actions,
     ( {
         bestIntentions,
-        modalBucket,
+        modalColumn,
         modalId,
         modalItem,
         modalVisible,
@@ -63,7 +63,7 @@ export default connect(
         userId
     } ) => ( {
         bestIntentions: bestIntentions ? bestIntentions.toJSON() : {},
-        bucket: modalBucket,
+        column: modalColumn,
         id: modalId,
         inProgress: inProgress ? inProgress.toJSON() : {},
         item: modalItem,

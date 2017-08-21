@@ -1,3 +1,11 @@
+```text
+__.-._
+'-._"7'  JediFocus
+ /'.-c
+ |  /T   Do. Or do not.
+_)_/LI   There is no try.
+```
+
 ## How It Began
 
 A long time ago (*around 2013*), [I created a project (*called “**JFDI**”*) to manage my goals and action items][jfdi] — [I even wrote a manifesto about it][jfdi-manifesto].

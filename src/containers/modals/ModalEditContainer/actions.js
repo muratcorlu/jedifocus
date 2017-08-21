@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -16,45 +16,45 @@ import { fromJS as makeImmutable } from 'immutable';
 
 import {
     JFDI_GOAL_SAVE,
-    JFDI_GOAL_UPDATE_BUCKET,
+    JFDI_GOAL_UPDATE_COLUMN,
     JFDI_GOAL_UPDATE_DESCRIPTION,
     JFDI_GOAL_UPDATE_CONTEXT
 } from '../../../lib/constants';
 
 import {
     sendSaveGoalRequest,
-    sendRemoveFromOtherBucketsRequest
+    sendRemoveFromOtherColumnsRequest
 } from './network';
 
-const saveGoal = ( userId, context, bucket, goalId, item, currentContext ) => {
-    sendSaveGoalRequest( userId, context, bucket, goalId, item.trim() )
+const saveGoal = ( userId, context, column, goalId, item, currentContext ) => {
+    sendSaveGoalRequest( userId, context, column, goalId, item.trim() )
         .then( () => {
             if ( context !== currentContext ) {
-                return sendRemoveFromOtherBucketsRequest( userId, currentContext, 'done', goalId );
+                return sendRemoveFromOtherColumnsRequest( userId, currentContext, 'done', goalId );
             }
 
-            return sendRemoveFromOtherBucketsRequest( userId, currentContext, bucket, goalId );
+            return sendRemoveFromOtherColumnsRequest( userId, currentContext, column, goalId );
         } );
 
     return {
         type: JFDI_GOAL_SAVE,
-        payload: makeImmutable( { context, bucket, goalId } )
+        payload: makeImmutable( { context, column, goalId } )
     };
 };
 
-const updateBucket = ( currentBucket, id, nextBucket ) => ( {
-    type: JFDI_GOAL_UPDATE_BUCKET,
-    payload: makeImmutable( { currentBucket, id, nextBucket } )
+const updateColumn = ( currentColumn, id, nextColumn ) => ( {
+    type: JFDI_GOAL_UPDATE_COLUMN,
+    payload: makeImmutable( { currentColumn, id, nextColumn } )
 } );
 
-const updateDescription = ( bucket, id, value ) => ( {
+const updateDescription = ( column, id, value ) => ( {
     type: JFDI_GOAL_UPDATE_DESCRIPTION,
-    payload: makeImmutable( { bucket, id, value } )
+    payload: makeImmutable( { column, id, value } )
 } );
 
-const updateContext = ( bucket, id, context ) => ( {
+const updateContext = ( column, id, context ) => ( {
     type: JFDI_GOAL_UPDATE_CONTEXT,
-    payload: makeImmutable( { bucket, id, context } )
+    payload: makeImmutable( { column, id, context } )
 } );
 
-export { updateDescription, updateBucket, updateContext, saveGoal };
+export { updateDescription, updateColumn, updateContext, saveGoal };

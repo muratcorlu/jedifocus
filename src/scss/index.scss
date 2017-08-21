@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -25,13 +25,13 @@
 
 // #region Components
 
-@import "./modules/indicators/loading/index.scss";
-@import "./modules/cards/card/index.scss";
-@import "./modules/cards/card-controls/index.scss";
-@import "./modules/cards/card-link/index.scss";
-@import "./modules/navigations/navigation/index.scss";
-@import "./modules/buttons/action-button/index.scss";
-@import "./modules/columns/column/index.scss";
-@import "./modules/modals/modal-edit/index.scss";
+@import "./components/indicators/loading/index.scss";
+@import "./components/cards/card/index.scss";
+@import "./components/cards/card-controls/index.scss";
+@import "./components/cards/card-link/index.scss";
+@import "./components/navigations/navigation/index.scss";
+@import "./components/buttons/action-button/index.scss";
+@import "./components/columns/column/index.scss";
+@import "./components/modals/modal-edit/index.scss";
 
 // #endregion

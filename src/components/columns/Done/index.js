@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -19,7 +19,7 @@ import BaseColumn from '../BaseColumn';
 
 const Done = ( { items } ) => (
     <BaseColumn
-        bucket="done"
+        column="done"
         heading="Done & Dead"
         headingClassName="column-heading__done"
         className="column--done"

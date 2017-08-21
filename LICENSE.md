@@ -1,6 +1,9 @@
-```
-  ▬▬ι═══════ﺤJediFocus-═══════ι▬▬
-    use the source to get things done
+```text
+__.-._
+'-._"7'  JediFocus
+ /'.-c
+ |  /T   Do. Or do not.
+_)_/LI   There is no try.
 ```
 
 ## The MIT License (*MIT*)

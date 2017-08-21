@@ -1,0 +1,26 @@
+/*  __.-._
+ *  '-._"7'  JediFocus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
+ */
+
+.card-controls {
+    margin: 0 -16px -15px -16px;
+    padding: 5px 10px 5px 10px;
+
+    background: $dimmedWhite;
+    border-top: 1px $lightGrey solid;
+
+    cursor: default;
+}
+
+@import "./separator/index.scss";
+@import "./transition/index.scss";

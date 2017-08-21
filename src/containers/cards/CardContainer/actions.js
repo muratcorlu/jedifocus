@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -28,42 +28,42 @@ import {
 
 import {
     sendSaveGoalRequest,
-    sendRemoveFromOtherBucketsRequest
+    sendRemoveFromOtherColumnsRequest
 } from './network';
 
-const copyCard = ( column, id ) => ( { type: JFDI_CARD_COPY, payload: { bucket: column, id } } );
+const copyCard = ( column, id ) => ( { type: JFDI_CARD_COPY, payload: { column, id } } );
 
-const editCard = ( column, id ) => ( { type: JFDI_CARD_EDIT, payload: { bucket: column, id } } );
+const editCard = ( column, id ) => ( { type: JFDI_CARD_EDIT, payload: { column, id } } );
 
 const moveCardToBestIntentions = ( id, userId, column, item, context ) => {
     sendSaveGoalRequest( userId, context, COLUMN_BEST_INTENTIONS, id, item.trim() )
-        .then( () => sendRemoveFromOtherBucketsRequest( userId, context, COLUMN_BEST_INTENTIONS, id ) );
+        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_BEST_INTENTIONS, id ) );
 
-    return { type: JFDI_CARD_MOVE_BEST_INTENTIONS, payload: { bucket: column, id } };
+    return { type: JFDI_CARD_MOVE_BEST_INTENTIONS, payload: { column, id } };
 };
 
 const moveCardToDone = ( id, userId, column, item, context ) => {
     sendSaveGoalRequest( userId, context, COLUMN_DONE, id, item.trim() )
-        .then( () => sendRemoveFromOtherBucketsRequest( userId, context, COLUMN_DONE, id ) );
+        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_DONE, id ) );
 
-    return { type: JFDI_CARD_MOVE_DONE, payload: { bucket: column, id } };
+    return { type: JFDI_CARD_MOVE_DONE, payload: { column, id } };
 };
 
 const moveCardToInProgress = ( id, userId, column, item, context ) => {
     sendSaveGoalRequest( userId, context, COLUMN_IN_PROGRESS, id, item.trim() )
-        .then( () => sendRemoveFromOtherBucketsRequest( userId, context, COLUMN_IN_PROGRESS, id ) );
+        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_IN_PROGRESS, id ) );
 
-    return { type: JFDI_CARD_MOVE_IN_PROGRESS, payload: { bucket: column, id } };
+    return { type: JFDI_CARD_MOVE_IN_PROGRESS, payload: { column, id } };
 };
 
 const moveCardToToDo = ( id, userId, column, item, context ) => {
     sendSaveGoalRequest( userId, context, COLUMN_TO_DO, id, item.trim() )
-        .then( () => sendRemoveFromOtherBucketsRequest( userId, context, COLUMN_TO_DO, id ) );
+        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_TO_DO, id ) );
 
-    return { type: JFDI_CARD_MOVE_TO_DO, payload: { bucket: column, id } };
+    return { type: JFDI_CARD_MOVE_TO_DO, payload: { column, id } };
 };
 
-const snoozeCard = ( bucket, id ) => ( { type: JFDI_CARD_SNOOZE, payload: { bucket, id } } );
+const snoozeCard = ( column, id ) => ( { type: JFDI_CARD_SNOOZE, payload: { column, id } } );
 
 export {
     copyCard,

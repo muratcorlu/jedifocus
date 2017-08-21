@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -29,7 +29,7 @@ const converter = new showdown.Converter( {
     openLinksInNewWindow: true
 } );
 
-const onCardClick = ( evt, bucket, id, editCard ) => {
+const onCardClick = ( evt, column, id, editCard ) => {
     if (
         parent(
             evt.target,
@@ -39,21 +39,21 @@ const onCardClick = ( evt, bucket, id, editCard ) => {
 
     evt.preventDefault();
 
-    editCard( bucket, id );
+    editCard( column, id );
 };
 
 const markdown = ( text ) => converter.makeHtml( text );
 
 const Card = ( {
-    item, bucket, id, userId, context,
+    item, column, id, userId, context,
     editCard, copyCard, /* snoozeCard, */
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
 } ) => (
-    <div className="card" onClick={( evt ) => onCardClick( evt, bucket, id, editCard )}>
+    <div className="card" onClick={( evt ) => onCardClick( evt, column, id, editCard )}>
         <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
         <div className="card-controls" onClick={( evt ) => evt.stopPropagation()}>
             <a href="#" className="card-link card-link--left"
-                onClick={() => copyCard( bucket, id )}
+                onClick={() => copyCard( column, id )}
                 title="Copy this goal into a new goal."
             ><img src="/images/icons/copy.png" alt="Copy Icon" title="Copy this goal into a new goal." /></a>
 
@@ -64,13 +64,13 @@ const Card = ( {
 
             <a className={`
                 card-link
-                ${bucket === COLUMN_BEST_INTENTIONS ?
+                ${column === COLUMN_BEST_INTENTIONS ?
         'card-link--best-intentions-selected' : 'card-link--best-intentions'}
             `}
-            title={`${bucket === COLUMN_BEST_INTENTIONS ? '' : 'Move this goal to “best intentions”.'}`}
+            title={`${column === COLUMN_BEST_INTENTIONS ? '' : 'Move this goal to “best intentions”.'}`}
             onClick={() => {
-                if ( bucket === COLUMN_BEST_INTENTIONS ) { return; }
-                moveCardToBestIntentions( id, userId, bucket, item, context );
+                if ( column === COLUMN_BEST_INTENTIONS ) { return; }
+                moveCardToBestIntentions( id, userId, column, item, context );
             }}
             >bi</a>
 
@@ -78,13 +78,13 @@ const Card = ( {
 
             <a className={`
                 card-link
-                ${bucket === COLUMN_TO_DO ?
+                ${column === COLUMN_TO_DO ?
         'card-link--to-do-selected' : 'card-link--to-do'}
             `}
-            title={`${bucket === COLUMN_TO_DO ? '' : 'Move this goal to “to do”.'}`}
+            title={`${column === COLUMN_TO_DO ? '' : 'Move this goal to “to do”.'}`}
             onClick={() => {
-                if ( bucket === COLUMN_TO_DO ) { return; }
-                moveCardToToDo( id, userId, bucket, item, context );
+                if ( column === COLUMN_TO_DO ) { return; }
+                moveCardToToDo( id, userId, column, item, context );
             }}
             >td</a>
 
@@ -92,13 +92,13 @@ const Card = ( {
 
             <a className={`
                 card-link
-                ${bucket === COLUMN_IN_PROGRESS ?
+                ${column === COLUMN_IN_PROGRESS ?
         'card-link--in-progress-selected' : 'card-link--in-progress'}
             `}
-            title={`${bucket === COLUMN_IN_PROGRESS ? '' : 'Move this goal to “in progress”.'}`}
+            title={`${column === COLUMN_IN_PROGRESS ? '' : 'Move this goal to “in progress”.'}`}
             onClick={() => {
-                if ( bucket === COLUMN_IN_PROGRESS ) { return; }
-                moveCardToInProgress( id, userId, bucket, item, context );
+                if ( column === COLUMN_IN_PROGRESS ) { return; }
+                moveCardToInProgress( id, userId, column, item, context );
             }}
             >ip</a>
 
@@ -106,20 +106,20 @@ const Card = ( {
 
             <a className={`
                 card-link
-                ${bucket === COLUMN_DONE ?
+                ${column === COLUMN_DONE ?
         'card-link--done-selected' : 'card-link--done'}
             `}
-            title={`${bucket === COLUMN_IN_PROGRESS ? '' : 'I’m “done” with this goal!'}`}
+            title={`${column === COLUMN_IN_PROGRESS ? '' : 'I’m “done” with this goal!'}`}
             onClick={() => {
-                if ( bucket === COLUMN_DONE ) { return; }
-                moveCardToDone( id, userId, bucket, item, context );
+                if ( column === COLUMN_DONE ) { return; }
+                moveCardToDone( id, userId, column, item, context );
             }}
             >✓</a>
         </div>
     </div> );
 
 Card.propTypes = {
-    bucket: PropTypes.string.isRequired,
+    column: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     copyCard: PropTypes.func.isRequired,
     editCard: PropTypes.func.isRequired,

@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -21,8 +21,8 @@ import ColumnDropdown from '../../../components/dropdowns/ColumnDropdown';
 import GoalDescriptionTextarea from '../../../components/textareas/GoalDescriptionTextarea';
 
 const ModalEdit = ( {
-    show, bucket, context, item, id,
-    updateDescription, updateBucket, updateContext, saveGoal
+    show, column, context, item, id,
+    updateDescription, updateColumn, updateContext, saveGoal
 } ) => show ? (
     <div className="modal-edit">
         <h2 className="modal-edit__heading">
@@ -30,10 +30,10 @@ const ModalEdit = ( {
         </h2>
 
         <h3 className="modal-edit__label modal-edit__label--floated modal-edit__label--floated-first">
-            <label htmlFor="modal-edit-column">Stage</label></h3>
+            <label htmlFor="modal-edit-column">Column</label></h3>
         <div>
-            <ColumnDropdown id="modal-edit-column" value={bucket}
-                onChange={( value ) => updateBucket( bucket, id, value )} />
+            <ColumnDropdown id="modal-edit-column" value={column}
+                onChange={( value ) => updateColumn( column, id, value )} />
         </div>
 
         <h3 className="modal-edit__label modal-edit__label--floated">
@@ -41,12 +41,12 @@ const ModalEdit = ( {
 
         <div>
             <ContextDropdown id="modal-edit-context" value={context}
-                onChange={( value ) => updateContext( bucket, id, value )} className="" />
+                onChange={( value ) => updateContext( column, id, value )} className="" />
         </div>
 
         <div>
             <GoalDescriptionTextarea id="modal-edit-description" value={item}
-                onChange={( value ) => updateDescription( bucket, id, value )} />
+                onChange={( value ) => updateDescription( column, id, value )} />
         </div>
 
         <div className="modal-edit__actions">
@@ -61,13 +61,13 @@ ModalEdit.defaultProps = {
 };
 
 ModalEdit.propTypes = {
-    bucket: PropTypes.string.isRequired,
+    column: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     saveGoal: PropTypes.func.isRequired,
     show: PropTypes.bool,
-    updateBucket: PropTypes.func.isRequired,
+    updateColumn: PropTypes.func.isRequired,
     updateDescription: PropTypes.func.isRequired,
     updateContext: PropTypes.func.isRequired
 };

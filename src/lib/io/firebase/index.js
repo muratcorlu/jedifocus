@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -32,7 +32,7 @@ const initialize = ( config ) => {
 const login = ( email, password ) => db().auth()
     .signInWithEmailAndPassword( email, password );
 
-const refGoal = ( userId, context, bucket, goalId ) => `${userId}/${context}/${bucket}/${goalId}`;
+const refGoal = ( userId, context, column, goalId ) => `${userId}/${context}/${column}/${goalId}`;
 
 const refColumn = ( userId, context, path ) => `${userId}/${context}/${path}`;
 
@@ -46,31 +46,31 @@ const toDo = ( userId, context ) => refOnce( userId, context, COLUMN_TO_DO );
 
 const inProgress = ( userId, context ) => refOnce( userId, context, COLUMN_IN_PROGRESS );
 
-const saveGoal = ( userId, context, bucket, goalId, item ) => {
+const saveGoal = ( userId, context, column, goalId, item ) => {
     if ( process.env.NODE_ENV !== 'production' ) {
-        console.log( 'db:saveGoal', context, bucket, goalId );
+        console.log( 'db:saveGoal', context, column, goalId );
     }
 
-    return bucket === 'done' || item.trim() === '' ?
+    return column === 'done' || item.trim() === '' ?
         Promise.resolve() :
         db()
             .database()
-            .ref( refGoal( userId, context, bucket, goalId ) )
+            .ref( refGoal( userId, context, column, goalId ) )
             .set( item.trim() );
 };
 
-const removeGoalFromOtherBuckets = ( userId, context, bucket, goalId ) => {
+const removeGoalFromOtherColumns = ( userId, context, column, goalId ) => {
     if ( process.env.NODE_ENV !== 'production' ) {
-        console.log( 'db:removeGoalFromOthers', context, bucket, goalId );
+        console.log( 'db:removeGoalFromOthers', context, column, goalId );
     }
 
     return Promise.all(
         [ COLUMN_TO_DO, COLUMN_IN_PROGRESS, COLUMN_BEST_INTENTIONS ]
-            .filter( ( b ) => b !== bucket )
+            .filter( ( b ) => b !== column )
             .map(
-                ( bucketToRemoveFrom ) => db()
+                ( columnToRemoveFrom ) => db()
                     .database()
-                    .ref( refGoal( userId, context, bucketToRemoveFrom, goalId ) )
+                    .ref( refGoal( userId, context, columnToRemoveFrom, goalId ) )
                     .remove()
             )
     );
@@ -81,7 +81,7 @@ export {
     inProgress,
     initialize,
     login,
-    removeGoalFromOtherBuckets,
+    removeGoalFromOtherColumns,
     saveGoal,
     toDo
 };

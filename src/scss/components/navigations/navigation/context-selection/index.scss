@@ -1,0 +1,46 @@
+/*  __.-._
+ *  '-._"7'  JediFocus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
+ */
+
+.context-selection {
+    color: $orange;
+    background: $white;
+
+    cursor: pointer;
+
+    text-align: right;
+
+    padding: 10px 30px 10px 18px;
+
+    position: fixed;
+    right: -20px;
+    bottom: 35px;
+
+    opacity: 0.85;
+    border-radius: 25px;
+
+    box-shadow: $defaultBoxShadow;
+    transition: $defaultTransition;
+    will-change: background, color, opacity, box-shadow;
+
+    &:hover {
+        background: $orange;
+        color: $white;
+        opacity: 1;
+        box-shadow: none;
+        transition: $defaultTransition;
+        will-change: background, color, opacity, box-shadow;
+    }
+
+    &__context-name { padding-right: 8px; }
+}

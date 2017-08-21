@@ -1,5 +1,5 @@
 /*  __.-._
- *  '-._"7'  Jedi Focus
+ *  '-._"7'  JediFocus
  *   /'.-c
  *   |  /T   Do. Or do not.
  *  _)_/LI   There is no try.
@@ -17,7 +17,7 @@ import PropTypes from 'prop-types';
 
 import CardContainer from '../../../containers/cards/CardContainer';
 
-const BaseColumn = ( { heading, items, className, headingClassName, bucket, children } ) => (
+const BaseColumn = ( { heading, items, className, headingClassName, column, children } ) => (
     <div className={`column-body ${className}`}>
         <h2 className={`column-heading ${headingClassName}`}>{heading}</h2>
 
@@ -25,7 +25,7 @@ const BaseColumn = ( { heading, items, className, headingClassName, bucket, chil
             { Object.keys( items ).map( ( key ) => {
                 const item = items[ key ];
 
-                return ( <CardContainer key={key} item={item} id={key} bucket={bucket} /> );
+                return ( <CardContainer key={key} item={item} id={key} column={column} /> );
             } ) }
         </div>
 
@@ -39,7 +39,7 @@ BaseColumn.defaultProps = {
 };
 
 BaseColumn.propTypes = {
-    bucket: PropTypes.string.isRequired,
+    column: PropTypes.string.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
     heading: PropTypes.string.isRequired,
