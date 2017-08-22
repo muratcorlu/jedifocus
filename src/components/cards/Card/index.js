@@ -44,14 +44,61 @@ const onCardClick = ( evt, column, id, editCard ) => {
 
 const markdown = ( text ) => converter.makeHtml( text );
 
+const cardClassName = ( id, modalId, modalVisible ) => {
+    if ( !modalVisible ) { return 'card card--default'; }
+
+    if ( id === modalId ) { return 'card card--focused'; }
+
+    return 'card card--blurred';
+};
+
+const cardLinkModifiedClassName = ( modalVisible, className ) => {
+    if ( !modalVisible ) { return className; }
+
+    return `${className}-no-hover`;
+};
+
+const cardLinkClassName = ( modalVisible, linkColumn, column ) => {
+    const shouldSelect = column === linkColumn;
+    switch ( linkColumn ) {
+    case COLUMN_BEST_INTENTIONS:
+        return cardLinkModifiedClassName(
+            modalVisible,
+            shouldSelect ? 'card-link card-link--best-intentions-selected' : 'card-link card-link--best-intentions'
+        );
+    case COLUMN_TO_DO:
+        return cardLinkModifiedClassName(
+            modalVisible,
+            shouldSelect ? 'card-link card-link--to-do-selected' : 'card-link card-link--to-do'
+        );
+    case COLUMN_IN_PROGRESS:
+        return cardLinkModifiedClassName(
+            modalVisible,
+            shouldSelect ? 'card-link card-link--in-progress-selected' : 'card-link card-link--in-progress'
+        );
+    case COLUMN_DONE:
+        return cardLinkModifiedClassName(
+            modalVisible,
+            shouldSelect ? 'card-link card-link--done-selected' : 'card-link card-link--done'
+        );
+    default:
+        return '';
+    }
+};
+
+const cardControlsClassName = ( modalVisible ) =>
+    modalVisible ? 'card-controls card-controls--passive' : 'card-controls';
+
 const Card = ( {
     item, column, id, userId, context,
+    modalVisible, modalId,
     editCard, copyCard, /* snoozeCard, */
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
 } ) => (
-    <div className="card" onClick={( evt ) => onCardClick( evt, column, id, editCard )}>
+    <div className={cardClassName( id, modalId, modalVisible )}
+        onClick={( evt ) => onCardClick( evt, column, id, editCard )}>
         <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
-        <div className="card-controls" onClick={( evt ) => evt.stopPropagation()}>
+        <div className={cardControlsClassName( modalVisible )} onClick={( evt ) => evt.stopPropagation()}>
             <a href="#" className="card-link card-link--left"
                 onClick={() => copyCard( column, id )}
                 title="Copy this goal into a new goal."
@@ -62,61 +109,46 @@ const Card = ( {
             {/* title="Defer this goal until later." */}
             {/* ><img src="/images/clock.png" alt="Clock Icon" title="Defer this goal until later." /></a> */}
 
-            <a className={`
-                card-link
-                ${column === COLUMN_BEST_INTENTIONS ?
-        'card-link--best-intentions-selected' : 'card-link--best-intentions'}
-            `}
-            title={`${column === COLUMN_BEST_INTENTIONS ? '' : 'Move this goal to “best intentions”.'}`}
-            onClick={() => {
-                if ( column === COLUMN_BEST_INTENTIONS ) { return; }
-                moveCardToBestIntentions( id, userId, column, item, context );
-            }}
+            <a className={cardLinkClassName( modalVisible, COLUMN_BEST_INTENTIONS, column )}
+                title={`${column === COLUMN_BEST_INTENTIONS ? '' : 'Move this goal to “best intentions”.'}`}
+                onClick={() => {
+                    if ( column === COLUMN_BEST_INTENTIONS ) { return; }
+                    moveCardToBestIntentions( id, userId, column, item, context );
+                }}
             >bi</a>
 
             <span className="card-controls__transition"><img src="/images/icons/right.png" /></span>
 
-            <a className={`
-                card-link
-                ${column === COLUMN_TO_DO ?
-        'card-link--to-do-selected' : 'card-link--to-do'}
-            `}
-            title={`${column === COLUMN_TO_DO ? '' : 'Move this goal to “to do”.'}`}
-            onClick={() => {
-                if ( column === COLUMN_TO_DO ) { return; }
-                moveCardToToDo( id, userId, column, item, context );
-            }}
+            <a className={cardLinkClassName( modalVisible, COLUMN_TO_DO, column )}
+                title={`${column === COLUMN_TO_DO ? '' : 'Move this goal to “to do”.'}`}
+                onClick={() => {
+                    if ( column === COLUMN_TO_DO ) { return; }
+                    moveCardToToDo( id, userId, column, item, context );
+                }}
             >td</a>
 
             <span className="card-controls__transition"><img src="/images/icons/right.png" /></span>
 
-            <a className={`
-                card-link
-                ${column === COLUMN_IN_PROGRESS ?
-        'card-link--in-progress-selected' : 'card-link--in-progress'}
-            `}
-            title={`${column === COLUMN_IN_PROGRESS ? '' : 'Move this goal to “in progress”.'}`}
-            onClick={() => {
-                if ( column === COLUMN_IN_PROGRESS ) { return; }
-                moveCardToInProgress( id, userId, column, item, context );
-            }}
+            <a className={cardLinkClassName( modalVisible, COLUMN_IN_PROGRESS, column )}
+                title={`${column === COLUMN_IN_PROGRESS ? '' : 'Move this goal to “in progress”.'}`}
+                onClick={() => {
+                    if ( column === COLUMN_IN_PROGRESS ) { return; }
+                    moveCardToInProgress( id, userId, column, item, context );
+                }}
             >ip</a>
 
             <span className="card-controls__transition"><img src="/images/icons/right.png" /></span>
 
-            <a className={`
-                card-link
-                ${column === COLUMN_DONE ?
-        'card-link--done-selected' : 'card-link--done'}
-            `}
-            title={`${column === COLUMN_IN_PROGRESS ? '' : 'I’m “done” with this goal!'}`}
-            onClick={() => {
-                if ( column === COLUMN_DONE ) { return; }
-                moveCardToDone( id, userId, column, item, context );
-            }}
+            <a className={cardLinkClassName( modalVisible, COLUMN_DONE, column )}
+                title={`${column === COLUMN_DONE ? '' : 'I’m “done” with this goal!'}`}
+                onClick={() => {
+                    if ( column === COLUMN_DONE ) { return; }
+                    moveCardToDone( id, userId, column, item, context );
+                }}
             >✓</a>
         </div>
-    </div> );
+    </div>
+);
 
 Card.propTypes = {
     column: PropTypes.string.isRequired,
@@ -125,6 +157,8 @@ Card.propTypes = {
     editCard: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
+    modalId: PropTypes.string.isRequired,
+    modalVisible: PropTypes.bool.isRequired,
     moveCardToBestIntentions: PropTypes.func.isRequired,
     moveCardToDone: PropTypes.func.isRequired,
     moveCardToInProgress: PropTypes.func.isRequired,

@@ -13,21 +13,14 @@
  */
 
 .card {
-    background: $cardBackgroundColor;
+    &--focused {
+        opacity: 1;
+        transition: $defaultTransition;
+        box-shadow: 0 0 2px 3px $blue;
+        background: $trueWhite;
+        cursor: default;
+        pointer-events: none;
 
-    margin: 10px;
-    padding: 16px;
-
-    cursor: pointer;
-    position: relative;
-    line-height: 1.5 * $defaultFontSize;
-
-    min-width: $minCardWidth;
-
-    border: none;
+        a { cursor: default; }
+    }
 }
-
-@import "./text/index.scss";
-@import "./default/index.scss";
-@import "./focused/index.scss";
-@import "./blurred/index.scss";

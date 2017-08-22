@@ -13,9 +13,31 @@
  */
 
 .card {
-    background: $cardBackgroundColor;
+    &--focused .card__text {
+        transition: $defaultTransition;
+        will-change: border-right;
 
-    &__text {
+        padding: 5px 5px 5px 10px;
+        margin-bottom: 10px;
+        min-height: 75px;
+
+        border-left: $cardSideMarkerBorderWidth transparent solid;
+
+        a {
+            color: $cardLinkColor;
+            border-bottom: $cardLinkBorderWidth $cardLinkUnderlineColor solid;
+            padding: $cardLinkPadding;
+            transition: $defaultTransition;
+            will-change: color, border-bottom;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 16px 0;
+            padding: 0;
+        }
+    }
+
+    &--blurred .card__text {
         transition: $defaultTransition;
         will-change: border-right;
 
@@ -45,12 +67,44 @@
             margin: 0 0 16px 0;
             padding: 0;
         }
+    }
 
-        &:hover {
+    &--default .card__text {
+        transition: $defaultTransition;
+        will-change: border-right;
+
+        padding: 5px 5px 5px 10px;
+        margin-bottom: 10px;
+        min-height: 75px;
+
+        border-left: $cardSideMarkerBorderWidth transparent solid;
+
+        a {
+            color: $cardLinkColor;
+            border-bottom: $cardLinkBorderWidth $cardLinkUnderlineColor solid;
+            padding: $cardLinkPadding;
             transition: $defaultTransition;
-            will-change: border-right;
+            will-change: color, border-bottom;
 
-            border-left: $cardSideMarkerBorderWidth $cardSideMarkerColor solid;
+            &:hover {
+                transition: $defaultTransition;
+                will-change: color, border-bottom;
+                background: $cardLinkHoverBackgroundColor;
+                color: $cardLinkHoverColor;
+                border-bottom: $cardLinkHoverBorderWidth $cardLinkHoverBorderColor solid;
+            }
         }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 16px 0;
+            padding: 0;
+        }
+    }
+
+    &--default .card__text:hover {
+        transition: $defaultTransition;
+        will-change: border-right;
+
+        border-left: $cardSideMarkerBorderWidth $cardSideMarkerColor solid;
     }
 }

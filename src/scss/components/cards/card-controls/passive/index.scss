@@ -12,22 +12,4 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.card {
-    background: $cardBackgroundColor;
-
-    margin: 10px;
-    padding: 16px;
-
-    cursor: pointer;
-    position: relative;
-    line-height: 1.5 * $defaultFontSize;
-
-    min-width: $minCardWidth;
-
-    border: none;
-}
-
-@import "./text/index.scss";
-@import "./default/index.scss";
-@import "./focused/index.scss";
-@import "./blurred/index.scss";
+.card-controls { &--passive { img { opacity: 0.65; } } }
