@@ -38,7 +38,6 @@ const onCardClick = ( evt, column, id, editCard ) => {
     ) { return; }
 
     evt.preventDefault();
-
     editCard( column, id );
 };
 
@@ -52,14 +51,11 @@ const cardClassName = ( id, modalId, modalVisible ) => {
     return 'card card--blurred';
 };
 
-const cardLinkModifiedClassName = ( modalVisible, className ) => {
-    if ( !modalVisible ) { return className; }
-
-    return `${className}-no-hover`;
-};
+const cardLinkModifiedClassName = ( modalVisible, className ) => modalVisible ? `${className}-no-hover` : className;
 
 const cardLinkClassName = ( modalVisible, linkColumn, column ) => {
     const shouldSelect = column === linkColumn;
+
     switch ( linkColumn ) {
     case COLUMN_BEST_INTENTIONS:
         return cardLinkModifiedClassName(
@@ -86,8 +82,8 @@ const cardLinkClassName = ( modalVisible, linkColumn, column ) => {
     }
 };
 
-const cardControlsClassName = ( modalVisible ) =>
-    modalVisible ? 'card-controls card-controls--passive' : 'card-controls';
+const cardControlsClassName = ( modalVisible ) => modalVisible ?
+    'card-controls card-controls--passive' : 'card-controls';
 
 const Card = ( {
     item, column, id, userId, context,
@@ -96,18 +92,17 @@ const Card = ( {
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
 } ) => (
     <div className={cardClassName( id, modalId, modalVisible )}
-        onClick={( evt ) => onCardClick( evt, column, id, editCard )}>
+        onClick={( evt ) => onCardClick( evt, column, id, editCard )}
+    >
         <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
-        <div className={cardControlsClassName( modalVisible )} onClick={( evt ) => evt.stopPropagation()}>
+        <div
+            className={cardControlsClassName( modalVisible )}
+            onClick={( evt ) => evt.stopPropagation()}
+        >
             <a href="#" className="card-link card-link--left"
                 onClick={() => copyCard( column, id )}
                 title="Copy this goal into a new goal."
             ><img src="/images/icons/copy.png" alt="Copy Icon" title="Copy this goal into a new goal." /></a>
-
-            {/* <a href="#" className="card-controls__link card-controls__left-link" */}
-            {/* onClick={() => snoozeCard( bucket, id )} */}
-            {/* title="Defer this goal until later." */}
-            {/* ><img src="/images/clock.png" alt="Clock Icon" title="Defer this goal until later." /></a> */}
 
             <a className={cardLinkClassName( modalVisible, COLUMN_BEST_INTENTIONS, column )}
                 title={`${column === COLUMN_BEST_INTENTIONS ? '' : 'Move this goal to “best intentions”.'}`}
@@ -117,7 +112,7 @@ const Card = ( {
                 }}
             >bi</a>
 
-            <span className="card-controls__transition"><img src="/images/icons/right.png" /></span>
+            <span className="card-controls__transition-icon"><img src="/images/icons/right.png" /></span>
 
             <a className={cardLinkClassName( modalVisible, COLUMN_TO_DO, column )}
                 title={`${column === COLUMN_TO_DO ? '' : 'Move this goal to “to do”.'}`}
@@ -127,7 +122,7 @@ const Card = ( {
                 }}
             >td</a>
 
-            <span className="card-controls__transition"><img src="/images/icons/right.png" /></span>
+            <span className="card-controls__transition-icon"><img src="/images/icons/right.png" /></span>
 
             <a className={cardLinkClassName( modalVisible, COLUMN_IN_PROGRESS, column )}
                 title={`${column === COLUMN_IN_PROGRESS ? '' : 'Move this goal to “in progress”.'}`}
@@ -137,7 +132,7 @@ const Card = ( {
                 }}
             >ip</a>
 
-            <span className="card-controls__transition"><img src="/images/icons/right.png" /></span>
+            <span className="card-controls__transition-icon"><img src="/images/icons/right.png" /></span>
 
             <a className={cardLinkClassName( modalVisible, COLUMN_DONE, column )}
                 title={`${column === COLUMN_DONE ? '' : 'I’m “done” with this goal!'}`}

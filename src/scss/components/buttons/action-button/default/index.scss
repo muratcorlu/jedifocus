@@ -12,15 +12,18 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-
 .action-button {
     &--default {
         background-color: $orange;
         color: $white;
+        transition: $defaultTransition;
+        will-change: color, background-color;
 
         &:hover {
             background: $white;
             color: $orange;
+            transition: $defaultTransition;
+            will-change: color, background-color;
         }
     }
 }

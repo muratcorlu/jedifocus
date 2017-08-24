@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const moveToInProgress = ( state = {}, { payload } ) => ( {
-    ...state,
-    inProgress: state.inProgress.set( payload.id, state[payload.column].get( payload.id ) ),
-    [payload.column]: state[payload.column].remove( payload.id )
-} );
-
-export default moveToInProgress;
+.card-controls {
+    &__transition-icon {
+        position: relative;
+        top: -1px;
+        opacity: 0.55;
+    }
+}

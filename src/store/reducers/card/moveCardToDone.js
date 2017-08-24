@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const moveToDone = ( state = {}, { payload } ) => ( {
+const moveCardToDone = ( state = {}, { payload: { id, column } } ) => ( {
     ...state,
-    done: state.done.set( payload.id, state[payload.column].get( payload.id ) ),
-    [payload.column]: state[payload.column].remove( payload.id )
+    done: state.done.set( id, state[column].get( id ) ),
+    [column]: state[column].remove( id )
 } );
 
-export default moveToDone;
+export default moveCardToDone;

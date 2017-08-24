@@ -21,7 +21,8 @@ const ToDo = ( { items } ) => (
     <BaseColumn
         column="toDo"
         heading="To Do"
-        headingClassName="column-heading__to-do"
+        className="column__to-do"
+        headingClassName="column__heading column__heading--to-do"
         items={items}
     />
 );

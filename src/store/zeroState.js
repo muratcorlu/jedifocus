@@ -41,7 +41,7 @@ const zeroState = {
     modalColumn: '',
     modalId: '',
     modalItem: '',
-    modalContext: 'runway',
+    modalContext: '',
 
     // #endregion
 

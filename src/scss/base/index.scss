@@ -33,7 +33,12 @@ ul {
     }
 }
 
-a { color: $blueGray; }
+a {
+    color: $blueGray;
+    text-decoration: none;
+}
+
+img { vertical-align: middle; }
 
 textarea { resize: none; }
 

@@ -12,11 +12,14 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit {
-    &__selection {
-        &--for-context {
-            float: none;
-            width: 350px;
-        }
-    }
-}
+import { guid } from '../../../lib/strings';
+
+const copyCard = ( state = {}, { payload: { column, id } } ) => ( {
+    ...state,
+    modalVisible: true,
+    modalContextVisible: false,
+    modalId: guid(),
+    modalItem: state[ column ].get( id )
+} );
+
+export default copyCard;

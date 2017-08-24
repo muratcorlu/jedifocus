@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const snoozeCard = ( state = {}, { payload } ) => {
-    console.log( 'snoozeCard:payload', payload );
+const moveCardToBestIntentions = ( state = {}, { payload: { id, column } } ) => ( {
+    ...state,
+    bestIntentions: state.bestIntentions.set( id, state[column].get( id ) ),
+    [column]: state[column].remove( id )
+} );
 
-    return state;
-};
-
-export default snoozeCard;
+export default moveCardToBestIntentions;

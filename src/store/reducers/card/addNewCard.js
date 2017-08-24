@@ -12,4 +12,16 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__selection { &--larger { width: 180px; } }
+import { guid } from '../../../lib/strings';
+
+const addNew = ( state = {} ) => ( {
+    ...state,
+    modalVisible: true,
+    modalContextVisible: false,
+    modalId: guid(),
+    modalItem: '',
+    modalColumn: 'bestIntentions',
+    modalContext: state.context
+} );
+
+export default addNew;

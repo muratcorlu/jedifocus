@@ -13,21 +13,18 @@
  */
 
 .card {
-    background: $cardBackgroundColor;
-
     margin: 10px;
     padding: 16px;
+    position: relative;
+
+    background: $cardBackgroundColor;
 
     cursor: pointer;
-    position: relative;
-    line-height: 1.5 * $defaultFontSize;
 
     min-width: $minCardWidth;
-
-    border: none;
 }
 
-@import "./text/index.scss";
-@import "./default/index.scss";
-@import "./focused/index.scss";
-@import "./blurred/index.scss";
+@import './blurred/index.scss';
+@import './default/index.scss';
+@import './focused/index.scss';
+@import './text/index.scss';

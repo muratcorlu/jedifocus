@@ -12,13 +12,15 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__description {
-    margin:  -10px 10px 10px 0;;
-    padding: 7px;
+.modal-edit {
+    &__description {
+        margin: -10px 10px 10px 0;
+        padding: 7px;
 
-    width: 607px;
-    height: 187px;
+        width: 607px;
+        height: 187px;
 
-    color: $black;
-    background: $white;
+        color: $black;
+        background: $white;
+    }
 }

@@ -66,7 +66,7 @@ const removeGoalFromOtherColumns = ( userId, context, column, goalId ) => {
 
     return Promise.all(
         [ COLUMN_TO_DO, COLUMN_IN_PROGRESS, COLUMN_BEST_INTENTIONS ]
-            .filter( ( b ) => b !== column )
+            .filter( ( c ) => c !== column )
             .map(
                 ( columnToRemoveFrom ) => db()
                     .database()

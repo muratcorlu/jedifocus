@@ -12,9 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.card-controls {
-    &__separator {
-        color: #AAAAAA;
-        float: left;
-    }
-}
+const moveCardToToDo = ( state = {}, { payload: { id, column } } ) => ( {
+    ...state,
+    toDo: state.toDo.set( id, state[column].get( id ) ),
+    [column]: state[column].remove( id )
+} );
+
+export default moveCardToToDo;

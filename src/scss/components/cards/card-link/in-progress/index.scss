@@ -12,8 +12,12 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-
 .card-link {
-    &--in-progress { &:hover { @include hoveredCardLink($blue) } }
+    &--in-progress {
+        border: 1px lighten(#78909C, 20%) solid;
+
+        &:hover { @include hoveredCardLink($blue) }
+    }
+
     &--in-progress-selected { @include selectedCardLink($blue) }
 }

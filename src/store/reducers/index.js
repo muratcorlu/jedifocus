@@ -17,40 +17,34 @@ import { createRootReducer } from 'kink';
 
 import * as constants from '../../lib/constants';
 
-import addNew from './addNew';
-import changeContext from './changeContext';
-import copyCard from './copyCard';
-import editCard from './editCard';
-import moveToBestIntentions from './moveToBestIntentions';
-import moveToDone from './moveToDone';
-import moveToInProgress from './moveToInProgress';
-import moveToToDo from './moveToToDo';
-import receiveAppState from './receiveAppState';
-import saveGoal from './saveGoal';
-import search from './search';
-import snoozeCard from './snoozeCard';
-import updateColumn from './updateColumn';
-import updateContext from './updateContext';
-import updateDescription from './updateDescription';
-import updateGoalContext from './updateGoalContext';
+import addNewCard from './card/addNewCard';
+import changeCardContext from './card/changeCardContext';
+import copyCard from './card/copyCard';
+import editCard from './card/editCard';
+import moveCardToBestIntentions from './card/moveCardToBestIntentions';
+import moveCardToInProgress from './card/moveCardToInProgress';
+import moveCardToToDo from './card/moveCardToToDo';
+import receiveAppState from './app/receiveAppState';
+import saveCard from './card/saveCard';
+import updateAppContext from './app/updateAppContext';
+import updateCardColumn from './card/updateCardColumn';
+import updateCardContext from './card/updateCardContext';
+import updateCardDescription from './card/updateCardDescription';
 
 const rootReducer = createRootReducer( getInitialState, {
-    [constants.JFDI_APP_CHANGE_CONTEXT]: changeContext,
+    [constants.JFDI_APP_CHANGE_CONTEXT]: changeCardContext,
     [constants.JFDI_APP_RECEIVE_STATE]: receiveAppState,
-    [constants.JFDI_APP_UPDATE_CONTEXT]: updateContext,
-    [constants.JFDI_CARD_ADD_NEW]: addNew,
-    [constants.JFDI_CARD_COPY]: copyCard,
+    [constants.JFDI_APP_UPDATE_CONTEXT]: updateAppContext,
+    [constants.JFDI_CARD_ADD_NEW]: addNewCard,
     [constants.JFDI_CARD_EDIT]: editCard,
-    [constants.JFDI_CARD_MOVE_BEST_INTENTIONS]: moveToBestIntentions,
-    [constants.JFDI_CARD_MOVE_DONE]: moveToDone,
-    [constants.JFDI_CARD_MOVE_IN_PROGRESS]: moveToInProgress,
-    [constants.JFDI_CARD_MOVE_TO_DO]: moveToToDo,
-    [constants.JFDI_CARD_SNOOZE]: snoozeCard,
-    [constants.JFDI_GOAL_SAVE]: saveGoal,
-    [constants.JFDI_GOAL_UPDATE_COLUMN]: updateColumn,
-    [constants.JFDI_GOAL_UPDATE_CONTEXT]: updateGoalContext,
-    [constants.JFDI_GOAL_UPDATE_DESCRIPTION]: updateDescription,
-    [constants.JFDI_SEARCH]: search
+    [constants.JFDI_CARD_SAVE]: saveCard,
+    [constants.JFDI_CARD_UPDATE_COLUMN]: updateCardColumn,
+    [constants.JFDI_CARD_UPDATE_CONTEXT]: updateCardContext,
+    [constants.JFDI_CARD_UPDATE_DESCRIPTION]: updateCardDescription,
+    [constants.JFDI_CARD_COPY]: copyCard,
+    [constants.JFDI_CARD_MOVE_BEST_INTENTIONS]: moveCardToBestIntentions,
+    [constants.JFDI_CARD_MOVE_IN_PROGRESS]: moveCardToInProgress,
+    [constants.JFDI_CARD_MOVE_TO_DO]: moveCardToToDo
 } );
 
 export { rootReducer };

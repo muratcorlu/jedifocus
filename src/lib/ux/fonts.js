@@ -1,3 +1,4 @@
+
 /*  __.-._
  *  '-._"7'  JediFocus
  *   /'.-c
@@ -27,6 +28,6 @@ const checkFonts = () => Promise.all( [
         `${document.body.className} wf-loaded` :
         'wf-loaded'
     ) )
-    .catch( ( err ) => console.log( 'error occured', typeof err ) );
+    .catch( ( err ) => console.warn( 'Some of the fonts may not have loaded.', err ) );
 
 checkFonts();

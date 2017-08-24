@@ -21,8 +21,8 @@ const Done = ( { items } ) => (
     <BaseColumn
         column="done"
         heading="Done & Dead"
-        headingClassName="column-heading__done"
-        className="column--done"
+        className="column__done"
+        headingClassName="column__heading column__heading--done"
         items={items}
     />
 );

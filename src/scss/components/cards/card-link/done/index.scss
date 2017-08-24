@@ -14,6 +14,8 @@
 
 .card-link {
     &--done {
+        border: 1px lighten(#78909C, 20%) solid;
+
         &:hover { @include hoveredCardLink($teal) }
     }
 

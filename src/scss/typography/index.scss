@@ -41,12 +41,10 @@ body.wf-loaded {
     .modal-edit {
         &__description { font-family: $monotypeFont; }
 
-        &__heading {
-            &--label {
-                font-family: $baseFontItalic;
-                font-weight: inherit;
-                font-style: italic;
-            }
+        &__heading-label {
+            font-family: $baseFontItalic;
+            font-weight: inherit;
+            font-style: italic;
         }
 
         &__label {
@@ -56,19 +54,13 @@ body.wf-loaded {
         }
     }
 
-    .column-heading {
-        font-family: $baseFontItalic;
-        font-weight: inherit;
-        font-style: italic;
-    }
-
     .action-button, .context-selection, .navigation__action-button {
         font-family: $baseFontItalic;
         font-weight: inherit;
         font-style: italic;
     }
 
-    .column-heading {
+    .column__heading {
         font-family: $baseFontLightItalic;
         font-size: $largerFontSize;
         font-style: italic;
@@ -101,16 +93,15 @@ pre, code {
 .card-controls { text-align: right; }
 .card-link { text-decoration: none; }
 
-.column-heading {
-    font-weight: normal;
-    font-style: italic;
-    letter-spacing: 2px;
-}
-
 .modal-edit {
     &__label {
         font-weight: bold;
         font-style: normal;
+    }
+
+    &__heading-label {
+        font-weight: normal;
+        font-style: italic;
     }
 
     &__description {
@@ -123,13 +114,6 @@ pre, code {
         white-space: nowrap;
         text-overflow: ellipsis;
         font-size: $defaultFontSize;
-    }
-
-    &__heading {
-        &--label {
-            font-weight: normal;
-            font-style: italic;
-        }
     }
 }
 
@@ -151,16 +135,25 @@ pre, code {
     line-height: $buttonHeight;
     text-decoration: none;
     text-align: center;
+    letter-spacing: 1px;
+}
+
+.modal-edit {
+    &__action-button {
+        font-size: $buttonFontSize;
+    }
 }
 
 .context-selection {
     font-size: $buttonFontSize;
     font-weight: normal;
     font-style: italic;
+    letter-spacing: 1px;
 }
 
-.column-heading {
+.column__heading {
     font-size: 20px;
+    letter-spacing: 2px;
     font-style: italic;
     text-align: center;
 }

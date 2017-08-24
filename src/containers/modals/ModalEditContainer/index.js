@@ -50,27 +50,16 @@ ModalEditContainer.propTypes = {
 export default connect(
     ModalEditContainer,
     actions,
-    ( {
-        bestIntentions,
-        modalColumn,
-        modalId,
-        modalItem,
-        modalVisible,
-        modalContext,
-        context,
-        inProgress,
-        toDo,
-        userId
-    } ) => ( {
-        bestIntentions: bestIntentions ? bestIntentions.toJSON() : {},
-        column: modalColumn,
-        id: modalId,
-        inProgress: inProgress ? inProgress.toJSON() : {},
-        item: modalItem,
-        show: modalVisible,
-        context: modalContext,
-        stateContext: context,
-        toDo: toDo ? toDo.toJSON() : {},
-        userId
+    ( state ) => ( {
+        bestIntentions: state.bestIntentions ? state.bestIntentions.toJSON() : {},
+        column: state.modalColumn,
+        id: state.modalId,
+        inProgress: state.inProgress ? state.inProgress.toJSON() : {},
+        item: state.modalItem,
+        show: state.modalVisible,
+        context: state.modalContext,
+        stateContext: state.context,
+        toDo: state.toDo ? state.toDo.toJSON() : {},
+        userId: state.userId
     } )
 );

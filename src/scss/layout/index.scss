@@ -16,10 +16,13 @@
     @include center;
 
     display: flex;
+
     min-height: 100vh;
     max-width: 1190px;
 }
 
-.column-body { flex-basis: 33%; }
+.column {
+    flex-basis: 33%;
 
-.column { &--done { display: none; } }
+    &__done { display: none; }
+}

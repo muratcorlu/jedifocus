@@ -18,12 +18,11 @@ import PropTypes from 'prop-types';
 import * as actions from './actions';
 import { connect } from 'kink';
 
-import Navigation from '../../../components/navigation/Navigation';
+import Navigation from '../../../components/navigations/Navigation';
 
-const NavigationContainer = ( { addNew, search, changeContext, context } ) => (
+const NavigationContainer = ( { addNew, changeContext, context } ) => (
     <Navigation
         addNew={addNew}
-        search={search}
         changeContext={changeContext}
         context={context}
     />
@@ -31,7 +30,6 @@ const NavigationContainer = ( { addNew, search, changeContext, context } ) => (
 
 NavigationContainer.propTypes = {
     addNew: PropTypes.func.isRequired,
-    search: PropTypes.func.isRequired,
     changeContext: PropTypes.func.isRequired,
     context: PropTypes.string.isRequired
 };

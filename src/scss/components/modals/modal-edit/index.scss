@@ -13,12 +13,12 @@
  */
 
 .modal-edit {
-    margin: -150px -312px;
+    margin: -193px -325px;
     padding: 10px;
 
     z-index: 9999;
-    position: fixed;
 
+    position: fixed;
     top: 50%;
     left: 50%;
     height: 362px;
@@ -32,7 +32,6 @@
     will-change: top, left;
 }
 
-@import "./action-button/index.scss";
 @import "./actions/index.scss";
 @import "./body/index.scss";
 @import "./description/index.scss";

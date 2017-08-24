@@ -12,4 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__selection { &--margin-adjust { margin: -2px 3px 0 -5px; } }
+const moveCardToInProgress = ( state = {}, { payload: { id, column } } ) => ( {
+    ...state,
+    inProgress: state.inProgress.set( id, state[column].get( id ) ),
+    [column]: state[column].remove( id )
+} );
+
+export default moveCardToInProgress;

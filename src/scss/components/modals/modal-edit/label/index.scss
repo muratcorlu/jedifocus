@@ -12,9 +12,11 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__label { margin: 1px 10px 24px 0; }
+.modal-edit {
+    &__label { margin: 1px 10px 24px 0; }
+}
 
-@import "./centered.scss";
-@import "./floated.scss";
-@import "./floated-first.scss";
-@import "./top-pushed.scss";
+@import "./centered/index.scss";
+@import "./floated/index.scss";
+@import "./floated-first/index.scss";
+@import "./top-pushed/index.scss";

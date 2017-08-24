@@ -12,11 +12,13 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__action-button {
-    width: 150px;
-    margin-right: 10px;
-    font-size: 18px;
+/* eslint-disable no-bitwise */
+const guid = () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace( /[xy]/g, ( c ) => {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : ( r & 0x3 | 0x8 );
 
-    position: relative;
-    top: -1px;
-}
+    return v.toString( 16 );
+} );
+/* eslint-enable no-bitwise */
+
+export { guid };

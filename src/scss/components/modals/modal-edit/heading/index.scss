@@ -12,30 +12,32 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__heading {
-    @include modalHeadingBackground;
+.modal-edit {
+    &__heading {
+        @include modalHeadingBackground;
 
-    margin: -10px -10px 20px -10px;
-    padding: 13px 13px 15px 13px;
-    border-radius: 2px 2px 0 0;
+        margin: -10px -10px 20px -10px;
+        padding: 13px 13px 15px 13px;
+        border-radius: 2px 2px 0 0;
 
-    color: $black;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
+        color: $black;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0;
 
-    cursor: move;
+        cursor: move;
 
-    opacity: 0.65;
-    transition: $defaultTransition;
-    will-change: opacity;
-
-    &:hover {
+        opacity: 0.65;
         transition: $defaultTransition;
         will-change: opacity;
 
-        opacity: 1;
-    }
+        &:hover {
+            transition: $defaultTransition;
+            will-change: opacity;
 
-    label { cursor: move; }
+            opacity: 1;
+        }
+
+        label { cursor: move; }
+    }
 }

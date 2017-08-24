@@ -12,5 +12,9 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+.column {
+    &:hover { .column__heading { opacity: 1; } }
+}
+
 @import "./body/index.scss";
 @import "./heading/index.scss";

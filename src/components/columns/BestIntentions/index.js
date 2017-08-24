@@ -21,7 +21,8 @@ const BestIntentions = ( { items } ) => (
     <BaseColumn
         column="bestIntentions"
         heading="Best Intentions"
-        headingClassName="column-heading__best-intentions"
+        className="column__best-intentions"
+        headingClassName="column__heading column__heading--best-intentions"
         items={items}
     />
 );

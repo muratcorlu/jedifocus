@@ -18,8 +18,8 @@ import PropTypes from 'prop-types';
 import CardContainer from '../../../containers/cards/CardContainer';
 
 const BaseColumn = ( { heading, items, className, headingClassName, column, children } ) => (
-    <div className={`column-body ${className}`}>
-        <h2 className={`column-heading ${headingClassName}`}>{heading}</h2>
+    <div className={`column ${className}`}>
+        <h2 className={headingClassName}>{heading}</h2>
 
         <div className="column__body">
             { Object.keys( items ).map( ( key ) => {

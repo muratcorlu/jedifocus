@@ -12,13 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__actions {
-    margin: 4px 3px 0 0;
-
-    text-align: right;
-    float: right;
-
-    &--inline { float: none; }
-    &--centered { text-align: center; }
-    &--push-top { margin-top: 75px; }
+.modal-edit {
+    &__actions {
+        margin: 4px 3px 0 0;
+        text-align: right;
+        float: right;
+    }
 }

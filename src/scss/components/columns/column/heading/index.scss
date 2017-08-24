@@ -12,7 +12,7 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.column-heading {
+.column__heading {
     min-width: 200px;
     height: 25px;
     opacity: 0.35;
@@ -20,8 +20,8 @@
     color: $white;
     cursor: default;
 
-    &__best-intentions { background: $blueGray; }
-    &__to-do { background: $orange; }
-    &__in-progress { background: $blue; }
-    &__done { background: $teal; }
+    &--best-intentions { background: $blueGray; }
+    &--to-do { background: $orange; }
+    &--in-progress { background: $blue; }
+    &--done { background: $teal; }
 }

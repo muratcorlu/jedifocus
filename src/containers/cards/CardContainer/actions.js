@@ -28,49 +28,52 @@ import {
 
 import {
     sendSaveGoalRequest,
-    sendRemoveFromOtherColumnsRequest
+    sendRemoveGoalFromOtherColumnsRequest
 } from './network';
 
 const copyCard = ( column, id ) => ( { type: JFDI_CARD_COPY, payload: { column, id } } );
 
 const editCard = ( column, id ) => ( { type: JFDI_CARD_EDIT, payload: { column, id } } );
 
+const save = ( id, userId, context, column, item ) =>
+    sendSaveGoalRequest( userId, context, column, id, item.trim() )
+        .then( () => sendRemoveGoalFromOtherColumnsRequest( userId, context, column, id ) );
+
 const moveCardToBestIntentions = ( id, userId, column, item, context ) => {
-    sendSaveGoalRequest( userId, context, COLUMN_BEST_INTENTIONS, id, item.trim() )
-        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_BEST_INTENTIONS, id ) );
+    save( id, userId, context, COLUMN_BEST_INTENTIONS, item );
 
     return { type: JFDI_CARD_MOVE_BEST_INTENTIONS, payload: { column, id } };
 };
 
 const moveCardToDone = ( id, userId, column, item, context ) => {
-    sendSaveGoalRequest( userId, context, COLUMN_DONE, id, item.trim() )
-        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_DONE, id ) );
+    save( id, userId, context, COLUMN_DONE, item );
 
     return { type: JFDI_CARD_MOVE_DONE, payload: { column, id } };
 };
 
 const moveCardToInProgress = ( id, userId, column, item, context ) => {
-    sendSaveGoalRequest( userId, context, COLUMN_IN_PROGRESS, id, item.trim() )
-        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_IN_PROGRESS, id ) );
+    save( id, userId, context, COLUMN_IN_PROGRESS, item );
 
     return { type: JFDI_CARD_MOVE_IN_PROGRESS, payload: { column, id } };
 };
 
 const moveCardToToDo = ( id, userId, column, item, context ) => {
-    sendSaveGoalRequest( userId, context, COLUMN_TO_DO, id, item.trim() )
-        .then( () => sendRemoveFromOtherColumnsRequest( userId, context, COLUMN_TO_DO, id ) );
+    save( id, userId, context, COLUMN_TO_DO, item );
 
     return { type: JFDI_CARD_MOVE_TO_DO, payload: { column, id } };
 };
 
-const snoozeCard = ( column, id ) => ( { type: JFDI_CARD_SNOOZE, payload: { column, id } } );
+const snoozeCard = ( column, id ) => ( {
+    type: JFDI_CARD_SNOOZE,
+    payload: { column, id }
+} );
 
 export {
     copyCard,
     editCard,
-    snoozeCard,
     moveCardToBestIntentions,
-    moveCardToToDo,
+    moveCardToDone,
     moveCardToInProgress,
-    moveCardToDone
+    moveCardToToDo,
+    snoozeCard
 };

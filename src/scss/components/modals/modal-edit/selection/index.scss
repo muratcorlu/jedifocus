@@ -12,10 +12,11 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit__selection {
-    margin: -1px 0 0 -5px;;
-    padding: 5px 10px;
-    width: 165px;
-    float: left;
+.modal-edit {
+    &__selection {
+        margin: -1px 0 0 -5px;;
+        padding: 5px 10px;
+        width: 165px;
+        float: left;
+    }
 }
-

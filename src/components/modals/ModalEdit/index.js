@@ -26,7 +26,9 @@ const ModalEdit = ( {
 } ) => show ? (
     <div className="modal-edit">
         <h2 className="modal-edit__heading">
-            <label htmlFor="modal-edit-description" className="modal-edit__heading--label">Describe Your Goal</label>
+            <label
+                className="modal-edit__heading-label"
+                htmlFor="modal-edit-description">Describe Your Goal</label>
         </h2>
 
         <h3 className="modal-edit__label modal-edit__label--floated modal-edit__label--floated-first">
@@ -50,8 +52,10 @@ const ModalEdit = ( {
         </div>
 
         <div className="modal-edit__actions">
-            <ActionButton onClick={() => saveGoal()}
-                className="action-button--modal action-button--default">Save</ActionButton>
+            <ActionButton
+                onClick={() => saveGoal()}
+                className="action-button--modal action-button--default"
+            >Save Your Goal</ActionButton>
         </div>
     </div>
 ) : null;

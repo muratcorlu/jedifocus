@@ -30,5 +30,5 @@
 
 @mixin modalHeadingBackground {
     background: lighten($black, 40%);
-    background: linear-gradient(to bottom, $lightGrey, lighten($black, 40%));
+    background: linear-gradient(to bottom, $lightGray, lighten($black, 40%));
 }

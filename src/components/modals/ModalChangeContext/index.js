@@ -28,7 +28,7 @@ const ModalChangeContext = ( { show, changeContext, context } ) => show ? (
             <label htmlFor="modal-edit-context">Select the context you want to switch to</label>:
         </h3>
 
-        <div className="modal-edit__body">
+        <div className="modal-edit__body modal-edit__body--for-context">
             <ContextDropdown id="modal-edit-context" value={context} onChange={changeContext}
                 className="modal-edit__selection--for-context"
             />

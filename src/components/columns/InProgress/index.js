@@ -21,7 +21,8 @@ const InProgress = ( { items } ) => (
     <BaseColumn
         column="inProgress"
         heading="In Progress"
-        headingClassName="column-heading__in-progress"
+        className="column__in-progress"
+        headingClassName="column__heading column__heading--in-progress"
         items={items}
     />
 );

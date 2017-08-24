@@ -17,19 +17,13 @@ import PropTypes from 'prop-types';
 
 import ActionButton from '../../../components/buttons/ActionButton';
 
-const Navigation = ( { addNew, /* search, */ changeContext, context } ) => (
+const Navigation = ( { addNew, changeContext, context } ) => (
     <div className="navigation">
         <ActionButton
             onClick={() => addNew()}
             title="Add a brand new goal."
-            className="action-button--align-right action-button--inverted navigation__action-button"
+            className="navigation__action-button action-button--align-right action-button--inverted"
         ><img src="/images/icons/plus.png" alt="Plus Icon" title="Add a brand new goal." />&nbsp;</ActionButton>
-
-        {/* <ActionButton */}
-        {/* onClick={() => search()} */}
-        {/* title="Search this context." */}
-        {/* className="column__action-button navigation-main__action-button"*/}
-        {/* >search <img src="/images/search.png" alt="Search Icon" title="Search this context." /></ActionButton> */}
 
         <a className="context-selection" onClick={() => changeContext()}
             title="Change the active context."
@@ -42,8 +36,7 @@ const Navigation = ( { addNew, /* search, */ changeContext, context } ) => (
 Navigation.propTypes = {
     addNew: PropTypes.func.isRequired,
     changeContext: PropTypes.func.isRequired,
-    context: PropTypes.string.isRequired // ,
-    // search: PropTypes.func.isRequired
+    context: PropTypes.string.isRequired
 };
 
 export default Navigation;
