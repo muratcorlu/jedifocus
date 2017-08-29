@@ -17,7 +17,7 @@ import FontFaceObserver from 'fontfaceobserver';
 
 const FONT_LOAD_TIMEOUT = 10000;
 
-const inputMonoObserver = new FontFaceObserver( 'Input Mono Cond Lt' );
+const inputMonoObserver = new FontFaceObserver( 'Input Mono Cond Reg' );
 const georgiaProObserver = new FontFaceObserver( 'Georgia Pro Reg' );
 
 const checkFonts = () => Promise.all( [

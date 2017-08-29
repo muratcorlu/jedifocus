@@ -1,14 +1,15 @@
-/*
- * ▬▬ι═══════ﺤJediFocus-═══════ι▬▬
- *   use the source to get things done
+/*  __.-._
+ *  '-._"7'  JediFocus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
  *
- * This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
  *
- * You can watch “Byte-Sized JavaScript” at: https://bit.ly/bytesized
+ *  MIT Licensed — See LICENSE.md
  *
- * MIT Licensed — See LICENSE.md
- *
- * Send your comments, suggestions, and feedback to me@volkan.io                                                     l
+ *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
@@ -37,6 +38,9 @@ module.exports = {
 
     module: {
         rules: [ {
+            test: /firebase\.js$/,
+            use: 'script-loader'
+        }, {
             test: /\.js$/,
             include: [
                 join( __dirname, 'src' ),

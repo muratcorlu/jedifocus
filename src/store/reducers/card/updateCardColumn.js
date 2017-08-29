@@ -1,16 +1,15 @@
-/*   __
- *  |::|    Jedi Focus
- *  |::|
- * _|//|_  Do. Or do not.
- * |____|  There is no try.
- *  || |
- *  | ||   This project is a part of the “Byte-Sized JavaScript” videocasts.
- *  | ||   You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
- *  || |
- *  || |   MIT Licensed — See LICENSE.md
- *  || |
- *  | ||   Send your comments, suggestions, and feedback to me@volkan.io
- *  ||||
+/*  __.-._
+ *  '-._"7'  JediFocus
+ *   /'.-c
+ *   |  /T   Do. Or do not.
+ *  _)_/LI   There is no try.
+ *
+ *  This project is a part of the “Byte-Sized JavaScript” videocasts.
+ *  You can watch “Byte-Sized JavaScript” at: https://bytesized.tv/
+ *
+ *  MIT Licensed — See LICENSE.md
+ *
+ *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
 const moveColumn = ( activeColumn, currentColumn, nextColumn, goalId, state ) => {
@@ -20,12 +19,8 @@ const moveColumn = ( activeColumn, currentColumn, nextColumn, goalId, state ) =>
     return state[ activeColumn ];
 };
 
-const updateColumn = ( state = {}, { payload } ) => {
-    const currentColumn = payload.get( 'currentColumn' );
-    const nextColumn = payload.get( 'nextColumn' );
-    const id = payload.get( 'id' );
-
-    const rest = [ currentColumn, nextColumn, id, state ];
+const updateColumn = ( state = {}, { payload: { currentColumn, goalId, nextColumn } } ) => {
+    const rest = [ currentColumn, nextColumn, goalId, state ];
 
     return {
         ...state,

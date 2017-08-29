@@ -12,7 +12,7 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { fromJS as makeImmutable } from 'immutable';
+import { top } from '../../../lib/dom';
 
 import {
     JFDI_CARD_SAVE,
@@ -26,35 +26,38 @@ import {
     sendRemoveGoalFromOtherColumnsRequest
 } from './network';
 
-const saveGoal = ( userId, context, column, goalId, item, currentContext ) => {
-    sendSaveGoalRequest( userId, context, column, goalId, item )
-        .then( () => {
-            if ( context !== currentContext ) {
-                return sendRemoveGoalFromOtherColumnsRequest( userId, currentContext, 'done', goalId );
-            }
+import { guidWithTimestamp as guid } from '../../../lib/strings';
 
-            return sendRemoveGoalFromOtherColumnsRequest( userId, currentContext, column, goalId );
-        } );
+const saveCard = ( userId, goalContext, goalColumn, goalId, goalDescription, currentContext ) => {
+    const oldId = goalId;
+    const newId = guid();
+
+    sendSaveGoalRequest( userId, goalContext, goalColumn, newId, goalDescription )
+        .then( () => sendRemoveGoalFromOtherColumnsRequest( userId, currentContext, 'done', oldId ) );
 
     return {
         type: JFDI_CARD_SAVE,
-        payload: makeImmutable( { context, column, goalId } )
+        payload: { goalContext, goalColumn, goalId, newId }
     };
 };
 
-const updateColumn = ( currentColumn, id, nextColumn ) => ( {
-    type: JFDI_CARD_UPDATE_COLUMN,
-    payload: makeImmutable( { currentColumn, id, nextColumn } )
-} );
+const updateCardColumn = ( currentColumn, goalId, nextColumn ) => {
+    top();
 
-const updateDescription = ( column, id, value ) => ( {
+    return {
+        type: JFDI_CARD_UPDATE_COLUMN,
+        payload: { currentColumn, goalId, nextColumn }
+    };
+};
+
+const updateCardDescription = ( column, goalId, goalDescription ) => ( {
     type: JFDI_CARD_UPDATE_DESCRIPTION,
-    payload: makeImmutable( { column, id, value } )
+    payload: { column, goalId, goalDescription }
 } );
 
-const updateContext = ( column, id, context ) => ( {
+const updateCardContext = ( goalContext ) => ( {
     type: JFDI_CARD_UPDATE_CONTEXT,
-    payload: makeImmutable( { column, id, context } )
+    payload: { goalContext }
 } );
 
-export { updateDescription, updateColumn, updateContext, saveGoal };
+export { updateCardDescription, updateCardColumn, updateCardContext, saveCard };

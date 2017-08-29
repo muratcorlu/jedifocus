@@ -19,5 +19,8 @@ import { connect } from 'kink';
 export default connect(
     InProgress,
     {},
-    ( { inProgress } ) => ( { items: ( inProgress ? inProgress.toJSON() : {} ) } )
+    ( { inProgress, modalId, modalColumn } ) => ( {
+        items: ( inProgress ? inProgress.toJSON() : {} ),
+        modalId, modalColumn
+    } )
 );

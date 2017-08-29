@@ -28,7 +28,7 @@ const Navigation = ( { addNew, changeContext, context } ) => (
         <a className="context-selection" onClick={() => changeContext()}
             title="Change the active context."
         >
-            <span className="context-selection__context-name">{context}</span>
+            <span className="context-selection__context-name">{context === 'demo' ? 'change context' : context}</span>
         </a>
     </div>
 );

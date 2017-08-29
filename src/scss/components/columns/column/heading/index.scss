@@ -15,13 +15,28 @@
 .column__heading {
     min-width: 200px;
     height: 25px;
-    opacity: 0.35;
+    opacity: 0.15;
     will-change: opacity;
     color: $white;
     cursor: default;
 
     &--best-intentions { background: $blueGray; }
+    &--best-intentions-selected { background: $blueGray; }
     &--to-do { background: $orange; }
+    &--to-do-selected { background: $orange; }
     &--in-progress { background: $blue; }
+    &--in-progress-selected { background: $blue; }
     &--done { background: $teal; }
+    &--done-selected { background: $teal; }
+
+    &--dimmed {
+        color: $white;
+        opacity: 0.15;
+    }
+
+    &--selected {
+        color: $white;
+        opacity: 1;
+        box-shadow: $defaultBoxShadow;
+    }
 }

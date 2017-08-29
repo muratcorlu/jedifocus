@@ -17,18 +17,34 @@ import PropTypes from 'prop-types';
 
 import BaseColumn from '../../../components/columns/BaseColumn';
 
-const BestIntentions = ( { items } ) => (
+const COLUMN_NAME = 'bestIntentions';
+
+const progressClassName = ( modalColumn ) => {
+    return modalColumn === COLUMN_NAME ?
+        'column__heading--best-intentions-selected' : 'column__heading--best-intentions';
+};
+
+const classModifier = ( modalColumn ) => {
+    if ( modalColumn === '' ) { return ''; }
+
+    return modalColumn === COLUMN_NAME ? '--selected' : '--dimmed';
+};
+
+const BestIntentions = ( { items, modalId, modalColumn } ) => (
     <BaseColumn
-        column="bestIntentions"
+        column={COLUMN_NAME}
         heading="Best Intentions"
         className="column__best-intentions"
-        headingClassName="column__heading column__heading--best-intentions"
+        headingClassName={`column__heading${classModifier( modalColumn )} ${progressClassName( modalColumn )}`}
         items={items}
+        modalId={modalId}
     />
 );
 
 BestIntentions.propTypes = {
-    items: PropTypes.object.isRequired
+    items: PropTypes.object.isRequired,
+    modalId: PropTypes.string.isRequired,
+    modalColumn: PropTypes.string.isRequired
 };
 
 export default BestIntentions;

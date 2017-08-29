@@ -14,10 +14,10 @@
 
 .card-link {
     &--best-intentions {
-        border: 1px lighten(#78909C, 20%) solid;
+        border: 1px lighten($blueGray, 20%) solid;
 
-        &:hover { @include hoveredCardLink($blueGray) }
+        &:hover { @include hoveredCardLink(darken($blueGray, 20%)) }
     }
 
-    &--best-intentions-selected { @include selectedCardLink($blueGray) }
+    &--best-intentions-selected { @include selectedCardLink(darken($blueGray, 20%)) }
 }

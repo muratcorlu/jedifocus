@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const updateGoalContext = ( state = {}, { payload } ) => ( {
+const updateGoalContext = ( state = {}, { payload: { goalContext } } ) => ( {
     ...state,
     modalVisible: true,
-    modalContext: payload.get( 'context' )
+    modalContext: goalContext
 } );
 
 export default updateGoalContext;

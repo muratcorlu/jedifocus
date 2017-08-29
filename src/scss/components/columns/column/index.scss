@@ -13,7 +13,9 @@
  */
 
 .column {
-    &:hover { .column__heading { opacity: 1; } }
+    &:hover {
+        .column__heading { opacity: 1; }
+    }
 }
 
 @import "./body/index.scss";

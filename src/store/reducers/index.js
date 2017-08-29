@@ -22,6 +22,7 @@ import changeCardContext from './card/changeCardContext';
 import copyCard from './card/copyCard';
 import editCard from './card/editCard';
 import moveCardToBestIntentions from './card/moveCardToBestIntentions';
+import moveCardToDone from './card/moveCardToDone';
 import moveCardToInProgress from './card/moveCardToInProgress';
 import moveCardToToDo from './card/moveCardToToDo';
 import receiveAppState from './app/receiveAppState';
@@ -44,7 +45,8 @@ const rootReducer = createRootReducer( getInitialState, {
     [constants.JFDI_CARD_COPY]: copyCard,
     [constants.JFDI_CARD_MOVE_BEST_INTENTIONS]: moveCardToBestIntentions,
     [constants.JFDI_CARD_MOVE_IN_PROGRESS]: moveCardToInProgress,
-    [constants.JFDI_CARD_MOVE_TO_DO]: moveCardToToDo
+    [constants.JFDI_CARD_MOVE_TO_DO]: moveCardToToDo,
+    [constants.JFDI_CARD_MOVE_DONE]: moveCardToDone
 } );
 
 export { rootReducer };

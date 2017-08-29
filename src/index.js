@@ -12,9 +12,11 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+import './vendor/google/firebase/firebase.js';
+
 import React from 'react';
 import { render } from 'react-dom';
-import { $ } from 'dombili';
+import { $, on, firstParentIncludingSelf as parent } from 'dombili';
 
 import './scss/index.scss';
 
@@ -29,6 +31,21 @@ delete config.fbUserId;
 import AppContainer from './containers/app/AppContainer';
 
 import './lib/ux/fonts';
+
+on( document.body, 'mouseup', ( evt ) => {
+    const parentModal = parent(
+        evt.target,
+        ( el ) => el.classList && el.classList.contains( 'modal-edit' )
+    );
+
+    if ( parentModal ) { return; }
+
+    const textArea = document.querySelector( 'textarea' );
+
+    if ( !textArea ) { return; }
+
+    textArea.focus();
+} );
 
 render(
     <AppContainer config={config} email={email} password={password} userId={fbUserId} />,

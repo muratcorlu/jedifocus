@@ -41,3 +41,9 @@ export const COLUMN_TO_DO = 'toDo';
 export const COLUMN_DONE = 'done';
 
 // #endregion
+
+// #region Misc
+
+export const GUID_SEPARATOR = '___';
+
+// #endregion

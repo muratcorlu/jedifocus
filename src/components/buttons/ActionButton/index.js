@@ -15,21 +15,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ActionButton = ( { children, onClick, className, title } ) => (
+const ActionButton = ( { children, onClick, className, title, disabled } ) => (
     <a href="#"
-        className={`action-button ${className || ''}`}
+        className={`action-button ${disabled ? 'action-button--disabled' : ''} ${className || ''}`}
         title={title || ''}
         onClick={( evt ) => {
             evt.preventDefault();
+            if (disabled) {return;}
             onClick( evt );
         }}>{children}</a>
 );
+
+ActionButton.defaultProps = {
+    disabled: false
+};
 
 ActionButton.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     onClick: PropTypes.func.isRequired,
-    title: PropTypes.string
+    title: PropTypes.string,
+    disabled: PropTypes.bool
 };
 
 export default ActionButton;

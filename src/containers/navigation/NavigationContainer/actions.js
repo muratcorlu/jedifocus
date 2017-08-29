@@ -12,10 +12,20 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+import { top } from '../../../lib/dom';
+
 import { JFDI_CARD_ADD_NEW, JFDI_APP_CHANGE_CONTEXT } from '../../../lib/constants';
 
-const addNew = () => ( { type: JFDI_CARD_ADD_NEW } );
+const addNew = () => {
+    top();
 
-const changeContext = () => ( { type: JFDI_APP_CHANGE_CONTEXT } );
+    return { type: JFDI_CARD_ADD_NEW };
+};
+
+const changeContext = () => {
+    top();
+
+    return { type: JFDI_APP_CHANGE_CONTEXT };
+};
 
 export { addNew, changeContext };

@@ -25,9 +25,17 @@
         transition: $defaultTransition;
         will-change: box-shadow;
     }
+
+    &--disabled {
+        background: #cccccc;
+        color: #999999;
+        box-shadow: none;
+        cursor: default;
+    }
 }
 
 @import "./align-right/index.scss";
+@import "./align-center/index.scss";
 @import "./default/index.scss";
 @import "./inverted/index.scss";
 @import "./modal/index.scss";

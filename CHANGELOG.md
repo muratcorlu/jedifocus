@@ -6,6 +6,15 @@ __.-._
 _)_/LI   There is no try.
 ```
 
+## **JediFocus** (*v.0.10.0*)
+
+* Scrolling improvements (*each column is separately scrollable now*).
+* Actively-edited card moves to top.
+* Other usability improvements.
+* Card auto-sort-ordering implemented: 
+     * The goals that you interact with will “*bubble up*” to top because the more you interact with something, the more important it is to you, and the cards’ sort oder shall reflect that.
+* Minor bug fixes and refactorings.
+
 ## **JediFocus** (*v.0.9.0*)
 
 * Removed the “Done” column. — You don’t need it. If something is done, it is done; keeping track of done items is a counter-productive. Say “bye” do things you do, and move on. No need to overload your mind. — You are a **doer**; not an accountant!

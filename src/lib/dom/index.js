@@ -12,11 +12,16 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const updateDescription = ( state = {}, { payload: { column, goalId, goalDescription } } ) => ( {
-    ...state,
-    modalVisible: true,
-    modalItem: goalDescription,
-    [column]: state[column].set( goalId, goalDescription )
-} );
+import { tick, untick } from 'dombili';
 
-export default updateDescription;
+let tickId = null;
+
+const top = () => {
+    untick( tickId );
+    tickId = tick( () => Array.prototype.slice.call(
+        document.querySelectorAll( '.column__body' ) ).forEach( ( column ) => {
+        column.scrollTop = 0;
+    } ) );
+};
+
+export { top };

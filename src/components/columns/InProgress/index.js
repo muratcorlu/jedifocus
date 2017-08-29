@@ -17,18 +17,33 @@ import PropTypes from 'prop-types';
 
 import BaseColumn from '../BaseColumn';
 
-const InProgress = ( { items } ) => (
+const COLUMN_NAME = 'inProgress';
+
+const progressClassName = ( modalColumn ) => {
+    return modalColumn === COLUMN_NAME ? 'column__heading--in-progress-selected' : 'column__heading--in-progress';
+};
+
+const classModifier = ( modalColumn ) => {
+    if ( modalColumn === '' ) { return ''; }
+
+    return modalColumn === COLUMN_NAME ? '--selected' : '--dimmed';
+};
+
+const InProgress = ( { items, modalId, modalColumn } ) => (
     <BaseColumn
-        column="inProgress"
+        column={COLUMN_NAME}
         heading="In Progress"
         className="column__in-progress"
-        headingClassName="column__heading column__heading--in-progress"
+        headingClassName={`column__heading${classModifier( modalColumn )} ${progressClassName( modalColumn )}`}
         items={items}
+        modalId={modalId}
     />
 );
 
 InProgress.propTypes = {
-    items: PropTypes.object.isRequired
+    items: PropTypes.object.isRequired,
+    modalId: PropTypes.string.isRequired,
+    modalColumn: PropTypes.string.isRequired
 };
 
 export default InProgress;
