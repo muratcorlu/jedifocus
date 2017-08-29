@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const moveCardToBestIntentions = ( state = {}, { payload: { id, column } } ) => ( {
+const moveCardToBestIntentions = ( state = {}, { payload: { oldId, newId, column } } ) => ( {
     ...state,
-    bestIntentions: state.bestIntentions.set( id, state[column].get( id ) ),
-    [column]: state[column].remove( id )
+    bestIntentions: state.bestIntentions.set( newId, state[column].get( oldId ) ),
+    [column]: state[column].remove( oldId )
 } );
 
 export default moveCardToBestIntentions;

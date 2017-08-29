@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const moveCardToInProgress = ( state = {}, { payload: { id, column } } ) => ( {
+const moveCardToInProgress = ( state = {}, { payload: { oldId, newId, column } } ) => ( {
     ...state,
-    inProgress: state.inProgress.set( id, state[column].get( id ) ),
-    [column]: state[column].remove( id )
+    inProgress: state.inProgress.set( newId, state[column].get( oldId ) ),
+    [column]: state[column].remove( oldId )
 } );
 
 export default moveCardToInProgress;

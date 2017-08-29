@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const moveCardToToDo = ( state = {}, { payload: { id, column } } ) => ( {
+const moveCardToToDo = ( state = {}, { payload: { oldId, newId, column } } ) => ( {
     ...state,
-    toDo: state.toDo.set( id, state[column].get( id ) ),
-    [column]: state[column].remove( id )
+    toDo: state.toDo.set( newId, state[column].get( oldId ) ),
+    [column]: state[column].remove( oldId )
 } );
 
 export default moveCardToToDo;
