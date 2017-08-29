@@ -15,18 +15,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { getTimestampFromGuid as ts } from '../../../lib/strings';
+
 import CardContainer from '../../../containers/cards/CardContainer';
 
-const BaseColumn = ( { heading, items, className, headingClassName, column, children } ) => (
+const BaseColumn = ( { modalId, heading, items, className, headingClassName, column, children } ) => (
     <div className={`column ${className}`}>
         <h2 className={headingClassName}>{heading}</h2>
 
         <div className="column__body">
-            { Object.keys( items ).map( ( key ) => {
-                const item = items[ key ];
+            { Object.keys( items )
+                .sort( ( key, otherKey ) => {
+                    if ( key === modalId ) { return -1; }
+                    if ( otherKey === modalId ) { return 1; }
 
-                return ( <CardContainer key={key} item={item} id={key} column={column} /> );
-            } ) }
+                    const keyTimestamp = ts( key );
+                    const otherKeyTimestamp = ts( otherKey );
+
+                    if ( isNaN( keyTimestamp ) ) { return 1; }
+                    if ( isNaN( otherKeyTimestamp ) ) { return -1; }
+
+                    if ( keyTimestamp > otherKeyTimestamp ) { return -1; }
+
+                    return 1;
+                } )
+                .map( ( key ) => {
+                    const item = items[ key ];
+
+                    return ( <CardContainer key={key} item={item} id={key} column={column} /> );
+                } ) }
         </div>
 
         <div>{children}</div>
@@ -39,12 +56,13 @@ BaseColumn.defaultProps = {
 };
 
 BaseColumn.propTypes = {
-    column: PropTypes.string.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
+    column: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
     headingClassName: PropTypes.string,
-    items: PropTypes.object.isRequired
+    items: PropTypes.object.isRequired,
+    modalId: PropTypes.string.isRequired
 };
 
 export default BaseColumn;

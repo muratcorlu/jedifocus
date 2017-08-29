@@ -22,7 +22,7 @@ import GoalDescriptionTextarea from '../../../components/textareas/GoalDescripti
 
 const ModalEdit = ( {
     show, column, context, item, id,
-    updateDescription, updateColumn, updateContext, saveGoal
+    updateCardDescription, updateCardColumn, updateCardContext, saveCard
 } ) => show ? (
     <div className="modal-edit">
         <h2 className="modal-edit__heading">
@@ -35,26 +35,26 @@ const ModalEdit = ( {
             <label htmlFor="modal-edit-column">Column</label></h3>
         <div>
             <ColumnDropdown id="modal-edit-column" value={column}
-                onChange={( value ) => updateColumn( column, id, value )} />
+                onChange={( value ) => updateCardColumn( column, id, value )} />
         </div>
 
-        <h3 className="modal-edit__label modal-edit__label--floated">
+        <div className="pull-right">
+            <ContextDropdown id="modal-edit-context" value={context}
+                onChange={( value ) => updateCardContext( value )} className="" />
+        </div>
+
+        <h3 className="modal-edit__label pull-right">
             <label htmlFor="modal-edit-context">Context</label></h3>
 
         <div>
-            <ContextDropdown id="modal-edit-context" value={context}
-                onChange={( value ) => updateContext( column, id, value )} className="" />
-        </div>
-
-        <div>
             <GoalDescriptionTextarea id="modal-edit-description" value={item}
-                onChange={( value ) => updateDescription( column, id, value )} />
+                onChange={( value ) => updateCardDescription( column, id, value )} />
         </div>
 
         <div className="modal-edit__actions">
             <ActionButton
-                onClick={() => saveGoal()}
-                className="action-button--modal action-button--default"
+                onClick={() => saveCard()}
+                className="action-button--modal action-button--align-center action-button--default"
             >Save Your Goal</ActionButton>
         </div>
     </div>
@@ -66,14 +66,14 @@ ModalEdit.defaultProps = {
 
 ModalEdit.propTypes = {
     column: PropTypes.string.isRequired,
+    context: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
-    context: PropTypes.string.isRequired,
-    saveGoal: PropTypes.func.isRequired,
+    saveCard: PropTypes.func.isRequired,
     show: PropTypes.bool,
-    updateColumn: PropTypes.func.isRequired,
-    updateDescription: PropTypes.func.isRequired,
-    updateContext: PropTypes.func.isRequired
+    updateCardColumn: PropTypes.func.isRequired,
+    updateCardContext: PropTypes.func.isRequired,
+    updateCardDescription: PropTypes.func.isRequired
 };
 
 export default ModalEdit;

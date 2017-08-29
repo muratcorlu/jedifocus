@@ -14,27 +14,6 @@
 
 import React from 'react';
 const ContextDropdown = ( { id, value, onChange, className } ) => (
-    <div style={{ textAlign: 'left' }}>
-        <ul style={{ display: 'none' }}>
-            <li>
-                <label>Areas of Focus</label>
-                <ul>
-                    <li><a href="#" onClick={() => onChange( 'runway' )}>Runway</a></li>
-                    <li><a href="#" onClick={() => onChange( 'low-hanging-fruits' )}>Low-Hanging Fruits</a></li>
-                    <li><a href="#" onClick={() => onChange( 'errands' )}>Errands</a></li>
-                    <li><a href="#" onClick={() => onChange( 'backlog' )}>Backlog</a></li>
-                </ul>
-            </li>
-            <li>
-                <label>Clarify or Kick to the Future</label>
-                <ul>
-                    <li><a href="#" onClick={() => onChange( 'revisit' )}>
-                        Needs Clarification / Splitting / Revisit</a></li>
-                    <li><a href="#" onClick={() => onChange( 'later' )}>Later / Maybe</a></li>
-                    <li><a href="#" onClick={() => onChange( 'ice-box' )}>Ice Box</a></li>
-                </ul>
-            </li>
-        </ul>
         <select id={id}
             className={`modal-edit__selection ${className || ''}`}
             value={value}
@@ -48,12 +27,20 @@ const ContextDropdown = ( { id, value, onChange, className } ) => (
             </optgroup>
 
             <optgroup label="Later">
-                <option value="revisit">Needs Clarification / Splitting / Revisit</option>
+            <option value="revisit">Clarify / Revisit</option>
                 <option value="later">Later / Maybe</option>
                 <option value="ice-box">Ice Box</option>
+        </optgroup>
+
+        {
+            ( value === 'demo' ) ?
+                <optgroup label="Help">
+                    <option value="demo">Tutorial</option>
             </optgroup>
+                :
+                null
+        }
         </select>
-    </div>
 );
 
 import PropTypes from 'prop-types';

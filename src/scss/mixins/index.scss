@@ -13,7 +13,7 @@
  */
 
 @mixin selectedCardLink($color) {
-    border: 1px $color solid;
+    border: 2px $color solid;
     color: $color;
     background: $white;
     cursor: default;

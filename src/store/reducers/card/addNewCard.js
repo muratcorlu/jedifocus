@@ -12,16 +12,21 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { guid } from '../../../lib/strings';
+import { guidWithTimestamp as guid } from '../../../lib/strings';
 
-const addNew = ( state = {} ) => ( {
-    ...state,
-    modalVisible: true,
-    modalContextVisible: false,
-    modalId: guid(),
-    modalItem: '',
-    modalColumn: 'bestIntentions',
-    modalContext: state.context
-} );
+const addNewCard = ( state = {} ) => {
+    const newId = guid();
 
-export default addNew;
+    return {
+        ...state,
+        modalVisible: true,
+        modalContextVisible: false,
+        modalId: newId,
+        modalItem: '',
+        modalColumn: 'bestIntentions',
+        modalContext: state.context,
+        bestIntentions: state.bestIntentions.set( newId, '' )
+    };
+};
+
+export default addNewCard;

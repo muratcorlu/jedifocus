@@ -17,18 +17,34 @@ import PropTypes from 'prop-types';
 
 import BaseColumn from '../BaseColumn';
 
-const ToDo = ( { items } ) => (
+const COLUMN_NAME = 'toDo';
+
+const progressClassName = ( modalColumn ) => {
+    return modalColumn === COLUMN_NAME ?
+        'column__heading--to-do-selected' : 'column__heading--to-do';
+};
+
+const classModifier = ( modalColumn ) => {
+    if ( modalColumn === '' ) { return ''; }
+
+    return modalColumn === COLUMN_NAME ? '--selected' : '--dimmed';
+};
+
+const ToDo = ( { items, modalId, modalColumn } ) => (
     <BaseColumn
         column="toDo"
         heading="To Do"
         className="column__to-do"
-        headingClassName="column__heading column__heading--to-do"
+        headingClassName={`column__heading${classModifier( modalColumn )} ${progressClassName( modalColumn )}`}
         items={items}
+        modalId={modalId}
     />
 );
 
 ToDo.propTypes = {
-    items: PropTypes.object.isRequired
+    items: PropTypes.object.isRequired,
+    modalId: PropTypes.string.isRequired,
+    modalColumn: PropTypes.string.isRequired
 };
 
 export default ToDo;

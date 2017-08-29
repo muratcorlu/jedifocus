@@ -19,5 +19,8 @@ import { connect } from 'kink';
 export default connect(
     Done,
     {},
-    ( { done } ) => ( { items: ( done ? done.toJSON() : {} ) } )
+    ( { done, modalId, modalColumn } ) => ( {
+        items: ( done ? done.toJSON() : {} ),
+        modalId, modalColumn
+    } )
 );

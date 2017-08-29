@@ -22,28 +22,28 @@ import ModalEdit from '../../../components/modals/ModalEdit';
 
 const ModalEditContainer = ( {
     context, column, id, item, userId, stateContext, show,
-    updateColumn, updateContext, updateDescription, saveGoal
+    updateCardColumn, updateCardContext, updateCardDescription, saveCard
 } ) => (
     <ModalEdit
         context={context} column={column} id={id} item={item} show={show}
-        saveGoal={() => saveGoal( userId, context, column, id, item, stateContext )}
-        updateColumn={updateColumn}
-        updateContext={updateContext}
-        updateDescription={updateDescription}
+        saveCard={() => saveCard( userId, context, column, id, item, stateContext )}
+        updateCardColumn={updateCardColumn}
+        updateCardContext={updateCardContext}
+        updateCardDescription={updateCardDescription}
     />
 );
 
 ModalEditContainer.propTypes = {
     column: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
-    stateContext: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
-    saveGoal: PropTypes.func.isRequired,
+    saveCard: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
-    updateColumn: PropTypes.func.isRequired,
-    updateDescription: PropTypes.func.isRequired,
-    updateContext: PropTypes.func.isRequired,
+    stateContext: PropTypes.string.isRequired,
+    updateCardColumn: PropTypes.func.isRequired,
+    updateCardContext: PropTypes.func.isRequired,
+    updateCardDescription: PropTypes.func.isRequired,
     userId: PropTypes.string.isRequired
 };
 

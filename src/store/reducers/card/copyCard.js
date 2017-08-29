@@ -12,7 +12,7 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { guid } from '../../../lib/strings';
+import { guidWithTimestamp as guid } from '../../../lib/strings';
 
 const copyCard = ( state = {}, { payload: { column, id } } ) => ( {
     ...state,

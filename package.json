@@ -1,6 +1,6 @@
 {
   "name": "jedifocus",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Gets things done the Jedi way.",
   "main": "index.js",
   "repository": "git@github.com:jsbites/jedifocus.git",
@@ -55,6 +55,7 @@
     "node-sass": "^4.5.3",
     "sass-lint": "^1.10.2",
     "sass-loader": "^6.0.6",
+    "script-loader": "^0.7.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.3.0",

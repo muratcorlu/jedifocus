@@ -15,7 +15,7 @@
 body {
     background: $bodyBackground url(/images/backgrounds/zen/default.jpg) fixed;
     background-size: cover;
-    padding-bottom: 25vh;
+
 }
 
 h2 {
@@ -50,7 +50,7 @@ blockquote {
     color: $quoteColor;
 
     margin-bottom: 15px;
-    padding: 7px;
+    padding: 0;
     border-radius: 3px;
 
     p {

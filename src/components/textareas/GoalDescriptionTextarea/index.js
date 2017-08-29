@@ -21,7 +21,7 @@ const GoalDescriptionTextarea = ( { id, value, onChange } ) => (
         value={value}
         onChange={( evt ) => onChange( evt.target.value )}
         placeholder="What would you like to do?"
-        autoFocus={!value}
+        autoFocus={true}
     />
 );
 

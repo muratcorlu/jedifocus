@@ -13,6 +13,9 @@
  */
 
 /* eslint-disable no-bitwise */
+
+import { GUID_SEPARATOR } from '../../lib/constants';
+
 const guid = () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace( /[xy]/g, ( c ) => {
     const r = Math.random() * 16 | 0;
     const v = c === 'x' ? r : ( r & 0x3 | 0x8 );
@@ -21,4 +24,11 @@ const guid = () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace( /[xy]/g, ( c 
 } );
 /* eslint-enable no-bitwise */
 
-export { guid };
+const timestamp = () => `${( new Date() ).getTime()}`;
+
+const guidWithTimestamp = () => `${guid()}${GUID_SEPARATOR}${timestamp()}`;
+
+const getTimestampFromGuid = ( timestampedGuid ) =>
+    parseInt( timestampedGuid.split( GUID_SEPARATOR )[ 1 ], 10 );
+
+export { guid, timestamp, guidWithTimestamp, getTimestampFromGuid };

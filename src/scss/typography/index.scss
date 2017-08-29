@@ -15,145 +15,193 @@
 body {
     line-height: 1.5 * $defaultFontSize;
     font-size: $defaultFontSize;
-    font-family: $baseFallbackFont;
-
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+
+    a { text-decoration: none; }
+
+    img { vertical-align: middle; }
+
+    p { margin-bottom: 1.2 * $defaultFontSize; }
 }
 
-body.wf-loaded {
-    font-family: $baseFont;
+body {
+    font-family: $baseFallbackFont;
 
+    &.wf-loaded {
+        font-family: $baseFont;
+    }
+}
+
+body {
     strong, b, h1, h2, h3, h4, h5, h6 {
-        font-family: $baseFontBold;
-        font-weight: inherit;
+        font-weight: bold;
         font-style: inherit;
     }
 
-    em, i, blockquote {
-        font-family: $baseFontItalic;
-        font-weight: inherit;
-        font-style: italic;
-    }
-
-    pre, code { font-family: $monotypeFont; }
-
-    .modal-edit {
-        &__description { font-family: $monotypeFont; }
-
-        &__heading-label {
-            font-family: $baseFontItalic;
-            font-weight: inherit;
-            font-style: italic;
-        }
-
-        &__label {
+    &.wf-loaded {
+        strong, b, h1, h2, h3, h4, h5, h6 {
             font-family: $baseFontBold;
             font-weight: inherit;
             font-style: inherit;
         }
     }
+}
 
-    .action-button, .context-selection, .navigation__action-button {
-        font-family: $baseFontItalic;
-        font-weight: inherit;
-        font-style: italic;
-    }
-
-    .column__heading {
-        font-family: $baseFontLightItalic;
-        font-size: $largerFontSize;
+body {
+    em, i, blockquote, blockquote {
         font-style: italic;
         font-weight: inherit;
-        text-align: center;
+    }
+
+    &.wf-loaded {
+        em, i, blockquote {
+            font-family: $baseFontItalic;
+            font-weight: inherit;
+            font-style: italic;
+        }
     }
 }
 
-a { text-decoration: none; }
+body {
+    pre, code {
+        font-family: $monotypeFallbackFont;
+        font-size: $smallerFontSize;
+    }
 
-img { vertical-align: middle; }
-
-p { margin-bottom: 1.2 * $defaultFontSize; }
-
-strong, b, h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    font-style: inherit;
+    &.wf-loaded {
+        pre, code { font-family: $monotypeFont; }
+    }
 }
 
-em, i, blockquote, blockquote {
-    font-style: italic;
-    font-weight: inherit;
+body {
+    .modal-edit {
+        &__action-button {
+            font-size: $buttonFontSize;
+        }
+    }
 }
 
-pre, code {
-    font-family: $monotypeFallbackFont;
-    font-size: $smallerFontSize;
-}
-
-.card-controls { text-align: right; }
-.card-link { text-decoration: none; }
-
-.modal-edit {
-    &__label {
+body {
+    .modal-edit__label {
         font-weight: bold;
         font-style: normal;
     }
 
-    &__heading-label {
+    &.wf-loaded .modal-edit__label {
+        font-family: $baseFontBold;
+        font-weight: inherit;
+        font-style: inherit;
+    }
+}
+
+body {
+    .modal-edit__heading-label {
         font-weight: normal;
         font-style: italic;
     }
 
-    &__description {
+    &.wf-loaded .modal-edit__heading-label {
+        font-family: $baseFontItalic;
+        font-weight: inherit;
+        font-style: italic;
+    }
+}
+
+body {
+    .modal-edit__description {
         font-family: $monotypeFallbackFont;
         font-size: $defaultFontSize;
         line-height: $defaultFontSize * 1.5;
     }
 
-    &__selection {
+    &.wf-loaded .modal-edit__description {
+        font-family: $monotypeFont;
+    }
+}
+
+body {
+    .modal-edit__selection {
         white-space: nowrap;
         text-overflow: ellipsis;
         font-size: $defaultFontSize;
     }
 }
 
-.card {
-    &__text {
-        h1, h2, h3, h4, h5, h6 {
-            margin: 0 0 16px 0;
-            padding: 0;
-            font-size: $defaultFontSize;
-            text-align: left;
+body {
+    .action-button {
+        font-size: $buttonFontSize;
+        font-weight: normal;
+        font-style: italic;
+        line-height: $buttonHeight;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    &.wf-loaded .action-button {
+        font-family: $baseFontItalic;
+        font-weight: inherit;
+        font-style: italic;
+    }
+}
+
+body {
+    .context-selection {
+        font-size: $buttonFontSize;
+        font-weight: normal;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+
+    &.wf-loaded .context-selection {
+        font-family: $baseFontItalic;
+        font-weight: inherit;
+        font-style: italic;
+    }
+}
+
+body {
+    .navigation__action-button {
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    &.wf-loaded .navigation__action-button {
+        font-family: $baseFontItalic;
+        font-weight: inherit;
+        font-style: italic;
+    }
+}
+
+body {
+    .column__heading, .column__heading--dimmed, .column__heading--selected {
+        font-size: $largerFontSize;
+        letter-spacing: 2px;
+        font-style: italic;
+        text-align: center;
+    }
+
+    &.wf-loaded {
+        .column__heading, .column__heading--dimmed, .column__heading--selected {
+            font-family: $baseFontLightItalic;
+            font-style: italic;
+            font-weight: inherit;
         }
     }
 }
 
-.action-button {
-    font-size: $buttonFontSize;
-    font-weight: normal;
-    font-style: italic;
-    line-height: $buttonHeight;
-    text-decoration: none;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.modal-edit {
-    &__action-button {
-        font-size: $buttonFontSize;
+body {
+    .card {
+        &__text {
+            h1, h2, h3, h4, h5, h6 {
+                margin: 0 0 16px 0;
+                padding: 0;
+                font-size: $defaultFontSize;
+                text-align: left;
+            }
+        }
     }
+    .card-controls { text-align: right; }
+    .card-link { text-decoration: none; }
 }
 
-.context-selection {
-    font-size: $buttonFontSize;
-    font-weight: normal;
-    font-style: italic;
-    letter-spacing: 1px;
-}
-
-.column__heading {
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-style: italic;
-    text-align: center;
-}
