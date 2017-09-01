@@ -15,19 +15,20 @@
 .context-listing {
     &__link {
         &--default {
-            color: $black;
+            display: block;
+
             padding: 5px;
             border-bottom: 2px transparent solid;
+
+            color: $black;
             text-decoration: none;
-            transition: $defaultTransition;
-            will-change: color, background;
             background: $white;
             box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
-
             text-align: center;
             border-radius: 18px;
 
-            display: block;
+            transition: $defaultTransition;
+            will-change: color, background;
 
             &:hover {
                 background: $orange;

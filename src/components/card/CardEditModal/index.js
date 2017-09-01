@@ -20,7 +20,7 @@ import ContextDropdown from '../../../components/context/ContextDropdown';
 import ColumnDropdown from '../../../components/column/ColumnDropdown';
 import CardDescriptionTextarea from '../../../components/card/CardDescriptionTextarea';
 
-const CardEditModal = ({
+const CardEditModal = ( {
     show, column, context, item, id,
     updateCardDescription, updateCardColumn, updateCardContext, saveCard
 } ) => show ? (

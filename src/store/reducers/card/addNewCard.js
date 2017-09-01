@@ -12,7 +12,7 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { guidWithTimestamp as guid } from '../../../lib/strings';
+import { guidWithTimestamp as guid } from 'tangled';
 
 const addNewCard = ( state = {} ) => {
     const newId = guid();

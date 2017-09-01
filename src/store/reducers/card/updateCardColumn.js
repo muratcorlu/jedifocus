@@ -13,10 +13,10 @@
  */
 
 const moveColumn = ( activeColumn, currentColumn, nextColumn, goalId, state ) => {
-    if ( currentColumn === nextColumn ) { return state[ activeColumn ]; }
-    if ( activeColumn === currentColumn ) { return state[ activeColumn ].delete( goalId ); }
-    if ( activeColumn === nextColumn ) { return state[ activeColumn].set( goalId, state.modalItem ); }
-    return state[ activeColumn ];
+    if ( currentColumn === nextColumn ) { return state[activeColumn]; }
+    if ( activeColumn === currentColumn ) { return state[activeColumn].delete( goalId ); }
+    if ( activeColumn === nextColumn ) { return state[activeColumn].set( goalId, state.modalItem ); }
+    return state[activeColumn];
 };
 
 const updateColumn = ( state = {}, { payload: { currentColumn, goalId, nextColumn } } ) => {

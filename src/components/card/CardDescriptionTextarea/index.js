@@ -15,7 +15,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CardDescriptionTextarea = ({ id, value, onChange } ) => (
+const CardDescriptionTextarea = ( { id, value, onChange } ) => (
     <textarea id={id}
         className="modal-edit__description"
         value={value}

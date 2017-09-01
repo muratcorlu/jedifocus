@@ -12,14 +12,14 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { guidWithTimestamp as guid } from '../../../lib/strings';
+import { guidWithTimestamp as guid } from 'tangled';
 
 const copyCard = ( state = {}, { payload: { column, id } } ) => ( {
     ...state,
     modalVisible: true,
     modalContextVisible: false,
     modalId: guid(),
-    modalItem: state[ column ].get( id )
+    modalItem: state[column].get( id )
 } );
 
 export default copyCard;

@@ -15,7 +15,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getTimestampFromGuid as ts } from '../../../lib/strings';
+import { getTimestampFromGuid as ts } from 'tangled';
 
 import CardContainer from '../../../containers/card/CardContainer';
 
@@ -40,7 +40,7 @@ const BaseColumn = ( { modalId, heading, items, className, headingClassName, col
                     return 1;
                 } )
                 .map( ( key ) => {
-                    const item = items[ key ];
+                    const item = items[key];
 
                     return ( <CardContainer key={key} item={item} id={key} column={column} /> );
                 } ) }

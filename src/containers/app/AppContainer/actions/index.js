@@ -26,9 +26,9 @@ const requestAppState = () => ( { type: JFDI_APP_REQUEST_STATE } );
 const receiveAppState = ( data ) => ( {
     type: JFDI_APP_RECEIVE_STATE,
     payload: makeImmutable( {
-        bestIntentions: data[ 0 ],
-        toDo: data[ 1 ],
-        inProgress: data[ 2 ]
+        bestIntentions: data[0],
+        toDo: data[1],
+        inProgress: data[2]
     } )
 } );
 

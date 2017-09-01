@@ -88,3 +88,5 @@ stats\.json
 
 # for myself
 GTD
+public/css/
+public/js/

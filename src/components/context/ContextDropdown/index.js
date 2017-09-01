@@ -14,33 +14,33 @@
 
 import React from 'react';
 const ContextDropdown = ( { id, value, onChange, className } ) => (
-        <select id={id}
-            className={`modal-edit__selection ${className || ''}`}
-            value={value}
-            onChange={( evt ) => onChange( evt.target.value ) }
-        >
-            <optgroup label="Focus">
-                <option value="runway">Runway</option>
-                <option value="low-hanging-fruits">Low-Hanging Fruits</option>
-                <option value="errands">Errands</option>
-                <option value="backlog">Backlog</option>
-            </optgroup>
+    <select id={id}
+        className={`modal-edit__selection ${className || ''}`}
+        value={value}
+        onChange={( evt ) => onChange( evt.target.value ) }
+    >
+        <optgroup label="Focus">
+            <option value="runway">Runway</option>
+            <option value="low-hanging-fruits">Low-Hanging Fruits</option>
+            <option value="errands">Errands</option>
+            <option value="backlog">Backlog</option>
+        </optgroup>
 
-            <optgroup label="Later">
+        <optgroup label="Later">
             <option value="revisit">Clarify / Revisit</option>
-                <option value="later">Later / Maybe</option>
-                <option value="ice-box">Ice Box</option>
+            <option value="later">Later / Maybe</option>
+            <option value="ice-box">Ice Box</option>
         </optgroup>
 
         {
             ( value === 'demo' ) ?
                 <optgroup label="Help">
                     <option value="demo">Tutorial</option>
-            </optgroup>
+                </optgroup>
                 :
                 null
         }
-        </select>
+    </select>
 );
 
 import PropTypes from 'prop-types';

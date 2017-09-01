@@ -28,7 +28,7 @@ import {
     COLUMN_TO_DO
 } from '../../../lib/constants';
 
-import { guidWithTimestamp as guid } from '../../../lib/strings';
+import { guidWithTimestamp as guid } from 'tangled';
 
 import {
     sendSaveGoalRequest,

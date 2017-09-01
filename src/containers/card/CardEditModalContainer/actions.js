@@ -26,7 +26,7 @@ import {
     sendRemoveGoalFromOtherColumnsRequest
 } from './network';
 
-import { guidWithTimestamp as guid } from '../../../lib/strings';
+import { guidWithTimestamp as guid } from 'tangled';
 
 const saveCard = ( userId, goalContext, goalColumn, goalId, goalDescription, currentContext ) => {
     const oldId = goalId;

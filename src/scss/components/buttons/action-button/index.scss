@@ -26,12 +26,12 @@
         will-change: box-shadow;
     }
 
-    &--disabled {
-        background: #cccccc;
-        color: #999999;
-        box-shadow: none;
-        cursor: default;
-    }
+    //&--disabled {
+    //    background: #cccccc;
+    //    color: #999999;
+    //    box-shadow: none;
+    //    cursor: default;
+    //}
 }
 
 @import "./align-right/index.scss";

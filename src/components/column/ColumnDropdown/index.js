@@ -21,9 +21,9 @@ const ColumnnDropdown = ( { id, value, onChange } ) => (
         onChange={( evt ) => onChange( evt.target.value )}
     >
         <optgroup label="Working">
-        <option value="bestIntentions">Best Intentions</option>
-        <option value="toDo">To Do</option>
-        <option value="inProgress">In Progress</option>
+            <option value="bestIntentions">Best Intentions</option>
+            <option value="toDo">To Do</option>
+            <option value="inProgress">In Progress</option>
         </optgroup>
         <optgroup label="Completed">
             <option value="done">Done and Dusted</option>

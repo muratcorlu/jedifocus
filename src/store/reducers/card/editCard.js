@@ -12,14 +12,14 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const editCard = ( state = {}, { payload } ) => ( {
+const editCard = ( state = {}, { payload: { column, id } } ) => ( {
     ...state,
     modalVisible: true,
     modalContextVisible: false,
-    modalId: payload.id,
-    modalItem: state[ payload.column ].get( payload.id ),
+    modalId: id,
+    modalItem: state[column].get( id ),
     modalContext: state.context,
-    modalColumn: payload.column
+    modalColumn: column
 } );
 
 export default editCard;

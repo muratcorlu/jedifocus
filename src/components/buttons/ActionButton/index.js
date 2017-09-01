@@ -21,7 +21,7 @@ const ActionButton = ( { children, onClick, className, title, disabled } ) => (
         title={title || ''}
         onClick={( evt ) => {
             evt.preventDefault();
-            if (disabled) {return;}
+            if ( disabled ) {return;}
             onClick( evt );
         }}>{children}</a>
 );
