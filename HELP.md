@@ -18,6 +18,19 @@ Spend as much time in the sandbox as you like, until you feel comfortable with t
 
 Playing in the sandbox is not required to learn the app (*since the user interface is simple and intuitive already*); however, by playing in the sandbox you may still catch a quite a few tips and trick that can save you time.
 
+## General Tips
+
+> Goal management can only be successful when you keep things stupidly simple at the highest level.
+
+For instance…
+
+* Your smallest time unit should be **a week**; anything smaller than that means you’ll “appear to be busy” managing your goals, instead of actually **completing** them.
+* **Focus** on one major thing every week.
+* Related: Deciding what to do “next week” should not take hours. Make a decision, and stick to it. — The worst that can happen is, you’ll work on that thing for one week and then switch to something else. — You don’t need a Gannt Chart to decide what to do next; you already, inherently know what to do. — Just trust your gut.
+* Do anything you can quickly do **right now**, no questions asked (*see the “five minutes” rule below*).
+* Labels are helpful. — Like `@nextup`, `@current`, `@mvp`, `@urgent`… etc.; however don’t abuse them. Have a handful of labels, and know what they are for.
+
+
 ## The “Five Minutes” Rule
 
 > Some call this the “two minutes” rule; some call the “fifteen minutes” rule; I’ve never heard anyone call it the “one hour” rule **:)** — Nonetheless, the gist is the same.
@@ -26,7 +39,7 @@ This is one of the fundamental rules of productivity. — If something comes to 
 
 It does not matter how important or critical that thing is. It’s just five minutes of your time anyway. And it’s much more effort to book-keep it, revise it and categorise it; so just freaking do it.
 
-If for some reason you cannot do it **right now**, add it to **JediFocus** and move it to a context like **30 minutes** (*see description of contexes below*)/
+If for some reason you cannot do it **right now**, add it to **JediFocus** and move it to a context like **30 minutes** (*see description of contexes below*)
 
 ## Don’t Over-Analyze
 

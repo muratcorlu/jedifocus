@@ -15,7 +15,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ActionButton from '../../../components/buttons/ActionButton';
+import ActionButton from '../../buttons/ActionButton';
 
 const Navigation = ( { addNew, changeContext, context } ) => (
     <div className="navigation">

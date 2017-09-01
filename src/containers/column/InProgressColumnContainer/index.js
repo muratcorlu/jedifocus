@@ -12,12 +12,15 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit {
-    &__label { margin: 1px 10px 24px 0; }
-}
+import InProgress from '../../../components/column/InProgressColumn';
 
-@import "./centered/index.scss";
-@import "./context-switch/index.scss";
-@import "./floated/index.scss";
-@import "./floated-first/index.scss";
-@import "./top-pushed/index.scss";
+import { connect } from 'kink';
+
+export default connect(
+    InProgress,
+    {},
+    ( { inProgress, modalId, modalColumn } ) => ( {
+        items: ( inProgress ? inProgress.toJSON() : {} ),
+        modalId, modalColumn
+    } )
+);

@@ -12,12 +12,15 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit {
-    &__label { margin: 1px 10px 24px 0; }
-}
+import ToDo from '../../../components/column/ToDoColumn';
 
-@import "./centered/index.scss";
-@import "./context-switch/index.scss";
-@import "./floated/index.scss";
-@import "./floated-first/index.scss";
-@import "./top-pushed/index.scss";
+import { connect } from 'kink';
+
+export default connect(
+    ToDo,
+    {},
+    ( { toDo, modalId, modalColumn } ) => ( {
+        items: ( toDo ? toDo.toJSON() : {} ),
+        modalId, modalColumn
+    } )
+);

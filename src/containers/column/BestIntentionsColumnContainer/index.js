@@ -12,12 +12,16 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit {
-    &__label { margin: 1px 10px 24px 0; }
-}
+import BestIntentions from '../../../components/column/BestIntentionsColumn';
 
-@import "./centered/index.scss";
-@import "./context-switch/index.scss";
-@import "./floated/index.scss";
-@import "./floated-first/index.scss";
-@import "./top-pushed/index.scss";
+import { connect } from 'kink';
+
+export default connect(
+    BestIntentions,
+    {},
+    ( { bestIntentions, modalId, modalColumn } ) => ( {
+        items: ( bestIntentions ? bestIntentions.toJSON() : {} ),
+        modalId,
+        modalColumn
+    } )
+);

@@ -36,7 +36,30 @@ So if a goal needs some kind of documentation after being done; or if you need t
 
 If you have too many cards; you probably have too much on your plate and you need to discipline yourself.
  
-The best way to do it is to move some of your items that you cannot timeley to the backlog.
+The best way to do it is to move some of your items that you cannot timely to the backlog.
+
+## Simplicity Above Everything
+
+When adding a feature we’ll always make a risk/benefit analysis. — No feature will be added unless it is absolutely necessary **and** simplifies the workflow.
+
+So…
+
+* No attachment and multimedia support. — You can always upload your supporting media to somewhere like **Dropbox**, and add a reference link to your goal. — **JediFocus** focuses on goal tracking; **not** asset management.
+* No pagination. — If you have too many goals in your plate that you need to paginate; then you have a bigger problem than pagination. — **JediFocus** will only list a certain reasonable subset of your goals.
+* What’s done is done. — **JediFocus** does not track the goals you completed. Once a goal is done, it is irreversibly wiped from the system.
+* No search. — Again, if you need to search between your goals; then you have a bigger problem. — You should start from your topmost goal, and move all the way to the bottom; without needing to search for anything.
+    * We may include some form of **labeling** and/or **filtering** in the future, though.
+* Goals are ephemeral. — If you want to permanently store something before completing your goal, make sure you save it to a more permanent **reference** location.
+
+## Desktop First (*Until MVP*)
+
+Initially, we are assuming a **Desktop** user experience. This is to reduce the initial scope of the project. — Eventually we’ll support phone and tablet user agents too.
+
+This, however, does not mean that **JediFocus** will not be usable on phones and tablets; it’s just, initially we won’t be testing the app in those user agents.
+
+## Markdown Over WYSIWYG
+
+Why? Because what you see is never what you get. Besides, the user is supposed to express her goals, not author her next novel. — So the amount of formatting required is not sophisticated enough to validate the necessity of a MS-word-like WYSIWYG editor.
 
 ### You Don’t Need **Search**
 

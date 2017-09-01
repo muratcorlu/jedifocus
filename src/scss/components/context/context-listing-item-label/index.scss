@@ -12,12 +12,6 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit {
-    &__label { margin: 1px 10px 24px 0; }
+.context-listing-item-label {
+    font-weight: bold;
 }
-
-@import "./centered/index.scss";
-@import "./context-switch/index.scss";
-@import "./floated/index.scss";
-@import "./floated-first/index.scss";
-@import "./top-pushed/index.scss";
