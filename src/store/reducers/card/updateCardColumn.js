@@ -12,15 +12,15 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const moveColumn = ( activeColumn, currentColumn, nextColumn, goalId, state ) => {
+const moveColumn = ( activeColumn, currentColumn, nextColumn, cardId, state ) => {
     if ( currentColumn === nextColumn ) { return state[activeColumn]; }
-    if ( activeColumn === currentColumn ) { return state[activeColumn].delete( goalId ); }
-    if ( activeColumn === nextColumn ) { return state[activeColumn].set( goalId, state.modalItem ); }
+    if ( activeColumn === currentColumn ) { return state[activeColumn].delete( cardId ); }
+    if ( activeColumn === nextColumn ) { return state[activeColumn].set( cardId, state.modalDescription ); }
     return state[activeColumn];
 };
 
-const updateColumn = ( state = {}, { payload: { currentColumn, goalId, nextColumn } } ) => {
-    const rest = [ currentColumn, nextColumn, goalId, state ];
+const updateColumn = ( state = {}, { payload: { currentColumn, cardId, nextColumn } } ) => {
+    const rest = [ currentColumn, nextColumn, cardId, state ];
 
     return {
         ...state,

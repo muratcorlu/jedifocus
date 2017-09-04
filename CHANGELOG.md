@@ -33,9 +33,9 @@ _)_/LI   There is no try.
 
 ## **JediFocus** (*v.0.6.0*)
 
-* Bugfix: Clicking on a link inside a card now opens the link istead of activating the card.
-* Bugfix: Creating a new card resets the context to the active context.
-* Other minor bugfixes and refactorings.
+* Bug fix: Clicking on a link inside a card now opens the link istead of activating the card.
+* Bug fix: Creating a new card resets the context to the active context.
+* Other minor bug fixes and refactorings.
 * Minor style changes.
 * Using antialiased fonts (better readability for retina screens).
 * Using **Georgia Pro** and **Input Mono Condensed** as fonts; they load fast enough and when they are loading the fallback font the the browser renders is good enough.

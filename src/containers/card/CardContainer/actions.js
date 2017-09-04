@@ -31,8 +31,8 @@ import {
 import { guidWithTimestamp as guid } from 'tangled';
 
 import {
-    sendSaveGoalRequest,
-    sendRemoveGoalFromOtherColumnsRequest
+    sendSaveCardRequest,
+    sendRemoveCardFromOtherColumnsRequest
 } from './network';
 
 const copyCard = ( column, id ) => {
@@ -48,8 +48,8 @@ const editCard = ( column, id ) => {
 };
 
 const save = ( oldId, newId, userId, context, column, item ) =>
-    sendSaveGoalRequest( userId, context, column, newId, item.trim() )
-        .then( () => sendRemoveGoalFromOtherColumnsRequest( userId, context, column, oldId ) );
+    sendSaveCardRequest( userId, context, column, newId, item.trim() )
+        .then( () => sendRemoveCardFromOtherColumnsRequest( userId, context, column, oldId ) );
 
 const moveCardToBestIntentions = ( id, userId, column, item, context ) => {
     top();

@@ -22,42 +22,42 @@ import {
 } from '../../../lib/constants';
 
 import {
-    sendSaveGoalRequest,
-    sendRemoveGoalFromOtherColumnsRequest
+    sendSaveCardRequest,
+    sendRemoveCardFromOtherColumnsRequest
 } from './network';
 
 import { guidWithTimestamp as guid } from 'tangled';
 
-const saveCard = ( userId, goalContext, goalColumn, goalId, goalDescription, currentContext ) => {
-    const oldId = goalId;
+const saveCard = ( userId, cardContext, cardColumn, cardId, cardDescription, currentContext ) => {
+    const oldId = cardId;
     const newId = guid();
 
-    sendSaveGoalRequest( userId, goalContext, goalColumn, newId, goalDescription )
-        .then( () => sendRemoveGoalFromOtherColumnsRequest( userId, currentContext, 'done', oldId ) );
+    sendSaveCardRequest( userId, cardContext, cardColumn, newId, cardDescription )
+        .then( () => sendRemoveCardFromOtherColumnsRequest( userId, currentContext, 'done', oldId ) );
 
     return {
         type: JFDI_CARD_SAVE,
-        payload: { goalContext, goalColumn, goalId, newId }
+        payload: { cardContext, cardColumn, cardId, newId }
     };
 };
 
-const updateCardColumn = ( currentColumn, goalId, nextColumn ) => {
+const updateCardColumn = ( currentColumn, cardId, nextColumn ) => {
     top();
 
     return {
         type: JFDI_CARD_UPDATE_COLUMN,
-        payload: { currentColumn, goalId, nextColumn }
+        payload: { currentColumn, cardId, nextColumn }
     };
 };
 
-const updateCardDescription = ( column, goalId, goalDescription ) => ( {
+const updateCardDescription = ( column, cardId, cardDescription ) => ( {
     type: JFDI_CARD_UPDATE_DESCRIPTION,
-    payload: { column, goalId, goalDescription }
+    payload: { column, cardId, cardDescription }
 } );
 
-const updateCardContext = ( goalContext ) => ( {
+const updateCardContext = ( cardContext ) => ( {
     type: JFDI_CARD_UPDATE_CONTEXT,
-    payload: { goalContext }
+    payload: { cardContext }
 } );
 
 export { updateCardDescription, updateCardColumn, updateCardContext, saveCard };

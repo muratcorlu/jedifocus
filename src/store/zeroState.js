@@ -40,7 +40,7 @@ const zeroState = {
     modalVisible: false,
     modalColumn: '',
     modalId: '',
-    modalItem: '',
+    modalDescription: '',
     modalContext: '',
 
     // #endregion

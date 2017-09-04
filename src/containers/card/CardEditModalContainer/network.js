@@ -12,12 +12,12 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { saveGoal, removeGoalFromOtherColumns } from '../../../lib/io/firebase';
-
-const sendSaveGoalRequest = saveGoal;
-const sendRemoveGoalFromOtherColumnsRequest = removeGoalFromOtherColumns;
+import {
+    saveGoal as sendSaveCardRequest,
+    removeGoalFromOtherColumns as sendRemoveCardFromOtherColumnsRequest
+} from '../../../lib/io/firebase';
 
 export {
-    sendSaveGoalRequest,
-    sendRemoveGoalFromOtherColumnsRequest
+    sendSaveCardRequest,
+    sendRemoveCardFromOtherColumnsRequest
 };

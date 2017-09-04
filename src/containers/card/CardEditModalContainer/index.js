@@ -55,7 +55,7 @@ export default connect(
         column: state.modalColumn,
         id: state.modalId,
         inProgress: state.inProgress ? state.inProgress.toJSON() : {},
-        item: state.modalItem,
+        item: state.modalDescription,
         show: state.modalVisible,
         context: state.modalContext,
         stateContext: state.context,

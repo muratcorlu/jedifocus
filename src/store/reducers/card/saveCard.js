@@ -12,17 +12,17 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const saveCard = ( state = {}, { payload: { goalContext, goalColumn, goalId: oldId, newId } } ) => ( {
+const saveCard = ( state = {}, { payload: { cardContext, cardColumn, cardId: oldId, newId } } ) => ( {
     ...state,
     modalVisible: false,
     modalId: '',
-    modalItem: '',
+    modalDescription: '',
     modalColumn: '',
-    [goalColumn]: ( goalContext === state.context ) ?
-        state[goalColumn]
-            .set( newId, state[goalColumn].get( oldId ) )
+    [cardColumn]: ( cardContext === state.context ) ?
+        state[cardColumn]
+            .set( newId, state[cardColumn].get( oldId ) )
             .remove( oldId ) :
-        state[goalColumn].remove( oldId )
+        state[cardColumn].remove( oldId )
 } );
 
 export default saveCard;

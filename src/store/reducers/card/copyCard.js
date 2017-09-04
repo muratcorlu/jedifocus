@@ -19,7 +19,7 @@ const copyCard = ( state = {}, { payload: { column, id } } ) => ( {
     modalVisible: true,
     modalContextVisible: false,
     modalId: guid(),
-    modalItem: state[column].get( id )
+    modalDescription: state[column].get( id )
 } );
 
 export default copyCard;

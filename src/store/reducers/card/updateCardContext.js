@@ -12,10 +12,10 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const updateGoalContext = ( state = {}, { payload: { goalContext } } ) => ( {
+const updateCardContext = ( state = {}, { payload: { cardContext } } ) => ( {
     ...state,
     modalVisible: true,
-    modalContext: goalContext
+    modalContext: cardContext
 } );
 
-export default updateGoalContext;
+export default updateCardContext;

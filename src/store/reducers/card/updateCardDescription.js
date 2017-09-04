@@ -12,11 +12,11 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const updateDescription = ( state = {}, { payload: { column, goalId, goalDescription } } ) => ( {
+const updateDescription = ( state = {}, { payload: { column, cardId, cardDescription } } ) => ( {
     ...state,
     modalVisible: true,
-    modalItem: goalDescription,
-    [column]: state[column].set( goalId, goalDescription )
+    modalDescription: cardDescription,
+    [column]: state[column].set( cardId, cardDescription )
 } );
 
 export default updateDescription;

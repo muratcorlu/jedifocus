@@ -13,11 +13,11 @@
  */
 
 import {
-    saveGoal as sendSaveGoalRequest,
-    removeGoalFromOtherColumns as sendRemoveGoalFromOtherColumnsRequest
+    saveGoal as sendSaveCardRequest,
+    removeGoalFromOtherColumns as sendRemoveCardFromOtherColumnsRequest
 } from '../../../lib/io/firebase';
 
 export {
-    sendSaveGoalRequest,
-    sendRemoveGoalFromOtherColumnsRequest
+    sendSaveCardRequest,
+    sendRemoveCardFromOtherColumnsRequest
 };

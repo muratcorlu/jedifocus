@@ -22,7 +22,7 @@ const addNewCard = ( state = {} ) => {
         modalVisible: true,
         modalContextVisible: false,
         modalId: newId,
-        modalItem: '',
+        modalDescription: '',
         modalColumn: 'bestIntentions',
         modalContext: state.context,
         bestIntentions: state.bestIntentions.set( newId, '' )
