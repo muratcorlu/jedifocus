@@ -12,20 +12,28 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+import { tick } from 'dombili';
+
 import { top } from '../../../lib/dom';
 
-import { JFDI_CARD_ADD_NEW, JFDI_APP_CHANGE_CONTEXT } from '../../../lib/constants';
+import {
+    JFDI_CARD_ADD_NEW,
+    JFDI_APP_CHANGE_CONTEXT,
+    JFDI_APP_REVEAL_MODAL
+} from '../../../lib/constants';
 
-const addNew = () => {
+const addNew = () => ( dispatch ) => {
     top();
 
-    return { type: JFDI_CARD_ADD_NEW };
+    dispatch( { type: JFDI_CARD_ADD_NEW } );
+    tick( () => dispatch( { type: JFDI_APP_REVEAL_MODAL } ) );
 };
 
-const changeContext = () => {
+const changeContext = () => ( dispatch ) => {
     top();
 
-    return { type: JFDI_APP_CHANGE_CONTEXT };
+    dispatch( { type: JFDI_APP_CHANGE_CONTEXT } );
+    tick( () => dispatch( { type: JFDI_APP_REVEAL_MODAL } ) );
 };
 
 export { addNew, changeContext };

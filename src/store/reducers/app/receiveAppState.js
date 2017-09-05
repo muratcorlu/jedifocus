@@ -17,11 +17,12 @@ import { Map } from 'immutable';
 const receiveAppState = ( state = {}, { payload } ) => ( {
     ...state,
     appStateFetched: true,
-    modalVisible: false,
-    modalContextVisible: false,
     bestIntentions: payload.get( 'bestIntentions' ) || Map.of(),
-    toDo: payload.get( 'toDo' ) || Map.of(),
-    inProgress: payload.get( 'inProgress' ) || Map.of()
+    inProgress: payload.get( 'inProgress' ) || Map.of(),
+    modalContextVisible: false,
+    modalRevealed: false,
+    modalVisible: false,
+    toDo: payload.get( 'toDo' ) || Map.of()
 } );
 
 export default receiveAppState;

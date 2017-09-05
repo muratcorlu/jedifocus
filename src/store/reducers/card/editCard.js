@@ -15,6 +15,7 @@
 const editCard = ( state = {}, { payload: { column, id } } ) => ( {
     ...state,
     modalVisible: true,
+    modalRevealed: false,
     modalContextVisible: false,
     modalId: id,
     modalDescription: state[column].get( id ),

@@ -12,15 +12,11 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const updateContext = ( state = {}, { payload } ) => {
-    console.log( payload.toJSON() );
-
-    return ( {
-        ...state,
-        appStateFetched: false,
-        modalContextVisible: true,
-        context: payload.get( 'context' )
-    } );
-};
+const updateContext = ( state = {}, { payload: { context } } ) => ( {
+    ...state,
+    appStateFetched: false,
+    modalContextVisible: true,
+    context
+} );
 
 export default updateContext;

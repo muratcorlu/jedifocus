@@ -76,3 +76,10 @@ code {
     color: $codeColor;
     padding: 3px;
 }
+
+.no-pointer { pointer-events: none; }
+.faded {
+    transition: $defaultTransition;
+    will-change: opacity;
+    opacity: 0.35;
+}

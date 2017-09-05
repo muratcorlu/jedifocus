@@ -12,18 +12,9 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.card-controls {
-    margin: 0 -16px -15px -16px;
-    padding: 5px 10px 5px 10px;
+const hideModal = ( state = {} ) => ( {
+    ...state,
+    modalRevealed: false
+} );
 
-    background: $dimmedWhite;
-    border-top: 1px $lightGray solid;
-
-    cursor: default;
-
-    // Temporarily disable, until animation feature for card movement is implemented.
-    display: none;
-}
-
-@import "./transition-icon/index.scss";
-@import "./passive/index.scss";
+export default hideModal;

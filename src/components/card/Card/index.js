@@ -82,21 +82,21 @@ const cardLinkClassName = ( modalVisible, linkColumn, column ) => {
     }
 };
 
-const cardControlsClassName = ( modalVisible ) => modalVisible ?
+const cardControlsClassName = ( passive ) => passive ?
     'card-controls card-controls--passive' : 'card-controls';
 
 const Card = ( {
     item, column, id, userId, context,
-    modalVisible, modalId,
+    passive, modalId,
     editCard, copyCard, /* snoozeCard, */
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
 } ) => (
-    <div className={cardClassName( id, modalId, modalVisible )}
+    <div className={cardClassName( id, modalId, passive )}
         onClick={( evt ) => onCardClick( evt, column, id, editCard )}
     >
         <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
         <div
-            className={cardControlsClassName( modalVisible )}
+            className={cardControlsClassName( passive )}
             onClick={( evt ) => evt.stopPropagation()}
         >
             <a href="#" className="card-link card-link--left"
@@ -104,7 +104,7 @@ const Card = ( {
                 title="Copy this goal into a new goal."
             ><img src="/images/icons/copy.png" alt="Copy Icon" title="Copy this goal into a new goal." /></a>
 
-            <a className={cardLinkClassName( modalVisible, COLUMN_BEST_INTENTIONS, column )}
+            <a className={cardLinkClassName( passive, COLUMN_BEST_INTENTIONS, column )}
                 title={`${column === COLUMN_BEST_INTENTIONS ? '' : 'Move this goal to “best intentions”.'}`}
                 onClick={() => {
                     if ( column === COLUMN_BEST_INTENTIONS ) { return; }
@@ -114,7 +114,7 @@ const Card = ( {
 
             <span className="card-controls__transition-icon"><img src="/images/icons/right.png" /></span>
 
-            <a className={cardLinkClassName( modalVisible, COLUMN_TO_DO, column )}
+            <a className={cardLinkClassName( passive, COLUMN_TO_DO, column )}
                 title={`${column === COLUMN_TO_DO ? '' : 'Move this goal to “to do”.'}`}
                 onClick={() => {
                     if ( column === COLUMN_TO_DO ) { return; }
@@ -124,7 +124,7 @@ const Card = ( {
 
             <span className="card-controls__transition-icon"><img src="/images/icons/right.png" /></span>
 
-            <a className={cardLinkClassName( modalVisible, COLUMN_IN_PROGRESS, column )}
+            <a className={cardLinkClassName( passive, COLUMN_IN_PROGRESS, column )}
                 title={`${column === COLUMN_IN_PROGRESS ? '' : 'Move this goal to “in progress”.'}`}
                 onClick={() => {
                     if ( column === COLUMN_IN_PROGRESS ) { return; }
@@ -134,7 +134,7 @@ const Card = ( {
 
             <span className="card-controls__transition-icon"><img src="/images/icons/right.png" /></span>
 
-            <a className={cardLinkClassName( modalVisible, COLUMN_DONE, column )}
+            <a className={cardLinkClassName( passive, COLUMN_DONE, column )}
                 title={`${column === COLUMN_DONE ? '' : 'I’m “done” with this goal!'}`}
                 onClick={() => {
                     if ( column === COLUMN_DONE ) { return; }
@@ -153,7 +153,7 @@ Card.propTypes = {
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
     modalId: PropTypes.string.isRequired,
-    modalVisible: PropTypes.bool.isRequired,
+    passive: PropTypes.bool.isRequired,
     moveCardToBestIntentions: PropTypes.func.isRequired,
     moveCardToDone: PropTypes.func.isRequired,
     moveCardToInProgress: PropTypes.func.isRequired,

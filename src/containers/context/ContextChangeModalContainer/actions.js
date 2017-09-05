@@ -12,13 +12,17 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { fromJS as makeImmutable } from 'immutable';
+import { tick } from 'dombili';
 
-import { JFDI_APP_UPDATE_CONTEXT } from '../../../lib/constants';
+import { JFDI_APP_UPDATE_CONTEXT, JFDI_APP_HIDE_MODAL } from '../../../lib/constants';
 
-const changeContext = ( context ) => ( {
-    type: JFDI_APP_UPDATE_CONTEXT,
-    payload: makeImmutable( { context } )
-} );
+const changeContext = ( context ) => ( dispatch ) => {
+    dispatch( {
+        type: JFDI_APP_UPDATE_CONTEXT,
+        payload: { context }
+    } );
+
+    tick( () => dispatch( { type: JFDI_APP_HIDE_MODAL } ) );
+};
 
 export { changeContext };

@@ -17,8 +17,8 @@ import PropTypes from 'prop-types';
 
 import ActionButton from '../../buttons/ActionButton';
 
-const Navigation = ( { addNew, changeContext, context } ) => (
-    <div className="navigation">
+const Navigation = ( { addNew, changeContext, context, passive } ) => (
+    <div className={`navigation ${passive ? 'no-pointer faded' : ''}`}>
         <ActionButton
             onClick={() => addNew()}
             title="Add a brand new goal."
@@ -36,7 +36,8 @@ const Navigation = ( { addNew, changeContext, context } ) => (
 Navigation.propTypes = {
     addNew: PropTypes.func.isRequired,
     changeContext: PropTypes.func.isRequired,
-    context: PropTypes.string.isRequired
+    context: PropTypes.string.isRequired,
+    passive: PropTypes.bool.isRequired
 };
 
 export default Navigation;

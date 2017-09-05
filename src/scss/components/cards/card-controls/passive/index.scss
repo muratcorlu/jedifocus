@@ -12,4 +12,11 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.card-controls { &--passive { img { opacity: 0.65; } } }
+.card-controls {
+    &--passive {
+        transition: $defaultTransition;
+        will-change: opacity;
+
+        img { opacity: 0.65; }
+    }
+}

@@ -15,6 +15,7 @@
 const changeContext = ( state = {} ) => ( {
     ...state,
     modalVisible: false,
+    modalRevealed: false,
     modalContextVisible: true
 } );
 

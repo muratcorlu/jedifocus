@@ -15,6 +15,7 @@
 const saveCard = ( state = {}, { payload: { cardContext, cardColumn, cardId: oldId, newId } } ) => ( {
     ...state,
     modalVisible: false,
+    modalRevealed: false,
     modalId: '',
     modalDescription: '',
     modalColumn: '',

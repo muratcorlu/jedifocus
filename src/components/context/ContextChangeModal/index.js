@@ -17,10 +17,10 @@ import PropTypes from 'prop-types';
 
 import ContextListing from '../../../components/context/ContextListing';
 
-const ContextChangeModal = ( { show, changeContext, context } ) => show ? (
-    <div className="modal-edit">
+const ContextChangeModal = ( { show, reveal, changeContext, context } ) => show ? (
+    <div className={`modal-edit ${reveal ? '' : 'modal-edit--faded'}`}>
         <h2 className="modal-edit__heading">
-            <label className="modal-edit__heading--label">Change Current Context</label>
+            <label className="modal-edit__heading-label">Change Current Context</label>
         </h2>
 
         <p className='modal-edit__label--context-switch'>
@@ -37,6 +37,7 @@ ContextChangeModal.defaultProps = { show: false };
 
 ContextChangeModal.propTypes = {
     show: PropTypes.bool,
+    reveal: PropTypes.bool,
     context: PropTypes.string.isRequired,
     changeContext: PropTypes.func.isRequired
 };

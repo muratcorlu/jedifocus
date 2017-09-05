@@ -21,11 +21,11 @@ import { connect } from 'kink';
 import CardEditModal from '../../../components/card/CardEditModal';
 
 const CardEditModalContainer = ( {
-    context, column, id, item, userId, stateContext, show,
+    context, column, id, item, userId, stateContext, show, reveal,
     updateCardColumn, updateCardContext, updateCardDescription, saveCard
 } ) => (
     <CardEditModal
-        context={context} column={column} id={id} item={item} show={show}
+        context={context} column={column} id={id} item={item} show={show} reveal={reveal}
         saveCard={() => saveCard( userId, context, column, id, item, stateContext )}
         updateCardColumn={updateCardColumn}
         updateCardContext={updateCardContext}
@@ -40,6 +40,7 @@ CardEditModalContainer.propTypes = {
     item: PropTypes.string.isRequired,
     saveCard: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
+    reveal: PropTypes.bool.isRequired,
     stateContext: PropTypes.string.isRequired,
     updateCardColumn: PropTypes.func.isRequired,
     updateCardContext: PropTypes.func.isRequired,
@@ -57,6 +58,7 @@ export default connect(
         inProgress: state.inProgress ? state.inProgress.toJSON() : {},
         item: state.modalDescription,
         show: state.modalVisible,
+        reveal: state.modalRevealed,
         context: state.modalContext,
         stateContext: state.context,
         toDo: state.toDo ? state.toDo.toJSON() : {},

@@ -20,22 +20,27 @@ import { connect } from 'kink';
 
 import Navigation from '../../../components/navigations/Navigation';
 
-const NavigationContainer = ( { addNew, changeContext, context } ) => (
+const NavigationContainer = ( { addNew, changeContext, context, passive } ) => (
     <Navigation
         addNew={addNew}
         changeContext={changeContext}
         context={context}
+        passive={passive}
     />
 );
 
 NavigationContainer.propTypes = {
     addNew: PropTypes.func.isRequired,
     changeContext: PropTypes.func.isRequired,
-    context: PropTypes.string.isRequired
+    context: PropTypes.string.isRequired,
+    passive: PropTypes.bool.isRequired
 };
 
 export default connect(
     NavigationContainer,
     actions,
-    ( { context } ) => ( { context } )
+    ( { context, modalVisible, modalContextVisible, appStateFetched } ) => ( {
+        context,
+        passive: modalVisible || modalContextVisible || !appStateFetched
+    } )
 );

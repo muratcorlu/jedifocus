@@ -80,6 +80,7 @@ $defaultBoxShadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.26);
 
 // Transitions:
 $defaultTransition: all 0.25s ease-in-out;
+$modalFadeTransition: opacity 0.45s ease-in-out;
 
 // To make sass-lint happy:
 $blank: '';

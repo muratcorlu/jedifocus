@@ -22,13 +22,14 @@ import Card from '../../../components/card/Card';
 
 const CardContainer = ( {
     item, id, column, userId, context,
-    modalId, modalVisible,
+    modalId, passive,
     editCard, copyCard, snoozeCard,
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
 } ) => (
     <Card
         item={item} id={id} column={column} userId={userId} context={context}
-        modalId={modalId} modalVisible={modalVisible}
+        modalId={modalId}
+        passive={passive}
         editCard={editCard} copyCard={copyCard} snoozeCard={snoozeCard}
         moveCardToBestIntentions={moveCardToBestIntentions}
         moveCardToToDo={moveCardToToDo}
@@ -45,7 +46,7 @@ CardContainer.propTypes = {
     id: PropTypes.string.isRequired,
     item: PropTypes.string.isRequired,
     modalId: PropTypes.string.isRequired,
-    modalVisible: PropTypes.bool.isRequired,
+    passive: PropTypes.bool.isRequired,
     moveCardToBestIntentions: PropTypes.func.isRequired,
     moveCardToDone: PropTypes.func.isRequired,
     moveCardToInProgress: PropTypes.func.isRequired,
@@ -57,5 +58,6 @@ CardContainer.propTypes = {
 export default connect(
     CardContainer,
     actions,
-    ( { userId, context, modalId, modalVisible } ) => ( { userId, context, modalId, modalVisible } )
+    ( { userId, context, modalId, modalVisible, modalContextVisible } ) => ( {
+        userId, context, modalId, passive: modalVisible || modalContextVisible } )
 );

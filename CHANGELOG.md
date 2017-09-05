@@ -6,6 +6,12 @@ __.-._
 _)_/LI   There is no try.
 ```
 
+## **JediFocus** (*v.0.12.0*)
+
+* Added animations between modal dialog transitions.
+* When modal dialog is visible, no other action can be taken until modal dialog is dismissed.
+* Minor stylistic improvements.
+
 ## **JediFocus** (*v.0.10.0*)
 
 * Scrolling improvements (*each column is separately scrollable now*).
