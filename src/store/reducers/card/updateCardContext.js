@@ -14,7 +14,6 @@
 
 const updateCardContext = ( state = {}, { payload: { cardContext } } ) => ( {
     ...state,
-    modalVisible: true,
     modalContext: cardContext
 } );
 

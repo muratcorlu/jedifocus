@@ -14,7 +14,6 @@
 
 const updateDescription = ( state = {}, { payload: { column, cardId, cardDescription } } ) => ( {
     ...state,
-    modalVisible: true,
     modalDescription: cardDescription,
     [column]: state[column].set( cardId, cardDescription )
 } );

@@ -21,10 +21,10 @@ import ColumnDropdown from '../../../components/column/ColumnDropdown';
 import CardDescriptionTextarea from '../../../components/card/CardDescriptionTextarea';
 
 const CardEditModal = ( {
-    show, column, context, item, id,
+    show, reveal, column, context, item, id,
     updateCardDescription, updateCardColumn, updateCardContext, saveCard
 } ) => show ? (
-    <div className="modal-edit">
+    <div className={`modal-edit ${reveal ? '' : 'modal-edit--faded'}`}>
         <h2 className="modal-edit__heading">
             <label
                 className="modal-edit__heading-label"
@@ -69,6 +69,7 @@ CardEditModal.propTypes = {
     item: PropTypes.string.isRequired,
     saveCard: PropTypes.func.isRequired,
     show: PropTypes.bool,
+    reveal: PropTypes.bool,
     updateCardColumn: PropTypes.func.isRequired,
     updateCardContext: PropTypes.func.isRequired,
     updateCardDescription: PropTypes.func.isRequired

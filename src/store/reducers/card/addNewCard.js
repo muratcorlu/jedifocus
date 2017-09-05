@@ -20,6 +20,7 @@ const addNewCard = ( state = {} ) => {
     return {
         ...state,
         modalVisible: true,
+        modalRevealed: false,
         modalContextVisible: false,
         modalId: newId,
         modalDescription: '',

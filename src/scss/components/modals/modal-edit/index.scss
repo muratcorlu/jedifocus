@@ -29,7 +29,15 @@
     border-radius: 1px;
     opacity: 0.95;
 
-    will-change: top, left;
+    transition: $modalFadeTransition;
+    will-change: opacity, top, left;
+
+    &--faded {
+        transition: $modalFadeTransition;
+        will-change: opacity;
+
+        opacity: 0;
+    }
 }
 
 @import "./actions/index.scss";

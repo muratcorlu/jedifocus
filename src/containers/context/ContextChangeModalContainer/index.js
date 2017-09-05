@@ -20,12 +20,13 @@ import ContextChangeModal from '../../../components/context/ContextChangeModal';
 import * as actions from './actions';
 import { connect } from 'kink';
 
-const ContextChangeModalContainer = ( { show, context, changeContext } ) => (
-    <ContextChangeModal show={show} context={context} changeContext={changeContext} />
+const ContextChangeModalContainer = ( { show, reveal, context, changeContext } ) => (
+    <ContextChangeModal show={show} reveal={reveal} context={context} changeContext={changeContext} />
 );
 
 ContextChangeModalContainer.propTypes = {
     show: PropTypes.bool.isRequired,
+    reveal: PropTypes.bool.isRequired,
     context: PropTypes.string.isRequired,
     changeContext: PropTypes.func.isRequired
 };
@@ -33,5 +34,6 @@ ContextChangeModalContainer.propTypes = {
 export default connect(
     ContextChangeModalContainer,
     actions,
-    ( { modalContextVisible, context } ) => ( { show: modalContextVisible, context } )
+    ( { modalContextVisible, modalRevealed, context } ) => ( {
+        show: modalContextVisible, reveal: modalRevealed, context } )
 );

@@ -24,7 +24,6 @@ const updateColumn = ( state = {}, { payload: { currentColumn, cardId, nextColum
 
     return {
         ...state,
-        modalVisible: true,
         modalColumn: nextColumn,
         bestIntentions: moveColumn( 'bestIntentions', ...rest ),
         toDo: moveColumn( 'toDo', ...rest ),

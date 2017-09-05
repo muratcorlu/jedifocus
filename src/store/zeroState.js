@@ -38,6 +38,7 @@ const zeroState = {
     // #region “Edit Goal” Modal
 
     modalVisible: false,
+    modalRevealed: false,
     modalColumn: '',
     modalId: '',
     modalDescription: '',

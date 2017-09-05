@@ -12,13 +12,16 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+import { tick } from 'dombili';
+
 import { top } from '../../../lib/dom';
 
 import {
     JFDI_CARD_SAVE,
     JFDI_CARD_UPDATE_COLUMN,
     JFDI_CARD_UPDATE_DESCRIPTION,
-    JFDI_CARD_UPDATE_CONTEXT
+    JFDI_CARD_UPDATE_CONTEXTm,
+    JFDI_APP_HIDE_MODAL
 } from '../../../lib/constants';
 
 import {
@@ -28,17 +31,19 @@ import {
 
 import { guidWithTimestamp as guid } from 'tangled';
 
-const saveCard = ( userId, cardContext, cardColumn, cardId, cardDescription, currentContext ) => {
+const saveCard = ( userId, cardContext, cardColumn, cardId, cardDescription, currentContext ) => ( dispatch ) => {
     const oldId = cardId;
     const newId = guid();
 
     sendSaveCardRequest( userId, cardContext, cardColumn, newId, cardDescription )
         .then( () => sendRemoveCardFromOtherColumnsRequest( userId, currentContext, 'done', oldId ) );
 
-    return {
+    tick( () => dispatch( { type: JFDI_APP_HIDE_MODAL } ) );
+
+    setTimeout( () => tick( () => dispatch( {
         type: JFDI_CARD_SAVE,
         payload: { cardContext, cardColumn, cardId, newId }
-    };
+    } ) ), 450 );
 };
 
 const updateCardColumn = ( currentColumn, cardId, nextColumn ) => {

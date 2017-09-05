@@ -17,6 +17,7 @@ import { guidWithTimestamp as guid } from 'tangled';
 const copyCard = ( state = {}, { payload: { column, id } } ) => ( {
     ...state,
     modalVisible: true,
+    modalRevealed: false,
     modalContextVisible: false,
     modalId: guid(),
     modalDescription: state[column].get( id )

@@ -14,9 +14,12 @@
 
 .modal-edit {
     &__selection {
-        margin: -1px 0 0 -5px;;
+        margin: -1px 0 0 -5px;
         padding: 5px 10px;
         width: 165px;
         float: left;
+        height: 32px;
+        position: relative;
+        top: -4px;
     }
 }

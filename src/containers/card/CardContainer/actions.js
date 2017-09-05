@@ -12,6 +12,8 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+import { tick } from 'dombili';
+
 import { top } from '../../../lib/dom';
 
 import {
@@ -25,7 +27,8 @@ import {
     COLUMN_DONE,
     COLUMN_IN_PROGRESS,
     COLUMN_BEST_INTENTIONS,
-    COLUMN_TO_DO
+    COLUMN_TO_DO,
+    JFDI_APP_REVEAL_MODAL
 } from '../../../lib/constants';
 
 import { guidWithTimestamp as guid } from 'tangled';
@@ -41,10 +44,11 @@ const copyCard = ( column, id ) => {
     return { type: JFDI_CARD_COPY, payload: { column, id } };
 };
 
-const editCard = ( column, id ) => {
+const editCard = ( column, id ) => ( dispatch ) => {
     top();
 
-    return { type: JFDI_CARD_EDIT, payload: { column, id } };
+    dispatch( { type: JFDI_CARD_EDIT, payload: { column, id } } );
+    tick( () => dispatch( { type: JFDI_APP_REVEAL_MODAL } ) );
 };
 
 const save = ( oldId, newId, userId, context, column, item ) =>
