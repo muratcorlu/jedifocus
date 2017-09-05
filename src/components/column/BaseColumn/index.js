@@ -19,12 +19,12 @@ import { getTimestampFromGuid as ts } from 'tangled';
 
 import CardContainer from '../../../containers/card/CardContainer';
 
-const BaseColumn = ( { modalId, heading, items, className, headingClassName, column, children } ) => (
+const BaseColumn = ( { modalId, heading, descriptions, className, headingClassName, column, children } ) => (
     <div className={`column ${className}`}>
         <h2 className={headingClassName}>{heading}</h2>
 
         <div className="column__body">
-            { Object.keys( items )
+            { Object.keys( descriptions )
                 .sort( ( key, otherKey ) => {
                     if ( key === modalId ) { return -1; }
                     if ( otherKey === modalId ) { return 1; }
@@ -39,11 +39,9 @@ const BaseColumn = ( { modalId, heading, items, className, headingClassName, col
 
                     return 1;
                 } )
-                .map( ( key ) => {
-                    const item = items[key];
-
-                    return ( <CardContainer key={key} item={item} id={key} column={column} /> );
-                } ) }
+                .map( ( key ) =>
+                    ( <CardContainer key={key} description={descriptions[key]} id={key} column={column} /> )
+                ) }
         </div>
 
         <div>{children}</div>
@@ -61,7 +59,7 @@ BaseColumn.propTypes = {
     column: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
     headingClassName: PropTypes.string,
-    items: PropTypes.object.isRequired,
+    descriptions: PropTypes.object.isRequired,
     modalId: PropTypes.string.isRequired
 };
 

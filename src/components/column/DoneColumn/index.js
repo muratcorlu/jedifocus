@@ -17,19 +17,19 @@ import PropTypes from 'prop-types';
 
 import BaseColumn from '../BaseColumn';
 
-const Done = ( { items, modalId } ) => (
+const Done = ( { descriptions, modalId } ) => (
     <BaseColumn
         column="done"
         heading="Done & Dead"
         className="column__done"
         headingClassName="column__heading column__heading--done"
-        items={items}
+        descriptions={descriptions}
         modalId={modalId}
     />
 );
 
 Done.propTypes = {
-    items: PropTypes.object.isRequired,
+    descriptions: PropTypes.object.isRequired,
     modalId: PropTypes.string.isRequired
 };
 

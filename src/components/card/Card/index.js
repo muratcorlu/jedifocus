@@ -86,7 +86,7 @@ const cardControlsClassName = ( passive ) => passive ?
     'card-controls card-controls--passive' : 'card-controls';
 
 const Card = ( {
-    item, column, id, userId, context,
+    description, column, id, userId, context,
     passive, modalId,
     editCard, copyCard, /* snoozeCard, */
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
@@ -94,7 +94,7 @@ const Card = ( {
     <div className={cardClassName( id, modalId, passive )}
         onClick={( evt ) => onCardClick( evt, column, id, editCard )}
     >
-        <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( item ) }} />
+        <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( description ) }} />
         <div
             className={cardControlsClassName( passive )}
             onClick={( evt ) => evt.stopPropagation()}
@@ -108,7 +108,7 @@ const Card = ( {
                 title={`${column === COLUMN_BEST_INTENTIONS ? '' : 'Move this goal to “best intentions”.'}`}
                 onClick={() => {
                     if ( column === COLUMN_BEST_INTENTIONS ) { return; }
-                    moveCardToBestIntentions( id, userId, column, item, context );
+                    moveCardToBestIntentions( id, userId, column, description, context );
                 }}
             >bi</a>
 
@@ -118,7 +118,7 @@ const Card = ( {
                 title={`${column === COLUMN_TO_DO ? '' : 'Move this goal to “to do”.'}`}
                 onClick={() => {
                     if ( column === COLUMN_TO_DO ) { return; }
-                    moveCardToToDo( id, userId, column, item, context );
+                    moveCardToToDo( id, userId, column, description, context );
                 }}
             >td</a>
 
@@ -128,7 +128,7 @@ const Card = ( {
                 title={`${column === COLUMN_IN_PROGRESS ? '' : 'Move this goal to “in progress”.'}`}
                 onClick={() => {
                     if ( column === COLUMN_IN_PROGRESS ) { return; }
-                    moveCardToInProgress( id, userId, column, item, context );
+                    moveCardToInProgress( id, userId, column, description, context );
                 }}
             >ip</a>
 
@@ -138,7 +138,7 @@ const Card = ( {
                 title={`${column === COLUMN_DONE ? '' : 'I’m “done” with this goal!'}`}
                 onClick={() => {
                     if ( column === COLUMN_DONE ) { return; }
-                    moveCardToDone( id, userId, column, item, context );
+                    moveCardToDone( id, userId, column, description, context );
                 }}
             >✓</a>
         </div>
@@ -151,7 +151,7 @@ Card.propTypes = {
     copyCard: PropTypes.func.isRequired,
     editCard: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
-    item: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     modalId: PropTypes.string.isRequired,
     passive: PropTypes.bool.isRequired,
     moveCardToBestIntentions: PropTypes.func.isRequired,

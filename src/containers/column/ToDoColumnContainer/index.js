@@ -20,7 +20,7 @@ export default connect(
     ToDo,
     {},
     ( { toDo, modalId, modalColumn } ) => ( {
-        items: ( toDo ? toDo.toJSON() : {} ),
+        descriptions: ( toDo ? toDo.toJSON() : {} ),
         modalId, modalColumn
     } )
 );

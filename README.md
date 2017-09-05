@@ -18,11 +18,9 @@ Simply, “*simplicity*”.
 * **Less** configuration
 * And **less** clutter
 
-**JediFocus** has everything you need, and nothing you don’t; so you don’t [die by a thousand micro decisions][limited-resources].
+**Less** is **good** because “*less*” means *less* decision fatigue and *less* analysis paralysis. — **Less** is **more**.
 
-## Help Me, Obi-Wan Kenobi…
-
-If you need help, [file an issue][ticket], or [send me an email at me@volkan.io][email].
+> **JediFocus** has everything you need, and nothing you don’t. — Ergo, **JediFocus** won’t let you [die by a thousand micro decisions][limited-resources].
 
 ## Try **JediFocus** Online
 
@@ -32,13 +30,19 @@ If you need help, [file an issue][ticket], or [send me an email at me@volkan.io]
 >
 > Until the web app is ready, the only way to use **JediFocus** is to [build it from the source](INSTALLATION.md) and run it locally.
 
+## Help Me, Obi-Wan Kenobi…
+
+**JediFocus** is intuitive enough that you don’t need a manual to use it; however, in case you do [there is this help page that explains the **JediFocus** user interface and terminology in depth](HELP.md)
+
+If [the help page](HELP.md) doesn’t answer your question, you can always [file an issue][ticket], or [send me an email at me@volkan.io][email].
+
 ## Every Saga Has a Beginning
 
 I’m **obsessed** with **GTD** (*getting things done*), productivity methodologies, and related apps. — I’ve tried them all, only to see that they all were mere **illusions**: 
 
 All in all, **GTD** is a **virtual reality** to make you **feel** productive.
 
-Instead, the sole thing you need is a Jedi-like **focus**. 
+Instead, the sole thing you need, to be **actually** productive, is a Jedi-like **focus**. 
 
 When you have **focus**, your mind will handle the rest for you.
 

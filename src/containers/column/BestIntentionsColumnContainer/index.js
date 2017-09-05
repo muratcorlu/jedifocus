@@ -20,7 +20,7 @@ export default connect(
     BestIntentions,
     {},
     ( { bestIntentions, modalId, modalColumn } ) => ( {
-        items: ( bestIntentions ? bestIntentions.toJSON() : {} ),
+        descriptions: ( bestIntentions ? bestIntentions.toJSON() : {} ),
         modalId,
         modalColumn
     } )

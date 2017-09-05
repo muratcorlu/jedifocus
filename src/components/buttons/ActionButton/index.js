@@ -17,7 +17,8 @@ import PropTypes from 'prop-types';
 
 const ActionButton = ( { children, onClick, className, title, disabled } ) => (
     <a href="#"
-        className={`action-button ${disabled ? 'action-button--disabled' : ''} ${className || ''}`}
+        className={`action-button ${disabled ?
+            'action-button--disabled' : ''} ${className || ''}`}
         title={title || ''}
         onClick={( evt ) => {
             evt.preventDefault();

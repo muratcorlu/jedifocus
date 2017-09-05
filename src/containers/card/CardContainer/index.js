@@ -21,13 +21,13 @@ import * as actions from './actions';
 import Card from '../../../components/card/Card';
 
 const CardContainer = ( {
-    item, id, column, userId, context,
+    description, id, column, userId, context,
     modalId, passive,
     editCard, copyCard, snoozeCard,
     moveCardToBestIntentions, moveCardToToDo, moveCardToInProgress, moveCardToDone
 } ) => (
     <Card
-        item={item} id={id} column={column} userId={userId} context={context}
+        description={description} id={id} column={column} userId={userId} context={context}
         modalId={modalId}
         passive={passive}
         editCard={editCard} copyCard={copyCard} snoozeCard={snoozeCard}
@@ -44,7 +44,7 @@ CardContainer.propTypes = {
     copyCard: PropTypes.func.isRequired,
     editCard: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
-    item: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     modalId: PropTypes.string.isRequired,
     passive: PropTypes.bool.isRequired,
     moveCardToBestIntentions: PropTypes.func.isRequired,

@@ -22,6 +22,7 @@ const Navigation = ( { addNew, changeContext, context, passive } ) => (
         <ActionButton
             onClick={() => addNew()}
             title="Add a brand new goal."
+            disabled={passive}
             className="navigation__action-button action-button--align-right action-button--inverted"
         ><img src="/images/icons/plus.png" alt="Plus Icon" title="Add a brand new goal." />&nbsp;</ActionButton>
 

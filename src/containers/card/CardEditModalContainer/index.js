@@ -21,12 +21,12 @@ import { connect } from 'kink';
 import CardEditModal from '../../../components/card/CardEditModal';
 
 const CardEditModalContainer = ( {
-    context, column, id, item, userId, stateContext, show, reveal,
+    context, column, id, description, userId, stateContext, show, reveal,
     updateCardColumn, updateCardContext, updateCardDescription, saveCard
 } ) => (
     <CardEditModal
-        context={context} column={column} id={id} item={item} show={show} reveal={reveal}
-        saveCard={() => saveCard( userId, context, column, id, item, stateContext )}
+        context={context} column={column} id={id} description={description} show={show} reveal={reveal}
+        saveCard={() => saveCard( userId, context, column, id, description, stateContext )}
         updateCardColumn={updateCardColumn}
         updateCardContext={updateCardContext}
         updateCardDescription={updateCardDescription}
@@ -37,7 +37,7 @@ CardEditModalContainer.propTypes = {
     column: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
-    item: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     saveCard: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
     reveal: PropTypes.bool.isRequired,
@@ -56,7 +56,7 @@ export default connect(
         column: state.modalColumn,
         id: state.modalId,
         inProgress: state.inProgress ? state.inProgress.toJSON() : {},
-        item: state.modalDescription,
+        description: state.modalDescription,
         show: state.modalVisible,
         reveal: state.modalRevealed,
         context: state.modalContext,

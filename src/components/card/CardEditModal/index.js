@@ -21,7 +21,7 @@ import ColumnDropdown from '../../../components/column/ColumnDropdown';
 import CardDescriptionTextarea from '../../../components/card/CardDescriptionTextarea';
 
 const CardEditModal = ( {
-    show, reveal, column, context, item, id,
+    show, reveal, column, context, description, id,
     updateCardDescription, updateCardColumn, updateCardContext, saveCard
 } ) => show ? (
     <div className={`modal-edit ${reveal ? '' : 'modal-edit--faded'}`}>
@@ -47,14 +47,16 @@ const CardEditModal = ( {
             <label htmlFor="modal-edit-context">Context</label></h3>
 
         <div>
-            <CardDescriptionTextarea id="modal-edit-description" value={item}
+            <CardDescriptionTextarea id="modal-edit-description" value={description}
                 onChange={( value ) => updateCardDescription( column, id, value )} />
         </div>
 
         <div className="modal-edit__actions">
             <ActionButton
                 onClick={() => saveCard()}
-                className="action-button--modal action-button--align-center action-button--default"
+                disabled={description.trim() === ''}
+                className={`action-button--modal action-button--align-center
+                    ${description.trim() === '' ? '' : 'action-button--default'}`}
             >Save Your Goal</ActionButton>
         </div>
     </div>
@@ -66,7 +68,7 @@ CardEditModal.propTypes = {
     column: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
-    item: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     saveCard: PropTypes.func.isRequired,
     show: PropTypes.bool,
     reveal: PropTypes.bool,

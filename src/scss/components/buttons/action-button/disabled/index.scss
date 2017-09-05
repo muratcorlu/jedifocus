@@ -12,15 +12,12 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import Done from '../../../components/column/DoneColumn';
-
-import { connect } from 'kink';
-
-export default connect(
-    Done,
-    {},
-    ( { done, modalId, modalColumn } ) => ( {
-        descriptions: ( done ? done.toJSON() : {} ),
-        modalId, modalColumn
-    } )
-);
+.action-button {
+    &--disabled {
+        background: #cccccc;
+        color: #999999;
+        box-shadow: none;
+        cursor: default;
+        pointer-events: none;
+    }
+}

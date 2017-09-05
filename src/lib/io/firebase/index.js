@@ -46,17 +46,21 @@ const toDo = ( userId, context ) => refOnce( userId, context, COLUMN_TO_DO );
 
 const inProgress = ( userId, context ) => refOnce( userId, context, COLUMN_IN_PROGRESS );
 
-const saveGoal = ( userId, context, column, goalId, item ) => {
+const saveGoal = ( userId, context, column, goalId, description ) => {
     if ( process.env.NODE_ENV !== 'production' ) {
         console.log( 'db:saveGoal', context, column, goalId );
     }
 
-    return column === 'done' || item.trim() === '' ?
+    if ( typeof description !== 'string' ) {
+        return Promise.reject( { reason: 'Description should have been a `string`.' } );
+    }
+
+    return column === 'done' || description.trim() === '' ?
         Promise.resolve() :
         db()
             .database()
             .ref( refGoal( userId, context, column, goalId ) )
-            .set( item.trim() );
+            .set( description.trim() );
 };
 
 const removeGoalFromOtherColumns = ( userId, context, column, goalId ) => {

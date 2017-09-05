@@ -30,19 +30,19 @@ const classModifier = ( modalColumn ) => {
     return modalColumn === COLUMN_NAME ? '--selected' : '--dimmed';
 };
 
-const ToDo = ( { items, modalId, modalColumn } ) => (
+const ToDo = ( { descriptions, modalId, modalColumn } ) => (
     <BaseColumn
         column="toDo"
         heading="To Do"
         className="column__to-do"
         headingClassName={`column__heading${classModifier( modalColumn )} ${progressClassName( modalColumn )}`}
-        items={items}
+        descriptions={descriptions}
         modalId={modalId}
     />
 );
 
 ToDo.propTypes = {
-    items: PropTypes.object.isRequired,
+    descriptions: PropTypes.object.isRequired,
     modalId: PropTypes.string.isRequired,
     modalColumn: PropTypes.string.isRequired
 };

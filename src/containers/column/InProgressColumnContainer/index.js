@@ -20,7 +20,7 @@ export default connect(
     InProgress,
     {},
     ( { inProgress, modalId, modalColumn } ) => ( {
-        items: ( inProgress ? inProgress.toJSON() : {} ),
+        descriptions: ( inProgress ? inProgress.toJSON() : {} ),
         modalId, modalColumn
     } )
 );
