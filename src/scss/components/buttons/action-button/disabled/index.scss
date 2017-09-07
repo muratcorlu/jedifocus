@@ -14,7 +14,9 @@
 
 .action-button {
     &--disabled {
-        background: #cccccc;
+
+        // these need to be computed based off of variables scss.
+        background: #CCCCCC;
         color: #999999;
         box-shadow: none;
         cursor: default;

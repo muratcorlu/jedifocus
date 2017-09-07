@@ -24,9 +24,9 @@ import ContextChangeModalContainer from '../../../containers/context/ContextChan
 import LoadingIndicator from '../../../components/feedback/LoadingIndicator';
 import NavigationContainer from '../../../containers/navigation/NavigationContainer';
 
-const App = ( { appStateFetched } ) => (
+const App = ( { appStateFetched, appRandomQuote } ) => (
     <div className={`container ${appStateFetched ? '' : 'no-pointer'}`}>
-        <LoadingIndicator show={!appStateFetched} />
+        <LoadingIndicator show={!appStateFetched} text={appRandomQuote} />
         <CardEditModalContainer />
         <ContextChangeModalContainer />
         <BestIntentionsContainer />
@@ -38,7 +38,8 @@ const App = ( { appStateFetched } ) => (
 );
 
 App.propTypes = {
-    appStateFetched: PropTypes.bool.isRequired
+    appStateFetched: PropTypes.bool.isRequired,
+    appRandomQuote: PropTypes.string.isRequired
 };
 
 export default App;

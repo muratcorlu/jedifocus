@@ -12,9 +12,17 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const hideModal = ( state = {} ) => ( {
+const getRandomOne = ( list ) => {
+    if ( !list ) { return ''; }
+    if ( !list.size ) { return ''; }
+
+    return list.get( Math.floor( Math.random() * list.size ) );
+};
+
+const requestAppState = ( state = {} ) => ( {
     ...state,
-    modalRevealed: false
+    appStateFetched: false,
+    appRandomQuote: getRandomOne( state.quotes )
 } );
 
-export default hideModal;
+export default requestAppState;

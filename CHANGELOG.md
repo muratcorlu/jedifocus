@@ -6,6 +6,12 @@ __.-._
 _)_/LI   There is no try.
 ```
 
+## **JediFocus** (*v.0.13.0*)
+
+* While **JediFocus** is loading the goals of any context, it now displays random motivational quotes.
+* Bug fixes.
+* Style fixes and tpographic changes.
+
 ## **JediFocus** (*v.0.12.0*)
 
 * Added animations between modal dialog transitions.

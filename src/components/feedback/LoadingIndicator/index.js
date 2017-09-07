@@ -15,13 +15,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LoadingIndicator = ( { show } ) => ( show ?
-    <div className="loading">One, two, three… Fetching your goals…</div> :
-    null
+const LoadingIndicator = ( { show, text } ) => (
+    <div className={show ? 'loading' : 'loading loading--hidden'}>{text}</div>
 );
 
 LoadingIndicator.defaultProps = { show: false };
 
-LoadingIndicator.propTypes = { show: PropTypes.bool };
+LoadingIndicator.propTypes = {
+    show: PropTypes.bool,
+    text: PropTypes.string.isRequired
+};
 
 export default LoadingIndicator;

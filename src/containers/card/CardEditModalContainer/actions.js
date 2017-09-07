@@ -60,9 +60,9 @@ const updateCardDescription = ( column, cardId, cardDescription ) => ( {
     payload: { column, cardId, cardDescription }
 } );
 
-const updateCardContext = ( cardContext ) => ( {
+const updateCardContext = ( column, cardId, cardDescription, cardContext ) => ( {
     type: JFDI_CARD_UPDATE_CONTEXT,
-    payload: { cardContext }
+    payload: { column, cardId, cardDescription, cardContext }
 } );
 
 export { updateCardDescription, updateCardColumn, updateCardContext, saveCard };

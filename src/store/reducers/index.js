@@ -17,6 +17,7 @@ import { createRootReducer } from 'kink';
 
 import * as constants from '../../lib/constants';
 
+import requestAppState from './app/requestAppState';
 import receiveAppState from './app/receiveAppState';
 import updateAppContext from './app/updateAppContext';
 import revealModal from './app/revealModal';
@@ -36,6 +37,7 @@ import updateCardContext from './card/updateCardContext';
 import updateCardDescription from './card/updateCardDescription';
 
 const rootReducer = createRootReducer( getInitialState, {
+    [constants.JFDI_APP_REQUEST_STATE]: requestAppState,
     [constants.JFDI_APP_CHANGE_CONTEXT]: changeCardContext,
     [constants.JFDI_APP_HIDE_MODAL]: hideModal,
     [constants.JFDI_APP_RECEIVE_STATE]: receiveAppState,

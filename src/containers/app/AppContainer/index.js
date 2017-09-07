@@ -74,7 +74,10 @@ class AppContainer extends Component {
     }
 
     render() {
-        return ( <App appStateFetched={this.props.appStateFetched} /> );
+        return ( <App
+            appStateFetched={this.props.appStateFetched}
+            appRandomQuote={this.props.appRandomQuote}
+        /> );
     }
 }
 
@@ -84,13 +87,14 @@ AppContainer.propTypes = {
     password: PropTypes.string.isRequired,
     fetchAppState: PropTypes.func.isRequired,
     appStateFetched: PropTypes.bool.isRequired,
+    appRandomQuote: PropTypes.string.isRequired,
     userId: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired
 };
 
 const ConnectedAppContainer = connect(
     AppContainer, actions,
-    ( { appStateFetched, userId, context } ) => ( { appStateFetched, userId, context } )
+    ( { appStateFetched, appRandomQuote, userId, context } ) => ( { appStateFetched, appRandomQuote, userId, context } )
 );
 
 const ProvidedAppContainer = ( { config, email, password, userId } ) => (

@@ -22,6 +22,8 @@
     cursor: pointer;
 
     min-width: $minCardWidth;
+
+    user-select: none;
 }
 
 @import './blurred/index.scss';

@@ -12,9 +12,20 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const updateCardContext = ( state = {}, { payload: { cardContext } } ) => ( {
-    ...state,
-    modalContext: cardContext
-} );
+const updateCardContext = ( state = {}, { payload: { column, cardId, cardDescription, cardContext } } ) => {
+    if ( state.context === cardContext ) {
+        return ( {
+            ...state,
+            modalContext: cardContext,
+            [column]: state[column].set( cardId, cardDescription.trim() )
+        } );
+    }
+
+    return ( {
+        ...state,
+        modalContext: cardContext,
+        [column]: state[column].remove( cardId )
+    } );
+};
 
 export default updateCardContext;

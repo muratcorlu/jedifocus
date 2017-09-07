@@ -16,15 +16,16 @@
     &--default {
         transition: $defaultTransition;
 
-        background: $white;
+        background: darken($white, 2%);
         box-shadow: $defaultBoxShadow;
         opacity: 0.85;
-        will-change: opacity;
+        will-change: opacity, background;
 
         &:hover {
             opacity: 1;
-            will-change: opacity;
+            will-change: opacity, background;
             transition: $defaultTransition;
+            background: $trueWhite;
         }
     }
 }
