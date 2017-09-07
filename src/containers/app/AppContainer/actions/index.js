@@ -36,7 +36,9 @@ const fetchAppState = ( config, email, password, userId, context ) => ( dispatch
     dispatch( requestAppState() );
 
     sendFetchAppStateRequest( config, email, password, userId, context )
-        .then( ( data ) => dispatch( receiveAppState( data ) ) );
+        .then(
+            ( data ) => setTimeout( () => dispatch( receiveAppState( data ) ), 1200 )
+        );
 };
 
 export { fetchAppState };

@@ -13,6 +13,10 @@
  */
 
 .card-controls {
+
+    // Temporarily disable, until animation feature for card movement is implemented.
+    display: none;
+
     margin: 0 -16px -15px -16px;
     padding: 5px 10px 5px 10px;
 
@@ -21,8 +25,7 @@
 
     cursor: default;
 
-    // Temporarily disable, until animation feature for card movement is implemented.
-    display: none;
+
 }
 
 @import "./transition-icon/index.scss";

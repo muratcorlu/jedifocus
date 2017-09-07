@@ -24,6 +24,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                             'context-listing__link--selected' : 'context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
+                            if ( value === 'runway' ) { return; }
                             onChange( 'runway' );
                         }}
                         >Runway</a></li>
@@ -33,6 +34,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                             'context-listing__link--selected' : 'context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
+                            if ( value === 'low-hanging-fruits' ) { return; }
                             onChange( 'low-hanging-fruits' );
                         }}
                         >Low-Hanging Fruits</a></li>
@@ -42,6 +44,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                             'context-listing__link--selected' : 'context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
+                            if ( value === 'errands' ) { return; }
                             onChange( 'errands' );
                         }}
                         >Errands</a></li>
@@ -51,6 +54,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                             'context-listing__link--selected' : 'context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
+                            if ( value === 'backlog' ) { return; }
                             onChange( 'backlog' );
                         }}
                         >Backlog</a></li>
@@ -63,6 +67,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                             'context-listing__link--selected' : 'context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
+                            if ( value === 'revisit' ) { return; }
                             onChange( 'revisit' );
                         }}
                         >Clarify / Revisit</a></li>
@@ -72,6 +77,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                             'context-listing__link--selected' : 'context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
+                            if ( value === 'later' ) { return; }
                             onChange( 'later' );
                         }}
                         >Later / Maybe</a></li>
@@ -81,6 +87,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                             'context-listing__link--selected' : 'context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
+                            if ( value === 'ice-box' ) { return; }
                             onChange( 'ice-box' );
                         }}
                         >Ice Box</a></li>
@@ -89,9 +96,7 @@ const ContextListing = ( { value, onChange, className } ) => (
                         <li className="context-listing__sub-item">
                             <a href="#" className={value === 'demo' ?
                                 'context-listing__link--selected' : 'context-listing__link--default'}
-                            onClick={( evt ) => {
-                                evt.stopPropagation();
-                            }}
+                            onClick={( evt ) => evt.stopPropagation()}
                             >Demo</a>
                         </li> :
                         null}

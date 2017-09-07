@@ -26,6 +26,21 @@ body {
 }
 
 body {
+    .loading {
+        font-size: $largerFontSize;
+        font-family: $baseFallbackFont;
+
+        font-weight: inherit;
+        font-style: normal;
+        text-align: center;
+    }
+
+    &.wf-loaded .loading {
+        font-family: $baseFont;
+    }
+}
+
+body {
     font-family: $baseFallbackFont;
 
     &.wf-loaded {

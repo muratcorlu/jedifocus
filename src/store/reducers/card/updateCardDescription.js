@@ -12,10 +12,20 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const updateDescription = ( state = {}, { payload: { column, cardId, cardDescription } } ) => ( {
-    ...state,
-    modalDescription: cardDescription,
-    [column]: state[column].set( cardId, cardDescription )
-} );
+const updateCardDescription = ( state = {}, { payload: { column, cardId, cardDescription, cardContext } } ) => {
+    if ( state.context === cardContext ) {
+        return {
+            ...state,
+            modalDescription: cardDescription,
+            [column]: state[column].set( cardId, cardDescription )
+        };
+    }
 
-export default updateDescription;
+    return {
+        ...state,
+        modalDescription: cardDescription,
+        [column]: state[column].remove( cardId, cardDescription )
+    };
+};
+
+export default updateCardDescription;

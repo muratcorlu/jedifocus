@@ -40,7 +40,7 @@ const CardEditModal = ( {
 
         <div className="pull-right">
             <ContextDropdown id="modal-edit-context" value={context}
-                onChange={( value ) => updateCardContext( value )} className="" />
+                onChange={( value ) => updateCardContext( column, id, description, value )} className="" />
         </div>
 
         <h3 className="modal-edit__label pull-right">
@@ -48,7 +48,7 @@ const CardEditModal = ( {
 
         <div>
             <CardDescriptionTextarea id="modal-edit-description" value={description}
-                onChange={( value ) => updateCardDescription( column, id, value )} />
+                onChange={( value ) => updateCardDescription( column, id, value, context )} />
         </div>
 
         <div className="modal-edit__actions">

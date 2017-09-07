@@ -77,7 +77,7 @@ const moveCardToDone = ( id, userId, column, description, context ) => {
     return { type: JFDI_CARD_MOVE_DONE, payload: { column, oldId, newId } };
 };
 
-const moveCardToInProgress = ( id, userId, column, description , context ) => {
+const moveCardToInProgress = ( id, userId, column, description, context ) => {
     top();
 
     const oldId = id;
