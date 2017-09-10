@@ -24,6 +24,8 @@
     min-width: $minCardWidth;
 
     user-select: none;
+
+    overflow: auto;
 }
 
 @import './blurred/index.scss';

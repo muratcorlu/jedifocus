@@ -22,6 +22,7 @@ const CardDescriptionTextarea = ( { id, value, onChange } ) => (
         onChange={( evt ) => onChange( evt.target.value )}
         placeholder="What would you like to do?"
         autoFocus={true}
+        maxLength={5000}
     />
 );
 

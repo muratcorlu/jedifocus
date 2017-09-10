@@ -13,6 +13,8 @@
  */
 
 .column {
+    overflow: auto;
+
     &:hover {
         .column__heading {  }
     }
