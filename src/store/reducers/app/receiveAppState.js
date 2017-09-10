@@ -12,17 +12,17 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { Map } from 'immutable';
+import { fromJS as makeImmutable } from 'immutable';
 
-const receiveAppState = ( state = {}, { payload } ) => ( {
+const receiveAppState = ( state = {}, { payload: { bestIntentions, inProgress, toDo } } ) => ( {
     ...state,
     appStateFetched: true,
-    bestIntentions: payload.get( 'bestIntentions' ) || Map.of(),
-    inProgress: payload.get( 'inProgress' ) || Map.of(),
+    bestIntentions: makeImmutable( bestIntentions || {} ),
+    inProgress: makeImmutable( inProgress || {} ),
     modalContextVisible: false,
     modalRevealed: false,
     modalVisible: false,
-    toDo: payload.get( 'toDo' ) || Map.of()
+    toDo: makeImmutable( toDo || {} )
 } );
 
 export default receiveAppState;

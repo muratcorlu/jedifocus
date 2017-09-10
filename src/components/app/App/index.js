@@ -25,7 +25,7 @@ import LoadingIndicator from '../../../components/feedback/LoadingIndicator';
 import NavigationContainer from '../../../containers/navigation/NavigationContainer';
 
 const App = ( { appStateFetched, appRandomQuote } ) => (
-    <div className={`container ${appStateFetched ? '' : 'no-pointer'}`}>
+    <div className={`container ${appStateFetched ? 'container--fetched' : 'no-pointer'}`}>
         <LoadingIndicator show={!appStateFetched} text={appRandomQuote} />
         <CardEditModalContainer />
         <ContextChangeModalContainer />

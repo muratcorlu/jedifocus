@@ -42,6 +42,8 @@ This one is obvious, but there is no harm restating it:
 * **Eliminate** distractions: turn off Slack, turn off email, turn off notifications, silence your phone, turn off the Internet… (*or use it only for things that will help to get your goal done*). —  Check your information channels (such as Slack or email) at a particular time, when you want; **not** whenever you get a notification.
 * **Focus**.
 
+In short, do not split your **focus** because you have a limited willpower.
+
 ### Always Clear to Neutral
 
 Think of it like hibernating your work.
@@ -53,6 +55,14 @@ Note down, what you were doing; what you will do; important things that you need
 > Freeze your work in a state that you can resume easily, by supporting it with extra hints.
 
 **Think of your future self** before you pause your goal; she will be grateful to you.
+
+### Have a Routine
+
+For certain goals, repetition does wonders. 
+
+If you want to convert a goal into a habit, make a schedule, set calendar reminders, and stick to your schedule as much as you can.
+
+Having a routine also helps with learning, retention, and memory. 
 
 ### Trust Your Instincts
 
@@ -307,6 +317,20 @@ You are not likely to work on the goals inside the “*Later/Maybe*” context s
 The items in the “*Ice Box*” won’t be touched for a long long time. 
 
 They are as good as **deleted**.
+
+### About Task Ordering 
+
+**JediFocus** goals auto-sort themselves: 
+
+The items that you interact with move to top; therefore the items you touch less will automatically bubble down.
+
+This way you don’t have to bother with prioritizing things: 
+
+Since the goals that you are interacting with are, presumably, more important than the goals that you are not batting an eye; your goals will always be quasi-prioritized. 
+
+And that is **good enough**: 
+
+Wasting time to precisely sort and prioritize items is a losing battle. — Spend your valuable mental resources in other things than sorting stuff; like… actually **doing** stuff!
 
 [getting-things-done]: https://en.wikipedia.org/wiki/Getting_Things_Done "Getting Things Done"
 [create-issue]: http://github.com/jsbites/jedifocus/issues/new "Create a New Issue"

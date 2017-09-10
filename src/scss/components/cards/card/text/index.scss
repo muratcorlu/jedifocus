@@ -24,8 +24,7 @@
         border-left: $cardSideMarkerBorderWidth transparent solid;
 
         a {
-            color: $cardLinkColor;
-            border-bottom: $cardLinkBorderWidth $cardLinkUnderlineColor solid;
+            color: #2455C3;
             padding: $cardLinkPadding;
             transition: $defaultTransition;
             will-change: color, border-bottom;
@@ -48,8 +47,7 @@
         border-left: $cardSideMarkerBorderWidth transparent solid;
 
         a {
-            color: $cardLinkColor;
-            border-bottom: $cardLinkBorderWidth $cardLinkUnderlineColor solid;
+            color: #2455C3;
             padding: $cardLinkPadding;
             transition: $defaultTransition;
             will-change: color, border-bottom;
@@ -80,8 +78,8 @@
         border-left: $cardSideMarkerBorderWidth transparent solid;
 
         a {
-            color: $cardLinkColor;
-            border-bottom: $cardLinkBorderWidth $cardLinkUnderlineColor solid;
+            color: #2455C3;
+            border-bottom: $cardLinkBorderWidth transparent solid;
             padding: $cardLinkPadding;
             transition: $defaultTransition;
             will-change: color, border-bottom;
@@ -89,9 +87,7 @@
             &:hover {
                 transition: $defaultTransition;
                 will-change: color, border-bottom;
-                background: $cardLinkHoverBackgroundColor;
-                color: $cardLinkHoverColor;
-                border-bottom: $cardLinkHoverBorderWidth $cardLinkHoverBorderColor solid;
+                border-bottom: $cardLinkHoverBorderWidth #2455C3 solid;
             }
         }
 

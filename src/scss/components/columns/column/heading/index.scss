@@ -15,15 +15,15 @@
 .column__heading {
     min-width: 200px;
     height: 25px;
-    opacity: 0.15;
+    opacity: 0.65;
     will-change: opacity;
     color: $white;
     cursor: default;
 
-    &--best-intentions { background: $teal; }
-    &--best-intentions-selected { background: $blueGray; }
-    &--to-do { background: $orange; }
-    &--to-do-selected { background: $orange; }
+    &--best-intentions { background: darken($blue, 20%); }
+    &--best-intentions-selected { background: darken($blue, 20%); }
+    &--to-do { background: darken($blue, 10%); }
+    &--to-do-selected { background: darken($blue, 10%); }
     &--in-progress { background: $blue; }
     &--in-progress-selected { background: $blue; }
     &--done { background: $teal; }
@@ -39,4 +39,11 @@
         opacity: 1;
         box-shadow: $defaultBoxShadow;
     }
+}
+
+.no-pointer {
+  .column__heading {
+    transition: $defaultTransition;
+    opacity: 0.15;
+  }
 }

@@ -55,9 +55,9 @@ const updateCardColumn = ( currentColumn, cardId, nextColumn ) => {
     };
 };
 
-const updateCardDescription = ( column, cardId, cardDescription ) => ( {
+const updateCardDescription = ( column, cardId, cardDescription, cardContext ) => ( {
     type: JFDI_CARD_UPDATE_DESCRIPTION,
-    payload: { column, cardId, cardDescription }
+    payload: { column, cardId, cardDescription, cardContext }
 } );
 
 const updateCardContext = ( column, cardId, cardDescription, cardContext ) => ( {

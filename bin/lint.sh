@@ -13,6 +13,16 @@
 #
 #  Send your comments, suggestions, and feedback to me@volkan.io
 
+echo ""
+echo "  __.-._"
+echo "  '-._\"7'   JediFocus"
+echo "   \/'.-c?"
+echo "   |  \/T   Do. Or do not."
+echo "  _\)_\/LI  There is no try."
+echo ""
+
+sleep 2
+
 eslint src
 eslint webpack.config.js
 sass-lint -c .sass-lint.yml --no-exit -v

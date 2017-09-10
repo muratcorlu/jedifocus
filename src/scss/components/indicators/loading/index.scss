@@ -14,24 +14,28 @@
 
 .loading {
     margin: 0;
-    padding: 24px 32px 19px 32px;
-    width: calc(100vw - 64px);
+    padding: 26px 32px 16px 32px;
 
+    width: 50vw;
     position: fixed;
-    right: 0;
-    top: 0;
+    right: calc(25vw - 32px);
+    top: -10px;
 
     z-index: 9999;
 
     border-radius: 2px;
 
-    color: darken($blue, 40%);
-    background: $trueWhite;
-    opacity: 0.65;
-    transition: $modalFadeTransition;
+    color: $black;
+    background: linear-gradient(to bottom, $trueWhite 50%, darken($trueWhite, 30%) 100%);
+    box-shadow: $defaultBoxShadow;
+    opacity: 0.85;
+    transition: opacity 0.65s ease-in-out, top 0.45s ease-in-out;
+    will-change: top, opacity;
 
     &--hidden {
+        top: -80px;
         opacity: 0;
-        transition: $modalFadeTransition;
+        transition: opacity 0.65s ease-in-out, top 0.45s ease-in-out;
+        will-change: top, opacity;
     }
 }

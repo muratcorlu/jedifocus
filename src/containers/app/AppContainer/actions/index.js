@@ -12,8 +12,6 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { fromJS as makeImmutable } from 'immutable';
-
 import { sendFetchAppStateRequest } from '../network';
 
 import {
@@ -25,11 +23,11 @@ const requestAppState = () => ( { type: JFDI_APP_REQUEST_STATE } );
 
 const receiveAppState = ( data ) => ( {
     type: JFDI_APP_RECEIVE_STATE,
-    payload: makeImmutable( {
+    payload: {
         bestIntentions: data[0],
         toDo: data[1],
         inProgress: data[2]
-    } )
+    }
 } );
 
 const fetchAppState = ( config, email, password, userId, context ) => ( dispatch ) => {
