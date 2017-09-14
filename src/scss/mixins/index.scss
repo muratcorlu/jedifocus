@@ -29,6 +29,6 @@
 @mixin center { margin: 0 auto; }
 
 @mixin modalHeadingBackground {
-    background: lighten($black, 40%);
-    background: linear-gradient(to bottom, $lightGray, lighten($black, 40%));
+    background: darken(#E3E5E6, 10%);
+    background: linear-gradient(to bottom, darken(#E3E5E6, 10%), darken(#D3D6D9, 10%));
 }

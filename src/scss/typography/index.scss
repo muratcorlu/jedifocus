@@ -27,16 +27,18 @@ body {
 
 body {
     .loading {
-        font-size: $largeFontSize;
+        font-size: $largerFontSize;
         font-family: $baseFallbackFont;
 
         font-weight: inherit;
-        font-style: normal;
+        font-style: italic;
         text-align: center;
     }
 
     &.wf-loaded .loading {
-        font-family: $baseFont;
+        font-family: $baseFontLightItalic;
+	font-style: italic;
+	font-weight: inherit;
     }
 }
 
@@ -99,14 +101,15 @@ body {
 
 body {
     .modal-edit__label {
-        font-weight: bold;
-        font-style: italic;
+        font-weight: normal;
+        font-style: normal;
+        font-size: $largeFontSize;
     }
 
     &.wf-loaded .modal-edit__label {
-        font-family: $baseFontBoldItalic;
+        font-family: $baseFont;
         font-weight: inherit;
-        font-style: italic;
+        font-style: normal;
     }
 }
 
@@ -126,8 +129,8 @@ body {
 body {
     .modal-edit__description {
         font-family: $monotypeFallbackFont;
-        font-size: $defaultFontSize;
-        line-height: $defaultFontSize * 1.5;
+        line-height: 1.5 * ( $defaultFontSize - 2px);
+        font-size: $defaultFontSize - 2px;
     }
 
     &.wf-loaded .modal-edit__description {
@@ -140,13 +143,13 @@ body {
         white-space: nowrap;
         text-overflow: ellipsis;
         font-size: $largeFontSize;
-        font-style: italic;
+        font-style: normal;
         font-weight: normal;
     }
 
     &.wf-loaded .modal-edit__selection {
-        font-family: $baseFontItalic;
-        font-style: italic;
+        font-family: $baseFont;
+        font-style: normal;
         font-weight: inherit;
     }
 }
@@ -190,7 +193,7 @@ body {
     }
 
     &.wf-loaded .navigation__action-button {
-        font-family: $baseFontItalic;
+        font-family: $baseFontLightItalic;
         font-weight: inherit;
         font-style: italic;
     }
@@ -204,11 +207,12 @@ body {
         text-align: center;
         visibility: hidden;
         -webkit-font-smoothing: antialiased;
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.15);
     }
 
     &.wf-loaded {
         .column__heading, .column__heading--dimmed, .column__heading--selected {
-            font-family: $baseFontItalic;
+            font-family: $baseFontLightItalic;
             font-style: italic;
             font-weight: inherit;
             visibility: visible;

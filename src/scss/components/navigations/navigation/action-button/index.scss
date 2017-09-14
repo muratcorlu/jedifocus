@@ -16,24 +16,24 @@
     &__action-button {
         display: block;
         margin: 10px;
-        padding: 10px 15px 10px 6px;
+        padding: 5px 15px 5px 6px;
         width: 180px;
 
         position: fixed;
-        left: -140px;
-        top: 23px;
+        left: -116px;
+        top: 46px;
 
         transform: translateZ(0);
 
         opacity: 0.85;
-        background: $white;
-        color: $orange;
+        background: $orange;
+        color: $white;
 
         text-decoration: none;
 
         &:hover {
-            background-color: $orange;
-            color: $white;
+            background-color: $white;
+            color: $orange;
             opacity: 1;
         }
     }

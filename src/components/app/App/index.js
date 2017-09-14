@@ -34,6 +34,7 @@ const App = ( { appStateFetched, appRandomQuote } ) => (
         <InProgressContainer />
         <DoneContainer />
         <NavigationContainer />
+        <div className="topHeaderBackground"></div>
     </div>
 );
 

@@ -13,14 +13,14 @@
  */
 
 .context-selection {
-    color: $orange;
-    background: $white;
+    color: $white;
+    background: $orange;
 
     cursor: pointer;
 
     text-align: right;
 
-    padding: 10px 30px 10px 18px;
+    padding: 5px 20px 5px 17px;
 
     position: fixed;
     right: -20px;
@@ -29,18 +29,17 @@
     opacity: 0.85;
     border-radius: 25px;
 
-    box-shadow: $defaultBoxShadow;
     transition: $defaultTransition;
     will-change: background, color, opacity, box-shadow;
 
     &:hover {
-        background: $orange;
-        color: $white;
+        background: $white;
+        color: $orange;
         opacity: 1;
         box-shadow: none;
         transition: $defaultTransition;
         will-change: background, color, opacity, box-shadow;
     }
 
-    &__context-name { padding-right: 8px; }
+    &__context-name { padding-right: 8px; line-height: 32px; }
 }
