@@ -24,7 +24,10 @@ import ContextChangeModalContainer from '../../../containers/context/ContextChan
 import LoadingIndicator from '../../../components/feedback/LoadingIndicator';
 import NavigationContainer from '../../../containers/navigation/NavigationContainer';
 
-const App = ( { appStateFetched, appRandomQuote } ) => (
+import LoginModal from '../../../components/login/LoginModal';
+
+const App = ( { loggedIn, appStateFetched, appRandomQuote } ) => (
+    loggedIn ?
     <div className={`container ${appStateFetched ? 'container--fetched' : 'no-pointer'}`}>
         <LoadingIndicator show={!appStateFetched} text={appRandomQuote} />
         <CardEditModalContainer />
@@ -35,12 +38,26 @@ const App = ( { appStateFetched, appRandomQuote } ) => (
         <DoneContainer />
         <NavigationContainer />
         <div className="topHeaderBackground"></div>
+        <div className="bottomUndoNotification">
+            <span>Done and dusted!</span>
+            <strong>UNDO</strong>
+            <span>✕</span>
+        </div>
+    </div> :
+    <div className="container">
+        <LoginModal />
+        <div className="topHeaderBackground" style={{textAlign:'center', fontSize: '24px', fontFamily: 'Georgia Pro Lt It', fontWeight: 'inherit',  fontStyle: 'italic'}}><span style={{position: 'relative', top: '11px'}}>{appRandomQuote}</span></div>
+                <img 
+            src="/images/stationary.png"
+            style={{zIndex: '-2', position: 'fixed', top: '50px', left: '0', opacity: '1', xwidth: '50vw', xheight: '50vh'}}
+        />
     </div>
 );
 
 App.propTypes = {
     appStateFetched: PropTypes.bool.isRequired,
-    appRandomQuote: PropTypes.string.isRequired
+    appRandomQuote: PropTypes.string.isRequired,
+    loggedIn: PropTypes.bool.isRequired
 };
 
 export default App;

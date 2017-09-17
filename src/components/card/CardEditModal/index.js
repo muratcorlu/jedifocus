@@ -15,7 +15,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ActionButton from '../../buttons/ActionButton';
+import ActionButton from '../../../components/buttons/ActionButton';
 import ContextDropdown from '../../../components/context/ContextDropdown';
 import ColumnDropdown from '../../../components/column/ColumnDropdown';
 import CardDescriptionTextarea from '../../../components/card/CardDescriptionTextarea';

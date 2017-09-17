@@ -17,7 +17,7 @@
         transition: $defaultTransition;
 
         background: darken($white, 2%);
-        box-shadow: $defaultBoxShadow;
+        // box-shadow: $defaultBoxShadow;
         opacity: 0.85;
         will-change: opacity, background;
 

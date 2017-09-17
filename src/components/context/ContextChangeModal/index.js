@@ -20,7 +20,7 @@ import ContextListing from '../../../components/context/ContextListing';
 const ContextChangeModal = ( { show, reveal, changeContext, context } ) => show ? (
     <div className={`modal-edit ${reveal ? '' : 'modal-edit--faded'}`}>
         <h2 className="modal-edit__heading">
-            <label className="modal-edit__heading-label">Change Current Context</label>
+            <label className="modal-edit__heading-label">Change Context</label>
         </h2>
 
         <p className='modal-edit__label--context-switch'>

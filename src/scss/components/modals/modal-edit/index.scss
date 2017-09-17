@@ -25,7 +25,11 @@
     width: 624px;
 
     background: darken(#E3E5E6, 5%); // background: $modalEditBackground;
-    box-shadow: $defaultBoxShadow;
+    // box-shadow: $defaultBoxShadow;
+    
+    box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
+
+    
     border-radius: 1px;
     
     // opacity: 0.95;

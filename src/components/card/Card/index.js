@@ -94,6 +94,16 @@ const Card = ( {
     <div className={cardClassName( id, modalId, passive )}
         onClick={( evt ) => onCardClick( evt, column, id, editCard )}
     >
+        <div className="card__overlay">
+            {column === 'inProgress' ? <a href="" style={{fontSize: '16px', lineHeight: '16px', position: 'relative', top: '-5px'}}>✕</a> : <a href="">⭢</a>}
+        </div>
+        
+        {column === 'bestIntentions' ? null :  <div className="card__overlay-left"><a href="">⟵</a></div>}
+
+        <div className="card__overlay-options">
+            <a href="" style={{fontSize: '18px', position: 'relative', top: '-3px', lineHeight: '24px'}}>…</a>
+        </div>
+
         <div className="card__text" dangerouslySetInnerHTML={{ __html: markdown( description ) }} />
         <div
             className={cardControlsClassName( passive )}

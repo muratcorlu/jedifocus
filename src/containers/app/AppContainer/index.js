@@ -77,6 +77,7 @@ class AppContainer extends Component {
         return ( <App
             appStateFetched={this.props.appStateFetched}
             appRandomQuote={this.props.appRandomQuote}
+            loggedIn={this.props.loggedIn}
         /> );
     }
 }
@@ -94,7 +95,8 @@ AppContainer.propTypes = {
 
 const ConnectedAppContainer = connect(
     AppContainer, actions,
-    ( { appStateFetched, appRandomQuote, userId, context } ) => ( { appStateFetched, appRandomQuote, userId, context } )
+    ( { appStateFetched, appRandomQuote, userId, context, loggedIn } ) => 
+        ( { appStateFetched, appRandomQuote, userId, context, loggedIn } )
 );
 
 const ProvidedAppContainer = ( { config, email, password, userId } ) => (

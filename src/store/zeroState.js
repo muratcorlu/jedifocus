@@ -16,6 +16,12 @@ import { fromJS as makeImmutable } from 'immutable';
 
 const zeroState = {
 
+    // #region Authentication
+
+    loggedIn: false, // false, // false, // true, // false, // true, // false,
+
+    // #endregion
+
     // #region App and Context
 
     // Loading Indicator
@@ -62,6 +68,7 @@ const zeroState = {
         'Action is the foundational key to all success',
         'All our dreams can come true if we have the courage to pursue them.',
         'All progress takes place outside the comfort zone.',
+        'Arriving at one goal is the starting point to another.',
         'Believe that you can.',
         'Deserve your dream.',
         'Do one thing every day that scares you.',
@@ -81,6 +88,8 @@ const zeroState = {
         'Good, better, best. Never let it rest.',
         'Gopher it!',
         'Great things come to those who don’t wait.',
+        'Harder. Better. Faster. Stronger',
+        'Hope.',
         'I find that the harder I work, the more luck I seem to have.',
         'If you are going through hell, keep going.',
         'If you can dream it, you can do it.',
@@ -88,18 +97,24 @@ const zeroState = {
         'It does not matter how slowly you go, so long as you do not stop.',
         'It’s not what you look at that matters, it’s what you see.',
         'J. F. D. I.',
+        'Know yourself.',
         'Leap, and the net will appear.',
         'Life begins at the end of your comfort zone.',
+        'Love what you do; do what you love.',
         'Make it happen.',
+        'May the force be with you.',
+        'May the source be with you.',
         'Motivation is what gets you started. Habit is what keeps you going.',
         'Never complain, never explain.',
         'Never, never, never give up.',
+        'Never tell me the odds.',
         'No masterpiece was ever created by a lazy artist.',
         'Nothing is impossible, the word itself says “I’m possible”!',
         'One finds limits by pushing them.',
         'Opportunities don’t happen, you create them.',
         'People rarely succeed unless they have fun in what they are doing.',
         'Perfection is boring… JFDI!',
+        'Production is the best test environment.',
         'Quality is not an act, it is a habit.',
         'Quit talking and begin doing.',
         'Set up your goals high, and do not stop till you get there.',
@@ -109,12 +124,14 @@ const zeroState = {
         'Success is liking yourself, liking what you do, and liking how you do it.',
         'Success is the sum of small efforts, repeated.',
         'The best way to predict the future is to create it.',
+        'The Force will be with you. Always.',
         'The more you do, the more you can do.',
         'The secret of getting ahead is getting started.',
         'The starting point of all achievement is desire.',
         'The successful warrior is the average man, with laser-like focus.',
         'There is always room at the top.',
         'To begin, begin.',
+        'To do it, do it.',
         'To know yourself, assert yourself.',
         'To live a creative life, we must lose our fear of being wrong.',
         'Well done is better than well said.',
