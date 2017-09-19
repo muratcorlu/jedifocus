@@ -17,28 +17,24 @@ import React from 'react';
 import ActionButton from '../../../components/buttons/ActionButton';
 
 const LoginModal = () => (
-    <div className="modal-edit">
-        <h2 className="modal-edit__heading">
+    <div className="modal-edit" style={{boxShadow: '0 0 2px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.32))', height: '210px'}}>
+        <h2 className="modal-edit__heading" style={{xbackground: '#ed6c1f', colxor: '#0000000'}}>
             <label className="modal-edit__heading-label">
-                <strong>JediFocus</strong> Limited Preview
+                <strong>JediFocus</strong> — Control Your Life. Free Your Mind.
             </label>
         </h2>
         <div>
-            <p style={{fontSize: '18px', lineHeight: '30px', textAlign: 'center', marginTop: '55px', marginBottom: '10px'}}>
+            <p style={{fontSize: '18px', fontStyle: 'italic', fontFamily: 'Georgia Pro Lt It', lineHeight: '30px', textAlign: 'center', marginTop: '28px', marginBottom: '10px'}}>
 
-                <strong>JediFocus</strong> is a <em>minimalistic</em> and <em style={{borderBottom: '1px #000000 solid', paddingBottom: '2px'}}>opinionated</em> application that helps you <strong>control</strong> your life, <strong>organize</strong> your goals, and <strong>free</strong> your mind.<br /> 
-            </p>
-            <p style={{fontSize: '18px', lineHeight: '30px', textAlign: 'center', marginTop: '20px', marginBottom: '10px'}}>
-
-                           We are accepting a <strong>very</strong> limited number of individuals, initially.<br />
-            Register your email and we will notify you as soon as there is an open spot.</p>
-            <p style={{textAlign: 'center', marginTop: '30px'}}>
+                           During this limited preview, we are only accepting select few padawans.<br />
+            Register below, and we will notify you as soon as there is an availability.</p>
+            <p style={{textAlign: 'center', marginTop: '10px'}}>
                 <input type="email" placeholder="e.g., hermione.granger@magic.wiz.uk" 
                     style={{border: '1px #babfc3 solid', fontSize: '18px', fontFamily: 'Georgia Pro Reg', width: '350px', marginLeft: '30px', padding: '10px', textAlign: 'center', float: 'left'}}
                     autofocus
                 />
             </p>
-            <p style={{marginRight: '20px', marginTop: '12px', textAlign: 'center', float: 'right'}}>
+            <p style={{marginRight: '20px', marginTop: '2px', textAlign: 'center', float: 'right'}}>
                 <ActionButton
                     onClick={() => {}}
                     className={'action-button--modal action-button--align-center action-button--default'}

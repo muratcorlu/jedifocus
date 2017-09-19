@@ -46,6 +46,8 @@ So…
 
 * No attachment and multimedia support. — You can always upload your supporting media to somewhere like **Dropbox**, and add a reference link to your goal. — **JediFocus** focuses on goal tracking; **not** asset management.
 * No pagination. — If you have too many goals in your plate that you need to paginate; then you have a bigger problem than pagination. — **JediFocus** will only list a certain reasonable subset of your goals.
+* No drag and drop interaction for the cards — There are three columns; and you can simply move the card the the next column with the tap of a button. Dragging is much more time-consuming than just tapping a button. Besides, when you move a card to the next column, it moves to the top of the colum by design; and it does not look natural when you try to drag the card in the middle and it does not obey you and bounces to top.
+* Related to that: No custom sorting of cards. — Whenever you interact with a card in any way, it moves to the top of the column. That is the unbreakable, cardinal rule of the **JediFocus** UX; it is the core premise: The stuff that you interact with are, by logic, more important than the stuff that you do not interact with; ergo they bubble to top.
 * What’s done is done. — **JediFocus** does not track the goals you completed. Once a goal is done, it is irreversibly wiped from the system.
 * No search. — Again, if you need to search between your goals; then you have a bigger problem. — You should start from your topmost goal, and move all the way to the bottom; without needing to search for anything.
     * We may include some form of **labeling** and/or **filtering** in the future, though.

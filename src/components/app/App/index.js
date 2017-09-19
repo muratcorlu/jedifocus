@@ -48,8 +48,11 @@ const App = ( { loggedIn, appStateFetched, appRandomQuote } ) => (
         <LoginModal />
         <div className="topHeaderBackground" style={{textAlign:'center', fontSize: '24px', fontFamily: 'Georgia Pro Lt It', fontWeight: 'inherit',  fontStyle: 'italic'}}><span style={{position: 'relative', top: '11px'}}>{appRandomQuote}</span></div>
                 <img 
-            src="/images/stationary.png"
-            style={{zIndex: '-2', position: 'fixed', top: '50px', left: '0', opacity: '1', xwidth: '50vw', xheight: '50vh'}}
+            src="/images/desk.jpg" xwidth="500"
+            style={{zIndex: '-2', position: 'fixed', filter: 'xblur(15px)', top: '50px', left: '0', opacity: '0.35', 
+                width: '100vw', height: 'auto', 
+                
+            }}
         />
     </div>
 );

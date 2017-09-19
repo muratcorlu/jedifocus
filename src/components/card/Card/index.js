@@ -94,13 +94,13 @@ const Card = ( {
     <div className={cardClassName( id, modalId, passive )}
         onClick={( evt ) => onCardClick( evt, column, id, editCard )}
     >
-        <div className="card__overlay">
+        <div className="card__overlay" style={{visibility: 'hidden'}}>
             {column === 'inProgress' ? <a href="" style={{fontSize: '16px', lineHeight: '16px', position: 'relative', top: '-5px'}}>✕</a> : <a href="">⭢</a>}
         </div>
         
-        {column === 'bestIntentions' ? null :  <div className="card__overlay-left"><a href="">⟵</a></div>}
+        {column === 'bestIntentions' ? null :  <div className="card__overlay-left" style={{visibility: 'hidden'}}><a href="">⟵</a></div>}
 
-        <div className="card__overlay-options">
+        <div className="card__overlay-options" style={{visibility: 'hidden'}}>
             <a href="" style={{fontSize: '18px', position: 'relative', top: '-3px', lineHeight: '24px'}}>…</a>
         </div>
 

@@ -18,7 +18,7 @@ const zeroState = {
 
     // #region Authentication
 
-    loggedIn: false, // false, // false, // true, // false, // true, // false,
+    loggedIn: true, // false, // false, // false, // true, // false, // true, // false, //false, // false, // false, // true, // false, // true, // false,
 
     // #endregion
 
@@ -70,6 +70,7 @@ const zeroState = {
         'All progress takes place outside the comfort zone.',
         'Arriving at one goal is the starting point to another.',
         'Believe that you can.',
+        'Be like water.',
         'Deserve your dream.',
         'Do one thing every day that scares you.',
         'Do something wonderful, people will imitate you.',
@@ -88,7 +89,7 @@ const zeroState = {
         'Good, better, best. Never let it rest.',
         'Gopher it!',
         'Great things come to those who don’t wait.',
-        'Harder. Better. Faster. Stronger',
+        'Harder. Better. Faster. Stronger.',
         'Hope.',
         'I find that the harder I work, the more luck I seem to have.',
         'If you are going through hell, keep going.',
@@ -104,6 +105,7 @@ const zeroState = {
         'Make it happen.',
         'May the force be with you.',
         'May the source be with you.',
+        'Have a mind like water.',
         'Motivation is what gets you started. Habit is what keeps you going.',
         'Never complain, never explain.',
         'Never, never, never give up.',
@@ -134,6 +136,8 @@ const zeroState = {
         'To do it, do it.',
         'To know yourself, assert yourself.',
         'To live a creative life, we must lose our fear of being wrong.',
+        'Use the force, Luke.',
+        'Use the source, Luke.',
         'Well done is better than well said.',
         'What you can do today can improve all your tomorrows.',
         'What you do makes a difference.',
