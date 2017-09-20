@@ -124,8 +124,10 @@ code {
     // opacity: 0.65;
     // box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
 
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
-    border-bottom: 1px solid  darken(#D3D6D9, 12%);
+    // box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
+    // border-bottom: 1px solid  darken(#D3D6D9, 12%);
+
+    box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .6);
 }
 
 .bottomUndoNotification {
@@ -141,6 +143,8 @@ code {
     text-align: center;
     // box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
 
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
-    border-bottom: 1px solid darken(#E8E9E6, 10%);
+    // box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
+    // border-bottom: 1px solid darken(#E8E9E6, 10%);
+    
+    box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .6);
 }
