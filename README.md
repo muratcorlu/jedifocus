@@ -317,8 +317,6 @@ Let me tell you a secret:
 Any help and feedback are more than appreciated.
 
 If you want to report a bug; or share a comment or suggestion, [file an issue][ticket].
-[getting-things-done]: https://en.wikipedia.org/wiki/Getting_Things_Done "Getting Things Done"
-[create-issue]: http://github.com/jsbites/jedifocus/issues/new "Create a New Issue"
 
 > Are you a developer? — **pull requests are welcome** — [You might want to read the **installation instructions**](INSTALLATION.md) first.
 
@@ -356,3 +354,5 @@ It is a compilation of short (*around ten minutes*) screencasts about **JavaScri
 [ticket]: https://github.com/jsbites/jedifocus/issues/new "Create a New Issue"
 [vidcast]: https://bytesized.tv/ "ByteSized.TV"
 [yarn]: https://yarnpkg.com "Yarn: Fast, Reliable, and Secure Dependency Management"
+[getting-things-done]: https://en.wikipedia.org/wiki/Getting_Things_Done "Getting Things Done"
+[create-issue]: http://github.com/jsbites/jedifocus/issues/new "Create a New Issue"
