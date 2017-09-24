@@ -8,6 +8,8 @@ _)_/LI   There is no try.
 
 **JediFocus**: Your focus determines your reality.
 
+--------
+
 ## Why?
 
 **JediFocus** gives you an **opinionated** way to handle your goals.
@@ -49,6 +51,8 @@ Those are all illusions that steal the most precious asset of yours: Your time.
 > To be productive, you just need to **get $#!% done**. — Don’t sort your jelly beans like a five year old.
 
 **Less** is **more**.
+
+--------
 
 ## Productivity Tips
 
@@ -197,6 +201,8 @@ Don’t focus on what you just did; focus on **what you will do next**.
 > When you mark an item as **Done**, **JediFocus** removes it entirely. — So when it is **done**, it is **gone**.
 
 Keeping a track log of done items is a useless mental overload. It is **futile** and **pointless**.
+
+--------
 
 ## **JediFocus** User Interface and Concepts
 
