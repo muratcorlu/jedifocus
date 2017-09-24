@@ -274,6 +274,8 @@ And that is **good enough**,
 
 Wasting time to precisely sort and prioritize items is a losing battle. — Spend your valuable mental resources in other things than sorting stuff; like… actually **doing** stuff!
 
+--------
+
 ## Every Saga Has a Beginning
 
 I’m **obsessed** with **GTD** (*getting things done*), productivity methodologies, and the like. 
@@ -306,6 +308,8 @@ Let me tell you a secret:
 
 > It’s not the app that you use; it’s the focus, discipline, dedication, perseverance, persistence, routines, and boring **repetition** that makes you succeed.
 
+--------
+
 ## Wanna Help?
 
 Any help and feedback are more than appreciated.
@@ -330,6 +334,8 @@ MIT-licensed. — [See the license file for details](LICENSE.md).
 We are committed to making participation in this project a harassment-free experience for everyone, regardless of the level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.
 
 [See the code of conduct for details](CODE_OF_CONDUCT.md).
+
+--------
 
 ## A [ByteSized.TV][vidcast] Project
 
