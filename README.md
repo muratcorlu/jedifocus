@@ -206,7 +206,9 @@ Keeping a track log of done items is a useless mental overload. It is **futile**
 
 ## **JediFocus** User Interface and Concepts
 
-> For a deeper discussion on the topic, see [**JediFocus** Design Guidelines](DESIGN_GUIDELINES.md)
+> **Aside**
+>
+> For a deeper discussion on the topic, see [**JediFocus** Design Guidelines](DESIGN_GUIDELINES.md).
 
 This section describes **JediFocus**’ user interface and user experience.
 
