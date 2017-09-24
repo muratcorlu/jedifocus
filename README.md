@@ -56,7 +56,7 @@ You don’t need labeling, categorization, filtering, searching, color coding to
 
 [*Getting Things Done*](getting-things-done) is a **virtual reality**.
 
-More often than not, when you mean you are “*getting things done*”, nstead of doing actual work, you are organizing, categorizing, labeling your list of items. — Unless you are a librarian, that is **not** getting things done; per contra, that is just “appearing” to be busy.
+More often than not, when you mean you are “*getting things done*”, instead of doing actual work, you are organizing, categorizing, labeling your list of items. — Unless you are a librarian, that is **not** getting things done; per contra, that is just “appearing” to be busy.
 
 > Categorizing, or labeling something does not get it done. — **Doing** it gets it **done**.
 
