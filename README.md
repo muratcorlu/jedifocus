@@ -40,7 +40,11 @@ This is the most commonly-asked question, so let’s answer this once and for al
 
 **JediFocus** won’t let you [die by a thousand micro decisions][limited-resources].
 
-You don’t need labeling, categorization, filtering, searching, color coding to be productive. You don’t even need to set reminders and alarms to be productive. — Those are all illusions that steal the most precious asset of yours: Your time.
+You don’t need labeling, categorization, filtering, searching, color coding to be productive. 
+
+You don’t even need to set reminders and alarms to be productive. 
+
+Those are all illusions that steal the most precious asset of yours: Your time.
 
 > To be productive, you just need to **get $#!% done**. — Don’t sort your jelly beans like a five year old.
 
@@ -56,7 +60,9 @@ You don’t need labeling, categorization, filtering, searching, color coding to
 
 [*Getting Things Done*](getting-things-done) is a **virtual reality**.
 
-More often than not, when you mean you are “*getting things done*”, instead of doing actual work, you are organizing, categorizing, labeling your list of items. — Unless you are a librarian, that is **not** getting things done; per contra, that is just “appearing” to be busy.
+More often than not, when you mean you are “*getting things done*”, instead of doing actual work, you are organizing, categorizing, labeling your list of items. 
+
+Unless you are a librarian, that is **not** getting things done; per contra, that is just “appearing” to be busy.
 
 > Categorizing, or labeling something does not get it done. — **Doing** it gets it **done**.
 
