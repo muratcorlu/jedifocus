@@ -71,6 +71,8 @@ const zeroState = {
         'Arriving at one goal is the starting point to another.',
         'Believe that you can.',
         'Be like water.',
+        'Breathe out what you can’t control. — Focus.',
+        'Clarity affords focus.',
         'Deserve your dream.',
         'Do one thing every day that scares you.',
         'Do something wonderful, people will imitate you.',
@@ -82,6 +84,10 @@ const zeroState = {
         'Don’t think, just do.',
         'Either you run the day, or the day runs you.',
         'Expect problems and eat them for breakfast.',
+        'Focus.',
+        'Focus is your greatest asset',
+        'Focus on one thing, and one thing only.',
+        'Focus on your goals; ignore the rest.',
         'Fortune sides with him who dares.',
         'Frustration is a prerequisite of satisfaction.',
         'Get started to get ahead.',
@@ -91,6 +97,7 @@ const zeroState = {
         'Great things come to those who don’t wait.',
         'Harder. Better. Faster. Stronger.',
         'Hope.',
+        'I am speed!',
         'I find that the harder I work, the more luck I seem to have.',
         'If you are going through hell, keep going.',
         'If you can dream it, you can do it.',
@@ -103,9 +110,12 @@ const zeroState = {
         'Life begins at the end of your comfort zone.',
         'Love what you do; do what you love.',
         'Make it happen.',
+        'Make the “now” the primary focus of your life.',
         'May the force be with you.',
         'May the source be with you.',
         'Have a mind like water.',
+        'Make a plan; stick to the plan; always deliver.',
+        'Manage your distractions; don’t let them manage you.',
         'Motivation is what gets you started. Habit is what keeps you going.',
         'Never complain, never explain.',
         'Never, never, never give up.',
@@ -154,7 +164,8 @@ const zeroState = {
         'You must expect great things of yourself before you can do them.',
         'You were born to do this.',
         'You will never win if you never begin.',
-        'You will succeed because most people are lazy.'
+        'You will succeed because most people are lazy.',
+        'Your focus determines your reality.'
     ] )
 
     // #endregion

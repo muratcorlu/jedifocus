@@ -42,6 +42,8 @@ const BaseColumn = ( { modalId, heading, descriptions, className, headingClassNa
                 .map( ( key ) =>
                     ( <CardContainer key={key} description={descriptions[key]} id={key} column={column} /> )
                 ) }
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
         </div>
 
         <div>{children}</div>

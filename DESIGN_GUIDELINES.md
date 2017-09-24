@@ -34,16 +34,20 @@ So if a goal needs some kind of documentation after being done; or if you need t
 
 > The time log of done items is better out of sight and out of mind.
 
-If you have too many cards; you probably have too much on your plate and you need to discipline yourself.
- 
-The best way to do it is to move some of your items that you cannot timely to the backlog.
+If you have too many cards; you have too much on your plate. So instead of torturing yourself, move some to **backlog**.
 
 ## Simplicity Above Everything
 
-When adding a feature we’ll always make a risk/benefit analysis. — No feature will be added unless it is absolutely necessary **and** simplifies the workflow.
+When adding a feature we’ll always make a risk/benefit analysis. 
+
+No feature will be added unless it is absolutely necessary **and** simplifies the workflow.
 
 So…
 
+* At all times, there should be a **single way** of doing things. — This is one of the cardinal **JediFocus** UX rules: Provide only one way to edit a card; provide only a single way to move a card. — This will both help the UI keep clutter-free, and also help the code easier to test, robust, and bug-free.
+* No visual clutter: No fancy backgrounds, no excessive animations, the focus should be on the cards, and on the cards only. There can be some animations “within reason”, and of course some use of color, but the overall theme is a “zen-like” **simplicity**.
+* No popopver menu items on the cards. — The cards are what they are: Cards, that the user reads. — There is only a single way to interact with them and that is by tapping on them. 
+* No tags, labels, color codes… — You are not a librarian; you don’t need a taxonomical categorization of goals. Categorizing and sorting your goals gives you a false sense of satisfaction; however you are just slacking while appearing to look productive. — The system is dead simple: If you are working on something, work on it; if not, either move it to backlog or move it to a different column.
 * No attachment and multimedia support. — You can always upload your supporting media to somewhere like **Dropbox**, and add a reference link to your goal. — **JediFocus** focuses on goal tracking; **not** asset management.
 * No pagination. — If you have too many goals in your plate that you need to paginate; then you have a bigger problem than pagination. — **JediFocus** will only list a certain reasonable subset of your goals.
 * No drag and drop interaction for the cards — There are three columns; and you can simply move the card the the next column with the tap of a button. Dragging is much more time-consuming than just tapping a button. Besides, when you move a card to the next column, it moves to the top of the colum by design; and it does not look natural when you try to drag the card in the middle and it does not obey you and bounces to top.
