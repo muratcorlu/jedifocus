@@ -256,7 +256,7 @@ When you switch to a context, you only see the cards that belong to that context
 
 Goals are the **cards** that you create by tapping the “*add new*” button.
 
-## Your Goals are Sorted Automagically
+### Your Goals are Sorted Automagically
 
 **JediFocus** goals auto-sort themselves.
 
