@@ -10,7 +10,7 @@ _)_/LI   There is no try.
 
 ## Why?
 
-**JediFocus** gives you a straightforward and **opinionated** way to manage your goals. 
+**JediFocus** gives you a simple and **opinionated** way to manage your goals. 
 
 ## Try **JediFocus** Online
 
