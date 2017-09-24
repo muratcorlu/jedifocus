@@ -243,18 +243,6 @@ By design, **JediFocus** only allows the above-listed contexts; you cannot renam
 On a similar note, you cannot define additional columns, or you cannot change the name of a column.
 
 This is one of the **opinionated** design decisions that **JediFocus** has. It was a rather hard, yet necessary, decision to make.
- 
-### About “Best Intentions”
-
-When you create a new goal, it is inserted into this “Best Intentions” column, by default.
-
-### What is a “Goal”?
-
-Goals are the **cards** that you create by tapping the “*add new*” button.
-
-### About “To Do”
-
-“**To Do**” is the column that you put your goals that you plan to work on soon.
 
 ### The “Context” Button
 
@@ -263,6 +251,10 @@ It is the button you use to… well… switch to a different context.
 Contexts are “buckets” that you can put your goals in.
 
 When you switch to a context, you only see the cards that belong to that context.
+
+### What is a “Goal”?
+
+Goals are the **cards** that you create by tapping the “*add new*” button.
 
 ## Your Goals are Sorted Automagically
 
