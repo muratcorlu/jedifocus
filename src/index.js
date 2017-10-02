@@ -30,8 +30,6 @@ delete config.fbUserId;
 
 import AppContainer from './containers/app/AppContainer';
 
-import './lib/ux/fonts';
-
 on( document.body, 'mouseup', ( evt ) => {
     const parentModal = parent(
         evt.target,

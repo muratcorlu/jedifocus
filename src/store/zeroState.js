@@ -65,7 +65,7 @@ const zeroState = {
     quotes: makeImmutable( [
         'A goal is a dream with a deadline.',
         'A will finds a way.',
-        'Action is the foundational key to all success',
+        'Action is the foundational key to all success.',
         'All our dreams can come true if we have the courage to pursue them.',
         'All progress takes place outside the comfort zone.',
         'Arriving at one goal is the starting point to another.',
@@ -85,7 +85,7 @@ const zeroState = {
         'Either you run the day, or the day runs you.',
         'Expect problems and eat them for breakfast.',
         'Focus.',
-        'Focus is your greatest asset',
+        'Focus is your greatest asset.',
         'Focus on one thing, and one thing only.',
         'Focus on your goals; ignore the rest.',
         'Fortune sides with him who dares.',

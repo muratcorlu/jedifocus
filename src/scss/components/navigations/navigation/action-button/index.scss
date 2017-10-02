@@ -26,14 +26,14 @@
         transform: translateZ(0);
 
         opacity: 0.85;
-        background: $orange;
-        color: $white;
+        background: $white; // $orange;
+        color: $orange; // $white;
 
         text-decoration: none;
 
         &:hover {
-            background-color: $white;
-            color: $orange;
+            background-color: $orange; // $white;
+            color: $white; // $orange;
             opacity: 1;
         }
     }

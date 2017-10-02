@@ -14,11 +14,13 @@
 
 .column__heading {
     min-width: 200px;
-    height: 25px;
+    height: 18px;
     opacity: 1;
     will-change: opacity;
     color: $black;
     cursor: default;
+
+    line-height: 18px;
 
     // &--best-intentions { background: darken($blue, 20%); }
     // &--best-intentions-selected { background: darken($blue, 20%); }
@@ -31,13 +33,15 @@
 
     &--dimmed {
         color: $black;
-        height: 25px;
+        height: 18px;
+        line-height: 18px;
         opacity: 0.15;
     }
 
     &--selected {
         color: $black;
-        height: 25px;
+        height: 18px;
+        line-height: 18px;
         opacity: 1;
         box-shadow: $defaultBoxShadow;
     }

@@ -54,14 +54,19 @@ $cardLinkBorderWidth: 2px;
 $cardLinkHoverBorderWidth: 2px;
 
 // Fonts:
-$baseFontItalic: "Georgia Pro It";
-$baseFontLightItalic: "Georgia Pro Lt It";
-$baseFontBoldItalic: "Georgia Pro Bd It";
-$baseFont: "Georgia Pro Reg";
-$baseFontBold: "Georgia Pro Bd";
-$baseFallbackFont: Georgia, "Noto Serif", "Liberation Serif", "Dejavu Serif", "Times New Roman", Times, serif;
-$monotypeFont: "Input Mono Cond Reg";
-$monotypeFallbackFont: "OperatorMono-Book", "Operator Mono Book", "Menlo", "Monaco", "Meslo", "Courier New", "Courier", "Liberation Mono", monospace;
+$baseFont: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+$monotypeFont: Monaco, Courier, monospace;
+
+//
+//
+// $baseFontItalic: "Georgia Pro It";
+// $baseFontLightItalic: "Georgia Pro Lt It";
+// $baseFontBoldItalic: "Georgia Pro Bd It";
+// $baseFont: "Georgia Pro Reg";
+// $baseFontBold: "Georgia Pro Bd";
+// $baseFallbackFont: Georgia, "Noto Serif", "Liberation Serif", "Dejavu Serif", "Times New Roman", Times, serif;
+// $monotypeFont: "Input Mono Cond Reg";
+// $monotypeFallbackFont: "OperatorMono-Book", "Operator Mono Book", "Menlo", "Monaco", "Meslo", "Courier New", "Courier", "Liberation Mono", monospace;
 
 // Font sizes:
 $largerFontSize: 24px;

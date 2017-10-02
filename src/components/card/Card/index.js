@@ -26,7 +26,8 @@ import {
 showdown.setFlavor( 'github' );
 
 const converter = new showdown.Converter( {
-    openLinksInNewWindow: true
+    openLinksInNewWindow: true,
+    ghMentions: false
 } );
 
 const onCardClick = ( evt, column, id, editCard ) => {

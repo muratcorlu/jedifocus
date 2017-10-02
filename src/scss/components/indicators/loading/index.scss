@@ -14,12 +14,14 @@
 
 .loading {
     margin: 0;
-    padding: 22px 32px 12px 32px;
+
+    height: 42px;
+    line-height: 42px;
 
     width: 100vw;
     position: fixed;
-    right: -32px;
-    top: -9px;
+    left: 0;
+    top: 0;
 
     z-index: 9999;
 
