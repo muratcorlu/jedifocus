@@ -57,24 +57,13 @@ $cardLinkHoverBorderWidth: 2px;
 $baseFont: Palatino, "Palatino Linotype", "Book Antiqua", serif;
 $monotypeFont: Monaco, Courier, monospace;
 
-//
-//
-// $baseFontItalic: "Georgia Pro It";
-// $baseFontLightItalic: "Georgia Pro Lt It";
-// $baseFontBoldItalic: "Georgia Pro Bd It";
-// $baseFont: "Georgia Pro Reg";
-// $baseFontBold: "Georgia Pro Bd";
-// $baseFallbackFont: Georgia, "Noto Serif", "Liberation Serif", "Dejavu Serif", "Times New Roman", Times, serif;
-// $monotypeFont: "Input Mono Cond Reg";
-// $monotypeFallbackFont: "OperatorMono-Book", "Operator Mono Book", "Menlo", "Monaco", "Meslo", "Courier New", "Courier", "Liberation Mono", monospace;
-
 // Font sizes:
 $largerFontSize: 24px;
 $buttonFontSize: 18px;
 $largeFontSize: 18px;
-$defaultFontSize: 16px;
-$smallerFontSize: 14px;
-$smallestFontSize: 12px;
+$defaultFontSize: 18px;
+$smallerFontSize: 16px;
+$smallestFontSize: 14px;
 
 // Important Dimensions:
 $buttonHeight: 32px;
@@ -82,7 +71,7 @@ $buttonBorderRadius: 30px;
 $minCardWidth: 280px;
 
 // All boxes have this shadow:
-$defaultBoxShadow: none; // 2px 2px 4px 2px rgba(0, 0, 0, 0.26);
+$defaultBoxShadow: none;
 
 // Transitions:
 $defaultTransition: all 0.25s ease-in-out;

@@ -17,14 +17,11 @@ body {
     font-size: $defaultFontSize;
     font-family: $baseFont;
     
-    //-webkit-font-smoothing: subpixel-antialiased;
-    //-webkit-font-smoothing: antialiased;
-    //-moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 
-    a { text-decoration: none; }
+    a {text-decoration: none;}
 
-    img { vertical-align: middle; }
+    img {vertical-align: middle;}
 
     p { 
         margin-bottom: 1.2 * $defaultFontSize;
@@ -33,9 +30,7 @@ body {
 }
 
 .loading {
-    font-size:  $largeFontSize + 2px;    
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
+    font-size: $largeFontSize + 2px;    
     font-style: normal;
     text-align: center;
 }
@@ -56,12 +51,13 @@ blockquote {
 
 pre, code {
     font-family: $monotypeFont;
-    font-size: 14px; // $smallerFontSize;
+    font-size: 16px;
 }
     
 .modal-edit { 
     &__action-button {
         font-size: $buttonFontSize;
+        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
     }
 
     &__label {
@@ -73,14 +69,12 @@ pre, code {
     &__heading-label {
         font-weight: normal;
         font-style: normal;
-        // -webkit-font-smoothing: antialiased;
-        // -moz-osx-font-smoothing: grayscale;
     }
 
     &__description {
         font-family: $monotypeFont;
         line-height: 1.5 * ( $defaultFontSize - 2px);
-        font-size: 14px; // $defaultFontSize - 2px;
+        font-size: 14px;
     }
 
     &__selection {
@@ -90,6 +84,40 @@ pre, code {
         font-style: normal;
         font-weight: normal;
     }
+
+    &__login-teaser {
+        font-size: 18px;
+        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+        line-height: 27px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 35px;
+    }
+
+    &__login-input-wrap {
+        margin: 0;
+        padding: 0;
+        width: 404px;
+        float: left;
+    }
+
+    &__login-action-wrap {
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        width: 210px;
+        float: right;
+    }
+
+    &__login-input {
+        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+        width: 350px;
+        margin-left: 30px;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        border: 1px #BABFC3 solid;
+    }
 }
 
 .action-button {
@@ -98,60 +126,42 @@ pre, code {
     font-style: normal;
     line-height: $buttonHeight;
     text-decoration: none;
-    // letter-spacing: 1px;
-
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
 }
 
 .context-selection {
     font-size: $buttonFontSize;
     font-weight: normal;
     font-style: normal;
-    // letter-spacing: 1px;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
 }
 
 .navigation__action-button {
     font-weight: normal;
     font-style: normal;
-    // letter-spacing: 1px;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
 }
 
 .column__heading, .column__heading--dimmed, .column__heading--selected {
-    font-size: $largeFontSize + 2px;
-    // letter-spacing: 1px;
+    font-size: $largeFontSize + 4px;
     font-style: normal;
     font-weight: normal;
     text-align: center;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
+    font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
 }
 
 .context-listing__link--default, .context-listing__link--selected {
     font-weight: normal;
     font-style: normal;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
 }
 
 .card {
     &__text {
         h1, h2, h3, h4, h5, h6 {
-            // margin: 0 0 16px 0;
             margin-bottom: 1.2 * $defaultFontSize;
             margin-top: 1.2 * $defaultFontSize;
-
-            // padding: 0;
             font-size: $defaultFontSize;
             text-align: left;
-
             padding: 0;
         }
     }
 }
-.card-controls { text-align: right; }
-.card-link { text-decoration: none; }
+.card-controls {text-align: right;}
+.card-link {text-decoration: none;}

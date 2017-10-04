@@ -14,10 +14,6 @@
 
 .column {
     overflow: auto;
-
-    &:hover {
-        .column__heading {  }
-    }
 }
 
 @import "./body/index.scss";

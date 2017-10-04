@@ -83,19 +83,20 @@ class AppContainer extends Component {
 }
 
 AppContainer.propTypes = {
-    config: PropTypes.object.isRequired,
-    email: PropTypes.string.isRequired,
-    password: PropTypes.string.isRequired,
-    fetchAppState: PropTypes.func.isRequired,
-    appStateFetched: PropTypes.bool.isRequired,
     appRandomQuote: PropTypes.string.isRequired,
-    userId: PropTypes.string.isRequired,
-    context: PropTypes.string.isRequired
+    appStateFetched: PropTypes.bool.isRequired,
+    config: PropTypes.object.isRequired,
+    context: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    fetchAppState: PropTypes.func.isRequired,
+    loggedIn: PropTypes.bool.isRequired,
+    password: PropTypes.string.isRequired,
+    userId: PropTypes.string.isRequired
 };
 
 const ConnectedAppContainer = connect(
     AppContainer, actions,
-    ( { appStateFetched, appRandomQuote, userId, context, loggedIn } ) => 
+    ( { appStateFetched, appRandomQuote, userId, context, loggedIn } ) =>
         ( { appStateFetched, appRandomQuote, userId, context, loggedIn } )
 );
 

@@ -18,17 +18,15 @@
             display: block;
 
             background: $orange;
-            color: $white;
-            border-bottom: 2px $orange solid;
+            color: $trueWhite;
             box-shadow: none;
 
-            transition: $defaultTransition;
-            will-change: color, background;
+            font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+            font-size: 20px;
 
             text-align: center;
             border-radius: 18px;
             padding: 5px;
-            padding-top: 7px;
 
             cursor: default;
         }

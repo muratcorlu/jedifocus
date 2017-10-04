@@ -15,100 +15,18 @@
 .card {
     min-height: 64px;
 
+    a {
+        color: #2455C3;
+        padding: $cardLinkPadding;
 
-    &--focused .card__text {
+        border-bottom: $cardLinkBorderWidth transparent solid;
+        padding: $cardLinkPadding;
+        
         transition: $defaultTransition;
-        will-change: border-right;
+        will-change: border-bottom;
 
-        // min-height: 54px;
-
-        padding: 0; // 5px 5px 5px 10px;
-     //   padding-bottom: 10px;
-
-     //   margin-bottom: 10px;
-       
-     // min-height: 75px;
-
-//	margin-top: 10px;
-//	margin-bottom: 10px;
-
-
-        border-left: $cardSideMarkerBorderWidth transparent solid;
-
-        a {
-            color: #2455C3;
-            padding: $cardLinkPadding;
-            transition: $defaultTransition;
-            will-change: color, border-bottom;
-        }
+        &:hover {border-bottom: $cardLinkHoverBorderWidth #2455C3 solid;}
     }
 
-    &--blurred .card__text {
-        transition: $defaultTransition;
-        will-change: border-right;
-
-        padding: 0; // 5px 5px 5px 10px;
-        // padding-bottom: 10px;
-
-        // margin-bottom: 10px;
-        // min-height: 75px;
-
-	// margin-top: 20px;
-	// margin-bottom: 20px;
-
-
-        border-left: $cardSideMarkerBorderWidth transparent solid;
-
-        a {
-            color: #2455C3;
-            padding: $cardLinkPadding;
-            transition: $defaultTransition;
-            will-change: color, border-bottom;
-
-            &:hover {
-                transition: $defaultTransition;
-                will-change: color, border-bottom;
-                background: $cardLinkHoverBackgroundColor;
-                color: $cardLinkHoverColor;
-                border-bottom: $cardLinkHoverBorderWidth $cardLinkHoverBorderColor solid;
-            }
-        }
-    }
-
-    &--default .card__text {
-        transition: $defaultTransition;
-        will-change: border-right;
-
-        padding: 0; // 5px 5px 5px 10px;
-       // padding-bottom: 10px;
-
-    //    margin-bottom: 10px;
-   //     min-height: 75px;
-
-//	margin-top: 20px;
-//	margin-bottom: 20px;
-
-        border-left: $cardSideMarkerBorderWidth transparent solid;
-
-        a {
-            color: #2455C3;
-            border-bottom: $cardLinkBorderWidth transparent solid;
-            padding: $cardLinkPadding;
-            transition: $defaultTransition;
-            will-change: color, border-bottom;
-
-            &:hover {
-                transition: $defaultTransition;
-                will-change: color, border-bottom;
-                border-bottom: $cardLinkHoverBorderWidth #2455C3 solid;
-            }
-        }
-    }
-
-    &--default .card__text:hover {
-        transition: $defaultTransition;
-        will-change: border-left;
-
-        border-left: $cardSideMarkerBorderWidth transparent solid;
-    }
+    &__text {padding: 0;}
 }

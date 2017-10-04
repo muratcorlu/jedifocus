@@ -15,12 +15,12 @@
 .card {
     &--focused {
         opacity: 1;
-        transition: $defaultTransition;
         box-shadow: 0 0 2px 1px $blue;
-	// box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
 
         background: $trueWhite;
         cursor: default;
+        
+        // To disable the hover effect:
         pointer-events: none;
 
         a {cursor: default;}

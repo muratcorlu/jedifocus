@@ -14,20 +14,13 @@
 
 .card {
     &--default {
-        transition: $defaultTransition;
-
-        background: darken(#FFFFFF, 5%);
-        // box-shadow: $defaultBoxShadow;
-        opacity: 1; // 0.85;
-        // opacity: 0.85;
-        will-change: opacity, background;
-
-
+        background: darken($trueWhite, 5%);
+       
+        transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out; 
+        will-change: background, box-shadow;
+   
         &:hover {
-            // border: 1px $blue solid;
-            opacity: 1;
-            will-change: opacity, background;
-            transition: $defaultTransition;
+            box-shadow: 0 10px 10px -10px rgba(0, 0, 0, .4);
             background: $trueWhite;
         }
     }

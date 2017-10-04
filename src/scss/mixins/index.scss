@@ -32,3 +32,17 @@
     background: darken(#E3E5E6, 10%);
     background: linear-gradient(to bottom, darken(#E3E5E6, 10%), darken(#D3D6D9, 10%));
 }
+
+@mixin cantTouchThis() {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -xkhtml-user-select: none; 
+    -xmoz-user-select: none; 
+    -xms-user-select: none; 
+    user-select: none;
+}
+
+@mixin bodyBackground() {
+    background: #DFE1E3;
+    background: linear-gradient(to bottom, darken(#E8E9E6, 0%), darken(#DFE1E3, 0%));
+}

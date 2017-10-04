@@ -13,8 +13,8 @@
  */
 
 .context-selection {
-    color: $orange; // $white;
-    background: $white; // $orange;
+    color: $orange;
+    background: $white;
 
     cursor: pointer;
 
@@ -23,7 +23,7 @@
     padding: 5px 20px 5px 17px;
 
     position: fixed;
-    right: -20px;
+    right: -15px;
     bottom: 35px;
 
     opacity: 0.85;
@@ -32,13 +32,15 @@
     transition: $defaultTransition;
     will-change: background, color, opacity, box-shadow;
 
+    font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    font-size: 20px;
+    background: $trueWhite;
+
     &:hover {
-        background: $orange; // $white;
-        color: $white; // $orange;
+        background: $orange;
+        color: $trueWhite;
         opacity: 1;
         box-shadow: none;
-        transition: $defaultTransition;
-        will-change: background, color, opacity, box-shadow;
     }
 
     &__context-name { padding-right: 8px; line-height: 32px; }

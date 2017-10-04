@@ -13,29 +13,14 @@
  */
 
 body {
-    background: #DFE1E3;
-    background: linear-gradient(to bottom, darken(#E8E9E6, 0%), darken(#DFE1E3, 0%));
-
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -xkhtml-user-select: none; 
-    -xmoz-user-select: none; 
-    -xms-user-select: none; 
-    user-select: none; 
+    @include bodyBackground;
+    @include cantTouchThis;
 }
 
-h2 {
-    margin-bottom: 24px;
-    padding: 12px;
-    transition: $defaultTransition;
-}
+h2 {margin-bottom: 24px; padding: 12px;}
 
 input:focus, textarea:focus, select:focus, a:focus {
     outline: none;
-}
-
-a:focus {
-    box-shadow: 0 0 2px 1px $blue;
 }
 
 textarea:focus {
@@ -43,9 +28,11 @@ textarea:focus {
     background: $trueWhite;
 }
 
-select:focus {
-    box-shadow: 0 0 2px 1px $blue;
-}
+textarea {resize: none;}
+
+a:focus {box-shadow: 0 0 2px 1px $blue;}
+
+select:focus {box-shadow: 0 0 2px 1px $blue;}
 
 ul {
     margin-bottom: 16px;
@@ -62,13 +49,9 @@ a {
     text-decoration: none;
 }
 
-img { vertical-align: middle; }
-
-textarea { resize: none; }
+img {vertical-align: middle;}
 
 blockquote {
-    transition: $defaultTransition;
-
     background: $quoteBackground;
     border-left: $quoteBorderWidth $quoteBorderColor solid;
     color: $quoteColor;
@@ -103,32 +86,24 @@ code {
 }
 
 .no-pointer { pointer-events: none; }
-.faded {
-    transition: $defaultTransition;
-    will-change: opacity;
-    opacity: 0.35;
-}
 
-.hidden {
-    display: none;
-}
+.faded {opacity: 0.35;}
+
+.hidden {display: none;}
 
 .topHeaderBackground {
+    font-size: 22px;
+    font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    text-align: center;
     position: fixed;
     width: 100%;
     height: 42px;
+    line-height: 42px;
     background: #E3E5E6;
     background: linear-gradient(to bottom, #E3E5E6, #D3D6D9);
     top: 0;
     left: 0;
     z-index: -1;
-    // opacity: 0.85;
-    // opacity: 0.65;
-    // box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
-
-    // box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
-    // border-bottom: 1px solid  darken(#D3D6D9, 12%);
-
     box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .6);
 }
 
@@ -136,17 +111,23 @@ code {
     // for hide until mvp:
     visibility: hidden;
 
-	width: 210px;
+    width: 210px;
     position: fixed;
     bottom: 34px;
     left: 10px;
     padding: 10px;
-    background: #ffffff;
+    background: #FFFFFF;
     text-align: center;
-    // box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
-
-    // box-shadow: 0 1px 1px rgba(0, 0, 0, .25);
-    // border-bottom: 1px solid darken(#E8E9E6, 10%);
     
     box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .6);
+}
+
+.loginBackground {
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    opacity: 0.35;
+    z-index: -2;
 }
