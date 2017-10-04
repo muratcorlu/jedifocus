@@ -14,42 +14,25 @@
 
 .column__heading {
     min-width: 200px;
+    
     height: 18px;
-    opacity: 1;
-    will-change: opacity;
+    line-height: 18px;
+    
     color: $black;
     cursor: default;
 
-    line-height: 18px;
-
-    // &--best-intentions { background: darken($blue, 20%); }
-    // &--best-intentions-selected { background: darken($blue, 20%); }
-    // &--to-do { background: darken($blue, 10%); }
-    // &--to-do-selected { background: darken($blue, 10%); }
-    // &--in-progress { background: $blue; }
-    // &--in-progress-selected { background: $blue; }
-    // &--done { background: $teal; }
-    // &--done-selected { background: $teal; }
+    transition: $defaultTransition;
+    opacity: 1;
+    will-change: opacity;
 
     &--dimmed {
         color: $black;
-        height: 18px;
-        line-height: 18px;
         opacity: 0.15;
     }
 
     &--selected {
         color: $black;
-        height: 18px;
-        line-height: 18px;
         opacity: 1;
         box-shadow: $defaultBoxShadow;
     }
-}
-
-.no-pointer {
-  .column__heading {
-    transition: $defaultTransition;
-    opacity: 0.15;
-  }
 }

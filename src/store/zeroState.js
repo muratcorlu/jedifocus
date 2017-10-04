@@ -18,7 +18,7 @@ const zeroState = {
 
     // #region Authentication
 
-    loggedIn: true, // false, // false, // false, // true, // false, // true, // false, //false, // false, // false, // true, // false, // true, // false,
+    loggedIn: true,
 
     // #endregion
 

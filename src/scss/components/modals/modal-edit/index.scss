@@ -24,24 +24,18 @@
     height: 362px;
     width: 624px;
 
-    background: darken(#E3E5E6, 5%); // background: $modalEditBackground;
-    // box-shadow: $defaultBoxShadow;
-    
+    background: darken(#E3E5E6, 5%);
     box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
-
     
     border-radius: 1px;
-    
-    // opacity: 0.95;
 
     transition: $modalFadeTransition;
-    will-change: opacity, top, left;
+    will-change: opacity;
 
-    &--faded {
-        transition: $modalFadeTransition;
-        will-change: opacity;
+    &--faded {opacity: 0;}
 
-        opacity: 0;
+    &__login {
+        height: 210px;
     }
 }
 

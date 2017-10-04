@@ -96,3 +96,5 @@ public/js/
 # This is a derived work; and the original work’s license does not allow me to
 # publicly share it. So I’m keeping it out of source control
 public/images/desk\.jpg
+
+*.vim

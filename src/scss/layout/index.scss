@@ -24,7 +24,7 @@
 .column {
     flex-basis: 33%;
 
-    &__done { display: none; }
+    &__done {display: none;}
 }
 
 .column__body {
@@ -38,38 +38,11 @@
     padding: 16px;
 }
 
-body {
-    overflow: hidden;
-}
+body {overflow: hidden;}
 
 @media (max-width: 1250px) {
-    body {
-        overflow: auto;
-    }
-
-    .container {
-        // flex-wrap: wrap;
-        // flex-direction: column-reverse;
-        // min-width: 1190px;
-    }
-
-    .column {
-        // flex-basis: 100%;
-    }
-
-    .column__body {
-        // max-height: none;
-    }
-
-    .card {
-        // max-width: 550px;
-        // margin: 10px auto;
-    }
-
-    .topHeaderBackground {
-        // display: none;
-    }
+    body {overflow: auto;}
 }
 
-.pull-right { float: right; }
-.pull-left { float: left; }
+.pull-right {float: right;}
+.pull-left {float: left;}

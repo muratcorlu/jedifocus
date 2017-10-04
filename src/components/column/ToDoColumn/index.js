@@ -35,7 +35,8 @@ const ToDo = ( { descriptions, modalId, modalColumn } ) => (
         column="toDo"
         heading="To Do"
         className="column__to-do"
-        headingClassName={`column__heading${classModifier( modalColumn )} ${progressClassName( modalColumn )}`}
+        headingClassName={`column__heading column__heading${
+            classModifier( modalColumn )} ${progressClassName( modalColumn )}`}
         descriptions={descriptions}
         modalId={modalId}
     />

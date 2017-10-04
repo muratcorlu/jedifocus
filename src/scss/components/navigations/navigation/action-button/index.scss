@@ -25,16 +25,19 @@
 
         transform: translateZ(0);
 
-        opacity: 0.85;
-        background: $white; // $orange;
-        color: $orange; // $white;
+        background: $trueWhite;
+        color: $orange;
 
         text-decoration: none;
 
+        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+
+        transition: $defaultTransition;
+        will-change: color, background-color;
+
         &:hover {
-            background-color: $orange; // $white;
-            color: $white; // $orange;
-            opacity: 1;
+            background-color: $orange;
+            color: $trueWhite;
         }
     }
 }

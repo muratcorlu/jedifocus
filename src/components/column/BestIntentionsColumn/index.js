@@ -30,12 +30,15 @@ const classModifier = ( modalColumn ) => {
     return modalColumn === COLUMN_NAME ? '--selected' : '--dimmed';
 };
 
+const headingClassName = ( modalColumn ) => `column__heading column__heading${classModifier( modalColumn )}` +
+    `${progressClassName( modalColumn )}`;
+
 const BestIntentions = ( { descriptions, modalId, modalColumn } ) => (
     <BaseColumn
         column={COLUMN_NAME}
         heading="Best Intentions"
         className="column__best-intentions"
-        headingClassName={`column__heading${classModifier( modalColumn )} ${progressClassName( modalColumn )}`}
+        headingClassName={headingClassName( modalColumn )}
         descriptions={descriptions}
         modalId={modalId}
     />

@@ -12,5 +12,12 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+.context-listing {
+    &__link {
+        transition: $defaultTransition;
+        will-change: color, background;
+    }
+}
+
 @import './default/index.scss';
 @import './selected/index.scss';

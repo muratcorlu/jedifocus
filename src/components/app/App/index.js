@@ -28,34 +28,28 @@ import LoginModal from '../../../components/login/LoginModal';
 
 const App = ( { loggedIn, appStateFetched, appRandomQuote } ) => (
     loggedIn ?
-    <div className={`container ${appStateFetched ? 'container--fetched' : 'no-pointer'}`}>
-        <LoadingIndicator show={!appStateFetched} text={appRandomQuote} />
-        <CardEditModalContainer />
-        <ContextChangeModalContainer />
-        <BestIntentionsContainer />
-        <ToDoContainer />
-        <InProgressContainer />
-        <DoneContainer />
-        <NavigationContainer />
-        <div className="topHeaderBackground"></div>
-        <div className="bottomUndoNotification">
-            <span>Done and dusted!</span>
-            <strong>UNDO</strong>
-            <span>✕</span>
-        </div>
-    </div> :
-    <div className="container">
-        <LoginModal />
-        <div className="topHeaderBackground" style={{textAlign:'center', fontSize: '24px', fontFamily: 'xGeorgia Pro Lt It', fontWeight: 'inherit',  fontStyle: 'xitalic'}}><span style={{position: 'relative', top: '11px'}}>{appRandomQuote}</span></div>
+        <div className={`container ${appStateFetched ? 'container--fetched' : 'no-pointer'}`}>
+            <LoadingIndicator show={!appStateFetched} text={appRandomQuote} />
+            <CardEditModalContainer />
+            <ContextChangeModalContainer />
+            <BestIntentionsContainer />
+            <ToDoContainer />
+            <InProgressContainer />
+            <DoneContainer />
+            <NavigationContainer />
+            <div className="topHeaderBackground"></div>
+            <div className="bottomUndoNotification">
+                <span>Done and dusted!</span>
+                <strong>UNDO</strong>
+                <span>✕</span>
+            </div>
+        </div> :
+        <div className="container">
+            <LoginModal />
+            <div className="topHeaderBackground">{appRandomQuote}</div>
 
-                <img 
-            src="/images/desk.jpg" xwidth="500"
-            style={{zIndex: '-2', position: 'fixed', filter: 'xblur(15px)', top: '50px', left: '0', opacity: '0.35', 
-                width: '100vw', height: 'auto', 
-                
-            }}
-        />
-    </div>
+            <img src="/images/desk.jpg" className="loginBackground" />
+        </div>
 );
 
 App.propTypes = {

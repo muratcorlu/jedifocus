@@ -18,25 +18,20 @@
             display: block;
 
             padding: 5px;
-            padding-top: 7px;
-            border-bottom: 2px transparent solid;
 
             color: $black;
             text-decoration: none;
             background: $white;
-            // box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
             text-align: center;
             border-radius: 18px;
 
-            transition: $defaultTransition;
-            will-change: color, background;
+            font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+            background: $trueWhite;
+            font-size: 20px;
 
             &:hover {
                 background: $orange;
-                color: $white;
-                transition: $defaultTransition;
-                border-bottom: 2px $orange solid;
-                will-change: color, background;
+                color: $trueWhite;
                 box-shadow: none;
             }
         }

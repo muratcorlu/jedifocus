@@ -12,7 +12,7 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.navigation { position: absolute; z-index: 9999; }
+.navigation {transition: $defaultTransition; position: absolute; z-index: 9999;}
 
 @import "./action-button/index.scss";
 @import "./context-selection/index.scss";

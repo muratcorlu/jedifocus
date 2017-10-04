@@ -21,7 +21,8 @@ const ContextListing = ( { value, onChange, className } ) => (
                 <ul>
                     <li className="context-listing__sub-item">
                         <a href="#" className={value === 'runway' ?
-                            'context-listing__link--selected' : 'context-listing__link--default'}
+                            'context-listing__link context-listing__link--selected' :
+                            'context-listing__link context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
                             if ( value === 'runway' ) { return; }
@@ -31,7 +32,8 @@ const ContextListing = ( { value, onChange, className } ) => (
 
                     <li className="context-listing__sub-item">
                         <a href="#" className={value === 'low-hanging-fruits' ?
-                            'context-listing__link--selected' : 'context-listing__link--default'}
+                            'context-listing__link context-listing__link--selected' :
+                            'context-listing__link context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
                             if ( value === 'low-hanging-fruits' ) { return; }
@@ -41,7 +43,8 @@ const ContextListing = ( { value, onChange, className } ) => (
 
                     <li className="context-listing__sub-item">
                         <a href="#" className={value === 'errands' ?
-                            'context-listing__link--selected' : 'context-listing__link--default'}
+                            'context-listing__link context-listing__link--selected' :
+                            'context-listing__link context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
                             if ( value === 'errands' ) { return; }
@@ -51,7 +54,8 @@ const ContextListing = ( { value, onChange, className } ) => (
 
                     <li className="context-listing__sub-item">
                         <a href="#" className={value === 'backlog' ?
-                            'context-listing__link--selected' : 'context-listing__link--default'}
+                            'context-listing__link context-listing__link--selected' :
+                            'context-listing__link context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
                             if ( value === 'backlog' ) { return; }
@@ -64,7 +68,8 @@ const ContextListing = ( { value, onChange, className } ) => (
                 <ul>
                     <li className="context-listing__sub-item">
                         <a href="#" className={value === 'revisit' ?
-                            'context-listing__link--selected' : 'context-listing__link--default'}
+                            'context-listing__link context-listing__link--selected' :
+                            'context-listing__link context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
                             if ( value === 'revisit' ) { return; }
@@ -74,7 +79,8 @@ const ContextListing = ( { value, onChange, className } ) => (
 
                     <li className="context-listing__sub-item">
                         <a href="#" className={value === 'later' ?
-                            'context-listing__link--selected' : 'context-listing__link--default'}
+                            'context-listing__link context-listing__link--selected' :
+                            'context-listing__link context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
                             if ( value === 'later' ) { return; }
@@ -84,7 +90,8 @@ const ContextListing = ( { value, onChange, className } ) => (
 
                     <li className="context-listing__sub-item">
                         <a href="#" className={value === 'ice-box' ?
-                            'context-listing__link--selected' : 'context-listing__link--default'}
+                            'context-listing__link context-listing__link--selected' :
+                            'context-listing__link context-listing__link--default'}
                         onClick={( evt ) => {
                             evt.stopPropagation();
                             if ( value === 'ice-box' ) { return; }
@@ -95,7 +102,8 @@ const ContextListing = ( { value, onChange, className } ) => (
                     {value === 'demo' ?
                         <li className="context-listing__sub-item">
                             <a href="#" className={value === 'demo' ?
-                                'context-listing__link--selected' : 'context-listing__link--default'}
+                                'context-listing__link context-listing__link--selected' :
+                                'context-listing__link context-listing__link--default'}
                             onClick={( evt ) => evt.stopPropagation()}
                             >Demo</a>
                         </li> :
