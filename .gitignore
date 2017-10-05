@@ -98,3 +98,5 @@ public/js/
 public/images/desk\.jpg
 
 *.vim
+
+\.undodir/

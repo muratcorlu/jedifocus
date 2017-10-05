@@ -16,7 +16,24 @@ body {
     line-height: 1.5 * $defaultFontSize;
     font-size: $defaultFontSize;
     font-family: $baseFont;
-    
+
+    // These two declerations below are the best way to ensure that fonts are 
+    // rendered identically between Firefox, Safari, and Chrome on OSX Retina 
+    // and OSX Thunderbolt.
+    //
+    // I am not sure about windows, however it should not be that bad either.
+    //
+    // I tried `antialiased` but it was marginally less readable for the body text.
+    // So using subpixel antialiasing (and greyscale for Mozilla) which is better
+    // especially if you have dark text on light background a lot.
+    //
+    // I will apply grayscale/antialiased text to select few heading and buttons where
+    // thinner text is aesthetically more pleasing; but not to the body text.
+    -webkit-font-smoothing: subpixel-antialiased;
+    // `auto` is to hint Mozilla to pick whatever fits best for the operating system.
+    // Apparently, Mozilla does the right thing (TM) and defaults to subpixel antialiasing.
+    -moz-osx-font-smoothing: auto;
+        
     text-rendering: optimizeLegibility;
 
     a {text-decoration: none;}
@@ -33,6 +50,9 @@ body {
     font-size: $largeFontSize + 2px;    
     font-style: normal;
     text-align: center;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;   
 }
 
 strong, b, h1, h2, h3, h4, h5, h6 {
@@ -69,6 +89,9 @@ pre, code {
     &__heading-label {
         font-weight: normal;
         font-style: normal;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     &__description {
@@ -126,17 +149,35 @@ pre, code {
     font-style: normal;
     line-height: $buttonHeight;
     text-decoration: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid darken($trueWhite, 10%);    
 }
 
 .context-selection {
     font-size: $buttonFontSize;
     font-weight: normal;
     font-style: normal;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid darken($trueWhite, 10%);    
 }
 
 .navigation__action-button {
     font-weight: normal;
     font-style: normal;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid darken($trueWhite, 10%);
 }
 
 .column__heading, .column__heading--dimmed, .column__heading--selected {
@@ -145,11 +186,20 @@ pre, code {
     font-weight: normal;
     text-align: center;
     font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .context-listing__link--default, .context-listing__link--selected {
     font-weight: normal;
     font-style: normal;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid darken($trueWhite, 10%);
 }
 
 .card {
