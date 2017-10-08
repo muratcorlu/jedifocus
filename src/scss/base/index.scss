@@ -52,13 +52,13 @@ a {
 img {vertical-align: middle;}
 
 blockquote {
-    background: $quoteBackground;
-    border-left: $quoteBorderWidth $quoteBorderColor solid;
-    color: $quoteColor;
+    background: #E9E9E9; // $quoteBackground;
+    border-left: $quoteBorderWidth #D3D3D3 solid; // $quoteBorderColor solid;
+    color: #233200;
 
     margin-bottom: 15px;
     padding: 0;
-    border-radius: 3px;
+    border-radius: 0;
 
     p {
         margin: 0;
@@ -69,10 +69,11 @@ blockquote {
 }
 
 pre {
-    background: $codeBackground;
+    // background: $codeBackground;
     color: $codeColor;
-    border-left: $codeBorderWidth $codeBorderColor solid;
-    border-radius: 3px;
+    background: #fff7d4; // $quoteBackground;
+    border-left: $quoteBorderWidth #fee46e solid; // $quoteBorderColor solid;
+    border-radius: 0;
     margin-bottom: 15px;
     padding: 7px;
 
@@ -80,7 +81,7 @@ pre {
 }
 
 code {
-    background: $codeBackground;
+    background: #fff7d4; 
     color: $codeColor;
     padding: 3px;
 }

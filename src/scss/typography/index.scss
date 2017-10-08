@@ -71,12 +71,12 @@ blockquote {
 
 pre, code {
     font-family: $monotypeFont;
-    font-size: 16px;
+    font-size: 14px;
 }
     
 .modal-edit { 
     &__action-button {
-        font-size: $buttonFontSize;
+        // font-size: 20px; // $buttonFontSize;
         font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
     }
 
@@ -144,7 +144,7 @@ pre, code {
 }
 
 .action-button {
-    font-size: $buttonFontSize;
+    font-size: 20px; // $buttonFontSize;
     font-weight: normal;
     font-style: normal;
     line-height: $buttonHeight;
