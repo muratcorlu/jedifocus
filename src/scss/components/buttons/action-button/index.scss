@@ -15,11 +15,8 @@
 .action-button {
     border-radius: $buttonBorderRadius;
     height: $buttonHeight;
-
     transition: $defaultTransition;
-    will-change: color, background-color;
-
-    font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    font-family: $headingFont;
 }
 
 @import "./align-right/index.scss";

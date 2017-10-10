@@ -6,6 +6,17 @@ __.-._
 _)_/LI   There is no try.
 ```
 
+## **JediFocus** (*v.0.16.0*)
+
+* Code cleanup.
+* Organized CSS to make it more maintainable.
+* Build process is now exporting sass file (before they were inlined to the index.html).
+* Got rid of redundant CSS rules.
+* Minor bugfixes.
+* Removed `will-change` declerations because they were doing more harm than good.
+* Body text is more readable; buttons and heading are more “lickable” (*i.e. thinner*).
+* Increased the card width just a tiny bit.
+
 ## **JediFocus** (*v.0.13.0*)
 
 * While **JediFocus** is loading the goals of any context, it now displays random motivational quotes.

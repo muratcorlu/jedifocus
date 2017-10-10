@@ -14,8 +14,8 @@
 
 .action-button {
     &--disabled {
-        background: #CCCCCC;
-        color: #999999;
+        background: $disableButtonBackground;
+        color: $disabledButtonColor;
         box-shadow: none;
         cursor: default;
         pointer-events: none;

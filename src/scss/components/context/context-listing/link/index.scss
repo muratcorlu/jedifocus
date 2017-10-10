@@ -14,8 +14,10 @@
 
 .context-listing {
     &__link {
+        box-shadow: $cardBoxShadow;
+
         transition: $defaultTransition;
-        will-change: color, background;
+        border: none;
     }
 }
 

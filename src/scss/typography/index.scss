@@ -14,7 +14,7 @@
 
 body {
     line-height: 1.5 * $defaultFontSize;
-    font-size: $defaultFontSize;
+    font-size: 18px; // $defaultFontSize;
     font-family: $baseFont;
 
     // These two declerations below are the best way to ensure that fonts are 
@@ -35,24 +35,15 @@ body {
     -moz-osx-font-smoothing: auto;
         
     text-rendering: optimizeLegibility;
-
-    a {text-decoration: none;}
-
-    img {vertical-align: middle;}
-
-    p { 
-        margin-bottom: 1.2 * $defaultFontSize;
-        margin-top: 1.2 * $defaultFontSize
-    }
 }
 
-.loading {
-    font-size: $largeFontSize + 2px;    
-    font-style: normal;
-    text-align: center;
+a {text-decoration: none;}
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;   
+img {vertical-align: middle;}
+
+p { 
+    margin-bottom: 1.2 * $defaultFontSize;
+    margin-top: 1.2 * $defaultFontSize;
 }
 
 strong, b, h1, h2, h3, h4, h5, h6 {
@@ -73,22 +64,38 @@ pre, code {
     font-family: $monotypeFont;
     font-size: 14px;
 }
-    
+
+.loading {
+    @include makeFontsThin;
+
+    font-size: $largeFontSize + 2px;    
+    font-style: normal;
+    text-align: center;
+}
+   
 .modal-edit { 
     &__action-button {
-        // font-size: 20px; // $buttonFontSize;
-        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+        font-size: $actionButtonFontSize;
+        font-family: $headingFont;
     }
 
     &__label {
         font-weight: normal;
         font-style: normal;
-        font-size: $largeFontSize;
+        font-size: $actionButtonFontSize;
+
+        &--context-switch { 
+            text-align: center;
+            font-family: $headingFont;
+            font-size: $actionButtonFontSize;
+        }
     }
 
     &__heading-label {
         font-weight: normal;
         font-style: normal;
+        font-family: $headingFont;
+        font-size: $largeFontSize;
 
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -103,14 +110,15 @@ pre, code {
     &__selection {
         white-space: nowrap;
         text-overflow: ellipsis;
-        font-size: $largeFontSize;
+        font-size: $defaultFontSize;
+        font-family: $headingFont;
         font-style: normal;
         font-weight: normal;
     }
 
     &__login-teaser {
         font-size: 18px;
-        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+        font-family: $headingFont;
         line-height: 27px;
         text-align: center;
         margin-bottom: 10px;
@@ -133,7 +141,7 @@ pre, code {
     }
 
     &__login-input {
-        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+        font-family: $headingFont;
         width: 350px;
         margin-left: 30px;
         padding: 10px;
@@ -144,62 +152,66 @@ pre, code {
 }
 
 .action-button {
-    font-size: 20px; // $buttonFontSize;
+    @include makeFontsThin;
+
+    font-size: $actionButtonFontSize;
     font-weight: normal;
     font-style: normal;
     line-height: $buttonHeight;
     text-decoration: none;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-    border: 1px solid darken($trueWhite, 10%);    
 }
 
 .context-selection {
-    font-size: $buttonFontSize;
+    @include makeFontsThin;
+
+    font-size: $largeFontSize;
     font-weight: normal;
     font-style: normal;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: $headingFont;
 
     box-shadow: 0 1px 4px rgba(0,0,0,.04);
-    border: 1px solid darken($trueWhite, 10%);    
+    border: 1px solid darken($trueWhite, 10%);
+}
+
+.context-listing {
+    font-family: $headingFont;
+
+    &__link {
+        font-size: $actionButtonFontSize;
+
+        &--selected {
+            font-size: $actionButtonFontSize;
+        }
+    }
 }
 
 .navigation__action-button {
+    @include makeFontsThin;
+
     font-weight: normal;
     font-style: normal;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-    border: 1px solid darken($trueWhite, 10%);
 }
 
 .column__heading, .column__heading--dimmed, .column__heading--selected {
-    font-size: $largeFontSize + 4px;
+    @include makeFontsThin;
+
+    font-size: $largeFontSize;
     font-style: normal;
     font-weight: normal;
     text-align: center;
-    font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: $headingFont;
 }
 
 .context-listing__link--default, .context-listing__link--selected {
+    @include makeFontsThin;
+
     font-weight: normal;
     font-style: normal;
+}
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-    border: 1px solid darken($trueWhite, 10%);
+.context-listing__sub-item {
+    font-size: $largeFontSize;
+    line-height: 1.5 * $largeFontSize;
 }
 
 .card {
@@ -215,3 +227,8 @@ pre, code {
 }
 .card-controls {text-align: right;}
 .card-link {text-decoration: none;}
+
+.loading {
+    font-family: $headingFont;
+    font-size: $largeFontSize;
+}

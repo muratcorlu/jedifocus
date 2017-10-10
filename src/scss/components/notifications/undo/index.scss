@@ -12,7 +12,17 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.column {overflow: auto;}
+.bottomUndoNotification {
+    // to be hidden until mvp:
+    visibility: hidden;
 
-@import "./body/index.scss";
-@import "./heading/index.scss";
+    width: 210px;
+    position: fixed;
+    bottom: 34px;
+    left: 10px;
+    padding: 10px;
+    background: $trueWhite;
+    text-align: center;
+    
+    box-shadow: $headerBoxShadow;
+}

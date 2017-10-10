@@ -22,29 +22,19 @@ $orange: #EF6C00;
 $blue: #039BE5;
 $blueGray: #78909C;
 $teal: #009688;
-
-// Derived palette:
-$modalEditBackground: lighten($black, 70%);
-$codeBackground: adjust_hue(lighten($blueGray, 35%), 90deg);
-$codeColor: darken(adjust_hue(lighten($blueGray, 30%), 90deg), 70%);
-$codeBorderColor: adjust_hue(lighten($blueGray, 25%), 90deg);
-$quoteBackground: lighten($blueGray, 35%);
-$quoteBorderColor: lighten($blueGray, 25%);
-$quoteColor: darken(lighten($blueGray, 30%), 70%);
-$bodyBackground: lighten($black, 10%);
-
-// Derived palette / Card:
-$cardSideMarkerColor: adjust_hue(lighten($blue, 35%), 0deg);
-$cardBackgroundColor: $white;
-
-// Derived palette / Card / Link:
-$cardLinkColor: $black;
-$cardLinkPadding: 1px 3px 1px 3px;
-$cardLinkUnderlineColor: $black;
-$cardLinkUnderlineHoverColor: $black;
-$cardLinkHoverColor: $white;
-$cardLinkHoverBackgroundColor: $orange;
-$cardLinkHoverBorderColor: $orange;
+$quoteBackground: #E9E9E9;
+$quoteBorderColor: #D3D3D3;
+$quoteColor: #233200;
+$codeBackground: #FFF7D4;
+$codeBorderColor: #FEE46E; 
+$codeColor: #281E2A;
+$modalEditBackground: #D6D8DA;
+$disableButtonBackground: #CCCCCC;
+$disabledButtonColor: #999999;
+$linkColor: #2455C3;
+$cardBackgroundColor: #F2F2F2;
+$cardBorderColor: #CFD1CB;
+$actionButtonBorderColor: #E6E6E6;
 
 // Important borders:
 $codeBorderWidth: 6px;
@@ -55,12 +45,14 @@ $cardLinkHoverBorderWidth: 2px;
 
 // Fonts:
 $baseFont: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+$headingFont: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
 $monotypeFont: Monaco, Courier, monospace;
 
 // Font sizes:
 $largerFontSize: 24px;
+$largeFontSize: 22px;
+$actionButtonFontSize: 20px;
 $buttonFontSize: 18px;
-$largeFontSize: 18px;
 $defaultFontSize: 18px;
 $smallerFontSize: 16px;
 $smallestFontSize: 14px;
@@ -75,7 +67,15 @@ $defaultBoxShadow: none;
 
 // Transitions:
 $defaultTransition: all 0.25s ease-in-out;
+$cardTransition:  background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 $modalFadeTransition: opacity 0.45s ease-in-out;
+$loadingTransition: top 0.45s ease-in-out;
+
+$headerBoxShadow: 0 3px 3px -3px rgba(0, 0, 0, .6);
+$cardBoxShadow: 0 1px 4px rgba(0,0,0,.04);
+$modalHeadingBoxShadow: 0 0 2px rgba(0, 0, 0, .16);
+$modalEditBoxShadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
+$cardFocusedBoxShadow: 0 0 2px 1px $blue;
 
 // To make sass-lint happy:
 $blank: '';

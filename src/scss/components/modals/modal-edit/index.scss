@@ -24,9 +24,8 @@
     height: 362px;
     width: 624px;
 
-    background: darken(#E3E5E6, 5%);
-    box-shadow: 0 0 2px rgba(0, 0, 0, .16), 0 2px 4px rgba(0, 0, 0, .32);
-    
+    background: $modalEditBackground;
+    box-shadow: $modalEditBoxShadow;    
     border-radius: 1px;
 
     transition: $modalFadeTransition;

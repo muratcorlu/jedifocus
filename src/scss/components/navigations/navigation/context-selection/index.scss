@@ -24,19 +24,20 @@
 
     position: fixed;
     right: -15px;
-    bottom: 35px;
+    bottom: 20px;
 
     opacity: 0.85;
     border-radius: 25px;
 
     transition: $defaultTransition;
-    will-change: background, color, opacity, box-shadow;
 
-    font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
-    font-size: 20px;
     background: $trueWhite;
 
+    box-shadow: $cardBoxShadow;
+    border: 1px solid $actionButtonBorderColor;
+
     &:hover {
+        border: 1px solid transparent;
         background: $orange;
         color: $trueWhite;
         opacity: 1;

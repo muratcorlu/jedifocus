@@ -12,8 +12,4 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit {
-    &__label {
-        &--centered { text-align: center; }
-    }
-}
+.modal-edit {&__label {&--centered {text-align: center;}}}

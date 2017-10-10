@@ -12,7 +12,6 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.column {overflow: auto;}
-
-@import "./body/index.scss";
-@import "./heading/index.scss";
+.no-pointer {pointer-events: none;}
+.faded {opacity: 0.35;}
+.hidden {display: none;}

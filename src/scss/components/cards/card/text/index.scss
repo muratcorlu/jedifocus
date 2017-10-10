@@ -12,21 +12,4 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.card {
-    min-height: 64px;
-
-    a {
-        color: #2455C3;
-        padding: $cardLinkPadding;
-
-        border-bottom: $cardLinkBorderWidth transparent solid;
-        padding: $cardLinkPadding;
-        
-        transition: $defaultTransition;
-        will-change: border-bottom;
-
-        &:hover {border-bottom: $cardLinkHoverBorderWidth #2455C3 solid;}
-    }
-
-    &__text {padding: 0;}
-}
+.card {&__text {padding: 0;}}

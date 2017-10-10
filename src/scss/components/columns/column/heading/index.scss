@@ -22,8 +22,6 @@
     cursor: default;
 
     transition: $defaultTransition;
-    opacity: 1;
-    will-change: opacity;
 
     &--dimmed {
         color: $black;
@@ -32,7 +30,6 @@
 
     &--selected {
         color: $black;
-        opacity: 1;
         box-shadow: $defaultBoxShadow;
     }
 }

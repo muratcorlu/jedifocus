@@ -28,21 +28,37 @@
 
 @mixin center { margin: 0 auto; }
 
-@mixin modalHeadingBackground {
+@mixin modalHeadingBackground() {
     background: darken(#E3E5E6, 10%);
     background: linear-gradient(to bottom, darken(#E3E5E6, 10%), darken(#D3D6D9, 10%));
+}
+
+@mixin topHeaderBackground() {
+    background: #E3E5E6;
+    background: linear-gradient(to bottom, #E3E5E6, #D3D6D9);
 }
 
 @mixin cantTouchThis() {
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
-    -xkhtml-user-select: none; 
-    -xmoz-user-select: none; 
-    -xms-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
     user-select: none;
 }
 
 @mixin bodyBackground() {
     background: #DFE1E3;
     background: linear-gradient(to bottom, darken(#E8E9E6, 0%), darken(#DFE1E3, 0%));
+}
+
+@mixin loadingBackground() {
+    background: #EFEFEF;
+    background: linear-gradient(to top, darken(#EFEFEF, 5%), #EFEFEF);
+}
+
+@mixin makeFontsThin() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 }

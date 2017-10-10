@@ -12,8 +12,4 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-.modal-edit {
-    &__label {
-        &--floated-first { margin-left: 4px; }
-    }
-}
+.modal-edit {&__label {&--floated-first {margin-left: 4px;}}}

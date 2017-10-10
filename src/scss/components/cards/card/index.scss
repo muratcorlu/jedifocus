@@ -17,6 +17,8 @@
     padding-top: 0;
     position: relative;
 
+    min-height: 64px;
+
     background: $cardBackgroundColor;
 
     cursor: pointer;
@@ -28,8 +30,8 @@
     overflow: auto;
     word-break: break-word;
 
-    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-    border: 1px solid darken(#E8E9E6, 10%);
+    box-shadow: $cardBoxShadow;
+    border: 1px solid $cardBorderColor;
 }
 
 @import './blurred/index.scss';

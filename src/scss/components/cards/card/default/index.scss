@@ -14,11 +14,9 @@
 
 .card {
     &--default {
-        background: darken($trueWhite, 5%);
-       
-        transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out; 
-        will-change: background, box-shadow;
-   
+        background: $cardBackgroundColor;
+        transition: $cardTransition;
+
         &:hover {
             box-shadow: 0 10px 10px -10px rgba(0, 0, 0, .4);
             background: $trueWhite;

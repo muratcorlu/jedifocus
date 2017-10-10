@@ -30,7 +30,7 @@ const classModifier = ( modalColumn ) => {
     return modalColumn === COLUMN_NAME ? '--selected' : '--dimmed';
 };
 
-const headingClassName = ( modalColumn ) => `column__heading column__heading${classModifier( modalColumn )}` +
+const headingClassName = ( modalColumn ) => `column__heading column__heading${classModifier( modalColumn )} ` +
     `${progressClassName( modalColumn )}`;
 
 const BestIntentions = ( { descriptions, modalId, modalColumn } ) => (

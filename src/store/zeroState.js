@@ -30,7 +30,7 @@ const zeroState = {
     appRandomQuote: '',
 
     // Current Context
-    context: 'demo',
+    context: 'runway',
 
     // #endregion
 

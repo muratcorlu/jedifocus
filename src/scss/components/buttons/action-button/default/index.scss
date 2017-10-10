@@ -16,10 +16,12 @@
     &--default {
         background-color: $trueWhite;
         color: $orange;
+        border: none;
 
         &:hover {
             background: $orange;
             color: $trueWhite;
+            border: none;
         }
     }
 }

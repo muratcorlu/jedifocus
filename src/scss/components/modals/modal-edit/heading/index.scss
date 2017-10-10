@@ -27,10 +27,8 @@
         text-align: center;
         letter-spacing: 0;
 
-        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
-        font-size: 22px;
 
-        box-shadow: 0 0 2px rgba(0, 0, 0, .16);
+        box-shadow: $modalHeadingBoxShadow;
         cursor: move;
 
         label {cursor: move;}

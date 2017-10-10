@@ -21,12 +21,12 @@
             color: $trueWhite;
             box-shadow: none;
 
-            font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
-            font-size: 20px;
-
             text-align: center;
             border-radius: 18px;
             padding: 5px;
+
+            border: none;
+            pointer-events: none;
 
             cursor: default;
         }

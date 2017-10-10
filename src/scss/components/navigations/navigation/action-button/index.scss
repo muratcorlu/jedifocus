@@ -30,14 +30,15 @@
 
         text-decoration: none;
 
-        font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
-
         transition: $defaultTransition;
-        will-change: color, background-color;
+
+        box-shadow: $cardBoxShadow;
+        border: 1px solid $actionButtonBorderColor;
 
         &:hover {
             background-color: $orange;
             color: $trueWhite;
+            border: 1px solid transparent;
         }
     }
 }
