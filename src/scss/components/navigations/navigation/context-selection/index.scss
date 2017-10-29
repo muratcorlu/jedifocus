@@ -12,19 +12,23 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../../../../variables/index.scss';
+
 .context-selection {
     color: $orange;
     background: $white;
 
     cursor: pointer;
 
-    text-align: right;
+    // text-align: right;
 
     padding: 5px 20px 5px 17px;
 
     position: fixed;
     right: -15px;
     bottom: 20px;
+
+    width: 32px;
 
     opacity: 0.85;
     border-radius: 25px;

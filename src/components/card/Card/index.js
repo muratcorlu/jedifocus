@@ -61,15 +61,15 @@ Card.propTypes = {
     column: PropTypes.string.isRequired,
     context: PropTypes.string.isRequired,
     copyCard: PropTypes.func.isRequired,
+    description: PropTypes.string.isRequired,
     editCard: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     modalId: PropTypes.string.isRequired,
-    passive: PropTypes.bool.isRequired,
     moveCardToBestIntentions: PropTypes.func.isRequired,
     moveCardToDone: PropTypes.func.isRequired,
     moveCardToInProgress: PropTypes.func.isRequired,
     moveCardToToDo: PropTypes.func.isRequired,
+    passive: PropTypes.bool.isRequired,
     snoozeCard: PropTypes.func.isRequired,
     userId: PropTypes.string.isRequired
 };

@@ -12,6 +12,8 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../mixins/index.scss';
+
 .container {
     @include center;
 

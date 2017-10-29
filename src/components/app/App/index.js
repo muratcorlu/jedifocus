@@ -37,7 +37,7 @@ const App = ( { loggedIn, appStateFetched, appRandomQuote } ) => (
             <InProgressContainer />
             <DoneContainer />
             <NavigationContainer />
-            <div className="topHeaderBackground"></div>
+            <div className="topHeaderBackground"/>
             <div className="bottomUndoNotification">
                 <span>Done and dusted!</span>
                 <strong>UNDO</strong>

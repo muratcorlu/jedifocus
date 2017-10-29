@@ -12,6 +12,8 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../../../variables/index.scss';
+
 .loading {
     @include loadingBackground;
 
@@ -23,7 +25,7 @@
     width: 100vw;
     position: fixed;
     left: 0;
-    top: 0;
+    top: 6px;
 
     z-index: 9999;
 

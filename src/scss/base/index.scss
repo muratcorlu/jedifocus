@@ -12,6 +12,9 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../mixins/index.scss';
+@import '../variables/index.scss';
+
 body {
     @include bodyBackground;
     @include cantTouchThis;
@@ -49,6 +52,7 @@ ul, ol {
 
     li {
         margin-left: 18px;
+        margin-bottom: 8px;
     }
 
 }
@@ -73,19 +77,99 @@ blockquote {
 
 pre {
     margin-top: 18px;
-    margin-bottom: 18px;
-
-    color: $codeColor;
-    background: $codeBackground;
-    border-left: $quoteBorderWidth $codeBorderColor solid;
     margin-bottom: 15px;
     padding: 7px;
 
     overflow: auto;
+
+    color: $codeColor;
+    background: $codeBackground;
+    border-left: $quoteBorderWidth $codeBorderColor solid;
 }
 
 code {
     background: $codeBackground; 
     color: $codeColor;
     padding: 3px;
+}
+
+svg {
+  vertical-align: middle;
+  width: 24px;
+}
+
+path, rect {
+    // stroke: $orange;
+    fill: $orange;
+}
+
+.context-listing {
+    svg {
+        width: 24px;
+        height: 24px;
+      margin-right: 5px;
+      position: relative;
+      top: -2px;
+    }
+
+  path, rect {
+    fill: $black;
+  }
+}
+
+.modal-edit__actions {
+    svg {
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+    }
+
+    .action-button--disabled {
+      path, rect {
+        fill: #999999;
+      }
+    }
+
+  path, rect {
+    fill: $black;
+  }
+}
+
+.modal-edit__actions .action-button:hover {
+  path, rect {
+    fill: $trueWhite;
+  }
+}
+
+.context-listing__link--default:hover {
+    path, rect {
+        fill: $trueWhite;
+    }
+}
+
+.context-listing__link--selected {
+    path, rect {
+        fill: $trueWhite;
+    }
+}
+
+.navigation__action-button {
+    svg {
+        position: relative;
+        top: -2px;
+    }
+}
+
+.action-button--modal {
+    svg {
+        position: relative;
+        top: -2px;
+        margin-left: 5px;
+    }
+}
+
+.navigation__action-button:hover, .context-selection:hover {
+    path, rect {
+        fill: $trueWhite;
+    }
 }

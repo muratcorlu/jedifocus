@@ -6,6 +6,11 @@ __.-._
 _)_/LI   There is no try.
 ```
 
+## **JediFocus** (*v.0.17.0*)
+
+* Added some nifty `svg` icons.
+* Code needs some cleanup; however, the app is working fine, so I’ll deal with that later.
+
 ## **JediFocus** (*v.0.16.0*)
 
 * Code cleanup.

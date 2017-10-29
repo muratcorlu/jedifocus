@@ -12,10 +12,15 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../variables/index.scss';
+@import '../mixins/index.scss';
+
 .topHeaderBackground {
     @include topHeaderBackground;
 
-    font-size: $largeFontSize;
+    border-top: 6px darken(adjust_hue($orange, -180deg), 0%) solid;
+
+    font-size: $actionButtonFontSize;
     font-family: $headingFont;
     text-align: center;
     position: fixed;

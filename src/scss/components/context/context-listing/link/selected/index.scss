@@ -12,6 +12,8 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../../../../../variables/index.scss';
+
 .context-listing {
     &__link {
         &--selected {
@@ -21,9 +23,11 @@
             color: $trueWhite;
             box-shadow: none;
 
-            text-align: center;
-            border-radius: 18px;
+            // text-align: center;
+            border-radius: 4px;
             padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
 
             border: none;
             pointer-events: none;

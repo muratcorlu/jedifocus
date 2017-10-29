@@ -22,14 +22,12 @@ const ActionButton = ( { children, onClick, className, title, disabled } ) => (
         title={title || ''}
         onClick={( evt ) => {
             evt.preventDefault();
-            if ( disabled ) {return;}
+            if ( disabled ) { return; }
             onClick( evt );
         }}>{children}</a>
 );
 
-ActionButton.defaultProps = {
-    disabled: false
-};
+ActionButton.defaultProps = { disabled: false };
 
 ActionButton.propTypes = {
     children: PropTypes.node,

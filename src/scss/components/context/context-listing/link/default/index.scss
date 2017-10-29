@@ -12,18 +12,23 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../../../../../variables/index.scss';
+
 .context-listing {
     &__link {
         &--default {
             display: block;
 
             padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
 
-            color: $black;
+            color: $orange;
+            // ßcolor: $black;
             text-decoration: none;
             background: $white;
-            text-align: center;
-            border-radius: 18px;
+            // text-align: center;
+            border-radius: 4px;
 
             background: $trueWhite;
             border: none;

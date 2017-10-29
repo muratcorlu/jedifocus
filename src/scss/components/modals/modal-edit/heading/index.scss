@@ -12,6 +12,9 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../../../../variables/index.scss';
+@import '../../../../mixins/index.scss';
+
 .modal-edit {
     &__heading {
         @include modalHeadingBackground;

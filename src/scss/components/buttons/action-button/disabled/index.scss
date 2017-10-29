@@ -12,6 +12,8 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../../../../variables/index.scss';
+
 .action-button {
     &--disabled {
         background: $disableButtonBackground;
@@ -19,5 +21,6 @@
         box-shadow: none;
         cursor: default;
         pointer-events: none;
+        border-width: 0;
     }
 }

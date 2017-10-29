@@ -12,9 +12,12 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../variables/index.scss';
+@import '../mixins/index.scss';
+
 body {
-    line-height: 1.5 * $defaultFontSize;
-    font-size: 18px; // $defaultFontSize;
+    line-height: 1.2 * $defaultFontSize;
+    font-size: $defaultFontSize;
     font-family: $baseFont;
 
     // These two declerations below are the best way to ensure that fonts are 
@@ -46,9 +49,16 @@ p {
     margin-top: 1.2 * $defaultFontSize;
 }
 
+
+
 strong, b, h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     font-style: inherit;
+}
+
+h2 {
+  margin-bottom: 18px;
+  padding: 18px;
 }
 
 em, i {
@@ -62,15 +72,17 @@ blockquote {
 
 pre, code {
     font-family: $monotypeFont;
-    font-size: 14px;
+    font-size: $smallestFontSize;
 }
 
 .loading {
-    @include makeFontsThin;
+    // @include makeFontsThin;
 
-    font-size: $largeFontSize + 2px;    
     font-style: normal;
     text-align: center;
+
+    font-family: $headingFont;
+   font-size: $actionButtonFontSize;
 }
    
 .modal-edit { 
@@ -134,8 +146,7 @@ pre, code {
 
     &__login-action-wrap {
         margin: 0;
-        padding: 0;
-        padding-top: 10px;
+        padding: 10px 0 0 0;
         width: 210px;
         float: right;
     }
@@ -193,13 +204,14 @@ pre, code {
 }
 
 .column__heading, .column__heading--dimmed, .column__heading--selected {
-    @include makeFontsThin;
+    // @include makeFontsThin;
 
-    font-size: $largeFontSize;
+    font-size: $actionButtonFontSize;
     font-style: normal;
     font-weight: normal;
     text-align: center;
     font-family: $headingFont;
+  // color: $orange !important;
 }
 
 .context-listing__link--default, .context-listing__link--selected {
@@ -228,7 +240,4 @@ pre, code {
 .card-controls {text-align: right;}
 .card-link {text-decoration: none;}
 
-.loading {
-    font-family: $headingFont;
-    font-size: $largeFontSize;
-}
+

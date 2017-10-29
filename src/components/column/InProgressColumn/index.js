@@ -15,7 +15,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import BaseColumn from '../BaseColumn';
+import BaseColumn from '../../../components/column/BaseColumn';
 
 const COLUMN_NAME = 'inProgress';
 

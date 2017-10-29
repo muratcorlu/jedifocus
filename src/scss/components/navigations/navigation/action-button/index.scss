@@ -12,15 +12,17 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+@import '../../../../variables/index.scss';
+
 .navigation {
     &__action-button {
         display: block;
         margin: 10px;
         padding: 5px 15px 5px 6px;
-        width: 180px;
+        width: 177px;
 
         position: fixed;
-        left: -109px;
+        left: -155px;
         top: 46px;
 
         transform: translateZ(0);

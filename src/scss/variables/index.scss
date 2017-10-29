@@ -44,18 +44,25 @@ $cardLinkBorderWidth: 2px;
 $cardLinkHoverBorderWidth: 2px;
 
 // Fonts:
-$baseFont: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+
+// Helvetica Neue, Helvetica, Arial, sans-serif
+
+
+$baseFont:  Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+
+        // xOptima, Arial, Gill Sans, Impact, Trebuchet MS, Segoe, "Comic Sans Ms", Helvetica Neue, Palatino, Hoefler Text, Garamond, Comic Sans Ms, Optima, Georgia, xBaskerville, Optima, Gill Sans, Didot, Futura, Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif;
+// Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif; // xOptima, Georgia, Times, "Times New Roman", serif;
 $headingFont: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
 $monotypeFont: Monaco, Courier, monospace;
 
 // Font sizes:
 $largerFontSize: 24px;
 $largeFontSize: 22px;
-$actionButtonFontSize: 20px;
+$actionButtonFontSize: 18px;
 $buttonFontSize: 18px;
-$defaultFontSize: 18px;
-$smallerFontSize: 16px;
-$smallestFontSize: 14px;
+$defaultFontSize: 16px;
+$smallerFontSize: 14px;
+$smallestFontSize: 12px;
 
 // Important Dimensions:
 $buttonHeight: 32px;
