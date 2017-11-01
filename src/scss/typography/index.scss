@@ -97,7 +97,9 @@ pre, code {
         font-size: $actionButtonFontSize;
 
         &--context-switch { 
-            text-align: center;
+          margin-left: 10px;
+
+          text-align: left;
             font-family: $headingFont;
             font-size: $actionButtonFontSize;
         }
@@ -107,10 +109,10 @@ pre, code {
         font-weight: normal;
         font-style: normal;
         font-family: $headingFont;
-        font-size: $largeFontSize;
+        font-size: 18px; // $largeFontSize;
 
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        // -webkit-font-smoothing: antialiased;
+        // -moz-osx-font-smoothing: grayscale;
     }
 
     &__description {

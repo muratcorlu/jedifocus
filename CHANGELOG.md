@@ -10,6 +10,7 @@ _)_/LI   There is no try.
 
 * Added some nifty `svg` icons.
 * Code needs some cleanup; however, the app is working fine, so I’ll deal with that later.
+* Starting using `Optima` and its friends as the base font; it gives a fresher feel without looking “book…ish” (like `Georgia`) — I won’t be using custom fonts; I will be using system fonts instead.
 
 ## **JediFocus** (*v.0.16.0*)
 
@@ -17,8 +18,8 @@ _)_/LI   There is no try.
 * Organized CSS to make it more maintainable.
 * Build process is now exporting sass file (before they were inlined to the index.html).
 * Got rid of redundant CSS rules.
-* Minor bugfixes.
-* Removed `will-change` declerations because they were doing more harm than good.
+* Minor bug fixes.
+* Removed `will-change` declarations because they were doing more harm than good.
 * Body text is more readable; buttons and heading are more “lickable” (*i.e. thinner*).
 * Increased the card width just a tiny bit.
 
@@ -26,7 +27,7 @@ _)_/LI   There is no try.
 
 * While **JediFocus** is loading the goals of any context, it now displays random motivational quotes.
 * Bug fixes.
-* Style fixes and tpographic changes.
+* Style fixes and typographic changes.
 
 ## **JediFocus** (*v.0.12.0*)
 

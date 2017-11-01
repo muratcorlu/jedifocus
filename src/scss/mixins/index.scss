@@ -30,7 +30,8 @@
 
 @mixin modalHeadingBackground() {
     background: darken(#E3E5E6, 10%);
-    background: linear-gradient(to bottom, darken(#E3E5E6, 10%), darken(#D3D6D9, 10%));
+    // background: linear-gradient(to bottom, darken(#E3E5E6, 10%), darken(#D3D6D9, 10%));
+    background: linear-gradient(to bottom, #E3E5E6, #D3D6D9);
 }
 
 @mixin topHeaderBackground() {
