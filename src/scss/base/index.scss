@@ -40,6 +40,15 @@ a {
     border-bottom: $cardLinkHoverBorderWidth transparent solid;
     transition: $defaultTransition;
 
+    strong {
+      transition: $defaultTransition;
+      color: $linkColor;
+    }
+
+    path, rect {
+      transition: $defaultTransition;
+    }
+
     &:hover {border-bottom: $cardLinkHoverBorderWidth $linkColor solid;}
     &:focus {box-shadow: 0 0 2px 1px $blue;}
 }
@@ -161,6 +170,16 @@ path, rect {
 }
 
 .action-button--modal {
+    strong {
+        color: $orange;
+    }
+
+    &:hover {
+        strong {
+            color: $trueWhite;
+        }
+    }
+
     svg {
         position: relative;
         top: -2px;
@@ -171,5 +190,33 @@ path, rect {
 .navigation__action-button:hover, .context-selection:hover {
     path, rect {
         fill: $trueWhite;
+    }
+}
+
+.action-link--modal {
+    float: left;
+    line-height: 22px;
+    color: $black;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+
+    strong {
+        text-decoration: underline;
+        font-weight: normal;
+        color: $linkColor;
+    }
+
+    &:hover {
+        border: none;
+        color: $orange;
+
+        strong {
+            color: $orange;
+        }
+
+        path, rect {
+            fill: $orange;
+        }
     }
 }

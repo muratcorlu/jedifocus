@@ -47,6 +47,7 @@ const zeroState = {
 
     modalVisible: false,
     modalRevealed: false,
+    modalMoveOptionsShown: false,
     modalColumn: '',
     modalId: '',
     modalDescription: '',

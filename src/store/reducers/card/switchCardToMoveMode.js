@@ -12,20 +12,9 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-@import '../../../../variables/index.scss';
+const switchCardToMoveMode = ( state = {} ) => ( {
+    ...state,
+    modalMoveOptionsShown: true
+} );
 
-.modal-edit {
-    &__description {
-        display: block;
-        margin: 0;
-        margin-top: -10px;
-        padding: 7px;
-
-        width: 607px;
-        height: 235px;
-
-        color: $black;
-        background: $white;
-        border: 1px $modalEditBackground solid;
-    }
-}
+export default switchCardToMoveMode;

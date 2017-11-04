@@ -31,7 +31,6 @@
     border-radius: 1px;
 
     transition: $modalFadeTransition;
-    will-change: opacity;
 
     &--faded {opacity: 0;}
 
@@ -42,6 +41,9 @@
 
 @import "./actions/index.scss";
 @import "./body/index.scss";
+@import "./configuration-body/index.scss";
+@import "./configuration-columns/index.scss";
+@import "./configuration-contexts/index.scss";
 @import "./description/index.scss";
 @import "./heading/index.scss";
 @import "./label/index.scss";

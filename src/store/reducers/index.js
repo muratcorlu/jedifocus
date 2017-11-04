@@ -35,6 +35,7 @@ import saveCard from './card/saveCard';
 import updateCardColumn from './card/updateCardColumn';
 import updateCardContext from './card/updateCardContext';
 import updateCardDescription from './card/updateCardDescription';
+import switchCardToMoveMode from './card/switchCardToMoveMode';
 
 const rootReducer = createRootReducer( getInitialState, {
     [constants.JFDI_APP_REQUEST_STATE]: requestAppState,
@@ -53,7 +54,8 @@ const rootReducer = createRootReducer( getInitialState, {
     [constants.JFDI_CARD_SAVE]: saveCard,
     [constants.JFDI_CARD_UPDATE_COLUMN]: updateCardColumn,
     [constants.JFDI_CARD_UPDATE_CONTEXT]: updateCardContext,
-    [constants.JFDI_CARD_UPDATE_DESCRIPTION]: updateCardDescription
+    [constants.JFDI_CARD_UPDATE_DESCRIPTION]: updateCardDescription,
+    [constants.JFDI_CARD_SWITCH_MODE_MOVE]: switchCardToMoveMode
 } );
 
 export { rootReducer };

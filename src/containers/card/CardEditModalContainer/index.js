@@ -21,15 +21,17 @@ import { connect } from 'kink';
 import CardEditModal from '../../../components/card/CardEditModal';
 
 const CardEditModalContainer = ( {
-    context, column, id, description, userId, stateContext, show, reveal,
-    updateCardColumn, updateCardContext, updateCardDescription, saveCard
+    context, column, id, description, userId, stateContext, show, showMoveOptions, reveal,
+    updateCardColumn, updateCardContext, updateCardDescription, saveCard, switchCardToMoveMode,
 } ) => (
     <CardEditModal
         context={context} column={column} id={id} description={description} show={show} reveal={reveal}
+        showMoveOptions={showMoveOptions}
         saveCard={() => saveCard( userId, context, column, id, description, stateContext )}
         updateCardColumn={updateCardColumn}
         updateCardContext={updateCardContext}
         updateCardDescription={updateCardDescription}
+        switchToMoveMode={switchCardToMoveMode}
     />
 );
 
@@ -40,28 +42,35 @@ CardEditModalContainer.propTypes = {
     description: PropTypes.string.isRequired,
     saveCard: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
+    showMoveOptions: PropTypes.bool.isRequired,
     reveal: PropTypes.bool.isRequired,
     stateContext: PropTypes.string.isRequired,
     updateCardColumn: PropTypes.func.isRequired,
     updateCardContext: PropTypes.func.isRequired,
     updateCardDescription: PropTypes.func.isRequired,
+    switchCardToMoveMode: PropTypes.func.isRequired,
     userId: PropTypes.string.isRequired
 };
 
 export default connect(
     CardEditModalContainer,
     actions,
-    ( state ) => ( {
-        bestIntentions: state.bestIntentions ? state.bestIntentions.toJSON() : {},
-        column: state.modalColumn,
-        id: state.modalId,
-        inProgress: state.inProgress ? state.inProgress.toJSON() : {},
-        description: state.modalDescription,
-        show: state.modalVisible,
-        reveal: state.modalRevealed,
-        context: state.modalContext,
-        stateContext: state.context,
-        toDo: state.toDo ? state.toDo.toJSON() : {},
-        userId: state.userId
+    ( {
+        bestIntentions, inProgress, toDo, userId,
+        modalColumn, modalDescription, modalVisible, modalRevealed, modalMoveOptionsShown,
+        modalId, modalContext, context
+    } ) => ( {
+        bestIntentions: bestIntentions ? bestIntentions.toJSON() : {},
+        column: modalColumn,
+        showMoveOptions: modalMoveOptionsShown,
+        id: modalId,
+        inProgress: inProgress ? inProgress.toJSON() : {},
+        description: modalDescription,
+        show: modalVisible,
+        reveal: modalRevealed,
+        context: modalContext,
+        stateContext: context,
+        toDo: toDo ? toDo.toJSON() : {},
+        userId
     } )
 );

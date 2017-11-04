@@ -32,11 +32,9 @@
     color: $black;
 
     transition: $loadingTransition;
-    will-change: top;
 
     &--hidden {
         top: -80px;
         transition: $loadingTransition; 
-        will-change: top;
     }
 }
