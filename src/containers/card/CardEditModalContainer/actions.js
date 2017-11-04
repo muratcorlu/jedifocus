@@ -21,7 +21,8 @@ import {
     JFDI_CARD_UPDATE_COLUMN,
     JFDI_CARD_UPDATE_DESCRIPTION,
     JFDI_CARD_UPDATE_CONTEXT,
-    JFDI_APP_HIDE_MODAL
+    JFDI_APP_HIDE_MODAL,
+    JFDI_CARD_SWITCH_MODE_MOVE
 } from '../../../lib/constants';
 
 import {
@@ -43,7 +44,7 @@ const saveCard = ( userId, cardContext, cardColumn, cardId, cardDescription, cur
     setTimeout( () => tick( () => dispatch( {
         type: JFDI_CARD_SAVE,
         payload: { cardContext, cardColumn, cardId, newId }
-    } ) ), 450 );
+    } ) ), 260 );
 };
 
 const updateCardColumn = ( currentColumn, cardId, nextColumn ) => {
@@ -65,4 +66,12 @@ const updateCardContext = ( column, cardId, cardDescription, cardContext ) => ( 
     payload: { column, cardId, cardDescription, cardContext }
 } );
 
-export { updateCardDescription, updateCardColumn, updateCardContext, saveCard };
+const switchCardToMoveMode = () => ( { type: JFDI_CARD_SWITCH_MODE_MOVE } );
+
+export {
+    updateCardDescription,
+    updateCardColumn,
+    updateCardContext,
+    switchCardToMoveMode,
+    saveCard
+};

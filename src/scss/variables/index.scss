@@ -75,7 +75,7 @@ $defaultBoxShadow: none;
 // Transitions:
 $defaultTransition: all 0.25s ease-in-out;
 $cardTransition:  background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-$modalFadeTransition: opacity 0.45s ease-in-out;
+$modalFadeTransition: opacity 0.25s ease-in-out; //opacity 0.45s ease-in-out;
 $loadingTransition: top 0.45s ease-in-out;
 
 $headerBoxShadow: 0 3px 3px -3px rgba(0, 0, 0, .6);

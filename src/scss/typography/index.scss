@@ -164,6 +164,28 @@ pre, code {
     }
 }
 
+.modal-edit__configuration-columns, .modal-edit__configuration-contexts {
+    h3 {
+        transition: $defaultTransition;
+
+        font-weight: normal;
+        padding: 5px 15px 5px 15px;
+        margin: -10px;
+        // border-bottom: 1px $lightGray solid;
+        color: $black;
+        background: lighten(#c8ccce, 8%);
+        // background: linear-gradient(to bottom, #E3E5E6, #D3D6D9);
+    }
+
+    &:hover {
+        h3 {
+            color: $trueWhite;
+            background: $orange; // lighten(#c8ccce, 10%);
+            // background: linear-gradient(to bottom, lighten(#E3E5E6, 3%), lighten(#D3D6D9, 3%));
+        }
+    }
+}
+
 .action-button {
     @include makeFontsThin;
 

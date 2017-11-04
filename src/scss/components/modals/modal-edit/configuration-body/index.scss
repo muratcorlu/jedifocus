@@ -12,20 +12,11 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-@import '../../../../variables/index.scss';
-
 .modal-edit {
-    &__description {
-        display: block;
-        margin: 0;
-        margin-top: -10px;
-        padding: 7px;
-
-        width: 607px;
-        height: 235px;
-
-        color: $black;
-        background: $white;
-        border: 1px $modalEditBackground solid;
+    &__configuration-body {
+        margin-left: 7px;
+        margin-right: 10px;
+        display: flex;
+        min-height: 240px;
     }
 }

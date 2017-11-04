@@ -6,6 +6,11 @@ __.-._
 _)_/LI   There is no try.
 ```
 
+## **JediFocus** (*v.0.18.0*)
+
+* Updated the UI to better manage card configuration.
+* The code is dirty; however, the UX is “good enough” for now. — I’ll go over it once I have time for that.
+
 ## **JediFocus** (*v.0.17.0*)
 
 * Added some nifty `svg` icons.
