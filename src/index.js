@@ -12,40 +12,27 @@
  *  Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import './vendor/google/firebase/firebase.js';
+import 'jedifocus.lib/vendor/google/firebase/firebase';
+
+import { maintainFocusToModalTextArea } from 'jedifocus.lib/dom';
+import connectedAppContainer from 'jedifocus.lib/hocs/connectedAppContainer';
 
 import React from 'react';
 import { render } from 'react-dom';
-import { $, on, firstParentIncludingSelf as parent } from 'dombili';
+import { $ } from 'dombili';
 
-import './scss/index.scss';
+import 'jedifocus.styles/index.scss';
 
-import * as config from './config.json';
-const email = config.email;
-const fbUserId = config.fbUserId;
-const password = config.password;
-delete config.email;
-delete config.password;
-delete config.fbUserId;
+import * as config from '../config.json';
 
-import AppContainer from './containers/app/AppContainer';
+maintainFocusToModalTextArea();
 
-on( document.body, 'mouseup', ( evt ) => {
-    const parentModal = parent(
-        evt.target,
-        ( el ) => el.classList && el.classList.contains( 'modal-edit' )
-    );
+import AppContainer from 'jedifocus.containers/app/AppContainer';
 
-    if ( parentModal ) { return; }
-
-    const textArea = document.querySelector( 'textarea' );
-
-    if ( !textArea ) { return; }
-
-    textArea.focus();
-} );
+const ConnectedAppContainer = connectedAppContainer( AppContainer, config );
 
 render(
-    <AppContainer config={config} email={email} password={password} userId={fbUserId} />,
+    <ConnectedAppContainer />,
     $( '#react-root' )
 );
+

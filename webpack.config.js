@@ -47,7 +47,14 @@ module.exports = {
                 join( __dirname, 'node_modules/dombili' ),
                 join( __dirname, 'node_modules/kink' ),
                 join( __dirname, 'node_modules/delgado' ),
-                join( __dirname, 'node_modules/tangled' )
+                join( __dirname, 'node_modules/tangled' ),
+                join( __dirname, 'node_modules/jedifocus.lib' ),
+                join( __dirname, 'node_modules/jedifocus.containers' ),
+                join( __dirname, 'node_modules/jedifocus.components' ),
+                join( __dirname, 'node_modules/jedifocus.store' ),
+                join( __dirname, 'node_modules/jedifocus.buttons' ),
+                join( __dirname, 'node_modules/jedifocus.icons' ),
+                join( __dirname, 'node_modules/jedifocus.feedback' )
             ],
             use: [ 'babel-loader' ]
         }, {

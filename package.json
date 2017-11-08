@@ -1,6 +1,6 @@
 {
   "name": "jedifocus",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "Gets things done the Jedi way.",
   "main": "index.js",
   "repository": "git@github.com:jsbites/jedifocus.git",
@@ -63,18 +63,14 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "dombili": "^0.10.1",
-    "fontfaceobserver": "^2.0.13",
-    "immutable": "^3.8.1",
-    "kink": "^0.2.1",
+    "dombili": "^0.11.0",
+    "jedifocus.containers": "^0.3.3",
+    "jedifocus.lib": "^0.3.0",
+    "jedifocus.store": "^0.3.0",
+    "jedifocus.styles": "^0.1.0",
     "prop-types": "^15.5.10",
     "react": "16.0.0",
-    "react-dom": "16.0.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
-    "showdown": "^1.7.3",
-    "tangled": "^0.3.1"
+    "react-dom": "16.0.0"
   },
   "bugs": {
     "url": "https://github.com/jsbites/jedifocus/issues"
