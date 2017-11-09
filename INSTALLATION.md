@@ -20,9 +20,10 @@ If you want to tweak the way **JediFocus** works for you, that’s the place to 
 
 0. Make sure you have a recent version of [**Node.js**][node] and [**yarn**][yarn] installed on your system.
 1. First, **fork** this project from **GitHub**.
-2. Then rename `src/config.example.json` to `src/config.json` and fill in appropriate [**Firebase**][firebase] credentials and variables.
-3. Install the project using `yarn install`.
-4. Run the development server using `npm run serve`.
+2. You need to create a project in [**Firebase**][firebase] and enable Email/Password sign-in method on Firebase Authentication settings. Also you need to add a user for yourself in the Users tab of authentication settings.
+3. Then rename `src/config.example.json` to `src/config.json` and fill in appropriate [**Firebase**][firebase] credentials and variables.
+4. Install the project using `yarn install`.
+5. Run the development server using `npm run serve`.
 
 ## Dependencies
 
